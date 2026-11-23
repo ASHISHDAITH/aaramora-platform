@@ -41,11 +41,53 @@
 .library-search p{margin:0;font-size:.78rem;color:#64746A}
 [hidden].library-search-result{display:none!important}
 
+
+/* Multilingual catalogue enhancements · additive overrides */
+header{background:var(--paper)!important;background-color:var(--paper)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;isolation:isolate}
+header .nav{background:var(--paper)}
+.top .wrap{align-items:center;gap:16px}
+.support-links{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.support-link{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:3px 10px;border:1px solid #D2DED1;border-radius:999px;background:#F6F8F2;text-decoration:none!important;color:#29483A}
+.support-link strong{font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.top .wrap>span{display:flex;gap:14px;flex-wrap:wrap}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 14px;background:#203C34;color:#fff;border-radius:8px}
+.skip-link:focus{top:10px}
+.catalogue-notice{padding:15px 18px;border:1px solid #D9D5C4;border-radius:16px;background:#F7F0E4;color:#5D5145;margin:18px 0}
+.catalogue-notice strong{display:block;color:#4E4135;margin-bottom:4px}
+.catalogue-toolbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:18px;background:#E8EEE6;border:1px solid #D5DED1;border-radius:18px}
+.catalogue-field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.catalogue-field label,.catalogue-sort-label{font-size:.8rem;font-weight:750;color:#40584B}
+.catalogue-field input,.catalogue-field select,.catalogue-actions select{width:100%;min-height:44px;padding:9px 11px;border:1px solid #C8D4C8;border-radius:10px;background:#FFFEFA;color:#203C34;font:inherit}
+.catalogue-search-field{grid-column:span 2}
+.catalogue-actions{display:flex;align-items:end;gap:8px;flex-wrap:wrap}
+.catalogue-actions .button{min-height:44px;cursor:pointer}
+.catalogue-actions select{max-width:180px}
+.catalogue-status{min-height:1.5em;margin:14px 2px;color:#506257;font-size:.9rem}
+.language-coverage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.language-coverage details{background:#FFFEFA;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.language-coverage summary{font-weight:800;color:#365647;cursor:pointer}
+.language-coverage p{margin:8px 0 0;font-size:.84rem;color:#5E6D63}
+.catalogue-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:14px;margin-top:14px}
+.catalogue-record{background:#FFFEFA;border:1px solid var(--line);border-radius:18px;padding:18px;min-width:0;display:flex;flex-direction:column;gap:9px}
+.catalogue-record h3{font:500 1.25rem/1.25 Georgia,serif;color:#29483A;margin:0}
+.catalogue-record .record-subtitle{font-size:.85rem;color:#758075;margin:0}
+.catalogue-record p{font-size:.89rem;color:#56665C;margin:0}
+.catalogue-record .record-rights{padding-top:10px;border-top:1px solid #E4E8DF}
+.record-tags{display:flex;gap:6px;flex-wrap:wrap}
+.record-tag{display:inline-flex;padding:4px 8px;border-radius:999px;background:#E8EEE6;color:#365647;font-size:.72rem;font-weight:750}
+.record-tag.neutral{background:#F2EFE7;color:#665947}
+.record-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:3px}
+.record-actions a{font-size:.88rem;font-weight:800;text-underline-offset:3px}
+.record-verified{font-size:.76rem!important;color:#718076!important;border-top:1px solid #E8EAE2;padding-top:9px;margin-top:3px!important}
+@media(max-width:850px){.catalogue-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}.catalogue-search-field{grid-column:span 2}.language-coverage{grid-template-columns:1fr}}
+@media(max-width:600px){.support-links{width:100%}.top .wrap{align-items:flex-start}.catalogue-toolbar{grid-template-columns:1fr}.catalogue-search-field{grid-column:auto}.catalogue-actions{align-items:stretch}.catalogue-actions .button{justify-content:center}.catalogue-actions select{max-width:none;flex:1}.language-coverage{grid-template-columns:1fr}}
+
 </style></head>
 <body>
-<div class="top"><div class="wrap">India support: Tele-MANAS <a href="tel:14416">14416</a> · Emergency <a href="tel:112">112</a><span><a href="index.html">Home</a> · <a href="wellbeing.html">Mental wellbeing</a> · <a href="relationships.html">Relationships</a></span></div></div>
-<header><div class="wrap nav"><a class="brand" href="index.html">Aaramora · Reading Library</a><nav class="navlinks" aria-label="Library navigation"><a href="#free-downloads">Open books</a><a href="#workbooks-and-articles">Mental health</a><a href="#relationship-open-learning">Relationships</a><a href="#attachment-books">Attachment books</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#novels-and-classics">Fiction</a><a href="#github">GitHub source</a><a href="#licensing">Reuse rules</a></nav></div></header>
-<main>
+<div class="top"><div class="wrap"><div class="support-links"><a class="support-link" href="tel:14416"><span>Tele-MANAS</span><strong>14416</strong></a><a class="support-link" href="tel:112"><span>Emergency</span><strong>112</strong></a></div><span><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a></span></div></div>
+<header><div class="wrap nav"><a class="brand" href="index.html">Aaramora · Reading Library</a><nav class="navlinks" aria-label="Library navigation"><a href="#free-downloads">Open books</a><a href="#workbooks-and-articles">Mental health</a><a href="#relationship-open-learning">Relationships</a><a href="#attachment-books">Attachment books</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#novels-and-classics">Fiction</a><a href="#language-catalogue">Languages</a><a href="#github">GitHub source</a><a href="#licensing">Reuse rules</a></nav></div></header>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content">
 <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Read · explore · reflect</div><h1>Find a page worth staying with.</h1><p class="lead">Explore mental-health workbooks, relationship books, sacred texts, thoughtful novels and open-access research. Start with a subject or tradition that matters to you. Each entry links to its original source and explains what is free to read, download or reuse.</p><div class="hero-actions"><a class="button" href="#browse-shelves">Browse the shelves</a><a class="button alt" href="#faith-wisdom">Explore faith &amp; wisdom</a></div></div><figure class="hero-photo">
 <img src="https://images.pexels.com/photos/6873903/pexels-photo-6873903.jpeg?cs=srgb&amp;dl=pexels-pavel-danilyuk-6873903.jpg&amp;fm=jpg" alt="An open vintage book with a delicate dried flower resting on its pages" width="1200" height="800" fetchpriority="high" decoding="async">
 <figcaption>Book still life photographed by <a href="https://www.pexels.com/photo/photograph-of-a-book-with-dry-flowers-6873903/" target="_blank" rel="noopener noreferrer">Pavel Danilyuk · Pexels</a>.</figcaption>
@@ -53,6 +95,93 @@
 </figure></div></section>
 
 <nav class="shelf-nav wrap" id="browse-shelves" aria-label="Browse reading shelves"><a href="#free-downloads">Open books</a><a href="#workbooks-and-articles">Mental health</a><a href="#relationship-open-learning">Relationships</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#novels-and-classics">Fiction</a><a href="#github-shelves">GitHub collections</a></nav>
+
+<section class="section alt" id="language-catalogue">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">AARAMORA · multilingual discovery</div>
+      <h2>Find books in the language you read.</h2>
+      <p class="lead">Explore source collections across India's scheduled languages, additional regional languages, classical text languages and languages used around the world. These are discovery filters, not a promise that every source contains a book in every language.</p>
+    </div>
+    <div class="catalogue-notice" role="note">
+      <strong>For reflection and cultural reading, not as treatment.</strong>
+      Each entry links to its original institution. Free to read does not automatically mean free to download, reuse or redistribute. Availability, translation and rights vary by edition.
+    </div>
+    <div class="catalogue-toolbar" id="catalogue-toolbar">
+      <div class="catalogue-field catalogue-search-field">
+        <label for="catalogue-search">Search title, source, language or subject</label>
+        <input id="catalogue-search" type="search" placeholder="Try Marathi, Quran, GRETIL, attachment…" autocomplete="off">
+      </div>
+      <div class="catalogue-field">
+        <label for="catalogue-language">Language</label>
+        <select id="catalogue-language"><option value="">All languages</option></select>
+      </div>
+      <div class="catalogue-field">
+        <label for="catalogue-tradition">Tradition</label>
+        <select id="catalogue-tradition">
+          <option value="">All traditions</option>
+          <option>Hindu</option><option>Sikh</option><option>Islamic</option><option>Christian</option>
+          <option>Buddhist</option><option>Jain</option><option>Jewish</option><option>Secular</option>
+          <option>General / cross-disciplinary</option>
+        </select>
+      </div>
+      <div class="catalogue-field">
+        <label for="catalogue-access">Access</label>
+        <select id="catalogue-access">
+          <option value="">Any access</option>
+          <option value="discovery">Discovery / catalogue</option>
+          <option value="read-online">Read online</option>
+          <option value="download-at-source">Download at source</option>
+          <option value="audio-download">Audio / audiobook</option>
+          <option value="borrow">Library borrowing</option>
+          <option value="api-read-only">Read-only API</option>
+        </select>
+      </div>
+      <div class="catalogue-field">
+        <label for="catalogue-rights">Rights / licence</label>
+        <select id="catalogue-rights">
+          <option value="">Any rights status</option>
+          <option value="item-specific">Item-specific rights</option>
+          <option value="source-restricted">Source restrictions apply</option>
+          <option value="public-domain-edition">Public-domain edition</option>
+          <option value="open-license">Open licence</option>
+          <option value="permission-required">Permission required</option>
+        </select>
+      </div>
+      <div class="catalogue-field">
+        <label for="catalogue-level">Reading level</label>
+        <select id="catalogue-level">
+          <option value="">All levels</option>
+          <option value="all-levels">General / all levels</option>
+          <option value="introductory">Introductory</option>
+          <option value="academic">Academic / scholarly</option>
+          <option value="primary-source">Primary source</option>
+        </select>
+      </div>
+      <div class="catalogue-field">
+        <label for="catalogue-format">Format</label>
+        <select id="catalogue-format">
+          <option value="">Any format</option>
+          <option>HTML</option><option>PDF</option><option>EPUB</option><option>Audio</option>
+          <option>API</option><option>Manuscript images</option><option>Metadata</option>
+        </select>
+      </div>
+      <div class="catalogue-actions">
+        <button type="button" class="button alt" id="catalogue-reset">Clear filters</button>
+        <label class="catalogue-sort-label" for="catalogue-sort">Sort</label>
+        <select id="catalogue-sort">
+          <option value="title">Title A–Z</option>
+          <option value="checked">Recently verified</option>
+        </select>
+      </div>
+    </div>
+    <p id="catalogue-status" class="catalogue-status" role="status" aria-live="polite">Loading source catalogue…</p>
+    <div id="catalogue-language-groups" class="language-coverage" aria-label="Language coverage"></div>
+    <div id="catalogue-results" class="catalogue-results"></div>
+    <noscript><p class="notice">JavaScript is needed for the new catalogue filters. The original reading shelves and source links remain available below.</p></noscript>
+  </div>
+</section>
+
 <section class="section" id="free-downloads"><div class="wrap"><div class="section-head"><div class="eyebrow">Free and openly licensed</div><h2>Read and download from the source.</h2><p class="lead">These resources have explicit permissions or are available through official repositories. Use the publisher's download control so readers receive the correct edition and any updated errata.</p></div><div class="library-search"><label for="library-search-input">Search the reading library</label><input id="library-search-input" type="search" placeholder="Try “Gītā”, “attachment”, “anxiety”, “novel” or “Qur’an”" autocomplete="off"><p id="library-search-status" aria-live="polite">Browse every shelf below, or search by title, topic or tradition.</p></div><div class="grid">
 <article class="card"><span class="tag">CC BY 4.0 · REDISTRIBUTABLE WITH ATTRIBUTION</span><h3>Capacity to Connect: Supporting Students’ Mental Health and Wellness</h3><p>Gemma Armstrong and co-authors · BCcampus · 2021</p><p>A facilitator's guide with a Recognize, Respond, Refer structure, signs of distress, boundaries and practice scenarios. Useful for learning how to support someone and refer them to appropriate care. It is not a substitute for clinical training.</p><p class="licence">The book states CC BY 4.0. You may retain, reuse, revise, remix and redistribute it with attribution, while preserving any separate third-party notices. The official book page offers PDF, EPUB, MOBI and editable formats.</p><div class="card-actions"><a href="https://opentextbc.ca/capacitytoconnect/open/download?type=pdf" target="_blank" rel="noopener noreferrer">Download full PDF (97 pages)</a><a href="https://opentextbc.ca/capacitytoconnect/" target="_blank" rel="noopener noreferrer">Read online / other formats</a><a href="https://openlibrary-repo.ecampusontario.ca/jspui/bitstream/123456789/964/6/Capacity-to-Connect-Supporting-Students-Mental-Health-and-Wellness-1627496327.-htmlbook.html" target="_blank" rel="noopener noreferrer">View licence details</a></div></article>
 <article class="card"><span class="tag">CC BY-NC-SA 4.0 · NON-COMMERCIAL / SHARE-ALIKE</span><h3>Psychology 2e</h3><p>Rose M. Spielman, William J. Jenkins, Marilyn D. Lovett and contributors · OpenStax</p><p>A broad introductory psychology textbook covering memory, emotion, personality, social psychology, stress and health, psychological disorders, and therapy and treatment. It gives foundational context, not specialist clinical advice.</p><p class="licence">The official preface identifies CC BY-NC-SA 4.0 and separately prohibits ingestion into LLMs or generative-AI offerings without prior written permission. Read and download from OpenStax. Do not add this textbook to AARAMORA's AI research corpus.</p><div class="card-actions"><a href="https://openstax.org/details/books/psychology-2e" target="_blank" rel="noopener noreferrer">Read / download official book</a><a href="https://openstax.org/books/psychology-2e/pages/preface" target="_blank" rel="noopener noreferrer">View licence and scope</a></div></article>
@@ -155,4 +284,118 @@
   });
 })();
 </script>
+
+<script>
+(() => {
+  const url = "data/library.json";
+  const els = {
+    search:document.getElementById("catalogue-search"),
+    language:document.getElementById("catalogue-language"),
+    tradition:document.getElementById("catalogue-tradition"),
+    access:document.getElementById("catalogue-access"),
+    rights:document.getElementById("catalogue-rights"),
+    level:document.getElementById("catalogue-level"),
+    format:document.getElementById("catalogue-format"),
+    sort:document.getElementById("catalogue-sort"),
+    reset:document.getElementById("catalogue-reset"),
+    status:document.getElementById("catalogue-status"),
+    results:document.getElementById("catalogue-results"),
+    groups:document.getElementById("catalogue-language-groups")
+  };
+  if (!els.results || !els.status) return;
+  const normalise = value => String(value || "").toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
+  const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[char]);
+  const dateLabel = value => {
+    if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return "Date not recorded";
+    return new Date(value+"T00:00:00Z").toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
+  };
+  const safeUrl = value => /^https:\/\//i.test(String(value || "")) ? value : "";
+  function renderCard(record) {
+    const languages = record.languages || [];
+    const languageTags = languages.slice(0,5).map(x=>'<span class="record-tag">'+esc(x)+'</span>').join("");
+    const overflow = languages.length > 5 ? '<span class="record-tag neutral">+'+(languages.length-5)+' languages</span>' : "";
+    const languageMarkup = languageTags || '<span class="record-tag neutral">'+esc(record.languageCoverageLabel || "See the source for language coverage")+'</span>';
+    const accessUrl = safeUrl(record.access && record.access.url);
+    const policyUrl = safeUrl(record.rights && record.rights.policyUrl);
+    const provenanceUrl = safeUrl(record.provenance && record.provenance.sourceUrl);
+    const links = [];
+    if (accessUrl) links.push('<a href="'+esc(accessUrl)+'" target="_blank" rel="noopener noreferrer">Open official source</a>');
+    if (policyUrl) links.push('<a href="'+esc(policyUrl)+'" target="_blank" rel="noopener noreferrer">Rights and access terms</a>');
+    else if (provenanceUrl && provenanceUrl !== accessUrl) links.push('<a href="'+esc(provenanceUrl)+'" target="_blank" rel="noopener noreferrer">Source information</a>');
+    return '<article class="catalogue-record"><div class="record-tags"><span class="record-tag">'+esc(record.access.label)+'</span><span class="record-tag neutral">'+esc(record.rights.status.replace(/-/g," "))+'</span></div>' +
+      '<h3>'+esc(record.title)+'</h3><p class="record-subtitle">'+esc(record.editionTitle)+'</p>' +
+      '<p>'+esc(record.access.notes)+'</p><p><strong>Languages:</strong> '+languageMarkup+overflow+'</p>' +
+      '<p><strong>Subjects:</strong> '+esc((record.subjects || []).slice(0,6).join(" · "))+'</p>' +
+      '<p class="record-rights"><strong>Rights:</strong> '+esc(record.rights.licence)+'. '+esc(record.rights.reuse)+'</p>' +
+      '<p><strong>Accessibility:</strong> '+esc(record.accessibility.searchableText)+'; '+esc(record.accessibility.reflowable)+'.</p>' +
+      '<div class="record-actions">'+links.join("")+'</div>' +
+      '<p class="record-verified">Source record checked '+esc(dateLabel(record.verification.checkedAt))+' · Review due '+esc(dateLabel(record.verification.nextReviewAt))+'</p></article>';
+  }
+  function renderLanguageGroups(groups) {
+    els.groups.innerHTML = groups.map(group=>'<details><summary>'+esc(group.label)+' · '+group.languages.length+' languages</summary><p>'+esc(group.scope)+'</p><p>'+group.languages.map(esc).join(" · ")+'</p></details>').join("");
+  }
+  function populateLanguageSelect(groups) {
+    groups.forEach(group=>{
+      const optgroup=document.createElement("optgroup");
+      optgroup.label=group.label;
+      group.languages.forEach(language=>{
+        const option=document.createElement("option");
+        option.value=language;
+        option.textContent=language;
+        optgroup.appendChild(option);
+      });
+      els.language.appendChild(optgroup);
+    });
+  }
+  function filterRecords(records) {
+    const query=normalise(els.search.value);
+    const language=els.language.value;
+    const tradition=els.tradition.value;
+    const access=els.access.value;
+    const rights=els.rights.value;
+    const level=els.level.value;
+    const format=els.format.value;
+    const visible=records.filter(record=>{
+      const searchable=normalise([
+        record.title,record.editionTitle,record.languageCoverageLabel,
+        (record.languages||[]).join(" "),(record.subjects||[]).join(" "),
+        (record.traditions||[]).join(" "),record.access.label,record.access.notes,
+        record.rights.licence,record.rights.notes
+      ].join(" "));
+      return (!query || searchable.includes(query)) &&
+        (!language || (record.languages||[]).includes(language)) &&
+        (!tradition || (record.traditions||[]).includes(tradition)) &&
+        (!access || record.access.type===access) &&
+        (!rights || record.rights.status===rights) &&
+        (!level || record.readingLevel===level) &&
+        (!format || (record.access.formats||[]).some(value=>normalise(value)===normalise(format)));
+    });
+    visible.sort((a,b)=>els.sort.value==="checked"
+      ? (String(b.verification.checkedAt).localeCompare(String(a.verification.checkedAt)) || a.title.localeCompare(b.title))
+      : a.title.localeCompare(b.title));
+    els.results.innerHTML=visible.map(renderCard).join("");
+    els.status.textContent=visible.length+" of "+records.length+" source records match. Languages, access and rights are recorded at source/edition level.";
+  }
+  fetch(url,{cache:"no-cache"})
+    .then(response=>{if(!response.ok)throw new Error("Catalogue returned HTTP "+response.status);return response.json();})
+    .then(data=>{
+      if(!data || !Array.isArray(data.records) || !Array.isArray(data.languageGroups)) throw new Error("Catalogue data format is invalid");
+      renderLanguageGroups(data.languageGroups);
+      populateLanguageSelect(data.languageGroups);
+      [els.search,els.language,els.tradition,els.access,els.rights,els.level,els.format,els.sort].forEach(input=>input.addEventListener("input",()=>filterRecords(data.records)));
+      els.reset.addEventListener("click",()=>{
+        els.search.value="";els.language.value="";els.tradition.value="";els.access.value="";
+        els.rights.value="";els.level.value="";els.format.value="";els.sort.value="title";
+        filterRecords(data.records);
+      });
+      filterRecords(data.records);
+    })
+    .catch(error=>{
+      console.error("AARAMORA multilingual catalogue:",error);
+      els.status.textContent="The new catalogue could not load. The original reading shelves and source links below remain available.";
+      els.results.innerHTML='<p class="notice">Use the existing reading shelves below while the catalogue data is checked.</p>';
+    });
+})();
+</script>
+
 </body></html>
