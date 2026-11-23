@@ -123,3 +123,33 @@ The live Reading Library page, JSON catalogue and JSON schema returned HTTP 200.
 
 
 The metadata-only link checker percent-encodes non-ASCII URL paths before making HEAD/range requests. The checker does not parse or download source page bodies or book files.
+
+
+## Latest production release verification · 24 November 2026
+
+**Vercel deployment:** `dpl_Eeu3YsRJwmC86Zg652mQYriEcvbM`  
+**Deployment source:** `main` commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde`  
+**State:** READY · production target · stable `aaramora-platform.vercel.app` alias assigned.
+
+### Visitor-side verification
+
+A headless Chromium check against the stable production domain confirmed:
+
+- `/reading-library.html`, `/data/library.json`, `/data/library.schema.json`, and `/yoga-and-breath.html` all return HTTP 200.
+- The source catalogue contains and renders 26 entries.
+- The original 46 static book/resource cards and all original reading shelves remain present.
+- The language, tradition, rights, format, access and search filters return expected records in independent cases.
+- At 390 CSS-pixel viewport width, there is no horizontal page overflow.
+- The keyboard's first Tab reaches the skip link; activating it moves to main content.
+- axe-core 4.10.3 reports zero automated WCAG 2.2 AA/best-practice violations on the audited Reading Library page (46 passes, zero incomplete findings).
+- All four Hindi/Marathi draft transcript panels are present on the Yoga & Breath page. They remain drafts and are not recordings.
+
+This is an automated browser and axe scan, not a human NVDA, VoiceOver or TalkBack review, and not a formal WCAG conformance statement.
+
+### Source-link audit
+
+The local metadata-only source-link check examined 40 unique source/policy URLs: 32 returned success, 0 were confirmed dead (404/410), and 8 were inconclusive because of provider-side 503 responses, a timeout or a certificate issue. Those 8 are not labelled dead and should be rechecked. The checker percent-encodes Unicode/Indic/Arabic URL paths, uses HEAD first and only a one-byte range retry for selected blocked HEAD requests. It does not retrieve or parse book bodies.
+
+### Human review still required
+
+All catalogue records still show native-language, cultural-context and underlying-source accessibility review as pending. These statuses should remain pending until a named qualified reviewer checks the exact text and edition. Automated accessibility scanning does not review translation fidelity, theological interpretation, cultural phrasing, OCR accuracy or source-edition completeness.
