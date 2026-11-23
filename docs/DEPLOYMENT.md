@@ -169,3 +169,8 @@ Additional candidate browser checks:
 - axe-core 4.10.3 reports zero violations and 47 passes on the local candidate; browser console/page-error list is empty.
 
 Four independent-review files now exist under `docs/review/`. They are reviewer requests and test instructions, not completed reviews. Qualified native-language, cultural/religious, rights and assistive-technology reviewers have not been contacted or signed off. Do not mark those fields reviewed without evidence.
+
+
+
+### Support-contact touch target correction · 24 November 2026
+The Tele-MANAS and Emergency 112 support links now have a 44px minimum height and 24px gap. This avoids tightly clustered phone links on narrow screens. The latest candidate passes the 62-test Python suite and local axe/viewport checks. Human assistive-technology testing remains pending.
