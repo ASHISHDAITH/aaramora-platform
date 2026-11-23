@@ -51,7 +51,7 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - `docs/QA_CHECKLIST.md`, `docs/QA_RESULTS.md` and `docs/VALIDATION_NOTES.md` — quality gates, completed checks and remaining reviews.
 - `docs/DEPLOYMENT.md` — live Vercel deployment status, verification notes and the remaining Git-integration step.
 - `docs/AARAMORA_BRAND_FILM_ASSETS.md` — export manifest, verified file hashes and committed media paths.
-- `tests/check_relationships.py` and `tests/check_health_topics.py` — automated static content and safety checks.
+- `tests/check_relationships.py`, `tests/check_health_topics.py` and `tests/check_reading_library.py` — automated static content, safety and reading-library rights checks.
 - `research/benchmark50.csv` — 50-site benchmark candidate list (not a verified rank order).
 - `research/mental-health-website-benchmark-report.md` and `research/visual-report.html` — research and visual concept report.
 - `assets/` — original Healing Garden, Safe Corner and Thought River SVG illustrations.
@@ -69,7 +69,8 @@ Never commit real user messages, journals, screening answers, health records, pa
 
 
 ## Reading library and copyright rules
-- `reading-library.html` provides legal read/download links for explicitly licensed open resources and publisher/library access to copyrighted relationship books.
+- `reading-library.html` provides legal read/download links for explicitly licensed open resources, sacred-text source institutions, public-domain classics, open-access catalogues, publisher/library access to copyrighted relationship books, and title-specific reuse notes.
+- `docs/READING_LIBRARY_EXPANSION.md` records the sacred-text and public-domain discovery sources, edition-level rights caveats, Pexels hero-image credit and catalogue maintenance rules.
 - The GitHub source reference for OpenStax is `openstax/OpenStaxOnTheGo`; its repository AGPL licence covers software, while the book asset has its own source licence. The current official OpenStax site is the preferred download source.
 - Never bypass DRM, paywalls, private repository permissions or import copyrighted book copies without permission.
 - A public GitHub repository or its root licence does not automatically license every bundled third-party book, image or dataset.
