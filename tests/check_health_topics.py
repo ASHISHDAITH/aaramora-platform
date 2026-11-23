@@ -36,6 +36,17 @@ class WebsiteHealthContentTests(unittest.TestCase):
         for phrase in ["How it may feel","What may help","When to seek support"]:
             self.assertIn(phrase, self.well)
 
+    def test_all_womens_health_cards_have_the_same_guide_pattern(self):
+        start = self.home.index('<section class="womens-section" id="womens-health">')
+        end = self.home.index('</section>', start)
+        section = self.home[start:end]
+        cards = section.split('<article class="women-card"')[1:]
+        self.assertEqual(len(cards), 8)
+        for card in cards:
+            self.assertIn("How might this feel day to day?", card)
+            self.assertIn("What may help?", card)
+            self.assertTrue("When to seek support" in card or "When to seek support and urgent help" in card)
+
     def test_pmos_terms_and_uncertainty_are_present(self):
         self.assertIn("PMOS", self.home)
         self.assertIn("PCOD", self.home)

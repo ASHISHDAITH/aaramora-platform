@@ -129,3 +129,10 @@
 - [ ] BCcampus Capacity to Connect attribution and recommended original-source statement accompany any mirror.
 - [ ] Noba modules and Open Oregon textbook show their non-commercial ShareAlike terms.
 - [ ] Reading resources link to official publisher pages and direct publisher/repository downloads only.
+
+
+## Women's-health card consistency
+- [ ] All eight women's-health cards include How might this feel day to day? and What may help?
+- [ ] All eight cards include a When to seek support section; urgent red flags remain explicit.
+- [ ] PMOS mood/cognition information is evidence-qualified and does not claim causation or brain damage.
+- [ ] PMOS/PCOS and PCOD wording reflects current naming while preserving familiar search terms.
