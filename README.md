@@ -32,7 +32,7 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - Mental wellbeing guides covering depression, anxiety, panic, acute stress surges, trauma-related distress, rumination, sleep, burnout, grief and OCD-related experiences.
 - Yoga & Breath guide with study-specific evidence summaries, optional low-intensity practices, safety boundaries and Hindi/Marathi transcript drafts pending native-language and clinical/yoga review.
 - Relationships corner with 40 searchable concepts, three optional non-diagnostic reflections, a non-scored safety check and practical guidance for different sides of a relationship cycle.
-- Check-ins page with a non-scored guide finder, on-page women's-health appointment planner and printable original two-cycle symptom log.
+- Check-ins page with a non-scored guide finder, local-only Problem Bench worksheet, on-page women's-health appointment planner and printable original two-cycle symptom log.
 - Women's-health corner with eight topic areas and the shared “how it may feel / what may help / when to seek support” structure.
 - Expanded Reading Library with 23 linked resources across mental-health workbooks, academic/open books, attachment and relationship learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain sources, regional-language literature, public-domain classics and GitHub discovery indexes. A client-side title/topic/tradition search filters cards without sending queries to a server.
 - Resource shelf and future community concept (not a live forum).
@@ -49,10 +49,10 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - `docs/RELATIONSHIP_QUIZ_SPEC.md` — three reflection tools, safety check, privacy and review gates.
 - `docs/HEALTH_TOPIC_CONTENT_STANDARD.md` — shared authoring rules for all health topics.
 - `docs/YOGA_AND_BREATH_EVIDENCE.md` — yoga reviews, Friendship Bench and HAP trial notes, WHO licensing, safety and evidence-label rules.
-- `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md` — original Hindi/Marathi guided-rest and comfortable-breathing transcript drafts; not approved or recorded audio.
+- `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md` — four original Hindi/Marathi guided-rest and comfortable-breathing transcript drafts; not approved, recorded or published audio.
 - `docs/RESEARCH_SOURCES.md` — source and licensing register.
 - `docs/QA_CHECKLIST.md`, `docs/QA_RESULTS.md` and `docs/VALIDATION_NOTES.md` — quality gates, completed checks and remaining reviews.
-- `docs/DEPLOYMENT.md` — live Vercel deployment status, verification notes and the remaining Git-integration step.
+- `docs/PROBLEM_BENCH_SPEC.md` — implementation, safety and human-delivered-evidence boundaries for the Problem Bench worksheet.\n- `docs/WHO_STRESS_GUIDE_ADAPTATION.md` and `docs/WHO_OUTREACH_DRAFT.md` — original companion draft, WHO adaptation rules and an enquiry letter that has not been sent.\n- `docs/CONTENT_GOVERNANCE.md` and `docs/CORRECTIONS_LOG.md` — roles, correction process, suicide-related editorial rules and scheduled source review.\n- `data/service-links.json` — official India support-route register with source, owner and review dates.\n- `docs/DEPLOYMENT.md` — live Vercel deployment status, verification notes and the remaining Git-integration step.
 - `docs/AARAMORA_BRAND_FILM_ASSETS.md` — export manifest, verified file hashes and committed media paths.
 - `tests/check_relationships.py`, `tests/check_health_topics.py`, `tests/check_reading_library.py` and `tests/check_multilingual_catalogue.py` — automated static content, safety, source-rights and multilingual catalogue checks.
 - `scripts/check_catalogue.py` validates catalogue record structure and required source/rights/review fields; `scripts/check_library_links.py` checks metadata URLs without downloading books.
@@ -84,7 +84,7 @@ Never commit real user messages, journals, screening answers, health records, pa
 
 
 ## Automated checks
-GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on pushes and pull requests. The checks cover core page routes, wellbeing content structure, women's-health consistency, all 40 relationship concepts, optional quiz/privacy requirements, support links, internal anchors and inline JavaScript syntax on all five site pages.
+GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on pushes and pull requests. The checks cover core page routes, wellbeing content structure, women's-health consistency, all 40 relationship concepts, optional quiz/privacy requirements, Problem Bench privacy and print boundaries, support links, internal anchors and inline JavaScript syntax on the six site pages. A separate weekly workflow checks official support-source URLs without downloading their page bodies.
 
 
 ## Brand film
