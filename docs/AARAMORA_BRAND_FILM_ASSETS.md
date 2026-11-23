@@ -39,10 +39,10 @@ Tagline: **A gentle place to begin again.**
 This manifest records the inspected local exports. The MP4 binary files have **not yet been uploaded to GitHub**. The GitHub connector available in this session supports text writes but no direct binary asset upload/release action. Upload the two unique MP4s from a local checkout using the commands below.
 
 ```powershell
-New-Item -ItemType Directory -Force public/media/brand-film | Out-Null
+New-Item -ItemType Directory -Force assets/brand-film | Out-Null
 Copy-Item "$env:USERPROFILE\Downloads\AARAMORA_MASTER_16_9(2).mp4" "assets/brand-film/aaramora-master-16x9.mp4"
 Copy-Item "$env:USERPROFILE\Downloads\AARAMORA_INSTAGRAM_9_16(2).mp4" "assets/brand-film/aaramora-instagram-9x16.mp4"
-git add public/media/brand-film
+git add assets/brand-film
 git commit -m "Add AARAMORA brand film exports"
 git push origin main
 ```
