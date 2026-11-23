@@ -105,3 +105,17 @@
 - The multilingual Reading Library source-link check passed on commit `081ca9a4177fec08bbee9cd420d70cc3381975c8`: [run 45285225515](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285225515). The checker percent-encodes Unicode source paths and only tests metadata URLs, not source text or book files.
 - The current Vercel production snapshot is `dpl_CYKUri19P8g1uM4hu5tKHbiiZgjG`, READY, with the stable production alias assigned. This confirms deployment state and file inclusion, not a human clinical, accessibility, device or browser approval.
 - Named clinical, safeguarding, yoga and Hindi/Marathi reviewers remain unassigned. Those are launch gates, not tasks that can be truthfully marked complete by an automated build.
+
+
+
+## Final production verification · 24 November 2026
+
+- Latest production deployment: `dpl_Eeu3YsRJwmC86Zg652mQYriEcvbM`, source commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde`, READY.
+- Local source validation: `python scripts/check_catalogue.py` passed for 26 catalogue entries and four language groups.
+- Complete Python suite: 55 tests passed.
+- GitHub content-check run for current source commit: [45285497757](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285497757) — success.
+- Unicode-aware weekly metadata-link workflow on catalogue/link-checker commit: [45285225515](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285225515) — success.
+- Manual local metadata-only link check: 32 reachable, 0 confirmed dead, 8 inconclusive (provider responses/network/certificate). Recheck those 8 on the next scheduled run.
+- Production browser check: four routes HTTP 200; 26 dynamic cards and 46 original static cards; independent language/tradition/access/rights/format/search cases passed; 390px mobile layout has no horizontal overflow; keyboard skip link works; axe-core 4.10.3 reported zero violations and zero incomplete items on the audited Reading Library page.
+- Hindi and Marathi Yoga & Breath draft transcript panels are visible in production; their drafts remain unapproved and are not audio recordings.
+- Native-language, cultural-context, and manual assistive-technology reviews remain pending for the multilingual catalogue.
