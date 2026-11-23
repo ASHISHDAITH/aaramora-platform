@@ -83,11 +83,22 @@ header .nav{background:var(--paper)}
 @media(max-width:600px){.support-links{width:100%}.top .wrap{align-items:flex-start}.catalogue-toolbar{grid-template-columns:1fr}.catalogue-search-field{grid-column:auto}.catalogue-actions{align-items:stretch}.catalogue-actions .button{justify-content:center}.catalogue-actions select{max-width:none;flex:1}.language-coverage{grid-template-columns:1fr}}
 
  .card-verification{margin:10px 0 0!important;padding-top:9px;border-top:1px solid #E8EAE2;font-size:.75rem!important;line-height:1.45;color:#718076!important}.card-verification strong{color:#506257}
+
+/* WCAG 2.2 AA contrast and focus refinements from live axe review */
+.eyebrow{color:#496154}
+.hero-photo figcaption{color:#536157}
+.quote-card p{color:#536458}
+.book .author{color:#56655A}
+.catalogue-record .record-subtitle{color:#56655A}
+.record-verified,.card-verification{color:#56655A!important}
+.library-search p{color:#56655A}
+input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.skip-link{font-weight:800;line-height:1.3}
+
 </style></head>
 <body>
-<div class="top"><div class="wrap"><div class="support-links"><a class="support-link" href="tel:14416"><span>Tele-MANAS</span><strong>14416</strong></a><a class="support-link" href="tel:112"><span>Emergency</span><strong>112</strong></a></div><span><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a></span></div></div>
+<div class="top" role="region" aria-label="Support and site links"><div class="wrap"><a class="skip-link" href="#main-content">Skip to main content</a><div class="support-links"><a class="support-link" href="tel:14416"><span>Tele-MANAS</span><strong>14416</strong></a><a class="support-link" href="tel:112"><span>Emergency</span><strong>112</strong></a></div><span><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a></span></div></div>
 <header><div class="wrap nav"><a class="brand" href="index.html">Aaramora · Reading Library</a><nav class="navlinks" aria-label="Library navigation"><a href="#free-downloads">Open books</a><a href="#workbooks-and-articles">Mental health</a><a href="#relationship-open-learning">Relationships</a><a href="#attachment-books">Attachment books</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#novels-and-classics">Fiction</a><a href="#language-catalogue">Languages</a><a href="#github">GitHub source</a><a href="#licensing">Reuse rules</a></nav></div></header>
-<a class="skip-link" href="#main-content">Skip to main content</a>
 <main id="main-content">
 <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Read · explore · reflect</div><h1>Find a page worth staying with.</h1><p class="lead">Explore mental-health workbooks, relationship books, sacred texts, thoughtful novels and open-access research. Start with a subject or tradition that matters to you. Each entry links to its original source and explains what is free to read, download or reuse.</p><div class="hero-actions"><a class="button" href="#browse-shelves">Browse the shelves</a><a class="button alt" href="#faith-wisdom">Explore faith &amp; wisdom</a></div></div><figure class="hero-photo">
 <img src="https://images.pexels.com/photos/6873903/pexels-photo-6873903.jpeg?cs=srgb&amp;dl=pexels-pavel-danilyuk-6873903.jpg&amp;fm=jpg" alt="An open vintage book with a delicate dried flower resting on its pages" width="1200" height="800" fetchpriority="high" decoding="async">
@@ -177,7 +188,7 @@ header .nav{background:var(--paper)}
       </div>
     </div>
     <p id="catalogue-status" class="catalogue-status" role="status" aria-live="polite">Loading source catalogue…</p>
-    <div id="catalogue-language-groups" class="language-coverage" aria-label="Language coverage"></div>
+    <div id="catalogue-language-groups" class="language-coverage" role="group" aria-label="Language coverage"></div>
     <div id="catalogue-results" class="catalogue-results"></div>
     <noscript><p class="notice">JavaScript is needed for the new catalogue filters. The original reading shelves and source links remain available below.</p></noscript>
   </div>
