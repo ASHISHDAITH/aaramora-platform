@@ -95,3 +95,15 @@ This release enhances the Reading Library without removing its existing shelves 
 
 The Vercel API reports the deployment as READY and assigns the stable production alias. This tool could not load the live Vercel HTML/JSON in a normal browser session, so a human visitor-side smoke test of the live filters, source links and small-screen layout remains outstanding. Automated tests are not a substitute for keyboard, screen-reader, clinical, religious/cultural or legal review.
 
+
+## Edition-level multilingual update · 24 November 2026
+
+The Reading Library catalogue has grown to 26 entries. It now includes exact source pages for the Hindi Ramcharitmanas, Marathi Jnaneshwari, Bengali Gitanjali 1913, one Punjabi Guru Granth Sahib folio, Urdu Diwan-e-Ghalib, the first Skandha of the Odia Bhagabata, Tamil Tirukkural, Gujarati/Kannada/Malayalam book catalogues, the Arabic Safahat platform and four Project Gutenberg editions in French, German, Spanish and Portuguese.
+
+Each card now shows its known writing system separately from language and an explicit editorial-review note. Native-language, cultural-context and source-text accessibility review remain pending. The source pages have not been converted into AARAMORA-hosted book files.
+
+## Edition-level multilingual update · 24 November 2026
+
+The Reading Library catalogue has grown to 26 entries. It now includes exact source pages for the Hindi Ramcharitmanas, Marathi Jnaneshwari, Bengali Gitanjali 1913, one Punjabi Guru Granth Sahib folio, Urdu Diwan-e-Ghalib, the first Skandha of the Odia Bhagabata, Tamil Tirukkural, Gujarati/Kannada/Malayalam book catalogues, the Arabic Safahat platform and four Project Gutenberg editions in French, German, Spanish and Portuguese.
+
+Each card now shows its known writing system separately from language and an explicit editorial-review note. Native-language, cultural-context and source-text accessibility review remain pending. The source pages have not been converted into AARAMORA-hosted book files.
