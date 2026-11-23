@@ -42,7 +42,7 @@ Critical service links are registered in `data/service-links.json` with:
 - named editorial owner (to be assigned);
 - a non-invasive HTTP link check that does not retrieve content bodies.
 
-The weekly GitHub Actions check treats 404/410 as confirmed dead links; 403, 429, timeouts and other restrictions are inconclusive and require human review, not automatic deletion.
+The weekly GitHub Actions workflow `.github/workflows/service-links.yml` checks the official-source URLs for Tele-MANAS, ERSS 112 and Women Helpline 181. It treats 404/410 as confirmed dead links; 403, 405, 429, timeouts and other restrictions are inconclusive and require human review, not automatic deletion. The separate `reading-library-link-check.yml` workflow checks reading-catalogue metadata links only. Neither workflow downloads books or changes displayed numbers automatically.
 
 ## Crisis and suicide-related communication
 
