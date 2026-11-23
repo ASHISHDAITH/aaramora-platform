@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F5F2E9">
+<meta name="description" content="A quiet, privacy-first place for mental wellbeing information, gentle activities, women's health education and routes to human support in India.">
+<title>A Place to Begin | Mental wellbeing and women's health prototype</title>
+<style>
+:root{
+  --paper:#F5F2E9; --paper-deep:#ECE9DF; --surface:#FFFEFA;
+  --ink:#203B32; --ink-soft:#40564C; --muted:#586B62;
+  --sage:#DCE8DB; --sage-deep:#BCD0BD; --blue:#DFE9E8;
+  --lilac:#EAE4EF; --clay:#EAD8CB; --gold:#E9C779;
+  --line:#D7DED4; --focus:#1D5E9B; --forest:#23483C;
+  --radius:24px; --shadow:0 14px 44px rgba(31,57,46,.075);
+  --max:1180px; --body:Arial,"Noto Sans","Noto Sans Devanagari",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body)}
+a{color:inherit}
+button,select{font:inherit}
+button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip-link{position:absolute;left:-10000px;top:8px;background:#fff;padding:12px 16px;z-index:100;border-radius:10px}
+.skip-link:focus{left:12px}
+.wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+.support-ribbon{background:#E5EDE4;border-bottom:1px solid #D2DED1;color:#24463A}
+.support-ribbon-inner{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:7px}
+.support-line{font-size:.9rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.support-line strong{font-weight:750}
+.support-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.support-links a{display:inline-flex;align-items:center;min-height:34px;padding:3px 11px;border-radius:999px;text-decoration:none;border:1px solid #B9CBB9;font-weight:750;font-size:.84rem}
+.site-header{position:sticky;top:0;z-index:30;background:rgba(245,242,233,.96);border-bottom:1px solid rgba(215,222,212,.85);backdrop-filter:blur(8px)}
+.header-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;letter-spacing:-.03em;font-size:1.02rem;white-space:nowrap}
+.brand-mark{width:39px;height:39px;background:#DFE9DD;border-radius:14px;display:grid;place-items:center}
+.brand-mark svg{width:28px;height:28px}
+.main-nav{display:flex;gap:23px;align-items:center}
+.main-nav a{font-size:.91rem;color:var(--ink-soft);font-weight:650;text-decoration:none}
+.main-nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.header-actions{display:flex;align-items:center;gap:9px}
+.language-select{min-height:43px;border:1px solid var(--line);border-radius:999px;background:var(--surface);padding:8px 13px;color:var(--ink);max-width:140px}
+.quick-exit{min-height:43px;border-radius:999px;border:1px solid var(--line);background:transparent;padding:8px 13px;color:var(--ink-soft);font-size:.84rem;font-weight:650;cursor:pointer}
+.quick-exit:hover{background:#fff}
+.menu-toggle{display:none;min-height:44px;min-width:44px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font-weight:700}
+.button{display:inline-flex;justify-content:center;align-items:center;gap:9px;min-height:50px;padding:12px 20px;border-radius:999px;text-decoration:none;border:1px solid transparent;font-weight:750;transition:background .15s,border-color .15s}
+.button-primary{background:var(--forest);color:#fff}
+.button-primary:hover{background:#183A30}
+.button-secondary{background:var(--surface);border-color:var(--line);color:var(--ink)}
+.button-secondary:hover{border-color:#A7B9A7;background:#fff}
+.button-quiet{background:transparent;text-decoration:underline;text-underline-offset:4px;color:var(--ink-soft);padding-inline:9px}
+.eyebrow{font-size:.75rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:#5A7667}
+h1,h2,h3,p{margin-top:0}
+h1,h2,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}
+.hero{padding:62px 0 50px}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center}
+h1{font-size:clamp(2.7rem,5.3vw,5rem);line-height:1.02;max-width:670px;margin:18px 0 21px}
+.hero-copy{max-width:590px;font-size:1.13rem;line-height:1.72;color:#4B6156}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;align-items:center}
+.hero-footnote{display:flex;gap:9px;align-items:flex-start;margin-top:18px;color:var(--muted);font-size:.88rem;max-width:550px}
+.hero-footnote svg{flex:0 0 19px;margin-top:3px}
+.hero-scene{min-height:430px;position:relative;border-radius:36px;background:linear-gradient(160deg,#E6EEE5 0%,#E8ECE6 45%,#D7E4E2 100%);overflow:hidden;display:grid;place-items:center;border:1px solid rgba(56,88,68,.08)}
+.hero-scene:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:#F2E9D8;top:-150px;right:-55px}
+.scene-caption{position:absolute;bottom:17px;right:20px;font-size:.78rem;color:#496356;letter-spacing:.04em;z-index:2}
+.scene-svg{width:100%;max-width:650px;height:auto;position:relative;z-index:1}
+.intro-boundary{margin-top:28px;border-left:3px solid #A8BDA8;padding:9px 0 9px 15px;color:var(--muted);font-size:.88rem;max-width:585px}
+.section{padding:76px 0}
+.section-alt{background:#EFEEE6}
+.section-head{max-width:720px;margin-bottom:30px}
+h2{font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.12;margin:12px 0}
+.lead{font-size:1.03rem;line-height:1.72;color:var(--muted);max-width:680px}
+.choice-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.choice-card{min-height:190px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:14px;text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
+.choice-card:hover{border-color:#9EB49F;transform:translateY(-2px);box-shadow:var(--shadow)}
+.choice-icon{width:39px;height:39px;border-radius:13px;background:var(--sage);display:grid;place-items:center;color:#315646;font-size:1.2rem}
+.choice-card:nth-child(2) .choice-icon{background:var(--blue)}
+.choice-card:nth-child(3) .choice-icon{background:var(--clay)}
+.choice-card:nth-child(4) .choice-icon{background:var(--lilac)}
+.choice-card:nth-child(5) .choice-icon{background:#F0E8D2}
+.choice-card strong{font-size:.98rem;line-height:1.4}
+.choice-card small{font-size:.83rem;color:var(--muted);margin-top:auto}
+.story-section{padding:72px 0;background:#E8E4D9}
+.story-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:50px;align-items:center}
+.story-art{min-height:280px;border-radius:30px;background:#DCE7DB;display:grid;place-items:center;overflow:hidden}
+.story-art svg{max-width:360px;width:90%;height:auto}
+.story-copy{max-width:680px}
+.story-quote{font:clamp(1.5rem,2.8vw,2.28rem)/1.36 Georgia,"Times New Roman",serif;color:#2F5042;margin:18px 0}
+.story-note{font-size:.85rem;color:#53655B;max-width:610px}
+.story-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.story-point{padding:17px;border:1px solid rgba(56,88,68,.16);border-radius:17px;background:rgba(255,254,250,.56)}
+.story-point strong{display:block;font-size:.91rem;margin-bottom:5px}
+.story-point span{color:#52665A;font-size:.85rem}
+.pause-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.pause-options{display:grid;gap:10px}
+.pause-option{min-height:60px;width:100%;padding:12px 15px;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);display:flex;align-items:center;gap:13px;text-align:left;cursor:pointer}
+.pause-option:hover,.pause-option[aria-pressed="true"]{border-color:#91AA94;background:#EDF3EB}
+.pause-option .small-icon{height:34px;width:34px;flex:0 0 34px;border-radius:50%;background:var(--sage);display:grid;place-items:center}
+.pause-result{min-height:160px;padding:23px;border-radius:22px;background:#E0E9DE;border:1px solid #CFDDCE;color:#345044}
+.pause-result p:last-child{margin-bottom:0}
+.pause-result strong{display:block;margin-bottom:7px}
+.text-link{font-weight:700;text-underline-offset:4px}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.topic-card{padding:23px;border:1px solid var(--line);border-radius:21px;background:var(--surface);min-height:185px;display:flex;flex-direction:column}
+.topic-card h3{font-size:1.1rem;margin:0 0 9px}
+.topic-card p{font-size:.92rem;color:var(--muted);margin-bottom:15px}
+.topic-card a{margin-top:auto;font-weight:750;font-size:.9rem;text-underline-offset:4px}
+
+.womens-section{background:#F1ECE7;padding:78px 0}
+.womens-intro{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:end;margin-bottom:30px}
+.womens-note{padding:20px 22px;border:1px solid #D9CFC7;border-radius:20px;background:#FBF8F2;color:#59625A;font-size:.9rem}
+.womens-note strong{display:block;color:#344B40;margin-bottom:6px}
+.women-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.women-card{background:#FFFEFA;border:1px solid #DED9D1;border-radius:22px;overflow:hidden}
+.women-card-head{display:flex;gap:15px;align-items:flex-start;padding:21px 22px 15px}
+.women-symbol{height:43px;width:43px;flex:0 0 43px;border-radius:15px;background:#E7E2EA;display:grid;place-items:center;color:#4E5B51;font-size:1.25rem}
+.women-card:nth-child(3n+2) .women-symbol{background:#E8EBDD}
+.women-card:nth-child(3n) .women-symbol{background:#F0E2D8}
+.women-card h3{margin:0 0 5px;font-size:1.12rem}
+.women-kicker{font-size:.78rem;color:#69786D;font-weight:700;letter-spacing:.02em}
+.women-card>p{padding:0 22px;margin:0 0 16px;color:#536258;font-size:.91rem}
+.women-card details{margin:0 14px 14px;background:#F8F7F1;border-color:#E3E2D9;border-radius:15px;padding:12px 14px}
+.women-card details+details{margin-top:-7px}
+.women-card summary{font-size:.88rem;color:#304A3C}
+.women-card details p,.women-card details ul{font-size:.88rem;color:#56665C;margin:10px 0 0;padding-left:19px}
+.women-card details p{padding-left:0}
+.women-card details li{margin:5px 0}
+.evidence-note{margin-top:22px;background:#E2EAE0;border:1px solid #C9D8C8;padding:21px 23px;border-radius:20px}
+.evidence-note h3{font-family:Georgia,serif;font-weight:500;font-size:1.55rem;margin:0 0 9px;color:#29483A}
+.evidence-note p{color:#4D6155;font-size:.92rem;margin-bottom:10px}
+.evidence-note p:last-child{margin-bottom:0}
+.claim-check{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.claim-item{border:1px solid #D5DFD3;border-radius:15px;padding:15px;background:#F8FAF5}
+.claim-item strong{display:block;color:#2F4B3D;margin-bottom:5px}
+.claim-item span{font-size:.87rem;color:#55685B}
+.appointment-prep{margin-top:18px;padding:22px;border-radius:20px;background:#E8E4ED;border:1px solid #D8D0E0}
+.appointment-prep h3{font-size:1.18rem;margin:0 0 7px}
+.appointment-prep p{font-size:.91rem;color:#58635D}
+.appointment-prep ul{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;padding-left:20px;color:#46594E;font-size:.9rem;margin-bottom:15px}
+.source-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px;font-size:.85rem}
+.source-row a{color:#315B49;text-underline-offset:3px;font-weight:700}
+.medical-boundary{font-size:.82rem;color:#617168;margin-top:13px}
+@media(max-width:850px){
+  .womens-intro{grid-template-columns:1fr}
+  .women-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .womens-section{padding:58px 0}
+  .claim-check,.appointment-prep ul{grid-template-columns:1fr}
+  .women-card-head{padding:18px 17px 13px}
+  .women-card>p{padding-inline:17px}
+  .women-card details{margin-inline:11px}
+  .evidence-note,.appointment-prep{padding:18px}
+}
+
+.support-section{background:#23483C;color:#F7F4EC;padding:74px 0}
+.support-section h2{color:#FFFEFA}
+.support-section .lead{color:#D3E0D5}
+.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;margin-top:28px}
+.support-card{background:#F8F6EF;color:var(--ink);padding:25px;border-radius:22px}
+.support-card h3{font-size:1.18rem;margin-bottom:8px}
+.support-card p{color:#506259;font-size:.93rem}
+.support-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-top:1px solid #D8DED4}
+.support-row:first-of-type{margin-top:10px}
+.support-row strong{font-size:1.05rem}
+.support-row span{display:block;font-size:.82rem;color:#5A6A61}
+.support-number{display:inline-flex;min-width:105px;min-height:45px;align-items:center;justify-content:center;border-radius:999px;background:#244B3C;color:#fff;text-decoration:none;font-weight:800}
+.support-number.light{background:#fff;border:1px solid #C9D5C8;color:#244B3C}
+.support-boundary{font-size:.87rem;color:#D7E5D9;margin-top:20px;max-width:780px}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.trust-card{padding:23px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+.trust-card strong{display:block;margin-bottom:8px}
+.trust-card p{font-size:.9rem;color:var(--muted);margin-bottom:0}
+.faq-list{max-width:850px;display:grid;gap:9px}
+details{border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:16px 18px}
+summary{font-weight:750;cursor:pointer}
+details p{color:var(--muted);margin:12px 0 0;font-size:.94rem}
+.footer{background:#EAE9E0;padding:44px 0 28px}
+.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:25px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{font-size:.87rem;color:#40574A;text-underline-offset:4px}
+.footer-disclaimer{max-width:820px;border-top:1px solid #CFD6CC;padding-top:20px;font-size:.83rem;color:#53645A}
+.prototype-note{font-size:.8rem;color:#65766C;margin-top:10px}
+@media(max-width:1000px){
+ .hero-grid,.story-grid,.pause-grid,.support-grid{grid-template-columns:1fr}
+ .hero-scene{min-height:360px;max-width:720px;width:100%;margin-inline:auto}
+ .choice-grid{grid-template-columns:repeat(3,1fr)}
+ .topic-grid{grid-template-columns:repeat(2,1fr)}
+ .main-nav{display:none;position:absolute;left:0;right:0;top:76px;background:var(--paper);padding:16px 22px 20px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:17px}
+ .main-nav.is-open{display:flex}
+ .menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+}
+@media(max-width:650px){
+ .wrap{width:calc(100% - 28px)}
+ .support-ribbon-inner{align-items:flex-start}
+ .support-line{font-size:.82rem}
+ .support-links a{min-height:38px}
+ .header-inner{height:66px;gap:10px}
+ .main-nav{top:66px}
+ .brand{font-size:.95rem}
+ .brand-mark{height:35px;width:35px}
+ .quick-exit{padding-inline:10px;min-height:40px;font-size:.78rem}
+ .language-select{max-width:104px;min-height:40px;padding-inline:9px;font-size:.82rem}
+ .hero{padding:40px 0 42px}
+ h1{font-size:clamp(2.55rem,12vw,3.45rem)}
+ .hero-copy{font-size:1.03rem}
+ .hero-actions{align-items:stretch;flex-direction:column}
+ .hero-actions .button{width:100%}
+ .hero-scene{min-height:280px;border-radius:27px}
+ .section{padding:56px 0}
+ .choice-grid{grid-template-columns:1fr 1fr;gap:9px}
+ .choice-card{min-height:160px;padding:15px;gap:10px}
+ .choice-card:last-child{grid-column:span 2}
+ .story-section{padding:54px 0}
+ .story-points{grid-template-columns:1fr}
+ .topic-grid{grid-template-columns:1fr}
+ .topic-card{min-height:150px}
+ .trust-grid{grid-template-columns:1fr}
+ .support-section{padding:57px 0}
+ .support-row{align-items:flex-start}
+ .support-number{min-width:88px}
+ .footer-links{gap:13px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* Additional activity modules — static, local-only prototype components. */
+.activity-section{padding:78px 0;background:#F4F1E8}
+.activity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.activity-card{background:#FFFEFA;border:1px solid #D7DED4;border-radius:23px;padding:23px;min-width:0}
+.activity-card h3{font:500 1.55rem/1.2 Georgia,serif;margin:7px 0 10px;color:#203B32}
+.activity-card p{font-size:.93rem;color:#586B62}
+.activity-label{font-size:.74rem;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:#637E6C}
+.activity-card textarea{width:100%;min-height:118px;resize:vertical;border:1px solid #C9D4C8;border-radius:14px;padding:13px;background:#fff;color:#203B32;font:inherit;line-height:1.55}
+.activity-card textarea:focus-visible,.activity-card button:focus-visible{outline:3px solid #1D5E9B;outline-offset:3px}
+.activity-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:11px}
+.tool-button{min-height:43px;border-radius:999px;border:1px solid #B9CBB9;background:#23483C;color:#fff;padding:9px 16px;font-weight:750;cursor:pointer}
+.tool-button.secondary{background:#fff;color:#23483C}
+.tool-output{margin-top:13px;padding:15px 16px;border-radius:15px;background:#EDF3EB;border:1px solid #D4E0D2;color:#40564C;font-size:.9rem;min-height:54px}
+.tool-output p:last-child{margin-bottom:0}
+.garden-bed{min-height:105px;border-radius:17px;background:linear-gradient(180deg,#EDF3E9,#DCE8DB);display:flex;align-items:center;justify-content:center;gap:14px;padding:15px;margin-top:13px;flex-wrap:wrap}
+.garden-seed{font-size:2rem;line-height:1}
+.garden-plant{font-size:2.2rem;display:inline-grid;place-items:center;min-width:35px}
+.puzzle-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:14px}
+.puzzle-tile{min-height:68px;border:1px solid #C9D4C8;border-radius:15px;background:#EAF0E7;color:#345546;font-size:1.65rem;font-weight:700;cursor:pointer}
+.puzzle-tile[aria-pressed="true"],.puzzle-tile.is-matched{background:#DCE8DB;border-color:#8EAA91}
+.puzzle-tile.is-matched{cursor:default}
+.palette{display:flex;gap:10px;flex-wrap:wrap;margin:13px 0}
+.palette-button{width:43px;height:43px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px #A7B6A9;cursor:pointer}
+.palette-button[aria-pressed="true"]{outline:3px solid #1D5E9B;outline-offset:3px}
+.studio-preview{min-height:76px;border-radius:16px;padding:16px;border:1px solid #D7DED4;background:#DCE8DB;color:#30483C}
+.safe-scene-preview{min-height:110px;border-radius:16px;padding:20px;margin-top:14px;background:linear-gradient(145deg,#E7F0E6,#D9E7DE);border:1px solid #D1DED0;display:flex;flex-direction:column;justify-content:center;gap:8px;color:#355443}
+.safe-scene-preview span{font-size:2rem}
+.safe-scene-preview strong{font:500 1.2rem Georgia,serif}
+.night-card{background:#243D36;color:#F8F5EC;border-radius:23px;padding:25px;margin-top:17px}
+.night-card h3{color:#FFFDF7}.night-card p{color:#DBE5DA}.night-actions{display:flex;gap:10px;flex-wrap:wrap}.night-card a{color:#fff;text-underline-offset:4px;font-weight:750}
+.community-section{padding:72px 0;background:#E9ECE5}
+.community-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.community-card{background:#FFFEFA;border:1px solid #D5DDD2;border-radius:20px;padding:22px}
+.community-card ul{padding-left:20px;color:#53665A;font-size:.92rem}
+.community-card li{margin:7px 0}
+.notice{padding:14px 16px;border-left:3px solid #8DA98D;background:#F0F3EA;color:#52645A;border-radius:0 13px 13px 0;font-size:.9rem}
+@media(max-width:850px){.activity-grid,.community-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.activity-section,.community-section{padding:56px 0}.activity-card{padding:18px}.puzzle-tile{min-height:58px}.night-card{padding:20px}}
+
+
+.resource-section{padding:72px 0;background:#F5F2E9}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:25px}
+.resource-card{background:#FFFEFA;border:1px solid #D7DED4;border-radius:20px;padding:22px;display:flex;flex-direction:column}
+.resource-card h3{font:500 1.45rem/1.2 Georgia,serif;margin:6px 0 9px}
+.resource-card p{font-size:.91rem;color:#586B62}
+.resource-card a{font-weight:750;font-size:.9rem;text-underline-offset:4px;margin-top:auto}
+.resource-note{font-size:.82rem;color:#617168;margin-top:18px}
+@media(max-width:850px){.resource-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.resource-section{padding:56px 0}.resource-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="support-ribbon" role="region" aria-label="Immediate support information">
+  <div class="wrap support-ribbon-inner">
+    <div class="support-line">
+      <strong>Need a real person now?</strong>
+      <span>Free, 24/7 support in India:</span>
+      <a href="tel:14416" aria-label="Call Tele-MANAS at 14416">Tele-MANAS 14416</a>
+    </div>
+    <div class="support-links">
+      <a href="tel:112" aria-label="Call emergency services at 112">Emergency 112</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="The platform home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 4.2c3.6 4.4 6 7.8 6 11.6a6 6 0 1 1-12 0c0-3.8 2.4-7.2 6-11.6Z" fill="#E2BD6E"/><path d="M16 11v10M11.5 25h9" stroke="#315B48" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      <span>A Place to Begin</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#choose">Explore</a>
+      <a href="#experiences">Gentle activities</a>
+      <a href="#topics">Guides</a>
+      <a href="#support">Find support</a>
+      <a href="#womens-health">Women's health</a>
+      <a href="#promises">Our promises</a>
+    </nav>
+
+    <div class="header-actions">
+      <label for="language" class="sr-only" style="position:absolute;left:-10000px">Preview language</label>
+      <select class="language-select" id="language" aria-label="Preview language">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी · draft</option>
+        <option value="mr">मराठी · draft</option>
+      </select>
+      <button class="quick-exit" id="quick-exit" type="button" aria-label="Quick exit to a blank page">Quick exit</button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" data-i18n="eyebrow">A little space for the next step</div>
+      <h1 data-i18n="heroTitle">You don't have to figure everything out today.</h1>
+      <p class="hero-copy" data-i18n="heroCopy">A quiet place to understand what you're feeling, find one small next step, and connect with real support when you need it.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#choose" data-i18n="heroPrimary">Find a small next step <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="#support" data-i18n="heroSecondary">Find support from a person</a>
+        <a class="button button-quiet" href="#story" data-i18n="heroQuiet">I'd rather just look around</a>
+      </div>
+      <p class="hero-footnote">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" aria-hidden="true"><path d="M12 3.2 19 6v5.5c0 4.6-3 7.7-7 9.3-4-1.6-7-4.7-7-9.3V6l7-2.8Z" stroke="#577666" stroke-width="1.6"/><path d="m8.7 12.1 2.1 2.1 4.6-4.6" stroke="#577666" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="privacy">No account is needed to explore. Private tools should explain how they store information before you use them.</span>
+      </p>
+      <p class="intro-boundary">This platform offers information and help navigation. It is not therapy, diagnosis or an emergency service.</p>
+    </div>
+
+    <div class="hero-scene" role="img" aria-label="A gentle illustrated garden path, open window and a small warm firefly light">
+      <svg class="scene-svg" viewBox="0 0 660 470" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="sceneBg" x1="330" y1="0" x2="330" y2="470" gradientUnits="userSpaceOnUse"><stop stop-color="#EAF0E7"/><stop offset="1" stop-color="#D3E2DE"/></linearGradient>
+          <radialGradient id="lightGlow"><stop stop-color="#FFF4C3" stop-opacity=".95"/><stop offset="1" stop-color="#FFF4C3" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="516" cy="105" r="72" fill="#F0E4C9" opacity=".8"/>
+        <path d="M0 275C105 218 194 233 278 273c77 37 156 27 220-5 61-31 115-28 162-4v206H0V275Z" fill="#BED1BE"/>
+        <path d="M0 332c97-39 185-23 271 18 84 40 165 32 234 2 61-26 105-24 155-5v128H0V332Z" fill="#9ABAA0"/>
+        <path d="M0 390c108-46 188-19 268 20 93 45 171 32 247 7 55-18 97-19 145-5v89H0v-111Z" fill="#6F987E"/>
+        <path d="M154 470c31-62 71-96 122-122 51-26 78-49 100-92 25-49 57-71 111-96" stroke="#F3E9D5" stroke-width="18" stroke-linecap="round"/>
+        <path d="M154 470c31-62 71-96 122-122 51-26 78-49 100-92 25-49 57-71 111-96" stroke="#D5C8A9" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 12"/>
+        <ellipse cx="312" cy="344" rx="24" ry="9" fill="#E8DDC9"/><ellipse cx="355" cy="291" rx="20" ry="8" fill="#E8DDC9"/><ellipse cx="397" cy="235" rx="17" ry="6" fill="#E8DDC9"/>
+        <g opacity=".95">
+          <path d="M68 370c-17-31-8-56 12-69-2 27 5 44 19 57-7-28 2-48 22-60 4 27-1 48-17 61 20-8 37-5 51 6-22 19-52 23-87 5Z" fill="#6D9678"/>
+          <path d="M556 365c-11-25-5-44 11-57 0 20 7 36 21 47-5-22 2-40 19-49 3 23-2 39-16 50 18-6 32-4 44 6-20 17-45 18-79 3Z" fill="#6B9276"/>
+          <path d="M102 407c-8-20-4-35 8-46 1 17 6 28 17 38-4-17 2-32 15-39 2 18-2 31-13 40 15-4 25-2 34 6-16 13-36 14-61 1Z" fill="#557F68"/>
+        </g>
+        <!-- A tiny light character: decorative, not an interactive persona -->
+        <circle cx="466" cy="170" r="67" fill="url(#lightGlow)"/>
+        <g transform="translate(448 151)">
+          <path d="M17 14c-8-11-19-12-24-5-5 8 2 17 12 17 6 0 10-4 12-12Z" fill="#F6DFA0"/>
+          <path d="M22 14c8-11 19-12 24-5 5 8-2 17-12 17-6 0-10-4-12-12Z" fill="#E8C778"/>
+          <ellipse cx="20" cy="21" rx="6.5" ry="11" fill="#496E54"/>
+          <circle cx="18" cy="19" r="1.5" fill="#FFF9E7"/><circle cx="23" cy="19" r="1.5" fill="#FFF9E7"/>
+          <path d="M20 31v8M13 39h14" stroke="#496E54" stroke-width="2" stroke-linecap="round"/>
+          <path d="M14 7c-7-9-14-9-19-7M26 7c7-9 14-9 19-7" stroke="#6C8C6E" stroke-width="1.8" stroke-linecap="round"/>
+        </g>
+        <g fill="#FFF9E8" opacity=".85"><circle cx="137" cy="103" r="2"/><circle cx="223" cy="74" r="1.5"/><circle cx="352" cy="115" r="2"/><circle cx="581" cy="75" r="1.5"/></g>
+      </svg>
+      <span class="scene-caption">A light can show one step. You choose the path.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="choose">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Start wherever you are</div>
+      <h2 data-i18n="chooseTitle">What would help right now?</h2>
+      <p class="lead">There is no correct order. Choose a card, or skip this section and explore on your own.</p>
+    </div>
+    <div class="choice-grid">
+      <a class="choice-card" href="#pause"><span class="choice-icon" aria-hidden="true">◌</span><strong>I feel overwhelmed</strong><small>Find a gentle, optional pause</small></a>
+      <a class="choice-card" href="#experiences"><span class="choice-icon" aria-hidden="true">✳</span><strong>My mind will not slow down</strong><small>Try a private thought-unload tool</small></a>
+      <a class="choice-card" href="#support"><span class="choice-icon" aria-hidden="true">⌂</span><strong>I'm looking for professional support</strong><small>Understand where to start</small></a>
+      <a class="choice-card" href="#supporter"><span class="choice-icon" aria-hidden="true">♡</span><strong>I'm supporting someone</strong><small>Find ways to listen and help</small></a>
+      <a class="choice-card" href="#womens-health"><span class="choice-icon" aria-hidden="true">✿</span><strong>I have a women's health question</strong><small>Explore information without a diagnosis quiz</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="story-section" id="story">
+  <div class="wrap story-grid">
+    <div class="story-art" role="img" aria-label="Kiran, a tiny firefly light beside a stepping stone on a garden path">
+      <svg viewBox="0 0 390 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="196" cy="140" r="110" fill="#F0E9D9"/>
+        <path d="M0 203c80-39 144-15 210 10 69 26 124 12 180-5v72H0v-77Z" fill="#B9CFBB"/>
+        <path d="M0 242c75-26 132-13 192 8 69 24 132 9 198-6v36H0v-38Z" fill="#85AA8E"/>
+        <path d="M42 280c37-45 75-58 108-77 37-21 55-42 69-70" stroke="#F8F1E3" stroke-width="13" stroke-linecap="round"/>
+        <ellipse cx="148" cy="217" rx="17" ry="6" fill="#D6C9AB"/><ellipse cx="196" cy="177" rx="14" ry="5" fill="#D6C9AB"/>
+        <circle cx="245" cy="91" r="47" fill="#F5DE9C" opacity=".24"/>
+        <g transform="translate(227 68)">
+          <path d="M16 10C7 0-4 0-8 8c-4 7 2 14 11 14 6 0 10-4 13-12Z" fill="#F5DFA2"/>
+          <path d="M23 10C32 0 43 0 47 8c4 7-2 14-11 14-6 0-10-4-13-12Z" fill="#E8C674"/>
+          <ellipse cx="20" cy="18" rx="6.5" ry="10" fill="#466E53"/>
+          <circle cx="18" cy="16" r="1.3" fill="#FFF9E6"/><circle cx="22" cy="16" r="1.3" fill="#FFF9E6"/>
+          <path d="M20 28v8M14 36h12" stroke="#466E53" stroke-width="1.8" stroke-linecap="round"/>
+        </g>
+        <g stroke="#6E9878" stroke-width="2" stroke-linecap="round"><path d="M88 218c-13-20-11-34-2-45 5 16 13 25 24 30"/><path d="M301 215c-7-18-3-31 8-40 0 14 5 24 15 32"/></g>
+      </svg>
+    </div>
+    <div class="story-copy">
+      <div class="eyebrow">A small fictional story</div>
+      <h2>You do not need to see the whole way.</h2>
+      <p class="story-quote">“Some days, the path is hard to see. The little light does not ask you to explain why. It does not hurry you or choose your direction. It simply helps you notice one possible next step.”</p>
+      <p class="story-note">Kiran is a provisional name for an original visual guide. Kiran is not a person, therapist, chatbot or AI companion. This story is fictional, never a testimonial, and you can ignore the character without missing any information.</p>
+      <div class="story-points">
+        <div class="story-point"><strong>Pause</strong><span>You can take your time. Nothing needs to be completed.</span></div>
+        <div class="story-point"><strong>Choose</strong><span>You decide what feels useful and what to skip.</span></div>
+        <div class="story-point"><strong>Connect</strong><span>Human support is available beyond this website.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pause">
+  <div class="wrap pause-grid">
+    <div>
+      <div class="eyebrow">An optional moment</div>
+      <h2>A small pause, only if it helps.</h2>
+      <p class="lead">You do not have to do an exercise. Some people prefer looking around, some prefer moving, and some would rather skip this part.</p>
+      <p class="small">Choose one option. It is not timed, scored or saved.</p>
+    </div>
+    <div>
+      <div class="pause-options" role="group" aria-label="Choose an optional pause">
+        <button class="pause-option" type="button" data-pause="look" aria-pressed="false"><span class="small-icon" aria-hidden="true">◉</span><span>Look around and notice three ordinary things.</span></button>
+        <button class="pause-option" type="button" data-pause="steady" aria-pressed="false"><span class="small-icon" aria-hidden="true">▱</span><span>Notice one steady object in the room, if you want to.</span></button>
+        <button class="pause-option" type="button" data-pause="move" aria-pressed="false"><span class="small-icon" aria-hidden="true">↗</span><span>Move your hands, feet or shoulders in a comfortable way.</span></button>
+        <button class="pause-option" type="button" data-pause="skip" aria-pressed="false"><span class="small-icon" aria-hidden="true">→</span><span>Skip this. I'd rather keep exploring.</span></button>
+      </div>
+      <div class="pause-result" id="pause-result" role="status" aria-live="polite">
+        <strong>Nothing to prove here.</strong>
+        <p>Choose an option only if it feels useful. You can stop at any time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="activity-section" id="experiences">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Optional, low-pressure experiences</div>
+      <h2>Choose something small. Or skip everything.</h2>
+      <p class="lead">These are creative and reflective activities, not treatment. They do not assess you, diagnose you or measure progress. You can leave at any time.</p>
+    </div>
+    <div class="activity-grid">
+      <article class="activity-card" aria-labelledby="unload-title">
+        <div class="activity-label">Private reflection · no account</div>
+        <h3 id="unload-title">Overthinking unload</h3>
+        <p>Write a thought in your own words. You do not need to share it. The prompts below can help you look at it from a little distance.</p>
+        <label for="thought-input"><strong>One thought on your mind (optional)</strong></label>
+        <textarea id="thought-input" placeholder="Write only what feels okay to write. You can also leave this blank."></textarea>
+        <div class="activity-actions">
+          <button class="tool-button" id="thought-prompts" type="button">Show reflection prompts</button>
+          <button class="tool-button secondary" id="thought-clear" type="button">Clear note</button>
+        </div>
+        <div class="tool-output" id="thought-output" role="status" aria-live="polite">You are in control. This text stays in this open page and is not sent or saved by this prototype.</div>
+      </article>
+
+      <article class="activity-card" aria-labelledby="garden-title">
+        <div class="activity-label">A small visual activity</div>
+        <h3 id="garden-title">The little garden</h3>
+        <p>Add a small marker for something ordinary you did today: getting out of bed, drinking water, taking a break, asking for help, or simply making it through a moment.</p>
+        <div class="garden-bed" id="garden-bed" role="group" aria-label="Your temporary garden"><span class="garden-seed" aria-hidden="true">·</span><span class="garden-seed" aria-hidden="true">·</span><span class="garden-seed" aria-hidden="true">·</span></div>
+        <div class="activity-actions"><button class="tool-button" id="plant-seed" type="button">Add a small marker</button><button class="tool-button secondary" id="garden-reset" type="button">Start again</button></div>
+        <div class="tool-output" id="garden-output" role="status" aria-live="polite">No goals or streaks here. This is only a visual pause.</div>
+      </article>
+
+      <article class="activity-card" aria-labelledby="puzzle-title">
+        <div class="activity-label">Untimed puzzle · no score</div>
+        <h3 id="puzzle-title">Puzzle sanctuary</h3>
+        <p>Find the matching pairs. There is no timer, grade or leaderboard. You can reset or stop whenever you like.</p>
+        <div class="puzzle-board" id="puzzle-board" role="group" aria-label="A four-card matching puzzle">
+          <button class="puzzle-tile" type="button" data-card="0" aria-label="Hidden card 1" aria-pressed="false">·</button>
+          <button class="puzzle-tile" type="button" data-card="1" aria-label="Hidden card 2" aria-pressed="false">·</button>
+          <button class="puzzle-tile" type="button" data-card="2" aria-label="Hidden card 3" aria-pressed="false">·</button>
+          <button class="puzzle-tile" type="button" data-card="3" aria-label="Hidden card 4" aria-pressed="false">·</button>
+        </div>
+        <div class="activity-actions"><button class="tool-button secondary" id="puzzle-reset" type="button">Shuffle and restart</button></div>
+        <div class="tool-output" id="puzzle-output" role="status" aria-live="polite">Turn over two cards to look for a pair.</div>
+      </article>
+
+      <article class="activity-card" aria-labelledby="studio-title">
+        <div class="activity-label">Creative space · optional</div>
+        <h3 id="studio-title">A colour for this moment</h3>
+        <p>Choose a colour that fits the moment, or choose one simply because you like it. Add a word or a short note if useful.</p>
+        <div class="palette" role="group" aria-label="Choose a background colour">
+          <button class="palette-button" type="button" data-tone="#DCE8DB" aria-label="Sage" aria-pressed="true" style="background:#DCE8DB"></button>
+          <button class="palette-button" type="button" data-tone="#DFE9E8" aria-label="Soft blue" aria-pressed="false" style="background:#DFE9E8"></button>
+          <button class="palette-button" type="button" data-tone="#EAE4EF" aria-label="Lilac" aria-pressed="false" style="background:#EAE4EF"></button>
+          <button class="palette-button" type="button" data-tone="#EAD8CB" aria-label="Clay" aria-pressed="false" style="background:#EAD8CB"></button>
+        </div>
+        <div class="studio-preview" id="studio-preview">A little room for this moment.</div>
+        <label for="studio-note"><strong>Optional words</strong></label>
+        <textarea id="studio-note" placeholder="A colour, a word, a line, or nothing at all." style="margin-top:8px;min-height:82px"></textarea>
+        <div class="activity-actions"><button class="tool-button secondary" id="studio-clear" type="button">Clear words</button></div>
+      </article>
+
+      <article class="activity-card" aria-labelledby="safe-corner-title">
+        <div class="activity-label">A quiet visual space</div>
+        <h3 id="safe-corner-title">Your safe corner</h3>
+        <p>Choose a simple scene for this open page. It is not a safety guarantee or a treatment exercise. You can change it or leave it at any time.</p>
+        <div class="activity-actions" role="group" aria-label="Choose a visual scene">
+          <button class="tool-button secondary" type="button" data-scene="garden" aria-pressed="true">Garden</button>
+          <button class="tool-button secondary" type="button" data-scene="window" aria-pressed="false">Window</button>
+          <button class="tool-button secondary" type="button" data-scene="lamplight" aria-pressed="false">Lamplight</button>
+        </div>
+        <div class="safe-scene-preview" id="safe-scene-preview" role="status" aria-live="polite"><span aria-hidden="true">❀</span><strong>A little garden, in still light.</strong></div>
+      </article>
+
+      <article class="activity-card" aria-labelledby="journey-title">
+        <div class="activity-label">Short, optional pathways</div>
+        <h3 id="journey-title">A guided next step</h3>
+        <p>Choose the subject you want to explore. The steps are suggestions, not a test or a required sequence.</p>
+        <label for="journey-select"><strong>What would you like help finding?</strong></label>
+        <select id="journey-select" class="language-select" style="display:block;max-width:100%;width:100%;margin-top:8px">
+          <option value="thoughts">When thoughts keep looping</option>
+          <option value="sleep">When nights are difficult</option>
+          <option value="support">When I want to ask for help</option>
+          <option value="health">When I have a women's health question</option>
+        </select>
+        <div class="activity-actions"><button class="tool-button" id="journey-show" type="button">Show a possible path</button></div>
+        <div class="tool-output" id="journey-output" role="status" aria-live="polite">You can skip any step, leave this page or choose a different route.</div>
+      </article>
+    </div>
+    <aside class="night-card" id="night-help" aria-labelledby="night-title">
+      <div class="activity-label" style="color:#C7D9CA">For a difficult night</div>
+      <h3 id="night-title">You can keep this page simple.</h3>
+      <p>Choose a familiar, low-demand activity, look at one steady object, or skip the activities and contact a person. If you may be in immediate danger, use local emergency support.</p>
+      <div class="night-actions"><a href="#pause">Open the optional pause</a><a href="#support">Find human support</a><a href="#womens-health">Women's health information</a></div>
+    </aside>
+    <p class="prototype-note">Prototype privacy note: the interactive tools use temporary browser memory only. They do not submit content, call an AI service, use analytics or save notes after the page is closed. Verify the deployed build and network traffic before making a production privacy claim.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="topics">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Clear information, without judgement</div>
+      <h2>Find words. Understand options.</h2>
+      <p class="lead">Short, plain-language guides should explain what is known, what is uncertain and when talking with a professional may be useful.</p>
+    </div>
+    <div class="topic-grid">
+      <article class="topic-card"><h3>Overthinking and worry</h3><p>Understand repetitive thoughts and explore gentle ways to respond to them.</p><a href="#promises">How our information is reviewed →</a></article>
+      <article class="topic-card"><h3>Stress and panic</h3><p>Learn about common stress responses and find options for getting support.</p><a href="#support">Find support →</a></article>
+      <article class="topic-card"><h3>Sleep and difficult nights</h3><p>Explore sleep information and a private diary concept, if you choose to use one.</p><a href="#promises">Read our privacy principles →</a></article>
+      <article class="topic-card"><h3>Relationships and family pressure</h3><p>Find words for difficult conversations, boundaries and asking for help.</p><a href="#supporter">Support someone close →</a></article>
+      <article class="topic-card"><h3>First appointment</h3><p>Prepare questions, understand professional roles and decide what you want to ask.</p><a href="#support">See how to begin →</a></article>
+      <article class="topic-card" id="supporter"><h3>Supporting someone</h3><p>Offer practical support, listen without pressure and respect their choices.</p><a href="#support">Find real support →</a></article>
+      <article class="topic-card"><h3>Women's health</h3><p>Explore PMOS, periods, pelvic pain, menopause and the connection between physical and emotional wellbeing.</p><a href="#womens-health">Visit the women's health corner →</a></article>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="resource-section" id="library">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">A small, carefully chosen shelf</div>
+      <h2>Read at your own pace.</h2>
+      <p class="lead">Start with reliable public information and structured self-help resources. This prototype links out to the original publishers; it does not copy their articles, books or media.</p>
+    </div>
+    <div class="resource-grid">
+      <article class="resource-card"><div class="activity-label">Evidence-informed guides</div><h3>Understanding mental health</h3><p>Plain-language information about mental health, wellbeing and getting support.</p><a href="https://www.who.int/health-topics/mental-health" target="_blank" rel="noopener noreferrer">WHO mental health topic →</a></article>
+      <article class="resource-card"><div class="activity-label">Self-help workbooks</div><h3>Structured exercises</h3><p>Free worksheets and workbooks on worry, anxiety, low mood, self-esteem and related topics. Choose only what feels appropriate.</p><a href="https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself" target="_blank" rel="noopener noreferrer">CCI self-help resources →</a></article>
+      <article class="resource-card"><div class="activity-label">Support and explanation</div><h3>Finding the right words</h3><p>Guidance on symptoms, support options, rights and practical next steps.</p><a href="https://www.mind.org.uk/information-support/" target="_blank" rel="noopener noreferrer">Mind information and support →</a></article>
+    </div>
+    <p class="resource-note">Future audio/video shelf: publish only licensed or original content with captions, transcripts, clear authorship and review dates. No autoplay; audio stays off until selected. No treatment claims from testimonials or creator content.</p>
+  </div>
+</section>
+
+<section class="womens-section" id="womens-health">
+  <div class="wrap">
+    <div class="womens-intro">
+      <div class="section-head" style="margin-bottom:0">
+        <div class="eyebrow">A dedicated women's health corner</div>
+        <h2>Your body, cycle and mind deserve to be heard.</h2>
+        <p class="lead">Hormones, periods, sleep, pain and mental wellbeing can overlap. You deserve clear information without blame, myths or pressure to “fix” your body.</p>
+      </div>
+      <aside class="womens-note">
+        <strong>Start with what you notice, not a label.</strong>
+        These topics are information pages, not symptom checkers or diagnoses. Similar symptoms can have different causes. A qualified health professional can help work out what is relevant to you.
+      </aside>
+    </div>
+
+    <div class="women-grid">
+      <article class="women-card" id="pmos">
+        <div class="women-card-head">
+          <span class="women-symbol" aria-hidden="true">✿</span>
+          <div>
+            <div class="women-kicker">HORMONES · METABOLIC · REPRODUCTIVE HEALTH</div>
+            <h3>PMOS (formerly PCOS)</h3>
+          </div>
+        </div>
+        <p>PMOS is the new international name for the condition previously called polycystic ovary syndrome. It can affect menstrual cycles, androgen-related symptoms, metabolic health, fertility and emotional wellbeing.</p>
+        <details>
+          <summary>What might someone notice?</summary>
+          <p>Periods that are irregular or absent, acne, excess facial or body hair, scalp hair thinning, difficulty with ovulation or fertility, and metabolic concerns can occur. Not everyone has the same symptoms. It is not simply an “ovarian cyst” condition.</p>
+        </details>
+        <details>
+          <summary>What may help?</summary>
+          <ul>
+            <li>A clinician-led assessment and an individual plan based on the person's priorities and symptoms.</li>
+            <li>Regular physical activity and a sustainable, balanced eating pattern can support metabolic health. Benefits can occur without weight loss.</li>
+            <li>Different medical options may be considered for cycle irregularity, androgen-related symptoms, metabolic risks or fertility goals.</li>
+            <li>Emotional wellbeing, sleep, body image and anxiety/depression deserve attention too.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>When should someone seek an assessment?</summary>
+          <p>Consider a clinician visit for persistently irregular or absent periods, troublesome hair or skin changes, fertility concerns, or metabolic health questions. The right evaluation depends on age, symptoms and medical history.</p>
+        </details>
+      </article>
+
+      <article class="women-card">
+        <div class="women-card-head">
+          <span class="women-symbol" aria-hidden="true">〰</span>
+          <div>
+            <div class="women-kicker">PELVIC PAIN · MENSTRUAL HEALTH</div>
+            <h3>Endometriosis</h3>
+          </div>
+        </div>
+        <p>A long-term condition where tissue similar to the lining of the womb grows elsewhere. Pain can affect periods, daily activity, bowel or bladder function, sex and fertility.</p>
+        <details>
+          <summary>What might someone notice?</summary>
+          <p>Period pain that disrupts everyday life, ongoing pelvic pain, pain during or after sex, cyclical bowel or urinary symptoms, or fertility difficulties can be reasons to ask about endometriosis.</p>
+        </details>
+        <details>
+          <summary>What may help?</summary>
+          <ul>
+            <li>Assessment by a gynaecology clinician; symptom relief and investigations can often proceed in parallel.</li>
+            <li>Depending on the person, options may include pain management, hormonal treatment, specialist pelvic-pain support or surgery.</li>
+            <li>A normal ultrasound does not always rule out endometriosis. Persistent symptoms still deserve follow-up.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>When to seek help</summary>
+          <p>Seek assessment when period-related pain affects work, study, relationships or daily life, or when there is persistent pelvic pain, pain with sex, or cyclical bowel/bladder symptoms.</p>
+        </details>
+      </article>
+
+      <article class="women-card">
+        <div class="women-card-head">
+          <span class="women-symbol" aria-hidden="true">◒</span>
+          <div>
+            <div class="women-kicker">CYCLE · BLEEDING · PAIN</div>
+            <h3>Heavy or painful periods</h3>
+          </div>
+        </div>
+        <p>Very heavy, unpredictable or painful bleeding is not something a person should have to silently tolerate. Possible causes include fibroids, adenomyosis, PMOS, endometriosis and bleeding disorders.</p>
+        <details>
+          <summary>What may be a sign to discuss?</summary>
+          <p>Changing period products every 1–2 hours, bleeding longer than 7 days, large clots, bleeding through clothes or bedding, pain that disrupts life, tiredness or shortness of breath are reasons to discuss heavy bleeding with a clinician.</p>
+        </details>
+        <details>
+          <summary>What may help?</summary>
+          <ul>
+            <li>Track dates, bleeding pattern, pain and how symptoms affect daily life, if tracking feels comfortable.</li>
+            <li>A clinician may recommend a blood count and other tests based on the history and examination.</li>
+            <li>Depending on the cause and preferences, management may include medicines, hormonal options, treatment for iron deficiency or a specialist procedure.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Do fibroids always need treatment?</summary>
+          <p>No. Fibroids are common and non-cancerous; some cause no symptoms. Treatment is considered when symptoms or complications need attention, and options depend on location, size, symptoms and pregnancy plans.</p>
+        </details>
+      </article>
+
+      <article class="women-card">
+        <div class="women-card-head">
+          <span class="women-symbol" aria-hidden="true">☾</span>
+          <div>
+            <div class="women-kicker">CYCLE-LINKED MOOD · MENTAL HEALTH</div>
+            <h3>PMS and PMDD</h3>
+          </div>
+        </div>
+        <p>Premenstrual symptoms can include physical changes and mood shifts. PMDD is a more severe condition that can seriously affect daily life and relationships.</p>
+        <details>
+          <summary>What might someone notice?</summary>
+          <p>Symptoms may follow a repeating pattern before a period and improve after bleeding begins. PMDD can involve intense mood symptoms, irritability, anxiety or low mood. A pattern across cycles matters more than one difficult day.</p>
+        </details>
+        <details>
+          <summary>What may help?</summary>
+          <ul>
+            <li>A symptom diary across cycles may help a clinician understand timing and impact.</li>
+            <li>Depending on assessment, evidence-based options can include psychological support/CBT, lifestyle support, hormonal treatment or prescribed medicines.</li>
+            <li>There is no need to dismiss severe symptoms as “just hormones”.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>When to get help</summary>
+          <p>Seek support when cyclical symptoms disrupt work, study, relationships or daily life. Severe depression or thoughts of self-harm need prompt human support; use the emergency/support routes on this site if immediate help is needed.</p>
+        </details>
+      </article>
+
+      <article class="women-card">
+        <div class="women-card-head">
+          <span class="women-symbol" aria-hidden="true">☼</span>
+          <div>
+            <div class="women-kicker">MIDLIFE · SLEEP · MOOD · MEMORY</div>
+            <h3>Perimenopause and menopause</h3>
+          </div>
+        </div>
+        <p>Hormonal changes around menopause can affect periods, temperature regulation, sleep, mood, concentration, memory, joints and vaginal or urinary comfort.</p>
+        <details>
+          <summary>What might someone notice?</summary>
+          <p>Hot flushes, night sweats, sleep disruption, anxiety or low mood, brain fog, memory or concentration changes, joint aches, vaginal dryness or urinary symptoms can occur. Experiences vary widely.</p>
+        </details>
+        <details>
+          <summary>What may help?</summary>
+          <ul>
+            <li>Discuss symptoms and health history with a clinician; options should reflect personal risks and preferences.</li>
+            <li>Hormone replacement therapy (HRT) can help some menopause symptoms after an individual benefits-and-risks discussion.</li>
+            <li>Menopause-specific CBT may help with some hot flushes, sleep problems and mood symptoms.</li>
+            <li>Vaginal or urinary symptoms have their own treatment options; ask rather than silently tolerate them.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>What about memory?</summary>
+          <p>Memory and concentration changes are reported during perimenopause and menopause, and sleep disruption can contribute. New, sudden, worsening or function-limiting cognitive symptoms should not automatically be attributed to hormones; seek an appropriate medical assessment.</p>
+        </details>
+      </article>
+
+      <article class="women-card">
+        <div class="women-card-head">
+          <span class="women-symbol" aria-hidden="true">◇</span>
+          <div>
+            <div class="women-kicker">ENERGY · TEMPERATURE · CYCLES</div>
+            <h3>Thyroid conditions</h3>
+          </div>
+        </div>
+        <p>Thyroid hormones affect many body systems. Underactive thyroid can be associated with fatigue, feeling cold, dry skin, hair thinning, menstrual changes and low mood.</p>
+        <details>
+          <summary>What should people know?</summary>
+          <p>These symptoms are common and can have many causes. Symptoms alone cannot confirm a thyroid condition; a clinician may use blood tests and medical history.</p>
+        </details>
+        <details>
+          <summary>What may help?</summary>
+          <p>When hypothyroidism is confirmed, it is commonly treated with prescribed thyroid hormone replacement and follow-up blood tests. Do not start or change thyroid medicine or iodine supplements without medical advice.</p>
+        </details>
+      </article>
+
+      <article class="women-card">
+        <div class="women-card-head">
+          <span class="women-symbol" aria-hidden="true">＋</span>
+          <div>
+            <div class="women-kicker">FATIGUE · HEAVY BLEEDING · NUTRITION</div>
+            <h3>Iron deficiency and anaemia</h3>
+          </div>
+        </div>
+        <p>Heavy menstrual bleeding can contribute to iron deficiency and anaemia. Low iron can affect energy and physical functioning, but fatigue has many possible causes.</p>
+        <details>
+          <summary>What might someone notice?</summary>
+          <p>Persistent tiredness, reduced exercise tolerance, dizziness, palpitations or shortness of breath can be reasons to seek medical assessment. Symptoms alone do not confirm iron deficiency.</p>
+        </details>
+        <details>
+          <summary>What may help?</summary>
+          <p>A clinician may recommend blood tests, investigate the cause of blood loss and advise iron treatment or dietary changes as appropriate. Avoid high-dose iron supplements without assessment; excess iron can be harmful.</p>
+        </details>
+      </article>
+
+      <article class="women-card">
+        <div class="women-card-head">
+          <span class="women-symbol" aria-hidden="true">♡</span>
+          <div>
+            <div class="women-kicker">PREGNANCY · POSTPARTUM · EMOTIONAL HEALTH</div>
+            <h3>Postpartum depression and anxiety</h3>
+          </div>
+        </div>
+        <p>Depression or anxiety can begin during pregnancy or after birth. It is a health condition, not a personal failure and not a sign that someone does not love their baby.</p>
+        <details>
+          <summary>What might someone notice?</summary>
+          <p>Persistent sadness, anxiety, hopelessness, guilt, difficulty sleeping even when there is a chance to rest, loss of interest or difficulty managing everyday tasks can need professional attention.</p>
+        </details>
+        <details>
+          <summary>What may help?</summary>
+          <ul>
+            <li>Tell an obstetrician, family doctor or mental-health professional; screening should connect to proper assessment and follow-up.</li>
+            <li>Psychological therapies and, when clinically appropriate, medication can be considered with pregnancy and breastfeeding status included in the discussion.</li>
+            <li>Practical help, rest and supportive relationships can complement care, but should not replace it when symptoms are significant.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>When is urgent help needed?</summary>
+          <p>Severe confusion, hallucinations, extreme agitation, inability to sleep for prolonged periods with unusual energy or beliefs, or thoughts of harming oneself or the baby need urgent medical help. Do not wait for a routine appointment.</p>
+        </details>
+      </article>
+    </div>
+
+    <div class="evidence-note">
+      <div class="eyebrow">Research spotlight · PMOS and midlife brain health</div>
+      <h3>What does the memory research actually say?</h3>
+      <p>A 2024 observational study in the CARDIA cohort found that participants with a history of PCOS had lower average scores on some midlife tests involving attention, verbal learning and memory. A smaller MRI subgroup also showed differences in a white-matter measure. This is an association from one cohort, not proof that PMOS causes memory loss, dementia or brain damage. It cannot predict what will happen to an individual.</p>
+      <p>Research is still developing. The useful message is not to panic: take memory concerns seriously, discuss sleep, mood, metabolic health and other possible contributors with a clinician, and avoid treating one study as a personal forecast.</p>
+      <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11383880/" target="_blank" rel="noopener">Read the 2024 CARDIA cohort paper</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/42119588/" target="_blank" rel="noopener">Read the 2026 PMOS naming consensus</a></p>
+    </div>
+
+    <div class="evidence-note" style="background:#F4EDE6;border-color:#E4D7CC">
+      <div class="eyebrow">Social-media claim check</div>
+      <h3>Does every food or habit “balance PMOS hormones”?</h3>
+      <p>No single food, tea, seed, supplement or exercise has been shown to “balance hormones” or cure PMOS. The international guideline supports sustainable healthy eating and physical activity for general and metabolic health, and states that there is no one diet composition proven superior for PMOS outcomes.</p>
+      <div class="claim-check">
+        <div class="claim-item"><strong>Walking and strength activity</strong><span>Can be part of regular physical activity and support metabolic health. Choose activity that fits ability and preference.</span></div>
+        <div class="claim-item"><strong>Whole foods, fibre and protein</strong><span>Can contribute to a balanced eating pattern. They are not a stand-alone hormone treatment.</span></div>
+        <div class="claim-item"><strong>Vitamin D, magnesium, flax or green tea</strong><span>Do not present these as proven PMOS hormone-balancing treatments. Supplements should be discussed when deficiency, diet or another clinical reason is relevant.</span></div>
+        <div class="claim-item"><strong>Sleep and stress support</strong><span>Important for overall wellbeing. They do not replace assessment or evidence-based treatment for PMOS.</span></div>
+      </div>
+      <p style="margin-top:13px">Weight stigma and restrictive “PCOS diets” can cause harm. The goal is individualised health support, not blame, weight pressure or expensive supplement routines.</p>
+      <p><a href="https://www.monash.edu/medicine/mchri/pcos/guideline" target="_blank" rel="noopener">International PMOS guideline and resources</a> · <a href="https://www.who.int/news-room/fact-sheets/detail/polycystic-ovary-syndrome" target="_blank" rel="noopener">WHO overview (older PCOS terminology)</a></p>
+    </div>
+
+    <div class="appointment-prep">
+      <h3>Preparing for a women's health appointment</h3>
+      <p>You do not need to remember everything. If it feels useful, write down a few points before the visit:</p>
+      <ul>
+        <li>When symptoms began and how often they happen</li>
+        <li>Period dates, bleeding pattern and pain</li>
+        <li>Sleep, mood, energy and memory changes</li>
+        <li>Medicines and supplements you currently take</li>
+        <li>How symptoms affect work, study, relationships or daily life</li>
+        <li>Your questions, priorities and pregnancy plans if relevant</li>
+      </ul>
+      <p>Ask: “What else could explain these symptoms?”, “What tests are actually useful for me?”, “What are the benefits, risks and alternatives for each option?”, and “When should I come back?”</p>
+      <a class="button button-secondary" href="#support">Find a route to professional support</a>
+    </div>
+
+    <p class="medical-boundary">Medical content in this section is research-informed draft material, not personal medical advice. It requires review by a qualified women's-health clinician and native-language reviewers before publication. The site must not diagnose, recommend individual medicines or promise symptom relief.</p>
+  </div>
+</section>
+
+<section class="support-section" id="support">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#C5D8C8">A route to real people</div>
+    <h2>Support can happen beyond this website.</h2>
+    <p class="lead">You do not have to use this platform to find help. These public services are separate from us.</p>
+    <div class="support-grid">
+      <div class="support-card">
+        <h3>Tele-MANAS</h3>
+        <p>Free, confidential, round-the-clock mental-health support in India. Check current service details through official government information.</p>
+        <div class="support-row"><div><strong>14416</strong><span>National toll-free helpline</span></div><a class="support-number" href="tel:14416">Call 14416</a></div>
+        <div class="support-row"><div><strong>1800-89-14416</strong><span>Alternate toll-free number · verify before release</span></div><a class="support-number light" href="tel:18008914416">Call number</a></div>
+      </div>
+      <div class="support-card">
+        <h3>Immediate emergency</h3>
+        <p>For an emergency requiring police, fire, medical or other urgent response in India, contact the national emergency response system.</p>
+        <div class="support-row"><div><strong>112</strong><span>Pan-India emergency number</span></div><a class="support-number" href="tel:112">Call 112</a></div>
+        <p class="small" style="margin-top:13px">This site cannot receive emergency alerts or dispatch help.</p>
+      </div>
+    </div>
+    <p class="support-boundary">This platform is not an emergency response service. If a number, service detail or link changes, the information must be verified by a named owner before it is updated here.</p>
+  </div>
+</section>
+
+
+<section class="community-section" id="community">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">A future, carefully moderated space</div>
+      <h2>Connection should come with care.</h2>
+      <p class="lead">A peer community is a future product area, not a live feature in this prototype. It should be built only after moderation, safeguarding, escalation and privacy operations are ready.</p>
+    </div>
+    <div class="community-grid">
+      <article class="community-card">
+        <h3>Possible support circles</h3>
+        <ul><li>Overthinking and racing thoughts</li><li>Anxiety and panic experiences</li><li>Loneliness, grief and relationship strain</li><li>Burnout and emotional exhaustion</li><li>Women's health and mental wellbeing</li><li>Small everyday wins and practical support</li></ul>
+      </article>
+      <article class="community-card">
+        <h3>Safety before launch</h3>
+        <ul><li>Pseudonyms and no requirement to disclose personal history</li><li>Trained human moderation, report and block tools</li><li>Content warnings and limits on graphic material</li><li>No diagnosis, coercion, harassment or dangerous advice</li><li>No popularity ranking, engagement feed or follower counts</li><li>Clear crisis routes and a documented escalation policy</li></ul>
+      </article>
+    </div>
+    <p class="notice" style="margin-top:16px"><strong>Not live yet:</strong> There is no public posting, direct messaging, user account, peer matching or live listener service in this prototype. Stories must be consented, moderated and clearly distinguished from clinical guidance.</p>
+  </div>
+</section>
+
+<section class="section" id="promises">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Trust should be visible</div>
+      <h2>Our promises should be easy to check.</h2>
+      <p class="lead">The platform should show its sources, reviewers, privacy practices and limits in plain language. Trust is something to demonstrate, not just claim.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card"><strong>Named review</strong><p>Every health information page should show its author, qualified reviewer, sources, last-reviewed date and next review date.</p></div>
+      <div class="trust-card"><strong>Privacy in plain language</strong><p>Explain what is stored, where it is stored, how to delete it and whether anything is shared before inviting someone to use a private tool.</p></div>
+      <div class="trust-card"><strong>Clear boundaries</strong><p>No diagnosis, medication advice, treatment promises, crisis-response claims or AI best-friend experience.</p></div>
+    </div>
+    <p class="prototype-note">Prototype notice: this page is a static concept. Its draft language, crisis details, privacy claims and health content require review before public release.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="questions">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">A few things to know</div><h2>Clear answers, without pressure.</h2></div>
+    <div class="faq-list">
+      <details><summary>Do I have to tell the website what happened to me?</summary><p>No. The first visit does not ask for a personal history. You can read, explore or leave without explaining anything.</p></details>
+      <details><summary>Is this therapy or a diagnosis service?</summary><p>No. The platform shares reviewed information and helps people find support. It does not diagnose, provide therapy or replace professional care.</p></details>
+      <details><summary>Will the little character talk to me?</summary><p>No. Kiran is a small optional illustration used to make navigation friendlier. It does not chat, collect information or remember you.</p></details>
+      <details><summary>Can I leave at any time?</summary><p>Yes. You can close the page whenever you choose. The Quick exit button replaces this page with a blank page, but it does not erase browser history, network logs or activity recorded by a shared device.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✧</span><span>The platform</span></a>
+      <div class="footer-links"><a href="#choose">Explore</a><a href="#experiences">Gentle activities</a><a href="#topics">Guides</a><a href="#library">Resource shelf</a><a href="#support">Find support</a><a href="#womens-health">Women's health</a><a href="#community">Community plan</a><a href="#promises">Our promises</a></div>
+    </div>
+    <p class="footer-disclaimer">This is an early India-first mental-wellbeing and women's-health information and help-navigation prototype. It is not therapy, diagnosis or emergency response. All clinical content, translations, privacy statements, character symbolism and crisis resources require appropriate clinician, native-speaker, lived-experience and accessibility review before launch. Government helpline information must be rechecked at release.</p>
+  </div>
+</footer>
+
+<script>
+const languageCopy = {
+  en: {
+    eyebrow:"A little space for the next step",
+    heroTitle:"You don't have to figure everything out today.",
+    heroCopy:"A quiet place to understand what you're feeling, find one small next step, and connect with real support when you need it.",
+    heroPrimary:"Find a small next step →",
+    heroSecondary:"Find support from a person",
+    heroQuiet:"I'd rather just look around",
+    privacy:"No account is needed to explore. Private tools should explain how they store information before you use them.",
+    chooseTitle:"What would help right now?"
+  },
+  hi: {
+    eyebrow:"अगले छोटे कदम के लिए थोड़ी-सी जगह",
+    heroTitle:"आज आपको सब कुछ समझना ज़रूरी नहीं है।",
+    heroCopy:"यहाँ आप अपनी भावनाओं को समझने, एक छोटा अगला कदम चुनने और ज़रूरत पड़ने पर असली मदद से जुड़ने की शुरुआत कर सकते हैं।",
+    heroPrimary:"एक छोटा कदम चुनें →",
+    heroSecondary:"किसी व्यक्ति से मदद पाएँ",
+    heroQuiet:"मैं बस देखना चाहता/चाहती हूँ",
+    privacy:"यहाँ देखने के लिए खाते की ज़रूरत नहीं है। निजी टूल इस्तेमाल करने से पहले बताया जाना चाहिए कि जानकारी कहाँ रखी जाएगी।",
+    chooseTitle:"अभी आपको किस तरह की मदद उपयोगी लगेगी?"
+  },
+  mr: {
+    eyebrow:"पुढच्या छोट्या पावलासाठी थोडीशी जागा",
+    heroTitle:"आज तुम्हाला सगळं समजून घ्यायची गरज नाही.",
+    heroCopy:"तुम्हाला काय वाटत आहे हे समजून घेण्यासाठी, एक छोटं पुढचं पाऊल निवडण्यासाठी आणि गरज असल्यास प्रत्यक्ष मदतीशी जोडण्यासाठी ही शांत जागा आहे.",
+    heroPrimary:"एक छोटं पाऊल निवडा →",
+    heroSecondary:"एखाद्या व्यक्तीकडून मदत घ्या",
+    heroQuiet:"मला फक्त पाहायचं आहे",
+    privacy:"इथे पाहण्यासाठी खाते आवश्यक नाही. खाजगी साधने वापरण्यापूर्वी माहिती कुठे साठवली जाते हे स्पष्ट केले पाहिजे.",
+    chooseTitle:"आत्ता तुम्हाला कोणती मदत उपयोगी वाटेल?"
+  }
+};
+const langSelect = document.getElementById("language");
+langSelect.addEventListener("change", (event) => {
+  const lang = event.target.value;
+  const copy = languageCopy[lang] || languageCopy.en;
+  document.documentElement.lang = lang;
+  for (const [key, value] of Object.entries(copy)) {
+    const node = document.querySelector(`[data-i18n="${key}"]`);
+    if (node) node.textContent = value;
+  }
+});
+const pauseMessages = {
+  look: ["Look around, only if you want to.", "Notice three ordinary things you can see. They do not have to be special. You can stop whenever you like."],
+  steady: ["Notice something steady, if that feels okay.", "You might look at a wall, a table or another ordinary object. There is no need to close your eyes or focus inward."],
+  move: ["Choose a comfortable movement.", "You could gently move your hands, feet or shoulders, or do nothing at all. There is no right way to do this."],
+  skip: ["Skipping is a valid choice.", "You can continue exploring. Nothing has been missed."]
+};
+document.querySelectorAll("[data-pause]").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-pause]").forEach((item) => item.setAttribute("aria-pressed","false"));
+    button.setAttribute("aria-pressed","true");
+    const msg = pauseMessages[button.dataset.pause];
+    const output = document.getElementById("pause-result");
+    output.innerHTML = `<strong>${msg[0]}</strong><p>${msg[1]}</p>`;
+  });
+});
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("main-nav");
+menuToggle.addEventListener("click", () => {
+  const open = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", String(!open));
+  nav.classList.toggle("is-open", !open);
+  menuToggle.textContent = open ? "Menu" : "Close";
+});
+nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
