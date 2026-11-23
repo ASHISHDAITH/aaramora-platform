@@ -141,3 +141,7 @@
 ## Automated test execution
 - [ ] GitHub Actions content-checks workflow runs on pushes and pull requests.
 - [ ] `python -m unittest discover -s tests -p 'check_*.py' -v` passes before release.
+
+
+## Inline script syntax
+- [ ] Every inline JavaScript block on index, wellbeing, relationships and reading-library pages passes `node --check` in CI.

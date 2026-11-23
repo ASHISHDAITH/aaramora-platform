@@ -72,7 +72,7 @@ Never commit real user messages, journals, screening answers, health records, pa
 
 
 ## Automated checks
-GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on pushes and pull requests. The checks cover core page routes, wellbeing content structure, women's-health consistency, all 40 relationship concepts, optional quiz/privacy requirements, support links and internal anchors.
+GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on pushes and pull requests. The checks cover core page routes, wellbeing content structure, women's-health consistency, all 40 relationship concepts, optional quiz/privacy requirements, support links, internal anchors and inline JavaScript syntax on all four site pages.
 
 
 ## Brand film

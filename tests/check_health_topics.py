@@ -1,3 +1,6 @@
+import shutil
+import subprocess
+import tempfile
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
@@ -15,6 +18,29 @@ class Audit(HTMLParser):
             self.ids.append(a["id"])
         if tag == "a" and a.get("href", "").startswith("#"):
             self.anchors.append(a["href"][1:])
+
+
+class InlineScriptAudit(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.scripts = []
+        self._current = None
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "script":
+            attrs = dict(attrs)
+            script_type = attrs.get("type", "").lower()
+            if "src" not in attrs and (not script_type or script_type in {"text/javascript", "application/javascript", "module"}):
+                self._current = {"type": script_type, "parts": []}
+
+    def handle_data(self, data):
+        if self._current is not None:
+            self._current["parts"].append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "script" and self._current is not None:
+            self.scripts.append(self._current)
+            self._current = None
 
 class WebsiteHealthContentTests(unittest.TestCase):
     @classmethod
@@ -91,6 +117,39 @@ class WebsiteHealthContentTests(unittest.TestCase):
         ids = set(self.well_audit.ids)
         self.assertEqual(len(self.well_audit.ids), len(ids))
         self.assertFalse([a for a in self.well_audit.anchors if a not in ids])
+
+
+    def test_inline_javascript_parses_on_all_site_pages(self):
+        node = shutil.which("node")
+        if not node:
+            self.skipTest("Node.js is not installed in this test environment")
+
+        page_names = ["index.html", "wellbeing.html", "relationships.html", "reading-library.html"]
+        checked_scripts = 0
+        for page_name in page_names:
+            html = (ROOT / page_name).read_text(encoding="utf-8")
+            parser = InlineScriptAudit()
+            parser.feed(html)
+            for index, script in enumerate(parser.scripts, start=1):
+                source = "".join(script["parts"])
+                if not source.strip():
+                    continue
+                suffix = ".mjs" if script["type"] == "module" else ".js"
+                temp_path = None
+                try:
+                    with tempfile.NamedTemporaryFile("w", encoding="utf-8", suffix=suffix, delete=False) as temp:
+                        temp.write(source)
+                        temp_path = temp.name
+                    result = subprocess.run([node, "--check", temp_path], capture_output=True, text=True, check=False)
+                    self.assertEqual(
+                        result.returncode, 0,
+                        f"{page_name} inline script #{index} failed node --check:\\n{result.stderr or result.stdout}"
+                    )
+                    checked_scripts += 1
+                finally:
+                    if temp_path:
+                        Path(temp_path).unlink(missing_ok=True)
+        self.assertGreater(checked_scripts, 0, "No inline JavaScript blocks were checked")
 
     def test_relationship_internal_anchors_resolve(self):
         ids = set(self.rel_audit.ids)
