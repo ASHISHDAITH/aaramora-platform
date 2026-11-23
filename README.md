@@ -1,4 +1,4 @@
-# Aaramora Platform
+# AARAMORA Platform
 
 A privacy-first mental-wellbeing and women's-health information and help-navigation platform for India.
 
@@ -42,8 +42,8 @@ No npm install, database, account, remote fonts, analytics, AI API or backend is
 - `docs/HEALTH_TOPIC_CONTENT_STANDARD.md` — shared authoring rules for all health topics.
 - `docs/RESEARCH_SOURCES.md` — source and licensing register.
 - `docs/QA_CHECKLIST.md`, `docs/QA_RESULTS.md` and `docs/VALIDATION_NOTES.md` — quality gates, completed checks and remaining reviews.
-- `docs/DEPLOYMENT.md` — current hosting status and the steps required to connect and deploy.
-- `docs/AARAMORA_BRAND_FILM_ASSETS.md` — export manifest, file hashes and binary upload status.
+- `docs/DEPLOYMENT.md` — live Vercel deployment status, verification notes and the remaining Git-integration step.
+- `docs/AARAMORA_BRAND_FILM_ASSETS.md` — export manifest, verified file hashes and committed media paths.
 - `tests/check_relationships.py` and `tests/check_health_topics.py` — automated static content and safety checks.
 - `research/benchmark50.csv` — 50-site benchmark candidate list (not a verified rank order).
 - `research/mental-health-website-benchmark-report.md` and `research/visual-report.html` — research and visual concept report.
@@ -77,13 +77,20 @@ GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on
 
 ## Brand film
 
-The first AARAMORA six-scene brand-film exports have been reviewed. See [docs/AARAMORA_BRAND_FILM_ASSETS.md](docs/AARAMORA_BRAND_FILM_ASSETS.md) for scene order, verified technical metadata, website usage guidance and local upload commands. The intended unique files are the 16:9 website master and 9:16 Instagram edit; the supplied `CLEAN_NO_ADDED_AUDIO` file is byte-identical to the landscape master and still contains AAC audio, so it is not a separate silent export.
+The first AARAMORA six-scene brand-film exports are reviewed and committed in Git:
+- `assets/brand-film/aaramora-master-16x9.mp4` — 16:9 website master.
+- `assets/brand-film/aaramora-instagram-9x16.mp4` — 9:16 Instagram edit.
 
-**Binary status:** the MP4 files themselves have not been committed yet. Place them under `assets/brand-film/` from a local clone using the PowerShell commands in the manifest. The current GitHub connection can commit text documentation but does not expose a direct binary upload/release operation for these large MP4s.
+The supplied `CLEAN_NO_ADDED_AUDIO` file is byte-identical to the landscape master and still contains AAC audio, so it is not a separate silent export. The homepage player uses the landscape master and offers the vertical edit as a separate link. See [the export manifest](docs/AARAMORA_BRAND_FILM_ASSETS.md).
 
+## Live deployment
+
+**Production URL:** https://aaramora-platform.vercel.app
+
+The current public static deployment is marked READY by Vercel. It contains the four HTML pages and three SVG assets. The MP4 files remain versioned in GitHub and are delivered from the repository CDN URLs. This first deployment was uploaded directly to Vercel from commit `243b51188437d79a901b560df2e21dc573a8f793`; GitHub-to-Vercel automatic deployment is not yet connected, so later Git pushes do not publish automatically. See [deployment notes](docs/DEPLOYMENT.md).
 
 ## Current verification
 
 The latest GitHub Actions content-check run passed on the current repository history. It executed 19 Python static tests, including Node.js syntax validation of inline JavaScript on all four site pages. This is not a browser, screen-reader, clinical or production security certification.
 
-The site has not yet been deployed to a live URL. See `docs/DEPLOYMENT.md` for the current Vercel access blocker and release path.
+The current production deployment is live at the URL above. A final browser smoke test from a normal visitor session is still required. Deployment does not constitute clinical, safeguarding, accessibility or security approval.
