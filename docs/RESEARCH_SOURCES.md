@@ -255,3 +255,36 @@ See [READING_LIBRARY_EXPANSION.md](READING_LIBRARY_EXPANSION.md) for the complet
   - Use responsible, non-sensational public communication, avoid harmful detail and include help-seeking routes. Apply to site articles, campaign posts, stories and other public copy that discusses suicide.
 - Samaritans, *Media guidelines for reporting suicide*: https://www.samaritans.org/about-samaritans/media-guidelines/media-guidelines-reporting-suicide/
   - Additional editorial guidance for content likely to be read by vulnerable audiences.
+
+
+## Problem Bench and task-shared care models (checked 24 November 2026)
+
+- Chibanda et al. (2016), *Effect of a Primary Care-Based Psychological Intervention on Symptoms of Common Mental Disorders in Zimbabwe: A Randomized Clinical Trial*, JAMA. https://pubmed.ncbi.nlm.nih.gov/28027368/ ; https://jamanetwork.com/journals/jama/fullarticle/2594719
+  - 573 adults across 24 primary-care clinics were randomised. The Friendship Bench intervention included six individual problem-solving therapy sessions delivered by trained, supervised lay health workers, with optional peer-support sessions. At six months, the reported proportion with PHQ-9 >=11 was 13.7% versus 49.9% in enhanced usual care.
+  - AARAMORA's worksheet is inspired by a simple problem-definition/options/action/review sequence. It is not the Friendship Bench service, problem-solving therapy or an equivalent; the trial results must never be applied to a website worksheet.
+- Patel et al. (2017), *The Healthy Activity Programme (HAP), a lay counsellor-delivered brief psychological treatment for severe depression in primary care in India*, The Lancet. https://pubmed.ncbi.nlm.nih.gov/27988143/ ; https://pmc.ncbi.nlm.nih.gov/articles/PMC5236064/
+  - 495 adults were randomised in ten primary health centres in Goa. HAP was delivered by trained lay counsellors. At three months, remission was 147/230 (64%) versus 91/236 (39%) in enhanced usual care alone.
+  - AARAMORA's optional activity planning is not HAP or behavioural activation therapy and has no equivalent trial outcome.
+- Weobong et al. (2017), HAP 12-month follow-up: https://pubmed.ncbi.nlm.nih.gov/28898283/ ; https://pmc.ncbi.nlm.nih.gov/articles/PMC5595303/
+  - This follows the same human-delivered HAP intervention; it is not a digital intervention trial.
+
+## Culture, motivation and safety communication (checked 24 November 2026)
+
+- New Zealand Ministry of Health, *Te Whare Tapa Whā*: https://www.health.govt.nz/maori-health/maori-health-models/te-whare-tapa-wha
+  - Māori health model developed by Tā Mason Durie. Its dimensions are taha tinana (physical), taha hinengaro (mental/emotional), taha wairua (spiritual) and taha whānau (family/social). This is culturally situated; do not recast it as a generic AARAMORA four-part wellness model without Māori-informed collaboration and review.
+- Deci EL, Ryan RM (2000), *The “What” and “Why” of Goal Pursuits: Human Needs and the Self-Determination of Behavior.* https://doi.org/10.1207/S15327965PLI1104_01
+  - Describes autonomy, competence and relatedness as basic psychological needs relevant to motivation/self-regulation. This informs optional choice, clear small steps and visible human connection as design principles; it is not evidence that AARAMORA's features treat a condition.
+- WHO (2023), *Preventing suicide: a resource for media professionals, update 2023*: https://www.who.int/publications/i/item/9789240076846
+  - Use non-sensational, careful public communication. Avoid harmful detail and include appropriate help-seeking routes. Apply to suicide-related web articles, social posts, stories and other campaign copy.
+- Samaritans, *Media guidelines for reporting suicide*: https://www.samaritans.org/about-samaritans/media-guidelines/media-guidelines-reporting-suicide/
+  - Additional guidance for public and online content likely to be read by vulnerable audiences.
+
+## Official India help routes (checked 24 November 2026)
+
+- Directorate General of Health Services, National Mental Health Programme / Tele-MANAS: https://www.dghs.mohfw.gov.in/national-mental-health-programme.php
+  - Official page lists Tele-MANAS at 14416 and 1800-89-14416.
+- Ministry of Home Affairs, Emergency Response Support System (ERSS): https://www.mha.gov.in/emergency-response-support-system-erss
+  - MHA describes 112 as India's unified nationwide emergency response number.
+- Ministry of Women and Child Development, Women Helpline 181: https://www.wcd.gov.in/women/help
+  - Official WCD page describes a 24-hour toll-free service and currently states that it is operational in all States/UTs except West Bengal. Coverage and referral arrangements must not be represented as universal.
+- The source register `data/service-links.json` records the official source, displayed number, last editorial verification, next review date, caveat and editorial owner. The scheduled link checker only tests URL reachability; it does not verify staffing, service delivery or caller eligibility.
