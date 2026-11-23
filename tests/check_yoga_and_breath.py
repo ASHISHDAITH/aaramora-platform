@@ -47,7 +47,7 @@ class YogaAndBreathPageTests(unittest.TestCase):
             "pubmed.ncbi.nlm.nih.gov/23922209",
             "pubmed.ncbi.nlm.nih.gov/32423912",
             "pubmed.ncbi.nlm.nih.gov/37032928",
-            "pmc/articles/PMC11919030",
+            "pmc.ncbi.nlm.nih.gov/articles/PMC11919030",
         ):
             self.assertIn(url, self.page)
 
@@ -55,7 +55,7 @@ class YogaAndBreathPageTests(unittest.TestCase):
         for phrase in (
             "12 trials · 619 people",
             "19 studies · 1,080 people",
-            "13 studies (632 participants)",
+            "Thirteen studies (632 participants)",
             "2,341 participants in total",
             "active controls",
             "usual care",
