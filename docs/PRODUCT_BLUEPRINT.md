@@ -108,3 +108,14 @@ The dedicated `check-ins.html` page is a non-scored guide finder and preparation
 It does not reproduce or score PHQ-9, GAD-7, EPDS, DRSP, Greene Climacteric Scale, ECR-R or ECR-RS. Research and licensing analysis: `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md`; interaction and privacy requirements: `docs/CHECKIN_TOOL_SPEC.md`.
 
 Clinical screeners remain out of the current MVP because a validated instrument requires target-population and language suitability, clinical interpretation, follow-up and urgent-response ownership. A question set alone is not a care pathway.
+
+
+## Yoga and breath page (24 November 2026)
+
+A separate `yoga-and-breath.html` page provides an optional, evidence-honest introduction to comfortable breathing, gentle movement and guided rest. It links four systematic reviews/meta-analyses from 2013, 2021, 2023 and 2024, with the population, sample size, timeframe, comparator and evidence limitations stated separately. Study-level badges use descriptive evidence wording; no A/B/C/D grade is invented because the earlier rubric was not found in the current repository.
+
+The page's short practices are original prompts and have not been tested in clinical trials. They are not yoga therapy, a diagnosis, a treatment plan or a substitute for professional care. No forced breathwork, breath holds, rapid breathing, extreme poses, eyes-closed instruction or autoplay is included. Visitors may skip, change position, keep eyes open or stop.
+
+Hindi and Marathi guided-rest and comfortable-breathing scripts are kept as drafts in `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md`. They are not approved, recorded or published audio. Native-speaker, clinician and qualified yoga-professional review is required before recording. The evidence, rights and editorial register is `docs/YOGA_AND_BREATH_EVIDENCE.md`.
+
+The page is linked from the homepage and mental-wellbeing navigation. Before public launch, complete the clinical/yoga-safety review, Hindi/Marathi review, transcript/audio accessibility checks and next-review metadata.
