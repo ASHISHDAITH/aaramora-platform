@@ -66,7 +66,7 @@ header .nav{background:var(--paper)}
 .language-coverage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
 .language-coverage details{background:#FFFEFA;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
 .language-coverage summary{font-weight:800;color:#365647;cursor:pointer}
-.language-coverage p{margin:8px 0 0;font-size:.84rem;color:#5E6D63}
+.language-coverage p{margin:8px 0 0;font-size:.84rem;color:#5E6D63}.language-source-links a{font-weight:750;text-underline-offset:3px;margin-right:8px}
 .catalogue-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:14px;margin-top:14px}
 .catalogue-record{background:#FFFEFA;border:1px solid var(--line);border-radius:18px;padding:18px;min-width:0;display:flex;flex-direction:column;gap:9px}
 .catalogue-record h3{font:500 1.25rem/1.25 Georgia,serif;color:#29483A;margin:0}
@@ -268,7 +268,7 @@ header .nav{background:var(--paper)}
   const search = document.getElementById("library-search-input");
   const status = document.getElementById("library-search-status");
   if (!search || !status) return;
-  const entries = Array.from(document.querySelectorAll("article.card, article.book, article.catalog-card"));
+  const entries = Array.from(document.querySelectorAll("article.card, article.book, article.catalog-card, article.catalogue-record"));
   const normalize = (value) => value.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   search.addEventListener("input", () => {
     const query = normalize(search.value.trim());
@@ -332,7 +332,10 @@ header .nav{background:var(--paper)}
       '<p class="record-verified">Source record checked '+esc(dateLabel(record.verification.checkedAt))+' · Review due '+esc(dateLabel(record.verification.nextReviewAt))+'</p></article>';
   }
   function renderLanguageGroups(groups) {
-    els.groups.innerHTML = groups.map(group=>'<details><summary>'+esc(group.label)+' · '+group.languages.length+' languages</summary><p>'+esc(group.scope)+'</p><p>'+group.languages.map(esc).join(" · ")+'</p></details>').join("");
+    els.groups.innerHTML = groups.map(group=>{
+      const links=(group.sourceUrls||[]).filter(url=>/^https:\/\//i.test(url)).map(url=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Source</a>').join(" · ");
+      return '<details><summary>'+esc(group.label)+' · '+group.languages.length+' languages</summary><p>'+esc(group.scope)+'</p><p>'+group.languages.map(esc).join(" · ")+'</p>'+(links?'<p class="language-source-links">'+links+'</p>':"")+'</details>';
+    }).join("");
   }
   function populateLanguageSelect(groups) {
     groups.forEach(group=>{
