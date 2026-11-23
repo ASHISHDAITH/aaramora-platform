@@ -167,3 +167,19 @@
 - [ ] Each audio has an equivalent transcript, visible play/pause/stop, no autoplay and no tracking.
 - [ ] No audio file is described as published until the actual reviewed recording is committed and tested.
 - [ ] WHO stress-guide derivatives follow CC BY-NC-SA 3.0 IGO, attribution, translation disclaimer and no-endorsement/logo rules.
+
+
+## Multilingual Reading Library and preservation checks
+- [ ] All nine original reading-library sections remain available after catalogue additions.
+- [ ] The sticky header has an opaque paper background; no text bleeds through behind navigation.
+- [ ] Tele-MANAS 14416 and Emergency 112 are visually grouped on desktop and mobile.
+- [ ] Catalogue language filters include the 22 Eighth Schedule languages as a separately labelled constitutional group.
+- [ ] Additional Indian and global language filters are labelled as a growing discovery set, not a complete list of all languages.
+- [ ] NDLI language tags link to NDLI's current browse facets and its item-specific provider/access rules.
+- [ ] Heritage Scripture Server's 11 script options are described as scripts, not mislabelled as 11 translated languages.
+- [ ] GRETIL's scholarly-reference-only notice, non-commercial restriction and original-rightsholder copyright are retained.
+- [ ] BaniDB remains source-linked only; do not integrate its data until the current service terms and all obligations are reviewed and accepted.
+- [ ] Every catalogue record has source, access URL, rights statement, language scope, accessibility notes, verification date and next-review date.
+- [ ] Catalogue JSON passes `python scripts/check_catalogue.py` and all tests pass.
+- [ ] Weekly metadata-only link-check workflow runs; 403/429/5xx or transient network blocks are reported as inconclusive, not falsely marked dead.
+- [ ] The new catalogue never hides or replaces the original static book cards when JavaScript or the JSON file fails.
