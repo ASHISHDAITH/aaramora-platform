@@ -30,6 +30,9 @@
         "Tamil",
         "Telugu",
         "Urdu"
+      ],
+      "sourceUrls": [
+        "https://www.legislative.gov.in/static/uploads/2025/08/7af1daa22d65f9d04c00ae9b9aa5a799.pdf"
       ]
     },
     {
@@ -54,6 +57,10 @@
         "Ladakhi",
         "Rajasthani",
         "Chhattisgarhi"
+      ],
+      "sourceUrls": [
+        "https://www.ndl.iitkgp.ac.in/pa_browse/inLanguage",
+        "https://www.ndl.iitkgp.ac.in/ndl_se"
       ]
     },
     {
@@ -112,6 +119,10 @@
         "Xhosa",
         "Yoruba",
         "Zulu"
+      ],
+      "sourceUrls": [
+        "https://wikisource.org/",
+        "https://www.gutenberg.org/browse/languages"
       ]
     },
     {
@@ -123,6 +134,9 @@
         "Prakrit",
         "Tibetan",
         "Old Javanese"
+      ],
+      "sourceUrls": [
+        "https://gretil.sub.uni-goettingen.de/gretilbk.htm"
       ]
     }
   ],
@@ -184,7 +198,7 @@
         "Telugu",
         "Urdu"
       ],
-      "languageCoverageLabel": "The NDLI portal lists Indian-language content and browse facets including Assamese, Awadhi, Bengali, Bhojpuri, Bodo/Boro, Dogri, Garo, Gujarati, Hindi, Kannada, Kashmiri, Khasi, Konkani, Maithili, Malayalam, Manipuri/Meitei, Marathi, Mizo, Nepali, Odia, Punjabi, Sanskrit, Santali, Sinhala, Sindhi, Tamil, Telugu and Urdu. These are portal-level discovery terms; every book and edition remains item-specific.",
+      "languageCoverageLabel": "NDLI browse facets and its contents-in-Indian-languages page list overlapping Indian-language discovery categories, including Assamese, Awadhi, Bengali, Bhojpuri, Bodo/Boro, Dogri, Garo, Gujarati, Hindi, Kannada, Kashmiri, Khasi, Konkani, Maithili, Malayalam, Manipuri/Meitei, Marathi, Mizo, Nepali, Odia, Punjabi, Sanskrit, Santali, Sinhala, Sindhi, Tamil, Telugu and Urdu. These are portal-level discovery terms, not proof of a specific book in every language.",
       "readingLevel": "all-levels",
       "access": {
         "type": "discovery",
@@ -225,7 +239,7 @@
       "provenance": {
         "sourceName": "National Digital Library of India · IIT Kharagpur",
         "sourceUrl": "https://www.ndl.iitkgp.ac.in/ndl_ch",
-        "languageCoverageUrl": "https://www.ndl.iitkgp.ac.in/ndl_se",
+        "languageCoverageUrl": "https://www.ndl.iitkgp.ac.in/pa_browse/inLanguage",
         "policyUrl": "https://www.ndl.iitkgp.ac.in/faq"
       },
       "verification": {
