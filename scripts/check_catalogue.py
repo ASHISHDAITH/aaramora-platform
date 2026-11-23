@@ -96,7 +96,7 @@ def main() -> int:
     record_ids = set()
     required_record_fields = {
         "id", "recordType", "title", "editionTitle", "contributors", "traditions",
-        "subjects", "languages", "languageCoverageLabel", "readingLevel", "access",
+        "subjects", "languages", "scripts", "editorialReview", "languageCoverageLabel", "readingLevel", "access",
         "rights", "accessibility", "provenance", "verification",
     }
     for index, record in enumerate(records):
@@ -111,6 +111,16 @@ def main() -> int:
         require(isinstance(record["traditions"], list) and record["traditions"],
                 f"{label}.traditions must be a non-empty list")
         require(isinstance(record["languages"], list), f"{label}.languages must be a list")
+        require(isinstance(record["scripts"], list), f"{label}.scripts must be a list")
+        require(all(isinstance(script, str) and script.strip() for script in record["scripts"]),
+                f"{label}.scripts contains an empty/non-string value")
+        editorial = record["editorialReview"]
+        for field in ("nativeLanguage", "culturalContext", "accessibility", "note"):
+            require(field in editorial, f"{label}.editorialReview missing {field}")
+        for field in ("nativeLanguage", "culturalContext", "accessibility"):
+            require(editorial[field] in {"pending", "reviewed"},
+                    f"{label}.editorialReview.{field} must be pending or reviewed")
+        require(bool(editorial["note"].strip()), f"{label}.editorialReview.note is empty")
 
         access = record["access"]
         for field in ("type", "label", "url", "formats", "notes"):
@@ -146,7 +156,7 @@ def main() -> int:
 
     for marker in ('id="language-catalogue"', 'id="catalogue-language"', 'data/library.json'):
         require(marker in html, f"reading-library.html is missing {marker}")
-    print(f"Catalogue valid: {len(records)} source records, {len(groups)} language groups, "
+    print(f"Catalogue valid: {len(records)} catalogue entries, {len(groups)} language groups, "
           f"{len(scheduled['languages'])} scheduled Indian languages.")
     return 0
 
