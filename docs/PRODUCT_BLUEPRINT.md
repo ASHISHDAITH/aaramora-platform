@@ -119,3 +119,22 @@ The page's short practices are original prompts and have not been tested in clin
 Hindi and Marathi guided-rest and comfortable-breathing scripts are kept as drafts in `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md`. They are not approved, recorded or published audio. Native-speaker, clinician and qualified yoga-professional review is required before recording. The evidence, rights and editorial register is `docs/YOGA_AND_BREATH_EVIDENCE.md`.
 
 The page is linked from the homepage and mental-wellbeing navigation. Before public launch, complete the clinical/yoga-safety review, Hindi/Marathi review, transcript/audio accessibility checks and next-review metadata.
+
+
+## Problem Bench (24 November 2026)
+
+The existing `check-ins.html` page now includes a local-only, optional Problem Bench worksheet. The visitor may describe one situation, separate what may be within their influence from what may be outside their control, list options, identify support, choose one small action if safe, and select an optional review time. It can produce a local print view. It has no score, diagnosis, automated interpretation, account, server storage, analytics or AI call.
+
+The worksheet is **inspired by** a general problem-solving sequence, not the Friendship Bench programme, problem-solving therapy or a clinical intervention. The Friendship Bench RCT tested six individual sessions delivered by trained, supervised lay health workers plus optional peer support; its trial outcomes do not apply to AARAMORA. The Goa Healthy Activity Programme was also a structured, counsellor-delivered treatment, not an online activity planner. See `docs/PROBLEM_BENCH_SPEC.md` and `docs/YOGA_AND_BREATH_EVIDENCE.md`.
+
+The page keeps the existing guide finder, women's-health appointment planner and blank two-cycle log. Safety routes remain available before form completion. Clinical, safeguarding and native-language review are required before public launch.
+
+## WHO stress guide companion
+
+`docs/WHO_STRESS_GUIDE_ADAPTATION.md` contains an original AARAMORA stress-reflection companion draft and an adaptation/licensing plan for WHO's *Doing What Matters in Times of Stress*. It is not copied from or a translation of the WHO guide, not WHO material and not endorsed by WHO. A true translation/adaptation must follow WHO's CC BY-NC-SA terms, attribution, disclaimer and third-party rights requirements. The outreach letter in `docs/WHO_OUTREACH_DRAFT.md` is a draft and has not been sent.
+
+## Support-source register and governance
+
+`data/service-links.json` records official India routes, number formatting, source owners, last verification and next review. The weekly `.github/workflows/service-links.yml` checks URL reachability only; human review remains necessary for number, coverage and service details. The current WCD source states Women Helpline 181 is operational in all States/UTs except West Bengal.
+
+The content governance framework and public corrections log are in `docs/CONTENT_GOVERNANCE.md` and `docs/CORRECTIONS_LOG.md`. The clinical lead, yoga professional, safeguarding reviewer and Hindi/Marathi reviewers are not yet assigned; therefore no health page or practice is described as clinically approved.
