@@ -84,6 +84,6 @@ The first AARAMORA six-scene brand-film exports have been reviewed. See [docs/AA
 
 ## Current verification
 
-The latest GitHub Actions content-check run passed on the current repository history. It executed 18 Python static tests. This is not a browser, screen-reader, clinical or production security certification.
+The latest GitHub Actions content-check run passed on the current repository history. It executed 19 Python static tests, including Node.js syntax validation of inline JavaScript on all four site pages. This is not a browser, screen-reader, clinical or production security certification.
 
 The site has not yet been deployed to a live URL. See `docs/DEPLOYMENT.md` for the current Vercel access blocker and release path.

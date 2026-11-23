@@ -71,3 +71,9 @@ The checks above do not complete the following:
 - Lived-experience co-design and usability sessions.
 - Production privacy/security review and deployed network-traffic verification.
 - Final official verification of helplines and referral coverage immediately before launch.
+
+
+### Inline JavaScript validation added — 24 November 2026
+- Added an automated check that extracts each inline JavaScript block from `index.html`, `wellbeing.html`, `relationships.html` and `reading-library.html`, then runs Node.js `--check`.
+- GitHub Actions run [45266854917](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45266854917), commit `43483cadf081ffe7e630287ca2fd87faa27da95d`, completed successfully.
+- Result: **19 tests passed** (`Ran 19 tests`, `OK`), including the all-pages inline JavaScript syntax check.
