@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "lastReviewedAt": "2026-11-24",
-  "editorialPolicy": "AARAMORA is a multilingual discovery catalogue. It links to official sources and records language scope, access model, provenance, accessibility notes and item-level rights caveats. It does not mirror copyrighted books, scrape restricted sites, bypass access controls or treat a collection-level statement as a book-level licence. Language filters are discovery aids, not a guarantee that a linked source contains every listed language.",
+  "editorialPolicy": "AARAMORA is a multilingual discovery catalogue. It links to official sources and records language scope, access model, provenance, accessibility notes and item-level rights caveats. It does not mirror copyrighted books, scrape restricted sites, bypass access controls or treat a collection-level statement as a book-level licence. Language filters are discovery aids, not a guarantee that a linked source contains every listed language. Every edition-level record carries an explicit review state. A source page check is not a native-language, clinical, religious/cultural, legal or assistive-technology approval.",
   "languageGroups": [
     {
       "id": "india-scheduled",
@@ -246,6 +246,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -318,6 +325,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -384,6 +398,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -464,6 +485,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -538,6 +566,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -611,6 +646,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -677,6 +719,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -751,6 +800,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -827,6 +883,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -897,6 +960,13 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     },
     {
@@ -962,6 +1032,1128 @@
         "checkedAt": "2026-11-24",
         "nextReviewAt": "2027-02-24",
         "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "hi-ramcharitmanas-wikisource",
+      "recordType": "edition",
+      "title": "रामचरितमानस · Hindi Wikisource edition",
+      "editionTitle": "Book-length page index with export options · edition details to confirm on source",
+      "contributors": [
+        {
+          "name": "Goswami Tulsidas",
+          "role": "author"
+        }
+      ],
+      "traditions": [
+        "Hindu"
+      ],
+      "subjects": [
+        "Ramcharitmanas",
+        "Ramayana tradition",
+        "Hindi devotional literature",
+        "Bhakti",
+        "poetry"
+      ],
+      "languages": [
+        "Hindi"
+      ],
+      "scripts": [
+        "Devanagari"
+      ],
+      "languageCoverageLabel": "Hindi text in Devanagari. The source page lists the kands and an approximately 1,193-page book structure; compare the exact page/scan before citing a verse.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Read at Hindi Wikisource · export options on source page",
+        "url": "https://hi.wikisource.org/wiki/रामचरितमानस",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "MOBI",
+          "PDF"
+        ],
+        "notes": "The source page exposes a page index and EPUB/MOBI/PDF export controls. This catalogue record points to that edition page; it does not host a copied scan or verify every page against a printed edition."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Wikisource page and contributor terms; underlying source edition and scan rights require separate checking",
+        "jurisdiction": "Work, edition, source scan and transcription may have different status by territory",
+        "reuse": "Use the source reader/export controls. Do not mirror the scan or transcription until the exact source edition, page-level rights and contributor conditions have been checked.",
+        "notes": "The page itself discusses textual variants and possible interpolations. AARAMORA does not present this transcription as a critical edition."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "MOBI",
+          "PDF"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Hindi Wikisource",
+        "sourceUrl": "https://hi.wikisource.org/wiki/रामचरितमानस",
+        "metadataUrl": "https://hi.wikisource.org/wiki/रामचरितमानस"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "mr-jnaneshwari-wikisource",
+      "recordType": "edition",
+      "title": "ज्ञानेश्वरी · Marathi Wikisource",
+      "editionTitle": "Bhavarthadipika / Jnaneshwari · chapter-linked text",
+      "contributors": [
+        {
+          "name": "Dnyaneshwar (Jnaneshwar)",
+          "role": "author/commentator"
+        }
+      ],
+      "traditions": [
+        "Hindu"
+      ],
+      "subjects": [
+        "Bhagavad Gita commentary",
+        "Marathi literature",
+        "Bhakti",
+        "philosophy",
+        "Jnaneshwari"
+      ],
+      "languages": [
+        "Marathi"
+      ],
+      "scripts": [
+        "Devanagari"
+      ],
+      "languageCoverageLabel": "Marathi text in Devanagari. The page describes the commentary as composed around 1290 and links individual chapters.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Read Marathi chapters at Wikisource",
+        "url": "https://mr.wikisource.org/wiki/ज्ञानेश्वरी",
+        "formats": [
+          "HTML",
+          "Chapter pages",
+          "PDF print"
+        ],
+        "notes": "The page says the work is a Marathi commentary on the Bhagavad Gita, composed around 1290, and links the chapters. It also warns of a repeated passage/chapter issue; compare a scholarly printed edition before quoting."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "No clear book-level redistribution licence was confirmed from the source-page text retrieved for this check",
+        "jurisdiction": "Original composition and current digital transcription/edition must be assessed separately",
+        "reuse": "Link to the source page. Do not copy or mirror this transcription, commentary or any modern translation until the exact page-level terms and edition provenance have been confirmed.",
+        "notes": "The source page warns that chapter 6 has a duplication issue. AARAMORA has not reviewed the Marathi text line by line."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "Chapter pages",
+          "PDF print"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Marathi Wikisource",
+        "sourceUrl": "https://mr.wikisource.org/wiki/ज्ञानेश्वरी"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "bn-gitanjali-1913-wikisource",
+      "recordType": "edition",
+      "title": "গীতাঞ্জলি (১৯১৩) · Gitanjali",
+      "editionTitle": "Bengali edition · third edition, Indian Press, Allahabad, 1320 Bengali era",
+      "contributors": [
+        {
+          "name": "Rabindranath Tagore",
+          "role": "author"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "Bengali poetry",
+        "poetry",
+        "spiritual literature",
+        "Indian literature"
+      ],
+      "languages": [
+        "Bengali"
+      ],
+      "scripts": [
+        "Bengali"
+      ],
+      "languageCoverageLabel": "Original Bengali text in Bengali script; this is not the later English translation Songs Offerings.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "read-online",
+        "label": "Read the 1913 Bengali edition",
+        "url": "https://bn.wikisource.org/wiki/গীতাঞ্জলি_(১৯১৩)",
+        "formats": [
+          "HTML",
+          "EPUB export",
+          "PDF export"
+        ],
+        "notes": "The source page identifies Rabindranath Tagore, the Bengali-language 1913 edition and the Indian Press imprint. Do not confuse it with the English translation or later collected editions."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Wikisource page notes CC BY-SA for contributed text and marks this 1913 work public domain in the United States",
+        "jurisdiction": "The page says US public-domain status is based on publication before 1931 and discusses other countries separately; verify local law",
+        "reuse": "Read from Wikisource. For reuse, check the specific edition's status in the relevant territory and preserve CC BY-SA obligations for qualifying contributor contributions. Do not apply US public-domain status worldwide.",
+        "notes": "Wikisource's page states Tagore died in 1941 and gives a territory-specific public-domain explanation. AARAMORA links only; no text copied."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "EPUB export",
+          "PDF export"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Bengali Wikisource",
+        "sourceUrl": "https://bn.wikisource.org/wiki/গীতাঞ্জলি_(১৯১৩)"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "pa-guru-granth-sahib-folio-1",
+      "recordType": "selected-folio",
+      "title": "ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ · selected folio 1",
+      "editionTitle": "Page 1 of the digitized Guru Granth Sahib Ji PDF · not a complete scripture record",
+      "contributors": [
+        {
+          "name": "Guru Granth Sahib",
+          "role": "scripture"
+        }
+      ],
+      "traditions": [
+        "Sikh"
+      ],
+      "subjects": [
+        "Gurbani",
+        "Guru Granth Sahib",
+        "Sikh scripture",
+        "Gurmukhi",
+        "selected manuscript folio"
+      ],
+      "languages": [
+        "Punjabi"
+      ],
+      "scripts": [
+        "Gurmukhi"
+      ],
+      "languageCoverageLabel": "Punjabi/Gurmukhi folio transcription. The linked page represents a single selected page from a digitized PDF, not the full scripture.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Read selected Gurmukhi folio at Punjabi Wikisource",
+        "url": "https://pa.wikisource.org/wiki/ਪੰਨਾ:Guru_Granth_Sahib_Ji.pdf/1",
+        "formats": [
+          "HTML transcription",
+          "Original PDF folio"
+        ],
+        "notes": "This exact page is a transcription of folio/page 1 from Guru Granth Sahib Ji.pdf. Open the source for the page image and its transcription; it is not a full-text reader."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "The Wikisource page indicates CC BY-SA for the contributed transcription; the underlying scan/source edition can carry separate conditions",
+        "jurisdiction": "Contributed transcription licence and source scan rights must be assessed separately",
+        "reuse": "Do not treat the page-level CC BY-SA notice as blanket permission for the original scan, complete scripture database, translations or recitations. Preserve attribution/share-alike conditions for material actually covered by the page notice.",
+        "notes": "BaniDB remains a separate service with its own terms. AARAMORA links to this Wikisource folio and does not copy Gurbani data."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML transcription",
+          "Original PDF folio"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Punjabi Wikisource",
+        "sourceUrl": "https://pa.wikisource.org/wiki/ਪੰਨਾ:Guru_Granth_Sahib_Ji.pdf/1"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "ur-diwan-e-ghalib-wikisource",
+      "recordType": "edition",
+      "title": "دیوان غالب · Diwan-e-Ghalib",
+      "editionTitle": "Urdu Wikisource text with ghazal, qasida, masnavi and other sections",
+      "contributors": [
+        {
+          "name": "Mirza Ghalib",
+          "role": "author"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "Urdu poetry",
+        "ghazal",
+        "classical poetry",
+        "Persianate literature",
+        "Diwan"
+      ],
+      "languages": [
+        "Urdu"
+      ],
+      "scripts": [
+        "Perso-Arabic / Nastaliq"
+      ],
+      "languageCoverageLabel": "Urdu text in Perso-Arabic script. The page lists ghazals, qasidas, masnavis, rubaiyat and other sections.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "read-online",
+        "label": "Read Urdu text and source-side export formats",
+        "url": "https://ur.wikisource.org/wiki/دیوان_غالب",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "MOBI",
+          "PDF"
+        ],
+        "notes": "The source page is identified as Urdu and lists multiple poetry sections. It exposes export links; edition and transcription quality should be checked before quoting."
+      },
+      "rights": {
+        "status": "open-license",
+        "licence": "Wikisource page indicates Creative Commons Attribution-ShareAlike for contributed text",
+        "jurisdiction": "The page-level licence applies to qualifying contributions; underlying edition and images may differ",
+        "reuse": "For qualifying page text, follow CC BY-SA attribution and share-alike terms. Do not infer that the underlying facsimile, all editions, or third-party notes share the same licence.",
+        "notes": "The linked page cites a Wikisource revision and has an item-specific page history. AARAMORA has not verified this transcription against a printed critical edition."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "MOBI",
+          "PDF"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Urdu Wikisource",
+        "sourceUrl": "https://ur.wikisource.org/wiki/دیوان_غالب"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "or-odia-bhagabata-skandha-1",
+      "recordType": "edition-part",
+      "title": "ଓଡ଼ିଆ ଭାଗବତ · first skandha",
+      "editionTitle": "Odia Bhagabata, volume/part 1 · First Skandha only",
+      "contributors": [
+        {
+          "name": "Jagannath Das",
+          "role": "author"
+        }
+      ],
+      "traditions": [
+        "Hindu"
+      ],
+      "subjects": [
+        "Odia Bhagabata",
+        "Bhagavata Purana tradition",
+        "Odia devotional literature",
+        "Vaishnava literature"
+      ],
+      "languages": [
+        "Odia"
+      ],
+      "scripts": [
+        "Odia"
+      ],
+      "languageCoverageLabel": "Odia text in Odia script. This linked part is the first skandha; the source page links the following skandha separately.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Read first skandha and use source export options",
+        "url": "https://or.wikisource.org/wiki/ଓଡ଼ିଆ_ଭାଗବତ/୧",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "MOBI",
+          "PDF"
+        ],
+        "notes": "The page identifies Jagannath Das as author and the linked text as the first skandha. Export options are offered by Wikisource; this record does not imply the whole multi-skandha work is on this one page."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Check the exact source-page and contributor licence before reuse",
+        "jurisdiction": "Original work, edition and digital transcription must be checked separately",
+        "reuse": "Read and download only through the source page's controls. Do not republish the file or text until the exact edition and page-level rights are verified.",
+        "notes": "AARAMORA records the source's author, language and scope, but has not reviewed the Odia text or its completeness."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "MOBI",
+          "PDF"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Odia Wikisource",
+        "sourceUrl": "https://or.wikisource.org/wiki/ଓଡ଼ିଆ_ଭାଗବତ/୧"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "ta-thirukkural-project-madurai",
+      "recordType": "edition",
+      "title": "திருக்குறள் · Tirukkural",
+      "editionTitle": "Project Madurai Tamil Unicode/UTF-8 electronic text",
+      "contributors": [
+        {
+          "name": "Tiruvalluvar",
+          "role": "author"
+        },
+        {
+          "name": "K. Kalyanasundaram",
+          "role": "HTML/PDF preparation"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "Tamil classical literature",
+        "ethics",
+        "poetry",
+        "philosophy",
+        "Tirukkural"
+      ],
+      "languages": [
+        "Tamil"
+      ],
+      "scripts": [
+        "Tamil"
+      ],
+      "languageCoverageLabel": "Tamil text in Unicode/UTF-8 encoding, as described by Project Madurai.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "read-online",
+        "label": "Read the Tamil UTF-8 edition",
+        "url": "https://www.projectmadurai.org/pm_etexts/utf8/pmuni0001.html",
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "notes": "The source header identifies the work as Tiruvalluvar's Tirukkural and says the HTML/PDF formats were prepared by Dr. K. Kalyanasundaram. Unicode/UTF-8 text is provided."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Project Madurai source-specific redistribution permission, not a blanket Creative Commons licence",
+        "jurisdiction": "Applicable copyright law; source notice applies to the identified electronic file",
+        "reuse": "The source explicitly allows redistribution of this file if its header page is kept intact. Do not remove the header, change the content or extend this permission to other editions/translations.",
+        "notes": "The page carries © Project Madurai 1998–2000 and states the header-retention condition. AARAMORA links to the official source and does not copy the text."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "PDF"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Project Madurai",
+        "sourceUrl": "https://www.projectmadurai.org/pm_etexts/utf8/pmuni0001.html",
+        "policyUrl": "https://www.projectmadurai.org/faq.html"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "gu-wikisource-full-book-index",
+      "recordType": "language-catalogue",
+      "title": "Gujarati Wikisource · full-book list",
+      "editionTitle": "Gujarati Wikisource catalogue of completed books",
+      "contributors": [
+        {
+          "name": "Gujarati Wikisource contributors",
+          "role": "community editors"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "Gujarati literature",
+        "novels",
+        "folk literature",
+        "criticism",
+        "Gujarati books"
+      ],
+      "languages": [
+        "Gujarati"
+      ],
+      "scripts": [
+        "Gujarati"
+      ],
+      "languageCoverageLabel": "Gujarati-language catalogue. Open individual title records to confirm the author, edition, completion and rights.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "discovery",
+        "label": "Browse full-book titles at Gujarati Wikisource",
+        "url": "https://gu.wikisource.org/wiki/વિકિસ્રોત:પુસ્તકો",
+        "formats": [
+          "HTML",
+          "Book index",
+          "Some audio links"
+        ],
+        "notes": "The source page is an index of full books and exposes title, author, genre and (where available) audiobook links. This is a discovery index, not a single licensed book."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Per-title and per-edition rights; community contributions may have Wikimedia terms",
+        "jurisdiction": "Check the individual work and source edition",
+        "reuse": "Do not treat inclusion in the index as permission to reuse. Open the title page and verify its work, edition, contributors and page-specific rights before copying or redistribution.",
+        "notes": "AARAMORA links to the catalogue so readers can browse Gujarati works; no titles or files are copied."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "Book index",
+          "Some audio links"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Gujarati Wikisource",
+        "sourceUrl": "https://gu.wikisource.org/wiki/વિકિસ્રોત:પુસ્તકો"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "kn-wikisource-kannada-portal",
+      "recordType": "language-catalogue",
+      "title": "Kannada Wikisource · Kannada text library",
+      "editionTitle": "Kannada Wikisource home and active text projects",
+      "contributors": [
+        {
+          "name": "Kannada Wikisource contributors",
+          "role": "community editors"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "Kannada literature",
+        "Jaimini Bharata",
+        "Pampa Bharata",
+        "Kannada books",
+        "classical literature"
+      ],
+      "languages": [
+        "Kannada"
+      ],
+      "scripts": [
+        "Kannada"
+      ],
+      "languageCoverageLabel": "Kannada text in Kannada script; the portal lists current text projects and example book entries.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "discovery",
+        "label": "Browse Kannada Wikisource",
+        "url": "https://kn.wikisource.org/wiki/ಮುಖ್ಯ_ಪುಟ",
+        "formats": [
+          "HTML",
+          "PDF print/export"
+        ],
+        "notes": "The source page identifies itself as a free Kannada library and lists active projects including Jaimini Bharata and Pampa Bharata, plus sample books. Check each title's status and edition."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Per title and page; no single blanket book licence assumed",
+        "jurisdiction": "Per source work, transcription and edition",
+        "reuse": "Browse and read at source. Confirm the exact page, edition and rights notice before reusing any transcription, scan, image or recording.",
+        "notes": "Portal-level article counts and active projects change; AARAMORA does not copy the portal's text."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "PDF print/export"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Kannada Wikisource",
+        "sourceUrl": "https://kn.wikisource.org/wiki/ಮುಖ್ಯ_ಪುಟ"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "ml-wikisource-malayalam-book-list",
+      "recordType": "language-catalogue",
+      "title": "Malayalam Wikisource · book list",
+      "editionTitle": "Malayalam Wikisource catalogue and copyright-expiry project list",
+      "contributors": [
+        {
+          "name": "Malayalam Wikisource contributors",
+          "role": "community editors"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary",
+        "Hindu",
+        "Christian",
+        "Secular"
+      ],
+      "subjects": [
+        "Malayalam literature",
+        "novels",
+        "plays",
+        "dictionaries",
+        "history",
+        "translations"
+      ],
+      "languages": [
+        "Malayalam"
+      ],
+      "scripts": [
+        "Malayalam"
+      ],
+      "languageCoverageLabel": "Malayalam works and bibliography in Malayalam script; the index includes author, first-edition and scan-link details for some entries.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "discovery",
+        "label": "Browse Malayalam Wikisource book index",
+        "url": "https://ml.wikisource.org/wiki/വിക്കിഗ്രന്ഥശാല:വിക്കിപദ്ധതി/പുസ്തകപ്പട്ടിക",
+        "formats": [
+          "HTML",
+          "Linked scans and source pages"
+        ],
+        "notes": "This is a catalogue/proofreading project list, not one book. The page says the list focuses on works considered out of copyright under the project's description of Indian law; verify each listed work and scan separately."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "No catalogue-wide reuse permission; check each title and scan",
+        "jurisdiction": "Page describes an India life-plus-60-year rule; verify the law and death/publication facts for every author/work",
+        "reuse": "Treat this as discovery only. Do not copy the scan or transcription until the individual work, edition, contributor licence and territorial status are confirmed.",
+        "notes": "The source page says the list is incomplete and invites additions. AARAMORA does not treat the index as a legal clearance register."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "Linked scans and source pages"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Malayalam Wikisource",
+        "sourceUrl": "https://ml.wikisource.org/wiki/വിക്കിഗ്രന്ഥശാല:വിക്കിപദ്ധതി/പുസ്തകപ്പട്ടിക"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "ar-safahat-arabic-reading",
+      "recordType": "language-catalogue",
+      "title": "Safahat · Arabic literature and books",
+      "editionTitle": "Hindawi Foundation Arabic reading platform",
+      "contributors": [
+        {
+          "name": "Hindawi Foundation",
+          "role": "publisher and platform"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary",
+        "Islamic",
+        "Secular"
+      ],
+      "subjects": [
+        "Arabic literature",
+        "novels",
+        "essays",
+        "translations",
+        "modern Arabic writers",
+        "children's books"
+      ],
+      "languages": [
+        "Arabic"
+      ],
+      "scripts": [
+        "Arabic"
+      ],
+      "languageCoverageLabel": "Arabic books and Arabic translations. The Foundation also publishes multilingual children's books through its separate Booktime initiative.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "read-online",
+        "label": "Read or download eligible Arabic books on Safahat",
+        "url": "https://safahat.org/",
+        "formats": [
+          "Web reader",
+          "Source-side downloads"
+        ],
+        "notes": "Hindawi Foundation says it licensed and translated a collection of Arabic books and that those books remain free to read and download at Safahat. Availability depends on the specific title on the platform."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Hindawi-licensed and publisher-managed editions; no user redistribution licence inferred",
+        "jurisdiction": "Per title, translation, publisher and territory",
+        "reuse": "Use the free source reader/download where offered. Do not copy, republish or redistribute the files or translations unless the book's own notice grants that right.",
+        "notes": "The Foundation describes its Arabic collection as licensed and translated by Hindawi; free download from its platform is not the same as a licence to mirror or reuse the book."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "Web reader",
+          "Source-side downloads"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Hindawi Foundation · Safahat",
+        "sourceUrl": "https://safahat.org/",
+        "metadataUrl": "https://www.hindawi.org/en/about"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "fr-comte-monte-cristo-pg",
+      "recordType": "edition",
+      "title": "Le comte de Monte-Cristo, Tome I",
+      "editionTitle": "French Project Gutenberg edition · eBook 17989",
+      "contributors": [
+        {
+          "name": "Alexandre Dumas",
+          "role": "author"
+        },
+        {
+          "name": "Auguste Maquet",
+          "role": "co-author"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "French literature",
+        "historical fiction",
+        "adventure",
+        "classic novels"
+      ],
+      "languages": [
+        "French"
+      ],
+      "scripts": [
+        "Latin"
+      ],
+      "languageCoverageLabel": "French edition; source page identifies authors Alexandre Dumas and Auguste Maquet.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read or download from Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/17989",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ],
+        "notes": "Project Gutenberg identifies the language as French and lists both Dumas and Maquet as authors/contributors. Use the ebook landing page for available formats."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "Project Gutenberg rights statement for ebook 17989",
+        "jurisdiction": "Project Gutenberg identifies this edition as public domain in the United States; other countries may differ",
+        "reuse": "Check the source's current ebook permission notice and local law before redistribution outside the United States. Do not assume the same status for later translations, annotations, cover art or illustrations.",
+        "notes": "This is Tome I only, not necessarily the full multi-volume work."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Project Gutenberg",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/17989",
+        "policyUrl": "https://www.gutenberg.org/policy/permission"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "de-faust-pg",
+      "recordType": "edition",
+      "title": "Faust: Der Tragödie erster Teil",
+      "editionTitle": "German Project Gutenberg edition · eBook 2229",
+      "contributors": [
+        {
+          "name": "Johann Wolfgang von Goethe",
+          "role": "author"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "German literature",
+        "drama",
+        "tragedy",
+        "classic literature"
+      ],
+      "languages": [
+        "German"
+      ],
+      "scripts": [
+        "Latin"
+      ],
+      "languageCoverageLabel": "German text; the first part of Goethe's tragedy.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read or download from Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/2229",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ],
+        "notes": "Project Gutenberg identifies the title as German and the author as Johann Wolfgang von Goethe (1749–1832)."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "Project Gutenberg rights statement for ebook 2229",
+        "jurisdiction": "Project Gutenberg identifies this edition as public domain in the United States; other countries may differ",
+        "reuse": "Check the ebook's current permission notice and local law before redistribution outside the United States. The status does not automatically apply to modern translations, notes or illustrations.",
+        "notes": "This entry is Part One, not the complete Faust cycle."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Project Gutenberg",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/2229",
+        "policyUrl": "https://www.gutenberg.org/policy/permission"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "es-don-quijote-pg",
+      "recordType": "edition",
+      "title": "Don Quijote",
+      "editionTitle": "Spanish Project Gutenberg edition · eBook 2000",
+      "contributors": [
+        {
+          "name": "Miguel de Cervantes Saavedra",
+          "role": "author"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "Spanish literature",
+        "classic novels",
+        "satire",
+        "adventure"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "scripts": [
+        "Latin"
+      ],
+      "languageCoverageLabel": "Spanish text; the novel was published in two parts in 1605 and 1615.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read or download from Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/2000",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ],
+        "notes": "Project Gutenberg identifies the language as Spanish and the author as Miguel de Cervantes Saavedra (1547–1616)."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "Project Gutenberg rights statement for ebook 2000",
+        "jurisdiction": "Project Gutenberg identifies this edition as public domain in the United States; other countries may differ",
+        "reuse": "Check the ebook's current permission notice and local law before redistribution outside the United States. This does not clear later translations, annotations or artwork.",
+        "notes": "Use the source landing page for the edition-specific copyright statement and available formats."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Project Gutenberg",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/2000",
+        "policyUrl": "https://www.gutenberg.org/policy/permission"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
+      }
+    },
+    {
+      "id": "pt-os-lusiadas-pg",
+      "recordType": "edition",
+      "title": "Os Lusíadas",
+      "editionTitle": "Portuguese Project Gutenberg edition · eBook 3333",
+      "contributors": [
+        {
+          "name": "Luís de Camões",
+          "role": "author"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "Portuguese literature",
+        "epic poetry",
+        "history",
+        "voyages"
+      ],
+      "languages": [
+        "Portuguese"
+      ],
+      "scripts": [
+        "Latin"
+      ],
+      "languageCoverageLabel": "Portuguese epic poem, first published in 1572.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read or download from Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/3333",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ],
+        "notes": "Project Gutenberg identifies the language as Portuguese and the author as Luís de Camões (1524?–1580)."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "Project Gutenberg rights statement for ebook 3333",
+        "jurisdiction": "Project Gutenberg identifies this edition as public domain in the United States; other countries may differ",
+        "reuse": "Check the ebook's current permission notice and local law before redistribution outside the United States. New introductions, translations, notes and images may have separate rights.",
+        "notes": "Use the exact ebook record, not a blanket statement about every edition of the work."
+      },
+      "accessibility": {
+        "searchableText": "Source page searchable; verify text quality and transcription against the scan",
+        "reflowable": "Varies by source page and export format",
+        "screenReaderNotes": "AARAMORA has not completed manual screen-reader evaluation for this edition.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Project Gutenberg",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/3333",
+        "policyUrl": "https://www.gutenberg.org/policy/permission"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named title/source page for its title, language, author/edition context, access route and visible source rights notice where available. This does not certify text accuracy or clear reuse in every territory."
+      },
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       }
     }
   ]
