@@ -79,7 +79,7 @@ GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on
 
 The first AARAMORA six-scene brand-film exports have been reviewed. See [docs/AARAMORA_BRAND_FILM_ASSETS.md](docs/AARAMORA_BRAND_FILM_ASSETS.md) for scene order, verified technical metadata, website usage guidance and local upload commands. The intended unique files are the 16:9 website master and 9:16 Instagram edit; the supplied `CLEAN_NO_ADDED_AUDIO` file is byte-identical to the landscape master and still contains AAC audio, so it is not a separate silent export.
 
-**Binary status:** the MP4 files themselves have not been committed yet. Place them under `public/media/brand-film/` from a local clone using the PowerShell commands in the manifest. The current GitHub connection can commit text documentation but does not expose a direct binary upload/release operation for these large MP4s.
+**Binary status:** the MP4 files themselves have not been committed yet. Place them under `assets/brand-film/` from a local clone using the PowerShell commands in the manifest. The current GitHub connection can commit text documentation but does not expose a direct binary upload/release operation for these large MP4s.
 
 
 ## Current verification
