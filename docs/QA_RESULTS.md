@@ -80,3 +80,15 @@
 - Preserved the nine existing Reading Library sections and all 46 original resource cards; added metadata review stamps without removing existing content.
 - Added 11 source records, four language groups, 22 Eighth Schedule languages, additional Indian-language filters and an initial global-language filter set.
 - Remaining manual checks: live visitor-side browser smoke test, mobile widths, keyboard-only navigation, screen-reader result announcements, native-speaker review of language names/descriptions, and item-specific religious/tradition review.
+
+## Multilingual edition catalogue expansion · 24 November 2026
+- Catalogue expanded from 11 to 26 entries, including 12 named edition/folio/book records and 3 additional language indexes/platforms.
+- Every entry now has scripts and editorialReview fields. New edition cards render both script labels and the native/cultural/accessibility review note.
+- Tests assert that edition-specific source URLs exist, selected works are not described beyond their linked scope, and restricted sources remain link-only.
+- Native-language, cultural-context and item-level accessibility reviews are explicitly pending; they have not been signed off by AARAMORA reviewers.
+
+## Multilingual edition catalogue expansion · 24 November 2026
+- Catalogue expanded from 11 to 26 entries, including 12 named edition/folio/book records and 3 additional language indexes/platforms.
+- Every entry now has scripts and editorialReview fields. New edition cards render both script labels and the native/cultural/accessibility review note.
+- Tests assert that edition-specific source URLs exist, selected works are not described beyond their linked scope, and restricted sources remain link-only.
+- Native-language, cultural-context and item-level accessibility reviews are explicitly pending; they have not been signed off by AARAMORA reviewers.
