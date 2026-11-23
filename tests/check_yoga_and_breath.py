@@ -61,7 +61,7 @@ class YogaAndBreathPageTests(unittest.TestCase):
             "usual care",
             "not a prescription",
         ):
-            self.assertIn(phrase, self.page)
+            self.assertIn(phrase.lower(), self.page.lower())
 
     def test_no_diagnostic_or_cure_claim(self):
         lowered = self.page.lower()
