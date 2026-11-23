@@ -66,13 +66,16 @@ ACOG recommends standardised, validated screening for depression and anxiety in 
 
 Aaramora must not run an EPDS/PHQ-9 result flow unless it has a named perinatal clinical service, an urgent response protocol and locally appropriate validation. Availability of a questionnaire online is not sufficient.
 
-### PMOS / PCOS and psychological screening
+### PMOS and psychological screening
 
-The 2023 international evidence-based PCOS guideline recommends that healthcare professionals screen adults and adolescents with PCOS for depression using regionally validated tools, and adults with PCOS for anxiety using regionally validated tools. Moderate or severe symptoms should lead to further assessment, referral or treatment. It also recommends asking about symptom impact, quality of life, key concerns and management priorities.
+The international evidence-based ovarian-syndrome guideline was updated with the new term **PMOS (formerly PCOS)** in May 2026. The updated terminology note says the 2023 guideline recommendations and clinical content remain unchanged during the transition, while the new term is adopted in the guideline summary. PMOS and PCOS are expected to co-exist during a managed three-year transition; Aaramora should retain PCOS as a searchable alias while prioritising PMOS in visible copy.
 
-This supports Aaramora’s **appointment-preparation planner**, not a DIY PMOS symptom score. The guideline is written using PCOS terminology in its 2023 edition; keep its historical term when citing it, while the website's current naming policy may explain PMOS/PCOS continuity.
+The guideline recommends that healthcare professionals screen adults and adolescents with PMOS for depression using regionally validated tools, and adults with PMOS for anxiety using regionally validated tools. Moderate or severe symptoms should lead to further assessment, referral or treatment. It also recommends asking about symptom impact, quality of life, key concerns and management priorities.
 
-- Guideline recommendations: https://pmc.ncbi.nlm.nih.gov/articles/PMC10477934/
+This supports Aaramora’s **appointment-preparation planner**, not a DIY PMOS symptom score. The guidance is clinician-facing and expects regionally validated tools and clinical follow-up. It does not direct a consumer website to diagnose PMOS or depression from symptoms.
+
+- May 2026 PMOS terminology update and transition note: https://www.monash.edu/__data/assets/pdf_file/0009/4360095/Updated-PMOS-Guideline-12-June26.pdf
+- Updated guideline recommendation summary: https://www.asrm.org/practice-guidance/practice-committee-documents/recommendations-from-the-2023-international-evidence-based-guideline-for-the-assessment-and-management-of-polyendocrine-metabolic-ovarian-syndrome-2023/
 
 ### PMDD and cyclical symptoms
 
@@ -80,7 +83,8 @@ The EMA guideline says prospective daily monitoring over two consecutive menstru
 
 Aaramora may offer an **original blank paper log** for dates, cycle day, symptoms and daily-life impact. It must not reproduce the DRSP, assign a PMDD score or claim that a two-cycle log proves a diagnosis.
 
-- EMA PMDD guideline: https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-treatment-premenstrual-dysphoric-disorder-pmdd_en.pdf
+- EMA PMDD guideline (2011; DSM-IV/regulatory trial framework): https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-treatment-premenstrual-dysphoric-disorder-pmdd_en.pdf
+- ACOG, Management of Premenstrual Disorders (Clinical Practice Guideline No. 7, Dec 2023): https://www.acog.org/clinical/clinical-guidance/clinical-practice-guideline/articles/2023/12/management-of-premenstrual-disorders
 
 ### Endometriosis and pain tracking
 

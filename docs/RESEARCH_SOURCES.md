@@ -162,3 +162,9 @@ The 15-page *Attachment Protest and the Wider Psychology of Romantic Relationshi
 - Fraley's ECR-R FAQ: ECR-R measures attachment-related anxiety and avoidance, requires reverse-keying, is available for non-commercial research without author permission, and commercial use requires permission; the author cautions against categorical style assignment. https://labs.psychology.illinois.edu/~rcfraley/measures/ecrr.htm
 
 See `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md` for study details, instrument distinctions and Aaramora product recommendations; `docs/CHECKIN_TOOL_SPEC.md` defines the implemented tool.
+
+
+## PMOS terminology and women's-health screening update — May/June 2026
+- Monash MCHRI, International Evidence-based Guideline terminology update: official guideline summary now uses **PMOS (formerly PCOS)**. It states the 2023 guideline recommendations/content remain unchanged; PMOS/PCOS coexist during a three-year managed transition and 2028 is planned for PMOS-only guideline terminology. https://www.monash.edu/__data/assets/pdf_file/0009/4360095/Updated-PMOS-Guideline-12-June26.pdf
+- ASRM updated recommendation summary: clinicians should screen adults and adolescents with PMOS for depression and adults with PMOS for anxiety using regionally validated screening tools; moderate/severe symptoms require further assessment/referral/treatment; ask about quality-of-life impact, concerns and priorities. This is a clinical workflow recommendation, not a consumer diagnostic quiz. https://www.asrm.org/practice-guidance/practice-committee-documents/recommendations-from-the-2023-international-evidence-based-guideline-for-the-assessment-and-management-of-polyendocrine-metabolic-ovarian-syndrome-2023/
+- ACOG, Management of Premenstrual Disorders, Clinical Practice Guideline No. 7 (Dec 2023): https://www.acog.org/clinical/clinical-guidance/clinical-practice-guideline/articles/2023/12/management-of-premenstrual-disorders

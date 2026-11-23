@@ -44,45 +44,28 @@
 ## Follow-up repository QA — 24 November 2026
 
 ### Automated CI
-- Initial CI run `45263329157` failed one assertion because the test expected “not statistically significant” while the page correctly said “statistically non-significant”.
-- The assertion was corrected and the relationship test expanded to check all 40 concept cards and all three optional reflections.
-- Latest CI run: [45266028057](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45266028057), commit `4fe947eaeba87ac0dd4ad09683c8fda09402cf35`, conclusion **success**.
-- Result: **18 tests passed**. The workflow runs on push, pull request and manual `workflow_dispatch`.
+- Historical baseline: [run 45266854917](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45266854917), 19 tests, successful.
+- Current check-in update: commit `a311edb4d60888e0b82ead814113a734d18811e7`; [GitHub Actions run 45271916133](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45271916133) completed successfully.
+- Result: **21 tests passed** (`Ran 21 tests`, `OK`). The new checks cover check-in page content, skip/privacy behavior, support links, print structure, internal anchors and Node.js syntax on all five HTML pages.
+- Workflow runs on pushes, pull requests and manual `workflow_dispatch`.
+
+### Current repository additions
+- `check-ins.html`: optional non-diagnostic guide finder, women's-health appointment planner and original blank two-cycle paper log.
+- `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md`: clinical screener evidence, regional-language limitations, instrument licensing, self-harm-risk scale cautions and product recommendations.
+- `docs/CHECKIN_TOOL_SPEC.md`: privacy, interaction, accessibility and clinical-review boundaries.
+- Updated research/source register, product blueprint, quiz specification, QA checklist and README.
 
 ### Deployment
-- No live Aaramora deployment has been verified.
-- The connected Vercel Hobby team does not currently list a project linked to `ASHISHDAITH/aaramora-platform`.
-- Vercel project lookup/creation through the connected account returned HTTP 403 Forbidden. No project or deployment was created.
-- A Vercel GitHub App authorization for this repository, or a user-completed import from the Vercel dashboard, is still required. See `docs/DEPLOYMENT.md`.
-
-### Brand-film binary uploads
-- The export manifest is committed, but the two unique MP4 binaries are not in the Git repository.
-- The current task workspace did not contain the MP4 files, and the available GitHub write connector supports UTF-8 text rather than direct binary uploads.
-- Add the two unique exports from the original local files when available. The duplicate “clean/no added audio” file must not be treated as silent; the manifest records that it is byte-identical to the master and contains AAC audio.
+- Production alias: https://aaramora-platform.vercel.app
+- Latest verified production snapshot at last check: commit `3aef65fdc1f56bc3d9803ac7843ea275910f595e`, Vercel deployment `dpl_Fqfdf9uht4kjBwMnZAaPJ6WkSSjX`, READY.
+- The current main branch contains the check-in page, but it is **not in that production snapshot**.
+- Attempted production refresh through the connected Vercel tool returned HTTP 403 Forbidden. The connected Vercel sandbox/session endpoint also returned 403, so no CLI session was available. Do not state the new page is live until a new deployment is marked READY and the /check-ins route is visited in a regular browser.
+- GitHub-to-Vercel automatic deployments remain unavailable until the Vercel GitHub App has suitable access to this repository. See `docs/DEPLOYMENT.md`.
 
 ### Remaining release gates
-The checks above do not complete the following:
-- Browser interaction and visual audit on real Android and iOS devices.
-- Keyboard-only and screen-reader tests with NVDA, VoiceOver and TalkBack.
-- Formal WCAG 2.2 AA audit for each page, language and state.
-- Native-speaker review of English/Hindi/Marathi/Romanised Hindi content as appropriate.
-- Qualified clinical review of mental-health, women's-health and crisis copy.
-- Safeguarding specialist review of relationship content and safety routing.
-- Lived-experience co-design and usability sessions.
-- Production privacy/security review and deployed network-traffic verification.
-- Final official verification of helplines and referral coverage immediately before launch.
-
-
-### Inline JavaScript validation added — 24 November 2026
-- Added an automated check that extracts each inline JavaScript block from `index.html`, `wellbeing.html`, `relationships.html` and `reading-library.html`, then runs Node.js `--check`.
-- GitHub Actions run [45266854917](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45266854917), commit `43483cadf081ffe7e630287ca2fd87faa27da95d`, completed successfully.
-- Result: **19 tests passed** (`Ran 19 tests`, `OK`), including the all-pages inline JavaScript syntax check.
-
-
-## Quiz and self-check research — 24 November 2026
-- Added `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md` covering PHQ-9/GAD-7, EPDS, regional validation research, PMOS/PCOS screening guidance, PMDD prospective diaries, endometriosis symptom logs, menopause instrument permissions, adult attachment measures and self-harm risk-score cautions.
-- Added `check-ins.html`: optional non-scored guide finder, women's-health appointment preparation and an original blank two-cycle paper log.
-- Added `docs/CHECKIN_TOOL_SPEC.md` and linked the page from homepage, mental-wellbeing and relationship navigation.
-- The current page does not score clinical instruments, diagnose, assign labels, store answers or send data.
-- The new static tests cover optional controls, privacy, support links, print layout, internal anchors and inline JavaScript syntax on all five pages. CI result is pending.
-- This is educational UX, not clinical approval. Qualified clinical, safeguarding, language and accessibility review remain required.
+- Browser/device visual audit, keyboard-only and screen-reader tests.
+- Formal WCAG 2.2 AA review across page states and languages.
+- Qualified clinical review of mental-health and women's-health content.
+- Safeguarding specialist review of relationship content.
+- Native-speaker review of Hindi/Marathi/Romanised Hindi.
+- Lived-experience co-design, production privacy/security review and current helpline verification.

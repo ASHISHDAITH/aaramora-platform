@@ -61,5 +61,9 @@ A successful static deployment does not mean the platform is clinically approved
 Keep the public description clear: AARAMORA is an information and help-navigation prototype, not therapy, diagnosis, prescribing or an emergency response service.
 
 
-## Check-in page update pending
-The GitHub repository is adding a fifth static page, `check-ins.html`, with a non-diagnostic guide finder and women's-health appointment/print tools. The current production snapshot does not yet include that page until a refreshed Vercel deployment is marked READY. Do not announce the check-in page as live until the new production snapshot has been verified.
+## Check-in page update — committed, not yet deployed
+The fifth static page, `check-ins.html`, and its research/specification files are committed to GitHub main at commit `a311edb4d60888e0b82ead814113a734d18811e7`. It contains a non-diagnostic guide finder, women's-health appointment/print planner and original blank two-cycle symptom log. GitHub Actions passed 21 tests, including the new page's inline JavaScript syntax check.
+
+The currently verified Vercel production snapshot remains commit `3aef65fdc1f56bc3d9803ac7843ea275910f595e` and does not contain the new page. An attempt to refresh the existing production project through the connected Vercel deployment API returned HTTP 403 Forbidden; the Vercel sandbox-session API also returned 403. No deployment was created by these attempts. Do not announce `/check-ins.html` as live until Vercel shows a newer READY deployment and the route is tested in a regular browser.
+
+To publish manually from a local clone after GitHub access is available: pull the current `main`, link the local repository to the existing Vercel project with `vercel link --project aaramora-platform --scope httpsgithubcomefigma54-devpp`, then run `vercel deploy --prod`. Confirm the resulting deployment is READY and that `/check-ins` is accessible. GitHub automatic deployments require the Vercel GitHub App to have access to the repository.

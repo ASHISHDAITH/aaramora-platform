@@ -94,10 +94,10 @@ The supplied `CLEAN_NO_ADDED_AUDIO` file is byte-identical to the landscape mast
 
 **Production URL:** https://aaramora-platform.vercel.app
 
-The current public static deployment is marked READY by Vercel. It contains the four HTML pages and three SVG assets. The MP4 files remain versioned in GitHub and are delivered from the repository CDN URLs. This first deployment was uploaded directly to Vercel from commit `243b51188437d79a901b560df2e21dc573a8f793`; GitHub-to-Vercel automatic deployment is not yet connected, so later Git pushes do not publish automatically. See [deployment notes](docs/DEPLOYMENT.md).
+The current public static deployment is marked READY by Vercel and serves the four HTML pages and three SVG assets from its latest verified snapshot (commit `3aef65fdc1f56bc3d9803ac7843ea275910f595e`). The newer `check-ins.html` page and its related documentation are committed to GitHub main, but the attempted Vercel production refresh returned 403 Forbidden; the check-in page is therefore not yet live at the production URL. GitHub-to-Vercel automatic deployment is not connected. See [deployment notes](docs/DEPLOYMENT.md).
 
 ## Current verification
 
-The latest GitHub Actions content-check run passed on the current repository history. It executed 19 Python static tests, including Node.js syntax validation of inline JavaScript on all four site pages. This is not a browser, screen-reader, clinical or production security certification.
+The latest GitHub Actions content-check run passed on the current repository history. It executed 21 Python static tests, including Node.js syntax validation of inline JavaScript on all five source pages. This is not a browser, screen-reader, clinical or production security certification.
 
 The current production deployment is live at the URL above. A final browser smoke test from a normal visitor session is still required. Deployment does not constitute clinical, safeguarding, accessibility or security approval.
