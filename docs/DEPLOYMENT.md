@@ -1,42 +1,61 @@
 # Deployment Status and Release Path
 
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
-**Last checked:** 24 November 2026  
-**Current state:** GitHub source is committed; no live URL has been verified.
+**Production URL:** https://aaramora-platform.vercel.app  
+**Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
+**Latest deployment:** `dpl_E9X4QwnFefiDtnHxXX4uyDpRzSPq`  
+**Status:** READY · production
 
-## What is already working
-- The site is a static multi-page HTML/CSS/JS prototype with `index.html`, `wellbeing.html`, `relationships.html` and `reading-library.html`.
-- The GitHub Actions content-check workflow is green: 18 Python tests passed on commit `4fe947eaeba87ac0dd4ad09683c8fda09402cf35`.
-- No API keys, server, database or paid backend are needed to host the current prototype as a static site.
+## Current release
 
-## Vercel connection blocker
-The connected Vercel Hobby workspace currently lists other Git-linked projects, but not this repository. The attempt to look up and create a Git-linked project for `ASHISHDAITH/aaramora-platform` returned HTTP 403 Forbidden. No Vercel project or deployment was created.
+A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
 
-This is an account/repository authorization issue, not a website build error. The repository must be made accessible to the Vercel GitHub App / connected GitHub identity.
+The deployment is a static snapshot of commit `243b51188437d79a901b560df2e21dc573a8f793` on `main`. It contains:
+- `index.html`
+- `wellbeing.html`
+- `relationships.html`
+- `reading-library.html`
+- `assets/healing-garden.svg`
+- `assets/safe-corner.svg`
+- `assets/thought-river.svg`
 
-## Recommended deployment route: Git-connected Vercel project
-1. Open [Vercel New Project](https://vercel.com/new/import).
-2. Sign in to the Vercel Hobby workspace.
-3. If `ASHISHDAITH/aaramora-platform` is not listed, install or update the Vercel GitHub App so it has access to this repository, and confirm the correct GitHub account is connected to Vercel.
-4. Import `ASHISHDAITH/aaramora-platform` from `main`.
-5. Treat it as a static site / Other framework. The repository root contains `index.html`; there is no npm build or install step required for the prototype.
-6. Deploy, then verify all four routes, media requests, mobile navigation and no unexpected network calls.
-7. Keep the generated production URL and confirm a new push to `main` creates an automatic deployment.
+The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The homepage references those exact files through jsDelivr's GitHub CDN. Video playback is user-initiated; it does not autoplay.
 
-Vercel describes the repository-import route as the way to keep a stable project URL with automatic deployment on future Git pushes. See [Vercel project import](https://vercel.com/new/import).
+The Vercel deployment was created directly from the listed source files because Git repository integration was blocked. The project has Vercel SSO/password deployment protection disabled so the public static site can be visited without membership in the Vercel workspace.
 
-## Temporary alternative: Vercel Drop
-[Vercel Drop](https://vercel.com/drop) can publish a static folder or ZIP directly on the Hobby plan. It creates a new project for each drop; re-dropping does not update the same project URL. Use this only as a one-off preview, then connect the Git repository for ongoing updates. See [Vercel Drop overview](https://vercel.com/changelog/vercel-drop) and [Vercel's static-site deployment options](https://vercel.com/i/deploy-to-vercel-without-git).
+## Remaining Git integration step
 
-## Binary media still missing from Git
-`docs/AARAMORA_BRAND_FILM_ASSETS.md` records the two approved MP4 export paths and checksums. The current working session does not contain the MP4 binaries, and the available GitHub connector only writes UTF-8 text files. Add the two unique files from the original local exports before enabling the homepage brand-film video. Do not upload the duplicate file labelled “clean/no added audio”; the manifest records that it matches the landscape master and contains AAC audio.
+The connected Vercel GitHub identity returned `repo_no_access` when linking `ASHISHDAITH/aaramora-platform`, saying it needs admin or write access. GitHub confirms the repository is public and the signed-in GitHub connector can push, but Vercel's connected GitHub App/identity does not currently have the needed access.
+
+Until that is fixed, **new pushes to `main` will not automatically update the live site**. To enable automatic deployments:
+
+1. Open [Vercel project settings](https://vercel.com/httpsgithubcomefigma54-devpp/aaramora-platform/settings/git).
+2. In GitHub, install or update the Vercel GitHub App for the account that owns `ASHISHDAITH/aaramora-platform`, and grant it access to this repository.
+3. In Vercel, connect the repository to this existing project. Keep the root directory at `./`; this is a static HTML project with no package install or build command.
+4. Push a small reviewed commit and confirm Vercel creates a new production deployment automatically.
+
+Do not create another Vercel project just to retry the connection; the current project already owns the production alias.
+
+## Verification notes
+
+- Vercel's deployment API reports `READY`, `target=production`, and `aliasError=null`.
+- Vercel's source-file listing confirms all seven expected HTML/SVG files are present in the deployment.
+- This execution environment's browser and shell fetchers could not retrieve the new Vercel host, so an independent HTTP/browser smoke test is still pending. Open the production URL in a regular browser and test each route, internal navigation, mobile layout, video playback and the vertical-film link.
+- Confirm the video CDN returns the complete MP4s in a regular browser and check browser developer tools for failed requests before announcing the site publicly.
+
+## No backend or health-data collection
+
+The current website is a static information/help-navigation prototype. No API keys, database, accounts, server-side journal storage, analytics or AI service are required for this deployment. Do not add forms that collect private health details without a separate privacy/security review.
 
 ## Production release gates
-A successful static deploy does not make the platform clinically approved. Before public launch:
+
+A successful static deployment does not mean the platform is clinically approved. Before promoting the site as a health service:
 - clinician review of all mental-health and women's-health copy;
 - safeguarding review of relationship content and the safety flow;
 - native-language review of Hindi and Marathi content;
 - keyboard, screen-reader, mobile, low-bandwidth and WCAG 2.2 AA checks;
 - privacy/security review and deployed network-traffic inspection;
-- current verification of Tele-MANAS, emergency and women’s helpline details;
+- current verification of Tele-MANAS, emergency and women's helpline details;
 - explicit ownership and review dates for every public resource.
+
+Keep the public description clear: AARAMORA is an information and help-navigation prototype, not therapy, diagnosis, prescribing or an emergency response service.
