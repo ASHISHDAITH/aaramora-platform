@@ -92,3 +92,16 @@
 - Every entry now has scripts and editorialReview fields. New edition cards render both script labels and the native/cultural/accessibility review note.
 - Tests assert that edition-specific source URLs exist, selected works are not described beyond their linked scope, and restricted sources remain link-only.
 - Native-language, cultural-context and item-level accessibility reviews are explicitly pending; they have not been signed off by AARAMORA reviewers.
+
+
+## Problem Bench and Yoga transcript release · 24 November 2026
+
+- Problem Bench added to `check-ins.html` with an optional local-only worksheet, no scores or diagnosis, separate influence/outside-control prompts, options/support/action/review fields and a local print view. It explicitly says it is not a clinical service or the Friendship Bench programme.
+- The pre-existing guide finder, women's-health appointment planner and printable cycle log remain in the page.
+- Yoga & Breath now renders four expandable draft transcripts: Hindi and Marathi guided rest; Hindi and Marathi comfortable-breathing awareness. They are labelled draft text, not recordings. Target length is 5–7 minutes each.
+- The four scripts remain pending native-speaker, clinician and qualified yoga-professional approval. No audio generation job has been submitted and no audio file is published.
+- WHO companion is original AARAMORA wording, not copied or translated from WHO. The WHO adaptation plan includes the licence, attribution, no-logo/non-endorsement and third-party-rights rules; outreach is drafted but not sent.
+- The current content/JavaScript check passed on commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde`: [run 45285497757](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285497757).
+- The multilingual Reading Library source-link check passed on commit `081ca9a4177fec08bbee9cd420d70cc3381975c8`: [run 45285225515](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285225515). The checker percent-encodes Unicode source paths and only tests metadata URLs, not source text or book files.
+- The current Vercel production snapshot is `dpl_CYKUri19P8g1uM4hu5tKHbiiZgjG`, READY, with the stable production alias assigned. This confirms deployment state and file inclusion, not a human clinical, accessibility, device or browser approval.
+- Named clinical, safeguarding, yoga and Hindi/Marathi reviewers remain unassigned. Those are launch gates, not tasks that can be truthfully marked complete by an automated build.
