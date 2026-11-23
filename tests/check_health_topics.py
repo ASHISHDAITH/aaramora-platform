@@ -156,8 +156,8 @@ class WebsiteHealthContentTests(unittest.TestCase):
             self.assertIn(href, self.checkins)
         for token in ["localStorage", "sessionStorage", "XMLHttpRequest", "sendBeacon"]:
             self.assertNotIn(token, self.checkins)
-        self.assertNotRegex(self.checkins, r"fetch\\s*\\(")
-        self.assertNotRegex(self.checkins, r'<(?:input|select|textarea|button)\\b[^>]*\\srequired(?:\\s|>)')
+        self.assertNotRegex(self.checkins, r"fetch\s*\(")
+        self.assertNotRegex(self.checkins, r'<(?:input|select|textarea|button)\b[^>]*\srequired(?:\s|>)')
         self.assertIn('id="problem-print"', self.checkins)
         self.assertIn('data-print-target="problem"', self.checkins)
 
