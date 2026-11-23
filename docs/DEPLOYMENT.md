@@ -3,14 +3,14 @@
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
 **Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_HRQ1LQCvVZYRQnRcewg9vYnQf1Qi`  
+**Latest deployment:** `dpl_E45batFEw39PSg1GKyBkN5gQZRb3`  
 **Status:** READY · production · stable alias assigned
 
 ## Current release
 
 A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
 
-The latest deployment is a static snapshot of commit `f8c28f8aaf4a785257a3653416a8c7f57da521ee` on `main`. It contains:
+The latest deployment is a static snapshot of commit `a41820fa9bff38eab31054232267242fcbdb8c00` on `main`. It contains:
 - `index.html` — simplified navigation, shorter hero copy and the 16:9 brand film in the hero
 - `wellbeing.html`
 - `relationships.html`
@@ -20,7 +20,9 @@ The latest deployment is a static snapshot of commit `f8c28f8aaf4a785257a3653416
 - `assets/safe-corner.svg`
 - `assets/thought-river.svg`
 
-The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The homepage now shows five common navigation destinations and groups the remaining destinations under “More”; all original links, sections and tools are retained. It uses shorter hero copy and places the 16:9 master in the hero, with the 9:16 version as a separate link. Video playback is user-initiated; it does not autoplay. Three image-led pathway cards use free-to-use Pexels stock photography, with creator/source credits and descriptive alt text; those image requests are served externally by Pexels.
+The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The homepage now shows five common navigation destinations and groups the remaining destinations under “More”; all original links, sections and tools are retained. It uses shorter hero copy and places the 16:9 master in the hero, with the 9:16 version as a separate link. Video playback is user-initiated; it does not autoplay.
+
+The Reading Library now contains nine subject shelves and 23 linked catalogue cards spanning open mental-health workbooks, academic books, relationship learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain texts, regional-language literature, public-domain classics and GitHub discovery indexes. Its search filters rendered cards in the browser only; it sends no search query to a server and stores no search history. The hero uses a credited Pexels still-life image with an original AARAMORA reading note. It links to source institutions rather than copying third-party books or restricted texts.
 
 The Vercel deployment was created directly from the listed source files because Git repository integration was blocked. The project has Vercel SSO/password deployment protection disabled so the public static site can be visited without membership in the Vercel workspace.
 
@@ -39,9 +41,9 @@ Do not create another Vercel project just to retry the connection; the current p
 
 ## Verification notes
 
-- Vercel's deployment API reports `READY`, `target=production`, the stable `aaramora-platform.vercel.app` alias, and `aliasError=null`.
-- Vercel's source-file listing confirms all eight expected HTML/SVG files are present, including `check-ins.html`.
-- The external browser-fetch tools in the execution environment could not retrieve the Vercel or Pexels image hosts, so an independent visitor-side browser smoke test remains pending. Open the production URL in a regular browser and test all five routes, internal navigation including the “More” menu, mobile layout, image loading, video playback and the vertical-film link.
+- Vercel's deployment API reports `READY`, `target=production`, the stable `aaramora-platform.vercel.app` alias, and `aliasError=null` for deployment `dpl_E45batFEw39PSg1GKyBkN5gQZRb3`.
+- Vercel's source-file listing confirms all eight expected HTML/SVG files are present, including `check-ins.html` and the expanded `reading-library.html`.
+- The web-fetch/browser environment could not retrieve the new Vercel page, so a full visitor-side browser smoke test remains pending. The deployment API and source-file tree are verified, but do not substitute for opening the page as a visitor. Test all five routes, all nine library section links, search on several sample terms, mobile layout, the Pexels image and brand-film playback in a regular browser.
 - Confirm the video CDN returns the complete MP4s in a regular browser and check browser developer tools for failed requests before announcing the site publicly.
 
 ## No backend or health-data collection
