@@ -28,6 +28,7 @@ ACCESS_TYPES = {
     "borrow", "api-read-only",
 }
 READING_LEVELS = {"all-levels", "introductory", "academic", "primary-source"}
+CONTENT_TYPES = {"book", "video", "audiobook", "article", "blog", "image"}
 
 
 class CatalogueError(Exception):
@@ -97,7 +98,7 @@ def main() -> int:
     required_record_fields = {
         "id", "recordType", "title", "editionTitle", "contributors", "traditions",
         "subjects", "languages", "scripts", "editorialReview", "languageCoverageLabel", "readingLevel", "access",
-        "rights", "accessibility", "provenance", "verification",
+        "rights", "accessibility", "provenance", "verification", "contentTypes",
     }
     for index, record in enumerate(records):
         label = f"records[{index}]"
@@ -108,6 +109,9 @@ def main() -> int:
         require(bool(record["title"].strip()), f"{label}.title is empty")
         require(bool(record["editionTitle"].strip()), f"{label}.editionTitle is empty")
         require(record["readingLevel"] in READING_LEVELS, f"{label} has invalid readingLevel")
+        require(isinstance(record["contentTypes"], list) and record["contentTypes"], f"{label}.contentTypes must be a non-empty list")
+        require(len(record["contentTypes"]) == len(set(record["contentTypes"])), f"{label}.contentTypes contains duplicate values")
+        require(set(record["contentTypes"]).issubset(CONTENT_TYPES), f"{label}.contentTypes contains an unsupported format")
         require(isinstance(record["traditions"], list) and record["traditions"],
                 f"{label}.traditions must be a non-empty list")
         require(isinstance(record["languages"], list), f"{label}.languages must be a list")
@@ -156,8 +160,10 @@ def main() -> int:
 
     for marker in ('id="language-catalogue"', 'id="catalogue-language"', 'data/library.json'):
         require(marker in html, f"reading-library.html is missing {marker}")
+    type_totals = {kind: sum(kind in record["contentTypes"] for record in records) for kind in sorted(CONTENT_TYPES)}
+    require(all(type_totals.values()), "All six format categories must have at least one resource")
     print(f"Catalogue valid: {len(records)} catalogue entries, {len(groups)} language groups, "
-          f"{len(scheduled['languages'])} scheduled Indian languages.")
+          f"{len(scheduled['languages'])} scheduled Indian languages, formats={type_totals}.")
     return 0
 
 
