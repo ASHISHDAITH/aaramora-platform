@@ -3,19 +3,20 @@
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
 **Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_E45batFEw39PSg1GKyBkN5gQZRb3`  
+**Latest deployment:** `dpl_ExFwq5vakQ7x5cB1pYfzDxTVTNGt`  
 **Status:** READY · production · stable alias assigned
 
 ## Current release
 
 A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
 
-The latest deployment is a static snapshot of commit `a41820fa9bff38eab31054232267242fcbdb8c00` on `main`. It contains:
+The latest deployment is a static snapshot of commit `05eec4ca64501910ecc2492607cc24f945bb5c48` on `main`. It contains:
 - `index.html` — simplified navigation, shorter hero copy and the 16:9 brand film in the hero
 - `wellbeing.html`
 - `relationships.html`
 - `check-ins.html`
 - `reading-library.html`
+- `yoga-and-breath.html` — evidence summaries, optional low-intensity practices, safety notes and links to draft Hindi/Marathi transcript files (no audio has been recorded or published)
 - `assets/healing-garden.svg`
 - `assets/safe-corner.svg`
 - `assets/thought-river.svg`
@@ -23,6 +24,8 @@ The latest deployment is a static snapshot of commit `a41820fa9bff38eab310542322
 The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The homepage now shows five common navigation destinations and groups the remaining destinations under “More”; all original links, sections and tools are retained. It uses shorter hero copy and places the 16:9 master in the hero, with the 9:16 version as a separate link. Video playback is user-initiated; it does not autoplay.
 
 The Reading Library now contains nine subject shelves and 23 linked catalogue cards spanning open mental-health workbooks, academic books, relationship learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain texts, regional-language literature, public-domain classics and GitHub discovery indexes. Its search filters rendered cards in the browser only; it sends no search query to a server and stores no search history. The hero uses a credited Pexels still-life image with an original AARAMORA reading note. It links to source institutions rather than copying third-party books or restricted texts.
+
+The Yoga & Breath page is a separate evidence-honest guide with summaries of four systematic reviews (2013, 2021, 2023 and 2024), gentle optional practices and safety boundaries. Study populations, outcomes, comparators and certainty are distinguished. The page does not claim yoga cures depression or replaces care, and it does not use invented A/B/C/D evidence grades. Draft Hindi/Marathi guided-rest and comfortable-breathing scripts are stored in `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md`; they require native-speaker, clinician and qualified yoga-professional review and are not recordings.
 
 The Vercel deployment was created directly from the listed source files because Git repository integration was blocked. The project has Vercel SSO/password deployment protection disabled so the public static site can be visited without membership in the Vercel workspace.
 
@@ -42,8 +45,8 @@ Do not create another Vercel project just to retry the connection; the current p
 ## Verification notes
 
 - Vercel's deployment API reports `READY`, `target=production`, the stable `aaramora-platform.vercel.app` alias, and `aliasError=null` for deployment `dpl_E45batFEw39PSg1GKyBkN5gQZRb3`.
-- Vercel's source-file listing confirms all eight expected HTML/SVG files are present, including `check-ins.html` and the expanded `reading-library.html`.
-- The web-fetch/browser environment could not retrieve the new Vercel page, so a full visitor-side browser smoke test remains pending. The deployment API and source-file tree are verified, but do not substitute for opening the page as a visitor. Test all five routes, all nine library section links, search on several sample terms, mobile layout, the Pexels image and brand-film playback in a regular browser.
+- Vercel's source-file listing confirms all nine expected HTML/SVG files are present, including `check-ins.html`, `reading-library.html` and `yoga-and-breath.html`.
+- The web-fetch/browser environment could not retrieve the new Vercel page, so a full visitor-side browser smoke test remains pending. The deployment API and source-file tree are verified, but do not substitute for opening the page as a visitor. Test all six routes, the yoga page's evidence links and draft-transcript link, all nine library section links, library search on several sample terms, mobile layout, the Pexels image and brand-film playback in a regular browser.
 - Confirm the video CDN returns the complete MP4s in a regular browser and check browser developer tools for failed requests before announcing the site publicly.
 
 ## No backend or health-data collection
