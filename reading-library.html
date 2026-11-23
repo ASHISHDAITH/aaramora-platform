@@ -55,6 +55,14 @@ header .nav{background:var(--paper)}
 .catalogue-notice{padding:15px 18px;border:1px solid #D9D5C4;border-radius:16px;background:#F7F0E4;color:#5D5145;margin:18px 0}
 .catalogue-notice strong{display:block;color:#4E4135;margin-bottom:4px}
 .catalogue-toolbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:18px;background:#E8EEE6;border:1px solid #D5DED1;border-radius:18px}
+.catalogue-kind-filter{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px;padding:14px 16px;background:#FFFEFA;border:1px solid var(--line);border-radius:16px}
+.catalogue-kind-label{font-size:.78rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase;color:#496154;margin-right:4px}
+.kind-chip{appearance:none;border:1px solid #CDD9CE;border-radius:999px;padding:8px 13px;min-height:40px;background:#F6F7F1;color:#29483A;font:700 .84rem/1.2 inherit;cursor:pointer}
+.kind-chip:hover{background:#E8EEE6;border-color:#9FB6A2}
+.kind-chip.is-active,.kind-chip[aria-pressed="true"]{background:#20483D;border-color:#20483D;color:#fff}
+.catalogue-record .record-kinds{display:flex;gap:6px;flex-wrap:wrap}
+.record-kind-tag{display:inline-flex;padding:4px 8px;border-radius:999px;background:#E3EBE2;color:#29483A;font-size:.7rem;font-weight:850;letter-spacing:.035em;text-transform:uppercase}
+
 .catalogue-field{display:flex;flex-direction:column;gap:5px;min-width:0}
 .catalogue-field label,.catalogue-sort-label{font-size:.8rem;font-weight:750;color:#40584B}
 .catalogue-field input,.catalogue-field select,.catalogue-actions select{width:100%;min-height:44px;padding:9px 11px;border:1px solid #C8D4C8;border-radius:10px;background:#FFFEFA;color:#203C34;font:inherit}
@@ -80,7 +88,7 @@ header .nav{background:var(--paper)}
 .record-actions a{font-size:.88rem;font-weight:800;text-underline-offset:3px}
 .record-verified{font-size:.76rem!important;color:#718076!important;border-top:1px solid #E8EAE2;padding-top:9px;margin-top:3px!important}
 @media(max-width:850px){.catalogue-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}.catalogue-search-field{grid-column:span 2}.language-coverage{grid-template-columns:1fr}}
-@media(max-width:600px){.support-links{width:100%}.top .wrap{align-items:flex-start}.catalogue-toolbar{grid-template-columns:1fr}.catalogue-search-field{grid-column:auto}.catalogue-actions{align-items:stretch}.catalogue-actions .button{justify-content:center}.catalogue-actions select{max-width:none;flex:1}.language-coverage{grid-template-columns:1fr}}
+@media(max-width:600px){.support-links{width:100%}.top .wrap{align-items:flex-start}.catalogue-toolbar{grid-template-columns:1fr}.catalogue-search-field{grid-column:auto}.catalogue-actions{align-items:stretch}.catalogue-actions .button{justify-content:center}.catalogue-actions select{max-width:none;flex:1}.language-coverage{grid-template-columns:1fr}.catalogue-kind-filter{align-items:flex-start}.catalogue-kind-label{width:100%}}
 
  .card-verification{margin:10px 0 0!important;padding-top:9px;border-top:1px solid #E8EAE2;font-size:.75rem!important;line-height:1.45;color:#718076!important}.card-verification strong{color:#506257}
 
@@ -123,26 +131,36 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
 </style></head>
 <body>
 <div class="top" role="region" aria-label="Support and site links"><div class="wrap"><a class="skip-link" href="#main-content">Skip to main content</a><div class="support-links"><a class="support-link" href="tel:14416"><span>Tele-MANAS</span><strong>14416</strong></a><a class="support-link" href="tel:112"><span>Emergency</span><strong>112</strong></a></div><span><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a></span></div></div>
-<header><div class="wrap nav"><a class="brand" href="index.html">Aaramora · Reading Library</a><nav class="navlinks" aria-label="Library navigation"><a href="#free-downloads">Open books</a><a href="#workbooks-and-articles">Mental health</a><a href="#relationship-open-learning">Relationships</a><a href="#attachment-books">Attachment books</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#novels-and-classics">Fiction</a><a href="#language-catalogue">Languages</a><a href="#github">GitHub source</a><a href="#licensing">Reuse rules</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html">Aaramora · Reading Library</a><nav class="navlinks" aria-label="Library navigation"><a href="#language-catalogue" data-content-type-link="book">Books</a><a href="#language-catalogue" data-content-type-link="video">Videos</a><a href="#language-catalogue" data-content-type-link="audiobook">Audiobooks</a><a href="#language-catalogue" data-content-type-link="article">Articles</a><a href="#language-catalogue" data-content-type-link="blog">Blogs</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#language-catalogue" data-content-type-link="image">Images</a><a href="#github-shelves">GitHub sources</a><a href="#licensing">Rights</a></nav></div></header>
 <main id="main-content">
 <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Read · explore · reflect</div><h1>Find a page worth staying with.</h1><p class="lead">Explore mental-health workbooks, relationship books, sacred texts, thoughtful novels and open-access research. Start with a subject or tradition that matters to you. Each entry links to its original source and explains what is free to read, download or reuse.</p><div class="hero-actions"><a class="button" href="#browse-shelves">Browse the shelves</a><a class="button alt" href="#faith-wisdom">Explore faith &amp; wisdom</a></div></div><figure class="hero-photo">
-<img src="https://images.pexels.com/photos/6873903/pexels-photo-6873903.jpeg?cs=srgb&amp;dl=pexels-pavel-danilyuk-6873903.jpg&amp;fm=jpg" alt="An open vintage book with a delicate dried flower resting on its pages" width="1200" height="800" fetchpriority="high" decoding="async">
-<figcaption>Book still life photographed by <a href="https://www.pexels.com/photo/photograph-of-a-book-with-dry-flowers-6873903/" target="_blank" rel="noopener noreferrer">Pavel Danilyuk · Pexels</a>.</figcaption>
-<div class="quote-card"><blockquote>“Let the page be a pause, not another thing to finish.”</blockquote><p>An original AARAMORA reading note</p></div>
+<img src="https://images.pexels.com/photos/16335051/pexels-photo-16335051.jpeg?cs=srgb&amp;dl=pexels-esrakorkmaz-16335051.jpg&amp;fm=jpg" alt="Vintage book pages with dried flowers arranged on a dark background" width="1200" height="800" fetchpriority="high" decoding="async">
+<figcaption>Book still life photographed by <a href="https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/" target="_blank" rel="noopener noreferrer">Esra Korkmaz · Pexels</a>.</figcaption>
+<div class="quote-card"><blockquote>“A book does not ask you to hurry; it simply leaves the next page open.”</blockquote><p>An original AARAMORA reading note</p></div>
 </figure></div></section>
 
-<nav class="shelf-nav wrap" id="browse-shelves" aria-label="Browse reading shelves"><a href="#free-downloads">Open books</a><a href="#workbooks-and-articles">Mental health</a><a href="#relationship-open-learning">Relationships</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#novels-and-classics">Fiction</a><a href="#github-shelves">GitHub collections</a></nav>
+<nav class="shelf-nav wrap" id="browse-shelves" aria-label="Browse by format"><a href="#language-catalogue" data-content-type-link="book">Books</a><a href="#language-catalogue" data-content-type-link="video">Videos</a><a href="#language-catalogue" data-content-type-link="audiobook">Audiobooks</a><a href="#language-catalogue" data-content-type-link="article">Articles</a><a href="#language-catalogue" data-content-type-link="blog">Blogs</a><a href="#language-catalogue" data-content-type-link="image">Images</a><a href="#faith-wisdom">Sacred texts</a><a href="#github-shelves">GitHub collections</a><a href="#licensing">Reuse rules</a></nav>
 
 <section class="section alt" id="language-catalogue">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">AARAMORA · multilingual discovery</div>
-      <h2>Find books in the language you read.</h2>
-      <p class="lead">Explore source collections across India's scheduled languages, additional regional languages, classical text languages and languages used around the world. These are discovery filters, not a promise that every source contains a book in every language.</p>
+      <h2>Find something worth reading, watching or hearing.</h2>
+      <p class="lead">Browse books, videos, audiobooks, articles, blogs and images across languages and traditions. Filter by format, subject, language, source, access and rights. Every entry links back to its publisher or creator.</p>
     </div>
     <div class="catalogue-notice" role="note">
       <strong>For reflection and cultural reading, not as treatment.</strong>
       Each entry links to its original institution. Free to read does not automatically mean free to download, reuse or redistribute. Availability, translation and rights vary by edition.
+    </div>
+    <div class="catalogue-kind-filter" id="catalogue-kind-filter" role="group" aria-label="Filter resources by content type">
+      <span class="catalogue-kind-label">Choose a format</span>
+      <button type="button" class="kind-chip is-active" data-content-type="" aria-pressed="true">All formats</button>
+      <button type="button" class="kind-chip" data-content-type="book" aria-pressed="false">Books</button>
+      <button type="button" class="kind-chip" data-content-type="video" aria-pressed="false">Videos</button>
+      <button type="button" class="kind-chip" data-content-type="audiobook" aria-pressed="false">Audiobooks</button>
+      <button type="button" class="kind-chip" data-content-type="article" aria-pressed="false">Articles</button>
+      <button type="button" class="kind-chip" data-content-type="blog" aria-pressed="false">Blogs</button>
+      <button type="button" class="kind-chip" data-content-type="image" aria-pressed="false">Images</button>
     </div>
     <div class="catalogue-toolbar" id="catalogue-toolbar">
       <div class="catalogue-field catalogue-search-field">
@@ -341,6 +359,27 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
   };
   if (!els.results || !els.status) return;
   let languageAliasesMap = {};
+  let selectedContentType = "";
+  let loadedRecords = [];
+  const allowedContentTypes = new Set(["","book","video","audiobook","article","blog","image"]);
+  const kindLabels = {book:"Book",video:"Video",audiobook:"Audiobook",article:"Article",blog:"Blog",image:"Image"};
+  const kindButtons = Array.from(document.querySelectorAll("[data-content-type]"));
+  function syncKindButtons() {
+    kindButtons.forEach(button=>{
+      const active=button.dataset.contentType===selectedContentType;
+      button.classList.toggle("is-active",active);
+      button.setAttribute("aria-pressed",String(active));
+    });
+  }
+  function chooseContentType(type) {
+    selectedContentType=allowedContentTypes.has(type)?type:"";
+    syncKindButtons();
+    if(loadedRecords.length) filterRecords(loadedRecords);
+  }
+  kindButtons.forEach(button=>button.addEventListener("click",()=>chooseContentType(button.dataset.contentType)));
+  document.querySelectorAll("[data-content-type-link]").forEach(link=>{
+    link.addEventListener("click",()=>chooseContentType(link.dataset.contentTypeLink));
+  });
   const normalise = value => String(value || "").toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[char]);
   const dateLabel = value => {
@@ -353,6 +392,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
     const languageTags = languages.slice(0,5).map(x=>'<span class="record-tag">'+esc(x)+'</span>').join("");
     const overflow = languages.length > 5 ? '<span class="record-tag neutral">+'+(languages.length-5)+' languages</span>' : "";
     const languageMarkup = languageTags || '<span class="record-tag neutral">'+esc(record.languageCoverageLabel || "See the source for language coverage")+'</span>';
+    const kindMarkup = (record.contentTypes||[]).map(kind=>'<span class="record-kind-tag">'+esc(kindLabels[kind]||kind)+'</span>').join("");
     const accessUrl = safeUrl(record.access && record.access.url);
     const policyUrl = safeUrl(record.rights && record.rights.policyUrl);
     const provenanceUrl = safeUrl(record.provenance && record.provenance.sourceUrl);
@@ -372,7 +412,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
       const languageAttr = record.titleLanguage ? ' lang="'+esc(record.titleLanguage)+'"' : "";
       titleMarkup = '<h3'+languageAttr+'>'+esc(record.title)+'</h3>';
     }
-    return '<article class="catalogue-record"><div class="record-tags"><span class="record-tag">'+esc(record.access.label)+'</span><span class="record-tag neutral">'+esc(record.rights.status.replace(/-/g," "))+'</span></div>' +
+    return '<article class="catalogue-record"><div class="record-kinds" aria-label="Content formats">'+kindMarkup+'</div><div class="record-tags"><span class="record-tag">'+esc(record.access.label)+'</span><span class="record-tag neutral">'+esc(record.rights.status.replace(/-/g," "))+'</span></div>' +
       titleMarkup+'<p class="record-subtitle">'+esc(record.editionTitle)+'</p>' +
       '<p>'+esc(record.access.notes)+'</p><p><strong>Languages:</strong> '+languageMarkup+overflow+'</p>' +
       ((record.scripts||[]).length ? '<p><strong>Scripts:</strong> '+esc(record.scripts.join(" · "))+'</p>' : '') +
@@ -411,6 +451,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
     const level=els.level.value;
     const format=els.format.value;
     const visible=records.filter(record=>{
+      if(selectedContentType && !(record.contentTypes||[]).includes(selectedContentType)) return false;
       const searchable=normalise([
         record.title,record.editionTitle,record.languageCoverageLabel,
         (record.languages||[]).join(" "),(record.scripts||[]).join(" "),
@@ -440,20 +481,21 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
       ? (String(b.verification.checkedAt).localeCompare(String(a.verification.checkedAt)) || a.title.localeCompare(b.title))
       : a.title.localeCompare(b.title));
     els.results.innerHTML=visible.map(renderCard).join("");
-    els.status.textContent=visible.length+" of "+records.length+" catalogue entries match. Language, script, edition, access and rights notes are shown at source level; editorial review status is visible on each card.";
+    els.status.textContent=visible.length+" of "+records.length+" catalogue entries match. Use the format chips with the language, tradition, access, rights and file-format filters.";
   }
   fetch(url,{cache:"no-cache"})
     .then(response=>{if(!response.ok)throw new Error("Catalogue returned HTTP "+response.status);return response.json();})
     .then(data=>{
       if(!data || !Array.isArray(data.records) || !Array.isArray(data.languageGroups)) throw new Error("Catalogue data format is invalid");
       languageAliasesMap = data.languageAliases || {};
+      loadedRecords = data.records;
       renderLanguageGroups(data.languageGroups);
       populateLanguageSelect(data.languageGroups);
       [els.search,els.language,els.tradition,els.access,els.rights,els.level,els.format,els.sort].forEach(input=>input.addEventListener("input",()=>filterRecords(data.records)));
       els.reset.addEventListener("click",()=>{
         els.search.value="";els.language.value="";els.tradition.value="";els.access.value="";
         els.rights.value="";els.level.value="";els.format.value="";els.sort.value="title";
-        filterRecords(data.records);
+        selectedContentType="";syncKindButtons();filterRecords(data.records);
       });
       filterRecords(data.records);
     })
