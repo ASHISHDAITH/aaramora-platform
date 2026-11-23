@@ -135,3 +135,6 @@ The current production deployment is live at the URL above. A final browser smok
 - `docs/review/ACCESSIBILITY_MANUAL_TEST_PLAN.md`: NVDA, VoiceOver, TalkBack, keyboard, 320 CSS px/400% zoom, forced-colors and reduced-motion test plan.
 - `docs/review/OUTREACH_DRAFTS.md`: unsubmitted academic, cultural and accessibility outreach messages.
 - No reviewer or institution has yet accepted a review; all independent human-review fields remain pending. The public contacts are referral leads, not endorsements.
+
+
+- The Tele-MANAS 14416 and Emergency 112 support links have a 44px minimum height and 24px separation to improve touch-target size; this is covered by a regression test.
