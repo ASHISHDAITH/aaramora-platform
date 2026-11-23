@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "lastReviewedAt": "2026-11-24",
-  "editorialPolicy": "AARAMORA is a multilingual discovery catalogue. It links to official sources and records language scope, access model, provenance, accessibility notes and item-level rights caveats. It does not mirror copyrighted books, scrape restricted sites, bypass access controls or treat a collection-level statement as a book-level licence. Language filters are discovery aids, not a guarantee that a linked source contains every listed language. Every edition-level record carries an explicit review state. A source page check is not a native-language, clinical, religious/cultural, legal or assistive-technology approval.",
+  "editorialPolicy": "AARAMORA is a multilingual discovery catalogue. It links to official sources and records language scope, access model, provenance, accessibility notes and item-level rights caveats. It does not mirror copyrighted books, scrape restricted sites, bypass access controls or treat a collection-level statement as a book-level licence. Language filters are discovery aids, not a guarantee that a linked source contains every listed language. Every edition-level record carries an explicit review state. A source page check is not a native-language, clinical, religious/cultural, legal or assistive-technology approval. Each record now carries format tags for book, video, audiobook, article, blog or image discovery. Tags describe the linked source, not AARAMORA-hosted copies. Video, audio, articles, blogs and images retain creator- and item-specific rights. Do not bulk scrape platforms, bypass DRM/paywalls or treat free-to-read links as redistribution permission.",
   "languageGroups": [
     {
       "id": "india-scheduled",
@@ -253,7 +253,14 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book",
+        "video",
+        "audiobook",
+        "article",
+        "image"
+      ]
     },
     {
       "id": "heritage-scripture-server",
@@ -332,7 +339,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "vedic-heritage-portal",
@@ -405,7 +415,13 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book",
+        "video",
+        "audiobook",
+        "image"
+      ]
     },
     {
       "id": "gretil-indian-texts",
@@ -492,7 +508,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "wikisource-multilingual",
@@ -573,7 +592,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "project-gutenberg-languages",
@@ -653,7 +675,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "librivox-multilingual-audio",
@@ -726,7 +751,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "audiobook"
+      ]
     },
     {
       "id": "open-library-discovery",
@@ -807,7 +835,11 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book",
+        "audiobook"
+      ]
     },
     {
       "id": "doab-oapen-open-access",
@@ -890,7 +922,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "openn-south-asian-manuscripts",
@@ -967,7 +1002,11 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book",
+        "image"
+      ]
     },
     {
       "id": "banidb-sikh-source",
@@ -1039,7 +1078,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "hi-ramcharitmanas-wikisource",
@@ -1118,7 +1160,10 @@
       },
       "titleNative": "रामचरितमानस",
       "titleLanguage": "hi",
-      "titleDisplaySuffix": "Hindi Wikisource edition"
+      "titleDisplaySuffix": "Hindi Wikisource edition",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "mr-jnaneshwari-wikisource",
@@ -1194,7 +1239,10 @@
       },
       "titleNative": "ज्ञानेश्वरी",
       "titleLanguage": "mr",
-      "titleDisplaySuffix": "Marathi Wikisource"
+      "titleDisplaySuffix": "Marathi Wikisource",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "bn-gitanjali-1913-wikisource",
@@ -1269,7 +1317,10 @@
       },
       "titleNative": "গীতাঞ্জলি (১৯১৩)",
       "titleLanguage": "bn",
-      "titleDisplaySuffix": "Gitanjali"
+      "titleDisplaySuffix": "Gitanjali",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "pa-guru-granth-sahib-folio-1",
@@ -1343,7 +1394,11 @@
       },
       "titleNative": "ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ",
       "titleLanguage": "pa",
-      "titleDisplaySuffix": "selected folio 1"
+      "titleDisplaySuffix": "selected folio 1",
+      "contentTypes": [
+        "book",
+        "image"
+      ]
     },
     {
       "id": "ur-diwan-e-ghalib-wikisource",
@@ -1422,7 +1477,10 @@
       "titleNative": "دیوان غالب",
       "titleLanguage": "ur",
       "titleDisplaySuffix": "Diwan-e-Ghalib",
-      "titleDirection": "rtl"
+      "titleDirection": "rtl",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "or-odia-bhagabata-skandha-1",
@@ -1499,7 +1557,10 @@
       },
       "titleNative": "ଓଡ଼ିଆ ଭାଗବତ",
       "titleLanguage": "or",
-      "titleDisplaySuffix": "first Skandha"
+      "titleDisplaySuffix": "first Skandha",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "ta-thirukkural-project-madurai",
@@ -1578,7 +1639,10 @@
       },
       "titleNative": "திருக்குறள்",
       "titleLanguage": "ta",
-      "titleDisplaySuffix": "Tirukkural"
+      "titleDisplaySuffix": "Tirukkural",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "gu-wikisource-full-book-index",
@@ -1651,7 +1715,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "kn-wikisource-kannada-portal",
@@ -1722,7 +1789,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "ml-wikisource-malayalam-book-list",
@@ -1797,7 +1867,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "ar-safahat-arabic-reading",
@@ -1872,7 +1945,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "fr-comte-monte-cristo-pg",
@@ -1952,7 +2028,10 @@
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       },
-      "titleLanguage": "fr"
+      "titleLanguage": "fr",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "de-faust-pg",
@@ -2028,7 +2107,10 @@
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       },
-      "titleLanguage": "de"
+      "titleLanguage": "de",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "es-don-quijote-pg",
@@ -2104,7 +2186,10 @@
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       },
-      "titleLanguage": "es"
+      "titleLanguage": "es",
+      "contentTypes": [
+        "book"
+      ]
     },
     {
       "id": "pt-os-lusiadas-pg",
@@ -2180,7 +2265,1694 @@
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       },
-      "titleLanguage": "pt"
+      "titleLanguage": "pt",
+      "contentTypes": [
+        "book"
+      ]
+    },
+    {
+      "id": "openstax-psychology-cc-by",
+      "recordType": "media-source",
+      "title": "Psychology · OpenStax",
+      "editionTitle": "Introductory psychology textbook · official free web and PDF editions",
+      "contributors": [
+        {
+          "name": "Rose M. Spielman and contributing authors",
+          "role": "authors"
+        }
+      ],
+      "traditions": [
+        "Secular"
+      ],
+      "subjects": [
+        "psychology",
+        "memory",
+        "emotion",
+        "social psychology",
+        "stress",
+        "mental health"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read online or download PDF at OpenStax",
+        "url": "https://openstax.org/books/psychology/pages/1-introduction",
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "notes": "Official introductory psychology textbook. The preface identifies this Psychology edition as CC BY 4.0 and offers free web and PDF access. It is distinct from the separately listed Psychology 2e title."
+      },
+      "rights": {
+        "status": "open-license",
+        "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "jurisdiction": "International licence, subject to third-party exclusions and applicable law",
+        "reuse": "The identified Psychology text may be shared and adapted with attribution. Retain author, title, source and licence details; check third-party figures separately.",
+        "notes": "The CC BY 4.0 notice applies to this identified Psychology edition, not the separate Psychology 2e entry.",
+        "policyUrl": "https://openstax.org/books/psychology/pages/preface"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "PDF"
+        ]
+      },
+      "provenance": {
+        "sourceName": "OpenStax · Rice University",
+        "sourceUrl": "https://openstax.org/books/psychology/pages/1-introduction",
+        "policyUrl": "https://openstax.org/books/psychology/pages/preface"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "book"
+      ]
+    },
+    {
+      "id": "standardebooks-captain-blood",
+      "recordType": "media-source",
+      "title": "Captain Blood · Standard Ebooks",
+      "editionTitle": "Rafael Sabatini · formatted public-domain ebook",
+      "contributors": [
+        {
+          "name": "Rafael Sabatini",
+          "role": "author"
+        },
+        {
+          "name": "Standard Ebooks contributors",
+          "role": "edition and formatting"
+        }
+      ],
+      "traditions": [
+        "Secular"
+      ],
+      "subjects": [
+        "historical fiction",
+        "adventure",
+        "classic novel"
+      ],
+      "languages": [
+        "English"
+      ],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read or download the Standard Ebooks edition",
+        "url": "https://standardebooks.org/ebooks/rafael-sabatini/captain-blood",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle"
+        ],
+        "notes": "A polished digital edition of the adventure novel. Its repository licence states the underlying text/artwork is believed public domain in the United States and contributor work is dedicated under CC0 1.0."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "US public-domain assessment; contributor changes dedicated under CC0 1.0",
+        "jurisdiction": "Public-domain statement is US-specific; check local copyright terms elsewhere",
+        "reuse": "Check the individual ebook licence and territorial status before redistribution. Do not assume an old source text clears every later illustration, translation or cover.",
+        "notes": "Repository licence states the US public-domain position and CC0 dedication for contributors.",
+        "policyUrl": "https://github.com/standardebooks/rafael-sabatini_captain-blood/blob/master/LICENSE.md"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Standard Ebooks",
+        "sourceUrl": "https://standardebooks.org/ebooks/rafael-sabatini/captain-blood",
+        "policyUrl": "https://github.com/standardebooks/rafael-sabatini_captain-blood/blob/master/LICENSE.md"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "book"
+      ]
+    },
+    {
+      "id": "cci-self-help-workbooks",
+      "recordType": "media-source",
+      "title": "Looking After Yourself · mental health workbooks",
+      "editionTitle": "Centre for Clinical Interventions · free workbook and worksheet collection",
+      "contributors": [
+        {
+          "name": "Centre for Clinical Interventions",
+          "role": "publisher"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "anxiety",
+        "depression",
+        "panic",
+        "health anxiety",
+        "sleep",
+        "self-esteem",
+        "perfectionism",
+        "worry",
+        "rumination"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "download-at-source",
+        "label": "Open free self-help workbooks at CCI",
+        "url": "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself",
+        "formats": [
+          "PDF",
+          "HTML",
+          "Worksheets",
+          "Guided audio"
+        ],
+        "notes": "Free topic resources include workbooks, information sheets, worksheets and some guided audio. CCI says these do not replace professional diagnosis or treatment."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "CCI copyright and personal-use conditions; no blanket republication licence",
+        "jurisdiction": "Publisher terms and applicable copyright law",
+        "reuse": "Link to CCI. Personal downloads are available from the publisher; reproduction, rehosting or republication requires permission.",
+        "notes": "Do not bulk-download, mirror or republish workbook PDFs. Preserve the source's clinical disclaimer.",
+        "policyUrl": "https://www.cci.health.wa.gov.au/Home/Utilities/Copyright-and-Disclaimer"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "PDF",
+          "HTML",
+          "Worksheets",
+          "Guided audio"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Centre for Clinical Interventions",
+        "sourceUrl": "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself",
+        "policyUrl": "https://www.cci.health.wa.gov.au/Home/Utilities/Copyright-and-Disclaimer"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "book",
+        "article"
+      ]
+    },
+    {
+      "id": "cci-worry-rumination",
+      "recordType": "media-source",
+      "title": "Worry and Rumination · CCI",
+      "editionTitle": "Information sheets, What Me Worry? workbook, modules, worksheets and guided audio",
+      "contributors": [
+        {
+          "name": "Centre for Clinical Interventions",
+          "role": "publisher"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "worry",
+        "rumination",
+        "repetitive thinking",
+        "uncertainty",
+        "anxiety"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read and download the original CCI module",
+        "url": "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Worry-and-Rumination",
+        "formats": [
+          "HTML",
+          "PDF",
+          "Worksheets",
+          "Audio"
+        ],
+        "notes": "A focused shelf for worry and rumination. Links to the provider's workbook, learning modules, worksheets and guided audio. These are educational self-help resources, not diagnosis or treatment."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "CCI copyright; personal-use downloads; republication requires permission",
+        "jurisdiction": "Publisher terms and applicable copyright law",
+        "reuse": "Link to CCI. Do not copy its worksheets, workbook pages or audio into AARAMORA without written permission.",
+        "notes": "A free download does not license rehosting or adaptation.",
+        "policyUrl": "https://www.cci.health.wa.gov.au/Home/Utilities/Copyright-and-Disclaimer"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "PDF",
+          "Worksheets",
+          "Audio"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Centre for Clinical Interventions",
+        "sourceUrl": "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Worry-and-Rumination",
+        "policyUrl": "https://www.cci.health.wa.gov.au/Home/Utilities/Copyright-and-Disclaimer"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "book",
+        "article",
+        "audiobook"
+      ]
+    },
+    {
+      "id": "pmc-open-access-articles",
+      "recordType": "media-source",
+      "title": "PubMed Central · Open Access Subset",
+      "editionTitle": "Article-level full-text access and reuse-filtered research index",
+      "contributors": [
+        {
+          "name": "US National Library of Medicine",
+          "role": "repository"
+        }
+      ],
+      "traditions": [
+        "Secular"
+      ],
+      "subjects": [
+        "mental health",
+        "psychology",
+        "medicine",
+        "public health",
+        "peer-reviewed research"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "discovery",
+        "label": "Search open-access full-text articles",
+        "url": "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
+        "formats": [
+          "HTML",
+          "PDF",
+          "XML",
+          "Metadata"
+        ],
+        "notes": "Use the Open Access Subset to find eligible full-text research. A free-to-read PMC page is not necessarily reusable; open the individual article and check its exact copyright and licence statement."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Article-specific Creative Commons or other publisher terms",
+        "jurisdiction": "Per article, publisher, author agreement and local law",
+        "reuse": "Reuse only articles whose item-level licence permits the intended action. Do not bulk-scrape the main PMC website; use documented OA Subset retrieval routes.",
+        "notes": "PMC contains both open-licensed and traditionally copyrighted articles.",
+        "policyUrl": "https://pmc.ncbi.nlm.nih.gov/about/copyright"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "PDF",
+          "XML",
+          "Metadata"
+        ]
+      },
+      "provenance": {
+        "sourceName": "PubMed Central · National Library of Medicine",
+        "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
+        "policyUrl": "https://pmc.ncbi.nlm.nih.gov/about/copyright"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "article"
+      ]
+    },
+    {
+      "id": "doaj-research-articles",
+      "recordType": "media-source",
+      "title": "Directory of Open Access Journals · DOAJ",
+      "editionTitle": "Searchable directory of open-access journals and article records",
+      "contributors": [
+        {
+          "name": "DOAJ",
+          "role": "directory and metadata service"
+        }
+      ],
+      "traditions": [
+        "Secular"
+      ],
+      "subjects": [
+        "psychology",
+        "mental health",
+        "health sciences",
+        "social sciences",
+        "relationships"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "discovery",
+        "label": "Discover open-access journals and articles",
+        "url": "https://doaj.org/",
+        "formats": [
+          "HTML",
+          "Metadata",
+          "Article links"
+        ],
+        "notes": "Use DOAJ to discover open-access journals and article pages. Follow each publisher link and inspect the article-level licence before reuse or downloading."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Per-journal and per-article publisher licence",
+        "jurisdiction": "Per publisher, article and applicable law",
+        "reuse": "DOAJ listing alone does not license an article. Use the publisher's article page and reproduce only where the exact licence permits.",
+        "notes": "Directory metadata and the underlying article have separate rights.",
+        "policyUrl": "https://doaj.org/apply/guide/"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "Metadata",
+          "Article links"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Directory of Open Access Journals",
+        "sourceUrl": "https://doaj.org/",
+        "policyUrl": "https://doaj.org/apply/guide/"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "article"
+      ]
+    },
+    {
+      "id": "greater-good-articles",
+      "recordType": "media-source",
+      "title": "Greater Good Magazine · science-based wellbeing articles",
+      "editionTitle": "UC Berkeley · research-informed essays and practical reading",
+      "contributors": [
+        {
+          "name": "Greater Good Science Center",
+          "role": "publisher"
+        }
+      ],
+      "traditions": [
+        "Secular"
+      ],
+      "subjects": [
+        "compassion",
+        "gratitude",
+        "relationships",
+        "empathy",
+        "mindfulness",
+        "social connection"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "read-online",
+        "label": "Read publisher articles and watch original media",
+        "url": "https://greatergood.berkeley.edu/",
+        "formats": [
+          "HTML",
+          "Video",
+          "Podcast"
+        ],
+        "notes": "Articles and media discuss compassion, gratitude, relationships and social connection. Individual stories and media remain subject to publisher and contributor terms."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Copyrighted editorial content; no blanket republication licence",
+        "jurisdiction": "Publisher and contributor terms",
+        "reuse": "Link to original articles or use official share/embed features where offered. Do not scrape or republish articles or media.",
+        "notes": "Free access is not a licence to reproduce article text or images.",
+        "policyUrl": "https://greatergood.berkeley.edu/about"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "Video",
+          "Podcast"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Greater Good Science Center · University of California, Berkeley",
+        "sourceUrl": "https://greatergood.berkeley.edu/",
+        "policyUrl": "https://greatergood.berkeley.edu/about"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "article",
+        "blog",
+        "video"
+      ]
+    },
+    {
+      "id": "gottman-relationship-articles",
+      "recordType": "media-source",
+      "title": "The Gottman Institute · relationship articles",
+      "editionTitle": "Articles on couples, conflict, friendship and relationship learning",
+      "contributors": [
+        {
+          "name": "The Gottman Institute",
+          "role": "publisher"
+        }
+      ],
+      "traditions": [
+        "Secular"
+      ],
+      "subjects": [
+        "relationships",
+        "communication",
+        "conflict",
+        "friendship",
+        "couples",
+        "repair"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "read-online",
+        "label": "Read relationship articles at the source",
+        "url": "https://www.gottman.com/blog/",
+        "formats": [
+          "HTML",
+          "Video",
+          "Podcast"
+        ],
+        "notes": "Articles and media introduce relationship concepts and communication ideas. They are educational resources, not a diagnosis or an assessment of a particular relationship."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Copyrighted articles, images and media; no blanket reuse licence",
+        "jurisdiction": "Publisher and contributor terms",
+        "reuse": "Link to the original post. Use official share/embed features where available; do not mirror text, video or artwork.",
+        "notes": "Free-to-read article pages still have copyright restrictions."
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "Video",
+          "Podcast"
+        ]
+      },
+      "provenance": {
+        "sourceName": "The Gottman Institute",
+        "sourceUrl": "https://www.gottman.com/blog/"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "article",
+        "blog",
+        "video"
+      ]
+    },
+    {
+      "id": "school-of-life-attachment-video",
+      "recordType": "media-source",
+      "title": "What Is Your Attachment Style?",
+      "editionTitle": "The School of Life · introductory relationship video · 2018",
+      "contributors": [
+        {
+          "name": "The School of Life",
+          "role": "video creator and publisher"
+        }
+      ],
+      "traditions": [
+        "Secular"
+      ],
+      "subjects": [
+        "attachment theory",
+        "relationships",
+        "anxious attachment",
+        "avoidant attachment"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "read-online",
+        "label": "Watch on the creator's YouTube channel",
+        "url": "https://www.youtube.com/watch?v=2s9ACDMcpjA",
+        "formats": [
+          "YouTube video",
+          "Captions (check player)"
+        ],
+        "notes": "Creator-produced introduction to attachment-style vocabulary. It is not a clinical assessment or a stand-alone academic source. Watch on the original YouTube page."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Copyright remains with The School of Life and contributors; YouTube terms apply",
+        "jurisdiction": "Creator and platform terms",
+        "reuse": "Link to or use the official YouTube embed. Do not download, rehost, edit or remove creator attribution.",
+        "notes": "AARAMORA stores the title, creator and link only; no video file is copied."
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "YouTube video",
+          "Captions (check player)"
+        ]
+      },
+      "provenance": {
+        "sourceName": "The School of Life · YouTube",
+        "sourceUrl": "https://www.youtube.com/watch?v=2s9ACDMcpjA"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "video"
+      ]
+    },
+    {
+      "id": "school-of-life-attachment-2026-video",
+      "recordType": "media-source",
+      "title": "How Does Our Attachment Style Shape the Way We Love and Suffer in Relationships?",
+      "editionTitle": "The School of Life · published 22 April 2026",
+      "contributors": [
+        {
+          "name": "The School of Life",
+          "role": "video creator and publisher"
+        }
+      ],
+      "traditions": [
+        "Secular"
+      ],
+      "subjects": [
+        "attachment theory",
+        "love",
+        "relationships",
+        "emotional patterns"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "read-online",
+        "label": "Watch on the creator's YouTube channel",
+        "url": "https://www.youtube.com/watch?v=Y7IxJxK7tT4",
+        "formats": [
+          "YouTube video",
+          "Captions (check player)"
+        ],
+        "notes": "Recent creator-produced attachment explainer. Treat it as an educational perspective rather than diagnostic advice or specialist research."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Copyright remains with The School of Life and contributors; YouTube terms apply",
+        "jurisdiction": "Creator and platform terms",
+        "reuse": "Link to the creator's YouTube video or use official embed. Do not download, copy, re-edit or host the video file.",
+        "notes": "Canonical source page remains the original YouTube video."
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "YouTube video",
+          "Captions (check player)"
+        ]
+      },
+      "provenance": {
+        "sourceName": "The School of Life · YouTube",
+        "sourceUrl": "https://www.youtube.com/watch?v=Y7IxJxK7tT4"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "video"
+      ]
+    },
+    {
+      "id": "librivox-multilingual-catalogue",
+      "recordType": "media-source",
+      "title": "LibriVox · free public-domain audiobooks",
+      "editionTitle": "Volunteer-read books searchable by title, author, subject and language",
+      "contributors": [
+        {
+          "name": "LibriVox volunteer readers",
+          "role": "recordings"
+        },
+        {
+          "name": "LibriVox coordinators",
+          "role": "production"
+        }
+      ],
+      "traditions": [
+        "Secular",
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "audiobooks",
+        "classic novels",
+        "poetry",
+        "history",
+        "philosophy",
+        "multilingual audio"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "audio-download",
+        "label": "Listen or download the official audiobook",
+        "url": "https://librivox.org/search",
+        "formats": [
+          "Audio",
+          "MP3",
+          "Online player"
+        ],
+        "notes": "LibriVox says volunteer recordings are dedicated to the public domain and free to listen or download. Check the underlying book's copyright in your country; older texts can contain outdated language or views."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "LibriVox recordings are dedicated to the public domain; source-book status must be checked separately",
+        "jurisdiction": "LibriVox rights guidance is US-centred; check the source text and local law",
+        "reuse": "Keep reader and recording credits. Check the underlying book's local copyright status before reuse or redistribution.",
+        "notes": "Recording and underlying literary work are distinct rights objects.",
+        "policyUrl": "https://librivox.org/pages/about-librivox/"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "Audio",
+          "MP3",
+          "Online player"
+        ]
+      },
+      "provenance": {
+        "sourceName": "LibriVox",
+        "sourceUrl": "https://librivox.org/search",
+        "policyUrl": "https://librivox.org/pages/about-librivox/"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "audiobook"
+      ]
+    },
+    {
+      "id": "ebible-world-english-audio",
+      "recordType": "media-source",
+      "title": "World English Bible · audio recordings",
+      "editionTitle": "eBible.org · downloadable Bible audio editions and named recordings",
+      "contributors": [
+        {
+          "name": "eBible.org",
+          "role": "publisher and source"
+        },
+        {
+          "name": "Named recording contributors",
+          "role": "recording"
+        }
+      ],
+      "traditions": [
+        "Christian"
+      ],
+      "subjects": [
+        "Bible",
+        "scripture",
+        "audio Bible"
+      ],
+      "languages": [
+        "English"
+      ],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "audio-download",
+        "label": "Listen to or download source audio",
+        "url": "https://ebible.org/webaudio/",
+        "formats": [
+          "Audio",
+          "MP3",
+          "Ogg"
+        ],
+        "notes": "eBible.org offers World English Bible audio editions. Specific recording pages describe permissions; follow the named recording and narrator notice because contributors can differ."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "World English Bible text is public domain; check each recording's rights notice",
+        "jurisdiction": "Per recording, narrator and local law",
+        "reuse": "Keep narrator, source and edition details. Reuse only the particular recording whose page explicitly allows it.",
+        "notes": "Text, translation, recitation and recording are separate rights layers.",
+        "policyUrl": "https://ebible.org/engwebu/copyright.htm"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "Audio",
+          "MP3",
+          "Ogg"
+        ]
+      },
+      "provenance": {
+        "sourceName": "eBible.org",
+        "sourceUrl": "https://ebible.org/webaudio/",
+        "policyUrl": "https://ebible.org/engwebu/copyright.htm"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "audiobook"
+      ]
+    },
+    {
+      "id": "gurbani-prakash-audio",
+      "recordType": "media-source",
+      "title": "Gurbani Prakash · read-along recitation",
+      "editionTitle": "Free browser reader for daily Nitnem and Sri Guru Granth Sahib Ji",
+      "contributors": [
+        {
+          "name": "Dr. Prabhjot Singh Bajwa",
+          "role": "project creator"
+        },
+        {
+          "name": "Named recitation contributors",
+          "role": "recordings"
+        }
+      ],
+      "traditions": [
+        "Sikh"
+      ],
+      "subjects": [
+        "Guru Granth Sahib",
+        "Gurbani",
+        "Nitnem",
+        "Japji Sahib",
+        "daily prayers"
+      ],
+      "languages": [
+        "Punjabi",
+        "Hindi",
+        "English"
+      ],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Open the source reader and follow along with audio",
+        "url": "https://gurbaniprakash.org/",
+        "formats": [
+          "HTML",
+          "Audio",
+          "Word-highlighted reader"
+        ],
+        "notes": "The seva project describes a free browser reader with word-highlighted recitation, daily Nitnem and all 1430 angs of Sri Guru Granth Sahib Ji. Its recitations are described as devotional, non-commercial use, not a general rehosting licence."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Mixed source text and recording rights; devotional non-commercial use described by project",
+        "jurisdiction": "Per recording, source text and contributor",
+        "reuse": "Link to the original reader. Do not download, mirror or reuse recordings or translations; follow the rights holder's conditions.",
+        "notes": "Text sourced from BaniDB; recitations credited to named contributors on the source page.",
+        "policyUrl": "https://gurbaniprakash.org/"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "Audio",
+          "Word-highlighted reader"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Gurbani Prakash",
+        "sourceUrl": "https://gurbaniprakash.org/",
+        "policyUrl": "https://gurbaniprakash.org/"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "audiobook",
+        "book"
+      ]
+    },
+    {
+      "id": "quran-com-recitation-reader",
+      "recordType": "media-source",
+      "title": "Quran.com · Qur’an reader and recitations",
+      "editionTitle": "Arabic text, translations and reciter streams in the official reader",
+      "contributors": [
+        {
+          "name": "Quran Foundation and named contributors",
+          "role": "platform, reciters and translators"
+        }
+      ],
+      "traditions": [
+        "Islamic"
+      ],
+      "subjects": [
+        "Qur’an",
+        "Quran recitation",
+        "translations",
+        "tafsir"
+      ],
+      "languages": [
+        "Arabic",
+        "English",
+        "Urdu"
+      ],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Read and listen in the official player",
+        "url": "https://quran.com/",
+        "formats": [
+          "HTML",
+          "Audio streaming",
+          "Translations"
+        ],
+        "notes": "Official reader for Qur’an text and recitations. Rights differ by reciter, recording and translation; use the site for personal reading/listening and link to the source."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Recitation, translation and text rights vary by source; platform terms apply",
+        "jurisdiction": "Per reciter, translator, edition and platform terms",
+        "reuse": "Do not extract or rehost recitations or translations. Credit platform, reciter and translation where terms require it.",
+        "notes": "A free reader does not grant general redistribution rights.",
+        "policyUrl": "https://quran.com/terms-and-conditions"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "Audio streaming",
+          "Translations"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Quran.com · Quran Foundation",
+        "sourceUrl": "https://quran.com/",
+        "policyUrl": "https://quran.com/terms-and-conditions"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "audiobook",
+        "book"
+      ]
+    },
+    {
+      "id": "tanzil-quran-text",
+      "recordType": "media-source",
+      "title": "The Qur’an · Tanzil text",
+      "editionTitle": "Verified Arabic text and published text licence",
+      "contributors": [
+        {
+          "name": "Tanzil Project",
+          "role": "text source"
+        }
+      ],
+      "traditions": [
+        "Islamic"
+      ],
+      "subjects": [
+        "Qur’an",
+        "Arabic scripture",
+        "Quran text",
+        "Islamic studies"
+      ],
+      "languages": [
+        "Arabic"
+      ],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read or download the text from Tanzil",
+        "url": "https://tanzil.net/",
+        "formats": [
+          "HTML",
+          "Text download"
+        ],
+        "notes": "Tanzil publishes a specific text licence. Its terms permit verbatim copying under CC BY 3.0 with attribution, but prohibit modifying the text. Translation, recitation and commentary have separate rights."
+      },
+      "rights": {
+        "status": "open-license",
+        "licence": "CC BY 3.0 for the specified Tanzil text, with no modification",
+        "jurisdiction": "Creative Commons licence subject to its terms and third-party rights",
+        "reuse": "Redistribute only the licensed text verbatim with copyright notice, source attribution and a link to Tanzil. Do not modify or extend this permission to audio or commentary.",
+        "notes": "The licence applies to the specified text, not every Qur’an edition or media format.",
+        "policyUrl": "https://tanzil.net/docs/Text_License"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "Text download"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Tanzil Project",
+        "sourceUrl": "https://tanzil.net/",
+        "policyUrl": "https://tanzil.net/docs/Text_License"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "book"
+      ]
+    },
+    {
+      "id": "quranenc-translation-library",
+      "recordType": "media-source",
+      "title": "QuranEnc · translations of the meanings of the Qur’an",
+      "editionTitle": "Translation catalogue with edition-specific source and reuse conditions",
+      "contributors": [
+        {
+          "name": "QuranEnc and named translators",
+          "role": "publisher and translators"
+        }
+      ],
+      "traditions": [
+        "Islamic"
+      ],
+      "subjects": [
+        "Qur’an",
+        "Quran translation",
+        "Arabic",
+        "Islamic studies"
+      ],
+      "languages": [
+        "Arabic",
+        "English",
+        "Urdu",
+        "French",
+        "German",
+        "Spanish"
+      ],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Choose a translation and read at source",
+        "url": "https://quranenc.com/en/home",
+        "formats": [
+          "HTML",
+          "Translations",
+          "Download at source where offered"
+        ],
+        "notes": "Translation entries have individual names and versions. Conditions allow eligible translation texts to be republished only without modification and with required publisher, source, version and transcript information."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "QuranEnc conditions for specific translations; no blanket licence for all media",
+        "jurisdiction": "Per translation, translator, edition and current conditions",
+        "reuse": "Do not edit, shorten or silently revise a translation. Preserve source, publisher, version and required transcript information; otherwise link only.",
+        "notes": "The permission does not automatically cover recitations, commentary or artwork.",
+        "policyUrl": "https://quranenc.com/en/home/about/conditions"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "Translations",
+          "Download at source where offered"
+        ]
+      },
+      "provenance": {
+        "sourceName": "QuranEnc",
+        "sourceUrl": "https://quranenc.com/en/home",
+        "policyUrl": "https://quranenc.com/en/home/about/conditions"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "book"
+      ]
+    },
+    {
+      "id": "suttacentral-buddhist-reader",
+      "recordType": "media-source",
+      "title": "SuttaCentral · early Buddhist texts",
+      "editionTitle": "Pāli and translated sutta reader with parallels and reference tools",
+      "contributors": [
+        {
+          "name": "SuttaCentral",
+          "role": "platform and editorial contributors"
+        },
+        {
+          "name": "Named translators",
+          "role": "translators"
+        }
+      ],
+      "traditions": [
+        "Buddhist"
+      ],
+      "subjects": [
+        "Pali Canon",
+        "suttas",
+        "early Buddhism",
+        "Pali",
+        "translations"
+      ],
+      "languages": [
+        "Pali",
+        "English",
+        "Chinese"
+      ],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Read texts and parallels at SuttaCentral",
+        "url": "https://suttacentral.net/",
+        "formats": [
+          "HTML",
+          "Text",
+          "Audio where available"
+        ],
+        "notes": "Specialist reader for early Buddhist texts, parallels and translations. Original-language text, project-authored material and third-party translations do not all share one licence."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Original SuttaCentral material may be CC0; third-party translations retain their rights",
+        "jurisdiction": "Per original text, translation, translator and source",
+        "reuse": "Link to each text. Do not scrape or use SuttaCentral content to build generative-AI datasets; reuse only items whose rights clearly permit it.",
+        "notes": "The licensing page distinguishes project-authored material from third-party translations.",
+        "policyUrl": "https://suttacentral.net/licensing?lang=en"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "HTML",
+          "Text",
+          "Audio where available"
+        ]
+      },
+      "provenance": {
+        "sourceName": "SuttaCentral",
+        "sourceUrl": "https://suttacentral.net/",
+        "policyUrl": "https://suttacentral.net/licensing?lang=en"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "book",
+        "article"
+      ]
+    },
+    {
+      "id": "suttacentral-github-source",
+      "recordType": "media-source",
+      "title": "SuttaCentral · sc-data repository",
+      "editionTitle": "GitHub source index for text corpora, parallels, structure and metadata",
+      "contributors": [
+        {
+          "name": "SuttaCentral contributors",
+          "role": "repository maintainers"
+        }
+      ],
+      "traditions": [
+        "Buddhist"
+      ],
+      "subjects": [
+        "Pali Canon",
+        "Buddhist texts",
+        "text corpora",
+        "GitHub"
+      ],
+      "languages": [
+        "Pali",
+        "English"
+      ],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "discovery",
+        "label": "Inspect the public source repository",
+        "url": "https://github.com/suttacentral/sc-data",
+        "formats": [
+          "GitHub repository",
+          "Text files",
+          "Metadata"
+        ],
+        "notes": "Repository README says it contains legacy and Bilara texts, parallels, structure and metadata. Public visibility does not grant blanket rights to every included translation or source text."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Repository code/data and underlying source texts have distinct rights",
+        "jurisdiction": "Per source text, translation and contributing rights holder",
+        "reuse": "Use as a source index only. Do not mirror or ingest text for redistribution or AI datasets unless the exact content licence permits it.",
+        "notes": "Check repository documentation and the SuttaCentral content licensing page.",
+        "policyUrl": "https://suttacentral.net/licensing?lang=en"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "GitHub repository",
+          "Text files",
+          "Metadata"
+        ]
+      },
+      "provenance": {
+        "sourceName": "SuttaCentral · GitHub",
+        "sourceUrl": "https://github.com/suttacentral/sc-data",
+        "policyUrl": "https://suttacentral.net/licensing?lang=en"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "book"
+      ]
+    },
+    {
+      "id": "openverse-image-discovery",
+      "recordType": "media-source",
+      "title": "Openverse · openly licensed image search",
+      "editionTitle": "Creative Commons and public-domain media search across source collections",
+      "contributors": [
+        {
+          "name": "Openverse contributors and source repositories",
+          "role": "search platform and original creators"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "photography",
+        "book still life",
+        "botanical images",
+        "manuscripts",
+        "illustration"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "discovery",
+        "label": "Search images and filter by licence",
+        "url": "https://openverse.org/",
+        "formats": [
+          "Image search",
+          "JPEG",
+          "PNG",
+          "SVG"
+        ],
+        "notes": "Discover Creative Commons and public-domain images. Open each original source record and confirm creator, licence version, attribution and modification/commercial-use conditions before use."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Per-image Creative Commons licence or public-domain status",
+        "jurisdiction": "Per creator, image, source and applicable law",
+        "reuse": "Store an image only after checking the original item's licence. Provide exact creator credit, source link and licence; honour non-commercial, no-derivatives and share-alike restrictions.",
+        "notes": "A search result is not itself a licence.",
+        "policyUrl": "https://openverse.org/about"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "Image search",
+          "JPEG",
+          "PNG",
+          "SVG"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Openverse",
+        "sourceUrl": "https://openverse.org/",
+        "policyUrl": "https://openverse.org/about"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "image"
+      ]
+    },
+    {
+      "id": "wikimedia-commons-media",
+      "recordType": "media-source",
+      "title": "Wikimedia Commons · free media collection",
+      "editionTitle": "Photographs, archival images, audio and video with item-level rights",
+      "contributors": [
+        {
+          "name": "Wikimedia Commons contributors",
+          "role": "original creators and uploaders"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "photographs",
+        "books",
+        "manuscripts",
+        "audio",
+        "video",
+        "history"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "discovery",
+        "label": "Browse free media and inspect each file's licence",
+        "url": "https://commons.wikimedia.org/",
+        "formats": [
+          "Image",
+          "Audio",
+          "Video",
+          "Metadata"
+        ],
+        "notes": "Commons includes freely licensed and public-domain media. Every file page has its own creator and licence details; check those details before reuse."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Per-file public domain or Creative Commons licence",
+        "jurisdiction": "Per file and applicable local law",
+        "reuse": "For Creative Commons files, provide creator, source and licence; follow ShareAlike and other conditions. Do not infer rights from the platform alone.",
+        "notes": "The collection has varied licence types and each file is a separate rights object.",
+        "policyUrl": "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "Image",
+          "Audio",
+          "Video",
+          "Metadata"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Wikimedia Commons · Wikimedia Foundation",
+        "sourceUrl": "https://commons.wikimedia.org/",
+        "policyUrl": "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "image",
+        "video",
+        "audiobook"
+      ]
+    },
+    {
+      "id": "pexels-rare-book-photo",
+      "recordType": "media-source",
+      "title": "Vintage book pages with a dried flower · Esra Erdem",
+      "editionTitle": "Pexels photograph · 4336 × 6500 · published 11 April 2023",
+      "contributors": [
+        {
+          "name": "Esra Erdem",
+          "role": "photographer"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "book still life",
+        "dried flower",
+        "dark academia",
+        "reading library"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "read-online",
+        "label": "View the photograph and download at Pexels",
+        "url": "https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/",
+        "formats": [
+          "JPEG",
+          "Photography"
+        ],
+        "notes": "Moody archival still life featuring vintage pages and a dried flower. Pexels identifies Esra Erdem as photographer and marks the photograph free. AARAMORA credits the photographer even though attribution is not required by Pexels."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Pexels License; follow current exclusions and restrictions",
+        "jurisdiction": "Pexels terms and applicable local law",
+        "reuse": "Use under Pexels License. Do not sell an unmodified copy or imply photographer/subject endorsement. Keep the credit link.",
+        "notes": "The source page identifies the photographer and image dimensions.",
+        "policyUrl": "https://www.pexels.com/legal-pages/license"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "JPEG",
+          "Photography"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Pexels · Esra Erdem",
+        "sourceUrl": "https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/",
+        "policyUrl": "https://www.pexels.com/legal-pages/license"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "image"
+      ]
+    },
+    {
+      "id": "pexels-free-video-discovery",
+      "recordType": "media-source",
+      "title": "Pexels · free stock video library",
+      "editionTitle": "Creator-uploaded video discovery for reading, nature and quiet-study visuals",
+      "contributors": [
+        {
+          "name": "Individual Pexels video creators",
+          "role": "original videographers"
+        },
+        {
+          "name": "Pexels",
+          "role": "discovery platform"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "reading",
+        "books",
+        "libraries",
+        "nature",
+        "study",
+        "ambient video"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language availability varies by item and edition; confirm at the source.",
+      "readingLevel": "introductory",
+      "access": {
+        "type": "discovery",
+        "label": "Browse videos and check creator credits",
+        "url": "https://www.pexels.com/videos/",
+        "formats": [
+          "Video",
+          "MP4"
+        ],
+        "notes": "Use the source page to find individual clips and their creators. Check the exact clip and current licence restrictions; do not bulk-scrape the platform."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Pexels License, subject to stated restrictions",
+        "jurisdiction": "Pexels terms and applicable local law",
+        "reuse": "Use only after checking the individual clip and licence. Credit the creator, avoid implying endorsement and do not redistribute unmodified stock files as standalone products.",
+        "notes": "This is a discovery link, not permission to mirror the catalogue.",
+        "policyUrl": "https://www.pexels.com/legal-pages/license"
+      },
+      "accessibility": {
+        "searchableText": "Search and reading features vary by source and item.",
+        "reflowable": "Reading and download formats vary by source.",
+        "screenReaderNotes": "Check the source for captions, transcripts, semantic structure and screen-reader support.",
+        "formats": [
+          "Video",
+          "MP4"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Pexels",
+        "sourceUrl": "https://www.pexels.com/videos/",
+        "policyUrl": "https://www.pexels.com/legal-pages/license"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the named official source page and available public rights/access notes on 24 November 2026. This is a source-level check, not verification of every item or edition."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "video"
+      ]
     }
   ],
   "languageAliases": {
