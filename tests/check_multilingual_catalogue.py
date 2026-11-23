@@ -158,6 +158,22 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn("titleLanguage", HTML)
         self.assertIn('aria-label="Open official source for ', HTML)
 
+
+    def test_language_aliases_allow_canonical_and_variant_names_to_match(self):
+        aliases = DATA.get("languageAliases", {})
+        self.assertIn("Manipuri (Meitei)", aliases["Manipuri"])
+        self.assertIn("Meitei (Manipuri)", aliases["Manipuri"])
+        self.assertIn("Filipino", aliases["Filipino/Tagalog"])
+        self.assertIn("Tagalog", aliases["Filipino/Tagalog"])
+        ndli = next(x for x in DATA["records"] if x["id"] == "ndli-multilingual-discovery")
+        self.assertIn("Manipuri (Meitei)", ndli["languages"])
+        self.assertIn("languageAliases", SCHEMA["required"])
+
+    def test_forced_colors_and_minimum_link_targets_are_present(self):
+        self.assertIn("@media(forced-colors:active)", HTML)
+        self.assertIn(".top .wrap a,.navlinks a{display:inline-flex;align-items:center;min-height:32px}", HTML)
+        self.assertIn('aria-label="Language coverage source ', HTML)
+
     def test_no_original_section_removed(self):
         for anchor in ("free-downloads", "scripture-shelf", "workbooks-and-articles", "relationship-open-learning", "attachment-books", "faith-wisdom", "novels-and-classics", "github-shelves", "licensing"):
             with self.subTest(anchor=anchor):
