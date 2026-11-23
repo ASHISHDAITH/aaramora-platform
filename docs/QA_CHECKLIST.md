@@ -114,3 +114,13 @@
 - [ ] Three optional reflection quizzes remain unscored and non-diagnostic.
 - [ ] Unanswered safety-check items are not interpreted as No.
 - [ ] Coercive control, threats, stalking and violence route to individual safety support.
+
+
+## Reading library and content licensing
+- [ ] Every downloadable/mirrored book has a verified book-level licence, not just a repository root licence.
+- [ ] Attribution, licence URI/version and change notices are visible.
+- [ ] NonCommercial and ShareAlike conditions are respected.
+- [ ] Third-party images, worksheets, charts and cover rights are checked separately.
+- [ ] Copyrighted titles link to official publisher or lawful library access, never unauthorised mirrors.
+- [ ] Public GitHub access is not treated as permission to copy bundled books.
+- [ ] Re-check official source and edition before publishing any download link.

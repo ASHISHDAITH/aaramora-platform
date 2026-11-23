@@ -91,3 +91,7 @@ Across mental wellbeing and women's health, every topic should explain:
 
 ## 40-concept relationship library
 The separate relationship page contains all 40 concepts from the uploaded research report appendix, each with how it may feel, what may help and when to seek support. The library has client-side search and no diagnostic scores. Three optional reflection quizzes remain separate from the non-scored safety check.
+
+
+## Reading library
+A separate `reading-library.html` page provides source-linked open resources, licence information and legitimate publisher/library routes for copyrighted attachment books. Aaramora does not bypass paywalls or mirror unlicensed scans. Each resource shows whether it is CC BY, CC BY-NC-SA, or publisher/library access only.

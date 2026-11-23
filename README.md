@@ -50,3 +50,10 @@ Relationship reflection prompts are custom and unvalidated, not attachment-style
 ## Privacy
 
 Never commit real user messages, journals, screening answers, health records, participant data, API keys or credentials. Use synthetic fixtures. Never send personal health data to free-tier AI APIs.
+
+
+## Reading library and copyright rules
+- `reading-library.html` provides legal read/download links for explicitly licensed open resources and publisher/library access to copyrighted relationship books.
+- The GitHub source reference for OpenStax is `openstax/OpenStaxOnTheGo`; its repository AGPL licence covers software, while the book asset has its own source licence. The current official OpenStax site is the preferred download source.
+- Never bypass DRM, paywalls, private repository permissions or import copyrighted book copies without permission.
+- A public GitHub repository or its root licence does not automatically license every bundled third-party book, image or dataset.

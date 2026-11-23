@@ -116,3 +116,21 @@ See `docs/RELATIONSHIPS_RESEARCH.md` for full citations, study limitations, read
 
 ## User-provided relationship research report integrated
 The 15-page *Attachment Protest and the Wider Psychology of Romantic Relationships* (24 November 2026) was used for the attachment framework, 40-term appendix, evidence grades, relationship-cycle model and practical pathways. Its method is described as a targeted narrative/scoping synthesis, not an exhaustive systematic review. See `docs/RELATIONSHIP_CONCEPT_CONTENT_MAP.md`.
+
+
+## Reading library: authoritative source and licence checks (24 November 2026)
+- OpenStax, *Psychology 2e*: official preface specifies CC BY 4.0 and free web/PDF access. https://openstax.org/books/psychology/pages/preface
+- OpenStax official publication/download page: https://openstax.org/details/books/psychology-2e
+- BCcampus, *Capacity to Connect: Supporting Students' Mental Health and Wellness*: book states CC BY 4.0 and offers PDF, EPUB, MOBI and editable formats. https://opentextbc.ca/capacitytoconnect/
+- WHO, *Doing What Matters in Times of Stress*: official rights page states CC BY-NC-SA 3.0 IGO; non-commercial redistribution/adaptation with attribution. https://www.who.int/publications/b/53604
+- WHO guide page and download: https://www.who.int/publications/i/item/9789240003927
+- eCampusOntario, *Mental Health Continuum*: CC BY-NC-SA 4.0 stated in book front matter. https://openlibrary-repo.ecampusontario.ca/xmlui/bitstream/handle/123456789/2400/Mental-Health-Continuum-1703011941.-pdf.pdf?sequence=3&isAllowed=y
+- NCBI Bookshelf: free access to health and life-science books/documents, but title-level copyright/permissions must be checked individually. https://www.ncbi.nlm.nih.gov/books/
+- GitHub: https://github.com/openstax/OpenStaxOnTheGo contains Psychology textbook assets. Its root LICENSE is AGPL-3.0 for repository software; do not assume it licenses all book assets. Psychology content is separately identified by OpenStax as CC BY 4.0. Prefer the current official OpenStax download page.
+- Bowlby, *Attachment*: Hachette/Basic Books official listing. https://www.hachettebookgroup.com/titles/john-bowlby/a-secure-base/9780465005437/?lens=basic-books
+- Bowlby, *Separation*: official listing. https://www.hachettebookgroup.com/titles/john-bowlby/separation/9780465097166/?lens=basic-books
+- Bowlby, *Loss*: official listing. https://www.hachettebookgroup.com/titles/john-bowlby/loss/9780465042388/
+- Mikulincer & Shaver, *Attachment in Adulthood* (2nd ed.): Guilford official page. https://www.guilford.com/books/Attachment-in-Adulthood/Mikulincer-Shaver/9781462533817
+- Cassidy & Shaver, *Handbook of Attachment* (3rd ed.): Guilford official page. https://www.guilford.com/books/Handbook-of-Attachment/Cassidy-Shaver/9781462536641
+- Johnson, *Attachment Theory in Practice*: Guilford official page. https://www.guilford.com/books/Attachment-Theory-in-Practice/Susan-Johnson/9781462538249
+- Gottman & Silver, *The Seven Principles for Making Marriage Work*: Penguin Random House official page. https://www.penguinrandomhouse.com/books/248395/the-seven-principles-for-making-marriage-work-by-john-gottman-phd-and-nan-silver/9781101902912/
