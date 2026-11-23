@@ -223,3 +223,35 @@ See `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md` for study details, instrument distinc
 
 
 See [READING_LIBRARY_EXPANSION.md](READING_LIBRARY_EXPANSION.md) for the complete editorial access model, rights notes, hero-image credit and maintenance rules.
+
+
+## Yoga, breath and low-intensity movement evidence (24 November 2026)
+
+- Cramer et al. (2013), *Yoga for depression: a systematic review and meta-analysis*: https://pubmed.ncbi.nlm.nih.gov/23922209/
+  - 12 RCTs, 619 participants. Moderate evidence for short-term effects versus usual care; limited evidence versus relaxation and aerobic exercise. No included RCT reported safety data; long-term effects could not be meta-analysed.
+- Brinsley et al. (2021), *Effects of yoga on depressive symptoms in people with mental disorders*: https://pubmed.ncbi.nlm.nih.gov/32423912/
+  - 19 studies / 1,080 people in review; 13 studies / 632 people meta-analysed. Included adults with several diagnosed mental disorders. Higher weekly frequency was associated with greater symptom reductions across studies; this is not an individual dose recommendation.
+- Wu et al. (2023), *Effectiveness of yoga for major depressive disorder*: https://pubmed.ncbi.nlm.nih.gov/37032928/ and https://pmc.ncbi.nlm.nih.gov/articles/PMC10077871/
+  - 34 RCTs; 2,341 participants total (1,269 yoga, 1,072 control). The review reports moderate effect sizes on depression measures; its anxiety effect estimate was negligible. Study quality and heterogeneity still matter.
+- Moosburner et al. (2024), *Yoga for Depressive Disorder: A Systematic Review and Meta-Analysis*: https://pubmed.ncbi.nlm.nih.gov/40226719/ and https://pmc.ncbi.nlm.nih.gov/articles/PMC11919030/
+  - 24 studies / 1,395 people included; 20 studies / 1,333 meta-analysed. Short-term depression symptom benefit versus passive controls, not statistically significant versus active controls. GRADE quality ranged moderate to very low.
+- NCCIH, *Yoga: Effectiveness and Safety*: https://www.nccih.nih.gov/health/yoga-effectiveness-and-safety
+  - Yoga is generally considered safe for healthy people when performed properly, but sprains and strains occur. Beginners should avoid extreme practices and forceful breathing; pregnancy, older age, injuries and health conditions may require clinician/instructor-guided modification.
+
+## Task-shared psychological programmes (inspiration only, not web equivalence)
+
+- Chibanda et al. (2016), Friendship Bench, JAMA: https://pubmed.ncbi.nlm.nih.gov/28027368/ and https://jamanetwork.com/journals/jama/fullarticle/2594719
+  - 573 participants in a cluster RCT. The intervention involved six individual problem-solving therapy sessions by trained, supervised lay health workers plus optional peer-support sessions. Depression symptoms at six months were 13.7% versus 49.9%. Do not imply these outcomes apply to a self-guided website.
+- Patel et al. (2017), Healthy Activity Programme, Goa, Lancet: https://pubmed.ncbi.nlm.nih.gov/27988143/ and https://pmc.ncbi.nlm.nih.gov/articles/PMC5236064/
+  - Ten primary-health centres; 495 randomised participants (247 HAP + enhanced usual care, 248 enhanced usual care). At three months, remission was 64% (147/230) versus 39% (91/236). HAP was a structured treatment delivered by lay counsellors, not a website activity checklist.
+- Weobong et al. (2017), HAP 12-month follow-up: https://pubmed.ncbi.nlm.nih.gov/28898283/ and https://pmc.ncbi.nlm.nih.gov/articles/PMC5595303/
+  - 247 HAP + enhanced usual care and 248 enhanced usual care alone. Gains were sustained through 12 months; remission remained higher in the intervention arm. This is follow-up of the same counsellor-delivered programme.
+
+## Stress guide licence and responsible public communication
+
+- WHO, *Doing What Matters in Times of Stress* (2020): https://www.who.int/publications/i/item/9789240003927
+  - Publication licence: CC BY-NC-SA 3.0 IGO. Non-commercial copying, redistribution, translation and adaptation are allowed with attribution; translations/adaptations must use the same or similar licence. Do not use the WHO logo or imply endorsement; translations need the prescribed disclaimer. Link to WHO's official guide unless an adaptation is properly licensed and reviewed.
+- WHO, *Preventing suicide: a resource for media professionals, update 2023*: https://www.who.int/publications/i/item/9789240076846
+  - Use responsible, non-sensational public communication, avoid harmful detail and include help-seeking routes. Apply to site articles, campaign posts, stories and other public copy that discusses suicide.
+- Samaritans, *Media guidelines for reporting suicide*: https://www.samaritans.org/about-samaritans/media-guidelines/media-guidelines-reporting-suicide/
+  - Additional editorial guidance for content likely to be read by vulnerable audiences.
