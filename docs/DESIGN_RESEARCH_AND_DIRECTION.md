@@ -1,7 +1,8 @@
 # First-Visit Experience — Research & Design Direction
 
 **Status:** Concept direction and static prototype  
-**Working product label:** “the platform” (final name remains open)  
+**Product name:** AARAMORA  
+**Tagline:** A gentle place to begin again.  
 **Audience assumption:** Adults in India, including people who may be distressed, overwhelmed, uncertain, low on time, on a low-end phone or more comfortable in Hindi/Marathi/Romanised Hindi.  
 **Product boundary:** Mental-health information and help navigation. Not therapy, diagnosis, crisis response or an AI companion.
 
@@ -38,7 +39,7 @@ A 2025 scoping review examined 118 studies of trauma-informed principles in digi
 
 ### 2.2 Psychological first aid suggests a human-help pathway, not an AI persona
 
-WHO psychological first aid uses the action principles “Look, Listen and Link”: attend to safety and urgent needs, listen without pressure, and connect people with information and services. This platform is not a psychological first-aid provider, but the principles support a clear information architecture: make the situation legible, do not pressure the user to disclose, and make links to real support easy to find.
+WHO psychological first aid uses the action principles “Look, Listen and Link”: attend to safety and urgent needs, listen without pressure, and connect people with information and services. AARAMORA is not a psychological first-aid provider, but the principles support a clear information architecture: make the situation legible, do not pressure the user to disclose, and make links to real support easy to find.
 
 ### 2.3 Calm technology: respect attention
 
@@ -83,7 +84,7 @@ A meta-analysis of 92 RCTs (16,728 participants) found no significant associatio
 
 Apple's “Behind the Design: Headspace” describes the role of a warm visual identity, approachable style and information organisation in making mindfulness less intimidating. The transferable lesson is to make content approachable and easier to navigate—not to copy Headspace’s orange palette, character style, illustrations, wording or app layout.
 
-Don Norman’s *Emotional Design* distinguishes visceral (first impression), behavioural (how it works) and reflective (what the experience means afterwards) design. For this platform:
+Don Norman’s *Emotional Design* distinguishes visceral (first impression), behavioural (how it works) and reflective (what the experience means afterwards) design. For AARAMORA:
 - Visceral: quiet, warm, legible visual welcome.
 - Behavioural: simple, predictable choices and fast routes.
 - Reflective: visitor leaves knowing the platform was honest, respectful and useful.
