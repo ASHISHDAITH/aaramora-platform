@@ -61,6 +61,16 @@ h1{font-size:clamp(2.7rem,5.3vw,5rem);line-height:1.02;max-width:670px;margin:18
 .hero-footnote{display:flex;gap:9px;align-items:flex-start;margin-top:18px;color:var(--muted);font-size:.88rem;max-width:550px}
 .hero-footnote svg{flex:0 0 19px;margin-top:3px}
 .hero-scene{min-height:430px;position:relative;border-radius:36px;background:linear-gradient(160deg,#E6EEE5 0%,#E8ECE6 45%,#D7E4E2 100%);overflow:hidden;display:grid;place-items:center;border:1px solid rgba(56,88,68,.08)}
+.brand-film-section{padding:58px 0;background:#E7EDE4;border-block:1px solid #D5DED3}
+.brand-film-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:34px;align-items:center}
+.brand-film-copy{max-width:480px}
+.brand-film-copy h2{margin-top:10px}
+.brand-film-frame{padding:12px;border:1px solid #D3DCCF;border-radius:26px;background:#FBFAF5;box-shadow:0 14px 40px rgba(31,57,46,.08)}
+.brand-film-video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#17231D;border-radius:16px}
+.brand-film-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.brand-film-section[hidden]{display:none!important}
+@media(max-width:1000px){.brand-film-grid{grid-template-columns:1fr}.brand-film-copy{max-width:720px}}
+
 .hero-scene:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:#F2E9D8;top:-150px;right:-55px}
 .scene-caption{position:absolute;bottom:17px;right:20px;font-size:.78rem;color:#496356;letter-spacing:.04em;z-index:2}
 .scene-svg{width:100%;max-width:650px;height:auto;position:relative;z-index:1}
@@ -378,6 +388,27 @@ details p{color:var(--muted);margin:12px 0 0;font-size:.94rem}
         <g fill="#FFF9E8" opacity=".85"><circle cx="137" cy="103" r="2"/><circle cx="223" cy="74" r="1.5"/><circle cx="352" cy="115" r="2"/><circle cx="581" cy="75" r="1.5"/></g>
       </svg>
       <span class="scene-caption">A light can show one step. You choose the path.</span>
+    </div>
+  </div>
+</section>
+
+<section class="brand-film-section" id="brand-film" aria-labelledby="brand-film-title" hidden>
+  <div class="wrap brand-film-grid">
+    <div class="brand-film-copy">
+      <div class="eyebrow">AARAMORA · Our first story</div>
+      <h2 id="brand-film-title">A gentle place to begin again.</h2>
+      <p class="lead">A short film about making room for your thoughts, finding care you can trust and feeling heard by another person.</p>
+      <p class="prototype-note">This film is an introduction to the platform, not a promise of treatment or recovery. You can watch, pause or skip it.</p>
+      <div class="brand-film-actions">
+        <a class="button button-secondary" href="assets/brand-film/aaramora-instagram-9x16.mp4" target="_blank" rel="noopener noreferrer">View the vertical film</a>
+      </div>
+    </div>
+    <div class="brand-film-frame">
+      <video class="brand-film-video" id="brand-film-video" controls preload="none" playsinline poster="assets/healing-garden.svg" aria-label="AARAMORA brand film: a quiet morning, a care conversation, journaling, a garden and human connection">
+        <source src="assets/brand-film/aaramora-master-16x9.mp4" type="video/mp4">
+        Your browser does not support embedded video. Use the vertical film link or open the video file directly.
+      </video>
+      <p class="prototype-note" style="margin:10px 4px 2px">Audio is user-controlled. The film does not autoplay.</p>
     </div>
   </div>
 </section>
@@ -1023,6 +1054,17 @@ document.querySelectorAll("[data-pause]").forEach((button) => {
     output.innerHTML = `<strong>${msg[0]}</strong><p>${msg[1]}</p>`;
   });
 });
+// Show the brand-film module only when the landscape media asset is present on the host.
+(async () => {
+  const filmSection = document.getElementById("brand-film");
+  if (!filmSection) return;
+  try {
+    const response = await fetch("assets/brand-film/aaramora-master-16x9.mp4", { method: "HEAD", cache: "no-store" });
+    if (response.ok) filmSection.hidden = false;
+  } catch (_) {
+    // Keep the module hidden on file:// previews and before the MP4 is uploaded.
+  }
+})();
 const menuToggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("main-nav");
 menuToggle.addEventListener("click", () => {
