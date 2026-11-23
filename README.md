@@ -30,6 +30,7 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - India human-support routes, optional pause prompts and low-stimulation Night Help.
 - Overthinking Unload, Little Garden, untimed Puzzle Sanctuary, Creative Studio and Safe Corner.
 - Mental wellbeing guides covering depression, anxiety, panic, acute stress surges, trauma-related distress, rumination, sleep, burnout, grief and OCD-related experiences.
+- Yoga & Breath guide with study-specific evidence summaries, optional low-intensity practices, safety boundaries and Hindi/Marathi transcript drafts pending native-language and clinical/yoga review.
 - Relationships corner with 40 searchable concepts, three optional non-diagnostic reflections, a non-scored safety check and practical guidance for different sides of a relationship cycle.
 - Check-ins page with a non-scored guide finder, on-page women's-health appointment planner and printable original two-cycle symptom log.
 - Women's-health corner with eight topic areas and the shared “how it may feel / what may help / when to seek support” structure.
@@ -47,6 +48,8 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - `docs/RELATIONSHIPS_RESEARCH.md` and `docs/RELATIONSHIP_CONCEPT_CONTENT_MAP.md` — relationship research and 40-concept glossary map.
 - `docs/RELATIONSHIP_QUIZ_SPEC.md` — three reflection tools, safety check, privacy and review gates.
 - `docs/HEALTH_TOPIC_CONTENT_STANDARD.md` — shared authoring rules for all health topics.
+- `docs/YOGA_AND_BREATH_EVIDENCE.md` — yoga reviews, Friendship Bench and HAP trial notes, WHO licensing, safety and evidence-label rules.
+- `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md` — original Hindi/Marathi guided-rest and comfortable-breathing transcript drafts; not approved or recorded audio.
 - `docs/RESEARCH_SOURCES.md` — source and licensing register.
 - `docs/QA_CHECKLIST.md`, `docs/QA_RESULTS.md` and `docs/VALIDATION_NOTES.md` — quality gates, completed checks and remaining reviews.
 - `docs/DEPLOYMENT.md` — live Vercel deployment status, verification notes and the remaining Git-integration step.
