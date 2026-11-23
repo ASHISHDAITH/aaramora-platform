@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "lastEditorialVerification": "2026-11-24",
+  "nextEditorialVerification": "2026-12-24",
+  "policy": {
+    "description": "Official-source register for helplines displayed by AARAMORA. Automated checks test source URLs only; they do not prove a helpline is staffed, reachable from every phone/network, or appropriate to every caller.",
+    "automatedCheck": "HTTP metadata reachability only. 403, 405, 429, timeouts and network errors are inconclusive and require human review.",
+    "privacy": "The checker sends no user information and downloads no source-page body."
+  },
+  "records": [
+    {
+      "id": "tele-manas",
+      "service": "Tele-MANAS",
+      "displayedNumbers": [
+        {
+          "display": "14416",
+          "tel": "14416",
+          "purpose": "Primary toll-free mental-health support number"
+        },
+        {
+          "display": "1800-89-14416",
+          "tel": "18008914416",
+          "purpose": "Alternative toll-free number listed by DGHS"
+        }
+      ],
+      "availability": "24 hours / 7 days; confirm current service details on the official source",
+      "geography": "India",
+      "officialSourceUrl": "https://www.dghs.mohfw.gov.in/national-mental-health-programme.php",
+      "secondaryOfficialSourceUrl": "https://telemanas.mohfw.gov.in/",
+      "lastVerified": "2026-11-24",
+      "nextReview": "2026-12-24",
+      "owner": "AARAMORA content editor; named individual not yet assigned",
+      "caveat": "Service details, language availability and routing may change. Do not promise a specific language or response time."
+    },
+    {
+      "id": "erss-112",
+      "service": "Emergency Response Support System",
+      "displayedNumbers": [
+        {
+          "display": "112",
+          "tel": "112",
+          "purpose": "Nationwide emergency response number"
+        }
+      ],
+      "availability": "Nationwide emergency response system",
+      "geography": "India",
+      "officialSourceUrl": "https://www.mha.gov.in/emergency-response-support-system-erss",
+      "lastVerified": "2026-11-24",
+      "nextReview": "2026-12-24",
+      "owner": "AARAMORA content editor; named individual not yet assigned",
+      "caveat": "For immediate emergencies. Local dispatch and service availability are managed by State/UT emergency response systems."
+    },
+    {
+      "id": "women-helpline-181",
+      "service": "Women Helpline",
+      "displayedNumbers": [
+        {
+          "display": "181",
+          "tel": "181",
+          "purpose": "Information, referral and emergency/non-emergency support for women"
+        }
+      ],
+      "availability": "Official WCD source describes a 24-hour toll-free service",
+      "geography": "India; WCD currently states operational in all States/UTs except West Bengal",
+      "officialSourceUrl": "https://www.wcd.gov.in/women/help",
+      "lastVerified": "2026-11-24",
+      "nextReview": "2026-12-24",
+      "owner": "AARAMORA content editor; named individual not yet assigned",
+      "caveat": "Do not imply universal State/UT coverage. WCD's current page lists West Bengal as an exception; verify local availability and referral arrangements before relying on it."
+    }
+  ]
+}
