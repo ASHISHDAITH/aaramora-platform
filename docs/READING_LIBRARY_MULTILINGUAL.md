@@ -116,3 +116,19 @@ These statuses must not be changed to reviewed until a named qualified reviewer 
 - Spanish Don Quijote: https://www.gutenberg.org/ebooks/2000
 - Portuguese Os Lusíadas: https://www.gutenberg.org/ebooks/3333
 
+
+
+## Six-format discovery catalogue · 24 November 2026
+
+The original 26 multilingual records remain. The catalogue now contains 48 entries after adding 22 source records. Each entry has required `contentTypes` tags, using one or more of `book`, `video`, `audiobook`, `article`, `blog` and `image`. Format tags describe source links, not AARAMORA-hosted content. They can be combined with the existing language, tradition, access, rights, reading-level and file-format filters.
+
+The media shelf includes:
+- OpenStax Psychology (the specific edition whose preface names CC BY 4.0), Standard Ebooks, and Centre for Clinical Interventions workbooks.
+- PubMed Central's Open Access Subset and DOAJ for article discovery, with article-level rights checks.
+- Greater Good and Gottman Institute article collections.
+- Creator-linked videos from The School of Life; use the YouTube source page or official embed only.
+- LibriVox public-domain audio discovery, World English Bible audio, Gurbani Prakash read-along audio, and Quran.com recitations.
+- Tanzil's licensed Arabic text, QuranEnc translation entries, SuttaCentral, and its public GitHub source index.
+- Openverse, Wikimedia Commons and the individually credited Pexels book photograph.
+
+See [READING_MEDIA_EXPANSION.md](READING_MEDIA_EXPANSION.md) for source-by-source links, exact contributor attributions and item-level restrictions. No source content is bulk copied into this repository. Native-language, religious/cultural-context and manual accessibility reviews remain pending.
