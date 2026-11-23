@@ -98,7 +98,7 @@ The supplied `CLEAN_NO_ADDED_AUDIO` file is byte-identical to the landscape mast
 
 **Production URL:** https://aaramora-platform.vercel.app
 
-The current public static deployment is marked READY by Vercel and serves six HTML pages (`index.html`, `wellbeing.html`, `relationships.html`, `check-ins.html`, `reading-library.html`, and `yoga-and-breath.html`) plus three SVG assets. The latest snapshot is commit `05eec4ca64501910ecc2492607cc24f945bb5c48` and includes the Yoga & Breath guide alongside the expanded Reading Library. The production alias is https://aaramora-platform.vercel.app. GitHub-to-Vercel automatic deployment is not connected, so future pushes still require a manual deployment. See [deployment notes](docs/DEPLOYMENT.md).
+The current public static deployment is marked READY by Vercel and serves six HTML pages (`index.html`, `wellbeing.html`, `relationships.html`, `check-ins.html`, `reading-library.html`, and `yoga-and-breath.html`) plus three SVG assets. The latest snapshot is commit `f4d5fe44062a69cfb68dd5e169403b531c2d71c3` and includes the Yoga & Breath guide alongside the expanded Reading Library. The production alias is https://aaramora-platform.vercel.app. GitHub-to-Vercel automatic deployment is not connected, so future pushes still require a manual deployment. See [deployment notes](docs/DEPLOYMENT.md).
 
 ## Current verification
 
