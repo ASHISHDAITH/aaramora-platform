@@ -50,6 +50,11 @@ class ReadingLibraryChecks(unittest.TestCase):
         self.assertIn('href="tel:14416"', HTML)
         self.assertIn('href="tel:112"', HTML)
 
+
+    def test_support_contact_targets_have_separation_for_wcag_target_size(self):
+        self.assertIn(".support-links{display:flex;align-items:center;gap:24px;flex-wrap:wrap}", HTML)
+        self.assertIn("min-height:44px;padding:5px 12px", HTML)
+
     def test_internal_fragment_links_resolve(self):
         ids = set(re.findall(r'\bid="([^"]+)"', HTML))
         fragments = re.findall(r'href="#([^"]+)"', HTML)
