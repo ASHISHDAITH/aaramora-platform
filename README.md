@@ -33,7 +33,7 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - Relationships corner with 40 searchable concepts, three optional non-diagnostic reflections, a non-scored safety check and practical guidance for different sides of a relationship cycle.
 - Check-ins page with a non-scored guide finder, on-page women's-health appointment planner and printable original two-cycle symptom log.
 - Women's-health corner with eight topic areas and the shared “how it may feel / what may help / when to seek support” structure.
-- Reading library with open educational resources, explicit licence notes and publisher links for copyrighted books.
+- Expanded Reading Library with 23 linked resources across mental-health workbooks, academic/open books, attachment and relationship learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain sources, regional-language literature, public-domain classics and GitHub discovery indexes. A client-side title/topic/tradition search filters cards without sending queries to a server.
 - Resource shelf and future community concept (not a live forum).
 
 ## Research and design materials
@@ -70,13 +70,13 @@ Never commit real user messages, journals, screening answers, health records, pa
 
 ## Reading library and copyright rules
 - `reading-library.html` provides legal read/download links for explicitly licensed open resources, sacred-text source institutions, public-domain classics, open-access catalogues, publisher/library access to copyrighted relationship books, and title-specific reuse notes.
-- `docs/READING_LIBRARY_EXPANSION.md` records the sacred-text and public-domain discovery sources, edition-level rights caveats, Pexels hero-image credit and catalogue maintenance rules.
+- `docs/READING_LIBRARY_EXPANSION.md` records the additional workbooks, repositories, scriptures, regional-language sources, edition-level rights, Pexels hero-image credit and catalogue maintenance rules.
 - The GitHub source reference for OpenStax is `openstax/OpenStaxOnTheGo`; its repository AGPL licence covers software, while the book asset has its own source licence. The current official OpenStax site is the preferred download source.
-- Never bypass DRM, paywalls, private repository permissions or import copyrighted book copies without permission.
+- Never bypass DRM, paywalls, private repository permissions, borrowing controls or import copyrighted book copies without permission. A free-to-read page is not automatically a reusable/downloadable file.
 - A public GitHub repository or its root licence does not automatically license every bundled third-party book, image or dataset.
 
 - `reading-library.html` also lists focused Noba attachment/relationship modules and a downloadable *Psychology of Human Relations* PDF.
-- OpenStax Psychology 2e is shown under its current CC BY-NC-SA 4.0 terms. Its current preface prohibits LLM/AI ingestion without prior written permission.
+- OpenStax Psychology 2e is linked under its current CC BY-NC-SA 4.0 terms. Its current preface prohibits LLM/AI ingestion without prior written permission. SuttaCentral also asks that its content not be scraped or used to build generative-AI datasets; AARAMORA links to its editions rather than copying them.
 
 
 ## Automated checks
