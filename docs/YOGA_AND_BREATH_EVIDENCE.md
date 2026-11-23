@@ -133,14 +133,28 @@ NCCIH, *Yoga: Effectiveness and Safety*: https://www.nccih.nih.gov/health/yoga-e
 
 AARAMORA's initial online practices deliberately avoid forced deep breathing, rapid breathing, breath holds, extreme poses and eyes-closed requirements. Visitors must be able to stop, change position, keep eyes open or skip everything. Stop if dizzy, faint, unusually breathless, in pain or more distressed. A short web script is not yoga therapy, a personalised exercise plan or an emergency intervention.
 
-## Inclusive and cultural content: verification backlog
+## Cultural and motivation frameworks: verified reference, cautious use
 
-The following concepts were proposed for future exploration but were not used as clinical evidence claims in the current page:
+### Te Whare Tapa Whā · Māori health model
 
-- Te Whare Tapa Whā: verify the original Māori health-model source and cultural framing before adapting it.
-- Self-determination theory: verify primary academic sources before using autonomy, competence and relatedness as motivational design claims.
+New Zealand Ministry of Health overview: https://www.health.govt.nz/maori-health/maori-health-models/te-whare-tapa-wha
+
+- The framework was developed by Māori health practitioner Tā Mason Durie and describes four dimensions of wellbeing: taha tinana (physical), taha hinengaro (mental/emotional), taha wairua (spiritual) and taha whānau (family/social).
+- This is a culturally situated Māori model, not a generic four-part wellness checklist. AARAMORA may link to it with its origin and meaning intact.
+- Do not copy the model into an AARAMORA-branded “four walls” self-check or relabel it as universal without Māori-informed collaboration, attribution, cultural review and a clear permission assessment.
+
+### Self-determination theory · motivation design reference
+
+Deci EL, Ryan RM. (2000). *The “What” and “Why” of Goal Pursuits: Human Needs and the Self-Determination of Behavior.* Psychological Inquiry 11(4):227–268. https://doi.org/10.1207/S15327965PLI1104_01
+
+- The theory describes autonomy, competence and relatedness as basic psychological needs relevant to motivation and self-regulation.
+- AARAMORA can use these as design prompts: offer choice/skip/exit (autonomy), clear small steps without scores or streaks (competence), and visible human support and connection (relatedness).
+- This is a design rationale, not proof that a particular AARAMORA feature improves clinical outcomes or treats a condition.
+
+### Still unverified / not used as evidence claims
+
 - Japanese forest bathing and Nordic friluftsliv: review systematic evidence and local/cultural sources before labelling effects or evidence strength.
-- Kabir, Tukaram, Dnyaneshwar, Thiruvalluvar, Sufi and Buddhist reflections: verify original/edition, translator, rights, context and culturally informed editorial review. Label them as optional wisdom/reflection, never treatment.
+- Kabir, Tukaram, Dnyaneshwar, Thiruvalluvar, Sufi and Buddhist reflections: verify original work/edition, translator, rights, context and culturally informed editorial review. Label any quotations as optional wisdom/reflection, never treatment.
 
 ## Governance before public release
 
@@ -150,3 +164,20 @@ The following concepts were proposed for future exploration but were not used as
 4. Provide transcript-first audio with a visible pause/stop control, no autoplay and no tracking.
 5. Keep crisis language factual, non-sensational and connected to current human support routes.
 6. Use the WHO media-professional guidance where AARAMORA publishes suicide-related articles, testimonials or public campaign material: https://www.who.int/publications/i/item/9789240076846
+
+
+## WHO guide language listing and service distinction · checked 24 November 2026
+
+- WHO's official publication page lists a Hindi edition of *Doing What Matters in Times of Stress*. Marathi was not shown in the language list reviewed on 24 November 2026. This describes that page's listing at the review date only; it does not prove no separate Marathi edition exists.
+- The official page also lists audio exercise resources; Hindi and Marathi were not shown in the audio language list reviewed at that date. Re-check the WHO page before stating language availability in public copy.
+- WHO Self-Help Plus (SH+) is a distinct five-session group course for up to 30 adults, delivered by supervised non-specialist facilitators with recorded audio and an illustrated guide. It is not a self-guided website worksheet, a short relaxation script or a synonym for the illustrated guide.
+- Official sources: https://www.who.int/publications/i/item/9789240003927 ; https://www.who.int/publications-detail-redirect/9789240035119
+- WHO copyright policy and adaptation terms: https://www.who.int/about/policies/publishing/copyright
+- AARAMORA's independent companion draft and licensing requirements are documented in `docs/WHO_STRESS_GUIDE_ADAPTATION.md`. Do not call it a WHO translation or endorsement.
+
+## India support routes · official-source check · 24 November 2026
+
+- Tele-MANAS: DGHS lists 14416 and 1800-89-14416. Official source: https://www.dghs.mohfw.gov.in/national-mental-health-programme.php
+- ERSS: MHA describes 112 as India's unified emergency response number. Official source: https://www.mha.gov.in/emergency-response-support-system-erss
+- Women Helpline 181: WCD describes a 24-hour toll-free service and currently states it is operational in all States/UTs except West Bengal. Official source: https://www.wcd.gov.in/women/help
+- These numbers are not a guarantee of access from every network/device or every local service. AARAMORA maintains source URLs and review dates in `data/service-links.json`; weekly automated checks test URL reachability only. Human verification of number, coverage and actual service details is still required before public release.
