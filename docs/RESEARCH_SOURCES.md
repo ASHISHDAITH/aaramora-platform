@@ -168,3 +168,58 @@ See `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md` for study details, instrument distinc
 - Monash MCHRI, International Evidence-based Guideline terminology update: official guideline summary now uses **PMOS (formerly PCOS)**. It states the 2023 guideline recommendations/content remain unchanged; PMOS/PCOS coexist during a three-year managed transition and 2028 is planned for PMOS-only guideline terminology. https://www.monash.edu/__data/assets/pdf_file/0009/4360095/Updated-PMOS-Guideline-12-June26.pdf
 - ASRM updated recommendation summary: clinicians should screen adults and adolescents with PMOS for depression and adults with PMOS for anxiety using regionally validated screening tools; moderate/severe symptoms require further assessment/referral/treatment; ask about quality-of-life impact, concerns and priorities. This is a clinical workflow recommendation, not a consumer diagnostic quiz. https://www.asrm.org/practice-guidance/practice-committee-documents/recommendations-from-the-2023-international-evidence-based-guideline-for-the-assessment-and-management-of-polyendocrine-metabolic-ovarian-syndrome-2023/
 - ACOG, Management of Premenstrual Disorders, Clinical Practice Guideline No. 7 (Dec 2023): https://www.acog.org/clinical/clinical-guidance/clinical-practice-guideline/articles/2023/12/management-of-premenstrual-disorders
+
+
+## Sacred texts, classics and catalogue discovery (reviewed 24 November 2026)
+
+
+### Hindu traditions
+- Heritage IIT Kanpur Gita Supersite: https://heritage.iitk.ac.in/gitasupersite
+  - Starting point for Bhagavad Gita and linked collections including Upanishads, Valmiki Ramayana, Ramcharitmanas, Yoga Sutra, Brahma Sutra and selected commentarial traditions.
+  - Read at source. Check the individual language, translation, commentary and digital edition rights before copying.
+- Project Gutenberg, Sir Edwin Arnold, *The Song Celestial; Or, Bhagavad-Gîtâ* (1885), ebook 2388: https://www.gutenberg.org/ebooks/2388
+  - Project Gutenberg identifies the ebook as public domain in the United States. Non-US visitors need to check local law. Link to the ebook landing page, not a direct static file.
+- Project Gutenberg, Ralph T. H. Griffith, *The Ramayana* (ebook 24869): https://www.gutenberg.org/ebooks/24869
+  - Same territory and edition-specific caution.
+
+### Sikh traditions
+- Sikher Project: https://sikher.com/
+- Guru Granth Sahib in English resource index: https://sikher.com/wiki/sikh-scriptures/guru-granth-sahib/guru-granth-sahib-in-english/
+- Download and source index: https://sikher.com/wiki/sikh-scriptures/guru-granth-sahib/guru-granth-sahib-download/
+- The source index includes Gurmukhi, Punjabi and English material and references daily prayers such as Japji Sahib, Jaap Sahib, Tav-Prasad Savaiye, Chaupai Sahib, Anand Sahib, Rehras Sahib, Sukhmani Sahib and Kirtan Sohila, plus other Sikh scriptural collections.
+- Sikher describes a corpus with multiple translations/transliterations and a mixture of licences. Treat each translation and transcription as a separate rights object; the software licence does not grant rights to every source text.
+
+### Islamic traditions
+- Tanzil: https://tanzil.net/ ; download: https://tanzil.net/download/ ; text licence: https://tanzil.net/docs/Text_License
+  - Tanzil Quran text licence is CC BY 3.0. Copy/distribute verbatim with the required attribution/source notice; do not modify the Quran text.
+- QuranEnc translations: https://quranenc.com/en/home ; conditions: https://quranenc.com/en/home/about/conditions
+  - The stated conditions govern republication of individual translation texts. Preserve text unchanged, source and version details, the required transcript information and other notice/update conditions. Check the translation entry before reuse.
+- Do not assume the Arabic text licence automatically applies to a translated meaning, commentary, recitation, cover, or typeset PDF.
+
+### Christian traditions
+- World English Bible, eBible.org: https://ebible.org/find/show.php?id=engwebu
+- Rights page: https://ebible.org/engwebu/copyright.htm
+  - The WEB is offered as public-domain text by eBible.org. Keep the rights/naming notes; do not label altered content as the unmodified World English Bible. Other translations (including modern copyrighted editions) retain their own rights.
+
+### Buddhist and other traditions
+- Project Gutenberg, F. Max Müller’s Dhammapada (ebook 2017): https://www.gutenberg.org/ebooks/2017
+- Project Gutenberg, F. L. Woodward’s *The Buddha’s Path of Virtue* (ebook 35185): https://www.gutenberg.org/ebooks/35185
+  - Project Gutenberg identifies these editions as public domain in the United States; check local rights before redistribution elsewhere.
+- Jain, regional, oral-history, and additional traditions should be added only when a stable institution/source and a work-level rights statement are documented. Do not treat the tradition’s age as a rights statement for modern editions.
+
+## Open books, novels and catalogues
+
+- Project Gutenberg: https://www.gutenberg.org/
+  - Free ebook catalogue, with territory checks and landing-page linking. Its terms caution against bulk scraping of the website and ask that links target ebook landing pages.
+- Standard Ebooks: https://standardebooks.org/
+  - Edited public-domain editions; verify the rights status of the specific work and any editorial assets before redistribution.
+- Wikisource: https://en.wikisource.org/wiki/Main_Page
+  - Mixed collection; each page may have its own public-domain or licence status.
+- Directory of Open Access Books (DOAB): https://www.doabooks.org/ and metadata policy https://doabooks.org/en/librarians/doab-metadata
+  - DOAB metadata is CC0; the books it describes carry individual publisher licences. Metadata reuse is not blanket permission to copy the book.
+- Open Library: https://openlibrary.org/ ; API: https://openlibrary.org/developers/api ; lending FAQ: https://help.openlibrary.org/
+  - Use cataloguing/API rules for discovery; borrow a title only where an authorised loan control is offered. Do not bulk-scrape HTML, bypass lending restrictions or assume every catalogue entry permits a download.
+
+
+
+See [READING_LIBRARY_EXPANSION.md](READING_LIBRARY_EXPANSION.md) for the complete editorial access model, rights notes, hero-image credit and maintenance rules.
