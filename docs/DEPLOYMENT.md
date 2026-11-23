@@ -153,3 +153,19 @@ The local metadata-only source-link check examined 40 unique source/policy URLs:
 ### Human review still required
 
 All catalogue records still show native-language, cultural-context and underlying-source accessibility review as pending. These statuses should remain pending until a named qualified reviewer checks the exact text and edition. Automated accessibility scanning does not review translation fidelity, theological interpretation, cultural phrasing, OCR accuracy or source-edition completeness.
+
+
+
+## Candidate release — multilingual filter and reviewer-pack hardening · 24 November 2026
+
+Candidate source commit: `f5a186d19274883e29b832ecd7e24671603b88f0` before this release-note update. The latest local checkout has passed `python scripts/check_catalogue.py` and all 60 Python tests.
+
+Additional candidate browser checks:
+- Manipuri and Meitei (Manipuri) aliases each return only the NDLI entry.
+- French returns only the French Monte-Cristo edition; Marathi returns three expected records.
+- Urdu native title carries `lang="ur"` and `dir="rtl"`; English descriptor remains LTR.
+- 1280, 768, 390, 360 and 320 CSS-pixel viewports show no horizontal overflow.
+- Forced-colors mode and reduced-motion CSS are enabled; 32px header/navigation targets were measured.
+- axe-core 4.10.3 reports zero violations and 47 passes on the local candidate; browser console/page-error list is empty.
+
+Four independent-review files now exist under `docs/review/`. They are reviewer requests and test instructions, not completed reviews. Qualified native-language, cultural/religious, rights and assistive-technology reviewers have not been contacted or signed off. Do not mark those fields reviewed without evidence.
