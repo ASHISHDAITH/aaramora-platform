@@ -24,7 +24,7 @@ class ReadingLibraryChecks(unittest.TestCase):
         for url in ("heritage.iitk.ac.in", "sikher.com", "tanzil.net/docs/Text_License", "quranenc.com/en/home/about/conditions", "ebible.org/engwebu/copyright.htm", "gutenberg.org/ebooks/2388", "doabooks.org", "openlibrary.org/developers/api"):
             with self.subTest(url=url):
                 self.assertIn(url, HTML)
-        for phrase in ("public domain in the United States", "check local copyright law", "must not be altered", "mixed open licences", "CC0 statement applies to metadata", "borrowing"):
+        for phrase in ("public domain in the United States", "check local copyright law", "must not be altered", "differing translation and transcription rights", "DOAB’s CC0 statement applies to its metadata", "borrowing"):
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, HTML)
 
