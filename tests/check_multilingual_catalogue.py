@@ -132,6 +132,32 @@ class MultilingualCatalogueTests(unittest.TestCase):
                 self.assertTrue(encoded.isascii())
                 self.assertIn("%", encoded)
 
+
+    def test_native_title_language_metadata_and_rtl_are_rendered(self):
+        expected = {
+            "hi-ramcharitmanas-wikisource": ("hi", "रामचरितमानस"),
+            "mr-jnaneshwari-wikisource": ("mr", "ज्ञानेश्वरी"),
+            "bn-gitanjali-1913-wikisource": ("bn", "গীতাঞ্জলি (১৯১৩)"),
+            "pa-guru-granth-sahib-folio-1": ("pa", "ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ"),
+            "ur-diwan-e-ghalib-wikisource": ("ur", "دیوان غالب"),
+            "or-odia-bhagabata-skandha-1": ("or", "ଓଡ଼ିଆ ଭାଗବତ"),
+            "ta-thirukkural-project-madurai": ("ta", "திருக்குறள்"),
+            "fr-comte-monte-cristo-pg": ("fr", None),
+            "de-faust-pg": ("de", None),
+            "es-don-quijote-pg": ("es", None),
+            "pt-os-lusiadas-pg": ("pt", None),
+        }
+        records = {item["id"]: item for item in DATA["records"]}
+        for record_id, (language, native_title) in expected.items():
+            with self.subTest(record=record_id):
+                self.assertEqual(language, records[record_id]["titleLanguage"])
+                if native_title:
+                    self.assertEqual(native_title, records[record_id]["titleNative"])
+                    self.assertIn("titleDisplaySuffix", records[record_id])
+        self.assertEqual("rtl", records["ur-diwan-e-ghalib-wikisource"]["titleDirection"])
+        self.assertIn('lang="'+records["ur-diwan-e-ghalib-wikisource"]["titleLanguage"]+'"', HTML)
+        self.assertIn("aria-label=\\"Open official source for ", HTML)
+
     def test_no_original_section_removed(self):
         for anchor in ("free-downloads", "scripture-shelf", "workbooks-and-articles", "relationship-open-learning", "attachment-books", "faith-wisdom", "novels-and-classics", "github-shelves", "licensing"):
             with self.subTest(anchor=anchor):
