@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#F5F2E9">
 <meta name="description" content="Optional private guide-finding and appointment preparation. No diagnosis, scores or saved answers.">
-<title>Check-ins and Appointment Preparation | Aaramora</title>
+<title>Check-ins, Problem Bench and Appointment Preparation | AARAMORA</title>
 <style>
 :root{--paper:#F5F2E9;--surface:#FFFEFA;--ink:#203B32;--muted:#586B62;--forest:#23483C;--sage:#DCE8DB;--line:#D7DED4;--focus:#1D5E9B;--lilac:#EAE4EF;--clay:#EAD8CB;--body:Arial,"Noto Sans","Noto Sans Devanagari",system-ui,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body)}a{color:inherit}button,select,textarea,input{font:inherit}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.top-support{background:#E5EDE4;border-bottom:1px solid #D2DED1;color:#24463A}.top-support .wrap{min-height:43px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:6px 0;font-size:.87rem}.top-support a{font-weight:800;text-underline-offset:3px}
@@ -24,6 +24,8 @@ h1,h2,h3{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-wei
  body[data-print-target] #print-root{display:block!important}
  body[data-print-target="appointment"] #appointment-print,
  body[data-print-target="cycle"] #cycle-print{display:block!important;position:static!important;width:100%!important;padding:0!important;border:0!important;box-shadow:none!important;background:#fff!important}
+
+ body[data-print-target="problem"] #problem-print{display:block!important;position:static!important;width:100%!important;padding:0!important;border:0!important;box-shadow:none!important;background:#fff!important}
  .tracker-table th,.tracker-table td{height:31px}
  .tracker-table{font-size:9pt;page-break-inside:avoid}
 }
@@ -31,7 +33,7 @@ h1,h2,h3{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-wei
 </head>
 <body>
 <div class="top-support"><div class="wrap"><span><strong>Need support now?</strong> India · Tele-MANAS <a href="tel:14416">14416</a> · Emergency <a href="tel:112">112</a></span><span><a href="tel:181">Women Helpline 181</a> · <a href="index.html">Aaramora home</a></span></div></div>
-<header><div class="wrap nav"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">✧</span>Aaramora</a><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a><a href="#guide-finder">Find a starting point</a><a href="#womens-health-planner">Women's health planner</a><a href="#cycle-log">Cycle log</a><a href="reading-library.html">Reading library</a></nav><div style="display:flex;gap:8px"><button class="quick" id="quick-exit" type="button">Quick exit</button><button class="menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button></div></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">✧</span>Aaramora</a><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a><a href="#guide-finder">Find a starting point</a><a href="#problem-bench">Problem Bench</a><a href="#womens-health-planner">Women's health planner</a><a href="#cycle-log">Cycle log</a><a href="reading-library.html">Reading library</a></nav><div style="display:flex;gap:8px"><button class="quick" id="quick-exit" type="button">Quick exit</button><button class="menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button></div></div></header>
 <main id="main">
 <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Optional on-page check-ins · small next steps</div><h1>Find a next step, not a label.</h1><p class="lead">Choose what feels relevant, explore a guide or prepare for a conversation with a professional. You can skip anything. This is not a diagnosis or clinical screening test. There are no scores, labels or pass/fail results here.</p><div class="hero-actions"><a class="button primary" href="#guide-finder">Find a starting point</a><a class="button" href="#womens-health-planner">Prepare for an appointment</a></div></div><div class="hero-art" role="img" aria-label="A gentle path through a garden with two stepping stones and a small warm light"><svg viewBox="0 0 460 250" fill="none" aria-hidden="true"><circle cx="364" cy="54" r="34" fill="#F0DCAF"/><path d="M0 155C85 111 148 132 218 160c75 29 142 16 242-12v102H0V155Z" fill="#B8CEBC"/><path d="M0 204c87-27 160-13 226 13 71 27 148 14 234-10v43H0v-46Z" fill="#79A286"/><path d="M146 250c24-48 48-71 92-102 31-22 49-45 60-77" stroke="#F4EBDD" stroke-width="15" stroke-linecap="round"/><path d="M102 189c17-17 32-18 46 1-16 14-31 14-46-1Z" fill="#638E71"/><path d="M280 182c18-19 35-17 49 3-17 13-34 12-49-3Z" fill="#638E71"/><circle cx="298" cy="114" r="9" fill="#E7C879"/></svg></div></div></section>
 <section class="section"><div class="wrap"><div class="urgent"><div><strong>When a situation is urgent</strong><p>If someone is in immediate danger or needs emergency medical help in India, call 112. For mental-health support and conversation, Tele-MANAS is available at 14416. These routes do not depend on finishing a quiz.</p></div><div class="urgent-links"><a href="tel:112">Call 112</a><a href="tel:14416">Call 14416</a><a href="tel:181">Call 181</a></div></div></div></section>
@@ -50,6 +52,32 @@ h1,h2,h3{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-wei
 <label class="choice"><input type="radio" name="guide-choice" value="unsure"><span>I am not sure yet</span></label>
 </div></fieldset><div class="field"><label for="help-preference">What would feel most useful right now? (optional)</label><select id="help-preference"><option value="">Skip this question</option><option value="learn">Understand the experience</option><option value="steps">Find a small, practical next step</option><option value="appointment">Prepare to speak with a professional</option><option value="person">Find support from a person</option></select></div><div class="actions"><button class="smallbtn" type="submit">Show a starting point</button><button class="smallbtn secondary" type="reset">Clear choices</button></div></form><div class="result" id="guide-result" role="status" aria-live="polite"></div><p class="subnote">A selection is not a diagnosis, symptom score, prediction or measure of severity. Similar experiences can have different causes.</p></div></div></section>
 
+<section class="section" id="problem-bench"><div class="wrap"><div class="section-head"><div class="eyebrow">Optional worksheet · one situation at a time</div><h2>Problem Bench</h2><p class="lead">A quiet place to put one problem into words, look at possible options and choose a small next step. You may leave any answer blank, pause or stop.</p></div>
+<div class="notice"><strong>Inspired by problem-solving approaches, not a therapy programme.</strong> The Friendship Bench research tested structured sessions delivered by trained, supervised lay health workers. This self-guided worksheet is not the Friendship Bench programme, problem-solving therapy, a clinical intervention or an equivalent service. The trial results do not apply to this page.</div>
+<div class="urgent"><div><strong>When this worksheet is not the right first step</strong><p>If you are in immediate danger, may hurt yourself or someone else, or need urgent medical help, step away from this worksheet and contact a person or emergency support. In India call 112. Tele-MANAS at 14416 offers mental-health support. If someone is monitoring your device or you feel unsafe with another person, use a safer device or private support route when possible.</p></div><div class="urgent-links"><a href="tel:112">Call 112</a><a href="tel:14416">Call 14416</a></div></div>
+<div class="panel problem-panel">
+<p class="subnote"><strong>Privacy:</strong> your entries stay in this open page only. They are not saved, uploaded, analysed or sent to AARAMORA. Avoid names, addresses or details you would not want visible on a shared or monitored device.</p>
+<form id="problem-bench-form">
+<div class="field"><label for="problem-description">1. What is the one situation you would like to think through?</label><textarea id="problem-description" name="problem" maxlength="1200" placeholder="A few words are enough. You do not need to describe anything traumatic or private."></textarea></div>
+<div class="grid2">
+<div class="field"><label for="problem-influence">2. Which part might be within your influence?</label><textarea id="problem-influence" name="influence" maxlength="700" placeholder="For example: one conversation, one request, one practical task."></textarea></div>
+<div class="field"><label for="problem-outside">What part may be outside your control?</label><textarea id="problem-outside" name="outside" maxlength="700" placeholder="For example: another person's reaction or an outcome you cannot guarantee."></textarea></div>
+</div>
+<div class="field"><label for="problem-options">3. What are two or three possible options?</label><textarea id="problem-options" name="options" maxlength="1200" placeholder="Include doing nothing for now, asking for help or taking a small practical step."></textarea></div>
+<div class="field"><label for="problem-support">Who or what could support you?</label><textarea id="problem-support" name="support" maxlength="700" placeholder="A trusted person, professional, service, information or practical resource."></textarea></div>
+<div class="field"><label for="problem-action">4. What is one small action you choose?</label><textarea id="problem-action" name="action" maxlength="700" placeholder="Choose an action that feels realistic and safe. It is okay to choose rest or to ask someone for help."></textarea></div>
+<div class="grid2">
+<div class="field"><label for="problem-when">When might you take this step?</label><select id="problem-when" name="when"><option value="">Leave undecided</option><option>Today, if it feels safe</option><option>Within the next few days</option><option>This week</option><option>After talking with someone</option><option>I am not ready to decide</option></select></div>
+<div class="field"><label for="problem-review">When would you like to review how it went?</label><select id="problem-review" name="review"><option value="">Leave undecided</option><option>Tomorrow</option><option>In a few days</option><option>Next week</option><option>With a trusted person or professional</option></select></div>
+</div>
+<div class="field"><label for="problem-barrier">5. What might make this step difficult, and what could help?</label><textarea id="problem-barrier" name="barrier" maxlength="700" placeholder="You may leave this blank. Your safety and limits matter."></textarea></div>
+<div class="actions"><button class="smallbtn" type="submit">Prepare my worksheet</button><button class="smallbtn secondary" type="reset">Clear this page</button><button class="smallbtn secondary" type="button" id="print-problem" disabled>Print / save as PDF</button></div>
+</form>
+<div class="result" id="problem-result" role="status" aria-live="polite"></div>
+<p class="subnote">You do not have to act on every idea. If the problem is persistent, feels unsafe, or is too much to manage alone, a qualified person may help you work through it. This worksheet does not assess risk, provide treatment or decide what you should do.</p>
+</div>
+<div class="source-list"><a href="https://pubmed.ncbi.nlm.nih.gov/28027368/" target="_blank" rel="noopener noreferrer">Friendship Bench trial · JAMA 2016</a><a href="https://www.friendshipbenchzimbabwe.org/" target="_blank" rel="noopener noreferrer">Friendship Bench organisation</a></div>
+</div></section>
 <section class="section" id="womens-health-planner"><div class="wrap"><div class="section-head"><div class="eyebrow">Women's health · appointment preparation</div><h2>Your concerns deserve time and context.</h2><p class="lead">Use this optional planner to organise what you may want to tell a clinician. It does not identify PMOS, endometriosis, PMDD, menopause or another condition.</p></div>
 <div class="planner-grid"><div class="panel"><form id="appointment-form">
 <div class="field"><label for="health-area">What would you most like to discuss?</label><select id="health-area"><option value="">Not sure / several things</option><option>Periods or cycle changes</option><option>Pelvic, period, bowel or bladder pain</option><option>PMOS / PCOS concerns</option><option>Menopause or perimenopause</option><option>Pregnancy or postpartum wellbeing</option><option>Another concern</option></select></div>
@@ -79,8 +107,8 @@ h1,h2,h3{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-wei
 <article class="mini-card"><h3>Relationships and attachment</h3><p>The relationship reflections are original, unvalidated prompts. They help notice one person's behaviour; they do not assign an attachment style, score a partner or judge relationship safety.</p><a href="relationships.html#safety">Open the relationship corner →</a></article>
 </div></div></section>
 </main>
-<div id="print-root"><section class="print-sheet panel" id="appointment-print" aria-label="Appointment notes for printing"></section><section class="print-sheet" id="cycle-print" aria-label="Two-cycle symptom log for printing"><h2>Two-cycle symptom notes</h2><p>Blank paper worksheet for a conversation with a qualified clinician. This is not a diagnostic instrument or the DRSP questionnaire.</p><div id="cycle-tables"></div><p>Bring the notes to a clinician if useful. A daily log can help describe timing, but it does not establish a diagnosis by itself.</p></section></div>
-<footer class="footer"><div class="wrap"><div class="footerlinks"><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a><a href="reading-library.html">Reading library</a><a href="#guide-finder">Guide finder</a><a href="#womens-health-planner">Appointment planner</a></div><p>Aaramora provides information and help navigation. It is not a diagnostic service, clinic, therapy provider or emergency response service. If you need urgent help, use the support routes above.</p></div></footer>
+<div id="print-root"><section class="print-sheet panel" id="problem-print" aria-label="Problem Bench worksheet for printing"></section><section class="print-sheet panel" id="appointment-print" aria-label="Appointment notes for printing"></section><section class="print-sheet" id="cycle-print" aria-label="Two-cycle symptom log for printing"><h2>Two-cycle symptom notes</h2><p>Blank paper worksheet for a conversation with a qualified clinician. This is not a diagnostic instrument or the DRSP questionnaire.</p><div id="cycle-tables"></div><p>Bring the notes to a clinician if useful. A daily log can help describe timing, but it does not establish a diagnosis by itself.</p></section></div>
+<footer class="footer"><div class="wrap"><div class="footerlinks"><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a><a href="reading-library.html">Reading library</a><a href="#guide-finder">Guide finder</a><a href="#problem-bench">Problem Bench</a><a href="#womens-health-planner">Appointment planner</a></div><p>Aaramora provides information and help navigation. It is not a diagnostic service, clinic, therapy provider or emergency response service. If you need urgent help, use the support routes above.</p></div></footer>
 <script>
 (function(){
 const routeMap={
@@ -113,6 +141,54 @@ guideForm.addEventListener("submit",event=>{
  if(preference==="appointment"&&key==="women"){const extra=document.createElement("p");extra.textContent="The appointment planner below can help you organise questions without sending them anywhere.";guideResult.append(extra);}
 });
 guideForm.addEventListener("reset",()=>{guideResult.className="result";guideResult.replaceChildren();});
+
+const problemForm=document.getElementById("problem-bench-form");
+const problemResult=document.getElementById("problem-result");
+const problemPrint=document.getElementById("problem-print");
+const printProblem=document.getElementById("print-problem");
+const problemLabels=[
+ ["The situation", "problem-description"],
+ ["Within my influence", "problem-influence"],
+ ["Outside my control", "problem-outside"],
+ ["Possible options", "problem-options"],
+ ["Support I could use", "problem-support"],
+ ["One small action", "problem-action"],
+ ["When", "problem-when"],
+ ["Review", "problem-review"],
+ ["What might make it difficult / what could help", "problem-barrier"]
+];
+const fieldValue=id=>{
+ const node=document.getElementById(id);
+ return node ? (node.value||"").trim() : "";
+};
+problemForm.addEventListener("submit",event=>{
+ event.preventDefault();
+ problemPrint.replaceChildren();
+ const title=document.createElement("h2");title.textContent="My Problem Bench notes";
+ const intro=document.createElement("p");intro.textContent="An optional reflection worksheet. These notes are not a diagnosis or treatment plan. Prepared in this browser only.";
+ const list=document.createElement("div");list.className="print-summary";
+ problemLabels.forEach(([label,id])=>{
+   const p=document.createElement("p");
+   const strong=document.createElement("strong");strong.textContent=label+": ";
+   p.append(strong,document.createTextNode(fieldValue(id)||"Not added"));
+   list.append(p);
+ });
+ const close=document.createElement("p");close.textContent="I can change my mind, leave this blank, or ask someone for support. This worksheet does not replace professional care or emergency support.";
+ problemPrint.append(title,intro,list,close);
+ problemResult.replaceChildren();
+ const status=document.createElement("p");status.textContent="Your worksheet is ready. It has not been saved or sent. Review it before printing, and avoid printing on a shared printer if the notes are private.";
+ problemResult.append(status);
+ problemResult.className="result show";
+ printProblem.disabled=false;
+});
+problemForm.addEventListener("reset",()=>{
+ problemResult.className="result";
+ problemResult.replaceChildren();
+ problemPrint.replaceChildren();
+ printProblem.disabled=true;
+});
+printProblem.addEventListener("click",()=>printTarget("problem"));
+
 const appointmentForm=document.getElementById("appointment-form");
 const appointmentResult=document.getElementById("appointment-result");
 const printAppointment=document.getElementById("print-appointment");
