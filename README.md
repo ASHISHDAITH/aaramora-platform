@@ -120,3 +120,10 @@ The current production deployment is live at the URL above. A final browser smok
 - GitHub Actions validates metadata on pushes and checks catalogue source links weekly. The link checker uses HEAD/range requests only and does not retrieve book contents.
 
 - The additional set comprises 11 named text editions/folios and 4 source indexes/platforms. The source list distinguishes original-language editions from a selected page/part and from broader discovery catalogues.
+
+
+### Final live check · 24 November 2026
+- Latest production deploy: `dpl_Eeu3YsRJwmC86Zg652mQYriEcvbM` from site commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde`, READY.
+- 26 catalogue records, 46 original static cards retained, 55 Python tests passed. Live Chromium/axe audit: zero automated WCAG violations; 390px mobile width no horizontal overflow.
+- Manual source-link audit: 32 reachable, 0 confirmed dead, 8 inconclusive; these eight need rechecking rather than being treated as broken.
+- Native-language, religious/cultural-context and manual screen-reader reviews remain pending.
