@@ -335,11 +335,23 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
     const policyUrl = safeUrl(record.rights && record.rights.policyUrl);
     const provenanceUrl = safeUrl(record.provenance && record.provenance.sourceUrl);
     const links = [];
-    if (accessUrl) links.push('<a href="'+esc(accessUrl)+'" target="_blank" rel="noopener noreferrer">Open official source</a>');
-    if (policyUrl) links.push('<a href="'+esc(policyUrl)+'" target="_blank" rel="noopener noreferrer">Rights and access terms</a>');
-    else if (provenanceUrl && provenanceUrl !== accessUrl) links.push('<a href="'+esc(provenanceUrl)+'" target="_blank" rel="noopener noreferrer">Source information</a>');
+    const linkContext = esc(record.title);
+    if (accessUrl) links.push('<a href="'+esc(accessUrl)+'" target="_blank" rel="noopener noreferrer" aria-label="Open official source for '+linkContext+' (opens in a new tab)">Open official source</a>');
+    if (policyUrl) links.push('<a href="'+esc(policyUrl)+'" target="_blank" rel="noopener noreferrer" aria-label="Read rights and access terms for '+linkContext+' (opens in a new tab)">Rights and access terms</a>');
+    else if (provenanceUrl && provenanceUrl !== accessUrl) links.push('<a href="'+esc(provenanceUrl)+'" target="_blank" rel="noopener noreferrer" aria-label="Read source information for '+linkContext+' (opens in a new tab)">Source information</a>');
+    let titleMarkup;
+    if (record.titleNative && record.titleLanguage) {
+      const direction = record.titleDirection === "rtl" ? "rtl" : "ltr";
+      const suffix = record.titleDisplaySuffix
+        ? '<span lang="en" dir="ltr"> · '+esc(record.titleDisplaySuffix)+'</span>'
+        : "";
+      titleMarkup = '<h3><bdi lang="'+esc(record.titleLanguage)+'" dir="'+direction+'">'+esc(record.titleNative)+'</bdi>'+suffix+'</h3>';
+    } else {
+      const languageAttr = record.titleLanguage ? ' lang="'+esc(record.titleLanguage)+'"' : "";
+      titleMarkup = '<h3'+languageAttr+'>'+esc(record.title)+'</h3>';
+    }
     return '<article class="catalogue-record"><div class="record-tags"><span class="record-tag">'+esc(record.access.label)+'</span><span class="record-tag neutral">'+esc(record.rights.status.replace(/-/g," "))+'</span></div>' +
-      '<h3>'+esc(record.title)+'</h3><p class="record-subtitle">'+esc(record.editionTitle)+'</p>' +
+      titleMarkup+'<p class="record-subtitle">'+esc(record.editionTitle)+'</p>' +
       '<p>'+esc(record.access.notes)+'</p><p><strong>Languages:</strong> '+languageMarkup+overflow+'</p>' +
       ((record.scripts||[]).length ? '<p><strong>Scripts:</strong> '+esc(record.scripts.join(" · "))+'</p>' : '') +
       '<p><strong>Subjects:</strong> '+esc((record.subjects || []).slice(0,6).join(" · "))+'</p>' +
