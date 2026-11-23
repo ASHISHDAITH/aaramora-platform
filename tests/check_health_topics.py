@@ -135,12 +135,51 @@ class WebsiteHealthContentTests(unittest.TestCase):
         self.assertIn("Cycle 1", self.checkins)
         self.assertIn("Cycle 2", self.checkins)
 
+    def test_problem_bench_is_optional_private_and_non_diagnostic(self):
+        self.assertIn('href="#problem-bench"', self.checkins)
+        self.assertIn('id="problem-bench"', self.checkins)
+        for field in [
+            "problem-description", "problem-influence", "problem-outside",
+            "problem-options", "problem-support", "problem-action",
+            "problem-when", "problem-review", "problem-barrier"
+        ]:
+            self.assertIn(f'id="{field}"', self.checkins)
+        for phrase in [
+            "not the Friendship Bench programme",
+            "not a clinical service",
+            "not saved, uploaded, analysed or sent",
+            "Prepare my worksheet",
+            "Print / save as PDF"
+        ]:
+            self.assertIn(phrase, self.checkins)
+        for href in ["tel:112", "tel:14416"]:
+            self.assertIn(href, self.checkins)
+        for token in ["localStorage", "sessionStorage", "XMLHttpRequest", "sendBeacon"]:
+            self.assertNotIn(token, self.checkins)
+        self.assertNotRegex(self.checkins, r"fetch\\s*\\(")
+        self.assertNotRegex(self.checkins, r'<(?:input|select|textarea|button)\\b[^>]*\\srequired(?:\\s|>)')
+        self.assertIn('id="problem-print"', self.checkins)
+        self.assertIn('data-print-target="problem"', self.checkins)
+
+    def test_problem_bench_does_not_replace_existing_checkin_tools(self):
+        for tool in [
+            'id="guide-form"',
+            'id="appointment-form"',
+            'id="cycle-log"',
+            'id="print-appointment"',
+            'id="print-cycle"',
+            'id="problem-bench-form"'
+        ]:
+            self.assertIn(tool, self.checkins)
+        self.assertLess(self.checkins.index('id="guide-finder"'), self.checkins.index('id="problem-bench"'))
+        self.assertLess(self.checkins.index('id="problem-bench"'), self.checkins.index('id="womens-health-planner"'))
+
     def test_inline_javascript_parses_on_all_site_pages(self):
         node = shutil.which("node")
         if not node:
             self.skipTest("Node.js is not installed in this test environment")
 
-        page_names = ["index.html", "wellbeing.html", "relationships.html", "reading-library.html", "check-ins.html"]
+        page_names = ["index.html", "wellbeing.html", "relationships.html", "reading-library.html", "check-ins.html", "yoga-and-breath.html"]
         checked_scripts = 0
         for page_name in page_names:
             html = (ROOT / page_name).read_text(encoding="utf-8")
