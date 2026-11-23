@@ -4,7 +4,7 @@ A privacy-first mental-wellbeing and women's-health information and help-navigat
 
 **Experience principle:** You do not have to figure everything out today.
 
-This repository contains the integrated static website prototype and the research, visual design, content, safety and QA materials assembled from the project discussion and supplied source files.
+This repository contains the AARAMORA static website prototype and the supporting research, visual design, content, safety and QA materials.
 
 ## Run the website
 
@@ -17,6 +17,12 @@ python -m http.server 8000
 Then visit http://localhost:8000.
 
 No npm install, database, account, remote fonts, analytics, AI API or backend is required for this prototype.
+
+## Visual direction
+
+The homepage follows a warm editorial botanical system: paper ivory, forest green, restrained sage, pale blue, muted lilac and clay accents. The 16:9 AARAMORA brand film sits in the hero as a user-controlled player; three credited Pexels photographs support the optional journaling, connection and professional-support pathways. Stock photographs are illustrative only and are not testimonials or representations of actual AARAMORA staff.
+
+See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography, responsive rules, image credits and video behavior.
 
 ## Included experience
 
