@@ -59,3 +59,7 @@ A successful static deployment does not mean the platform is clinically approved
 - explicit ownership and review dates for every public resource.
 
 Keep the public description clear: AARAMORA is an information and help-navigation prototype, not therapy, diagnosis, prescribing or an emergency response service.
+
+
+## Check-in page update pending
+The GitHub repository is adding a fifth static page, `check-ins.html`, with a non-diagnostic guide finder and women's-health appointment/print tools. The current production snapshot does not yet include that page until a refreshed Vercel deployment is marked READY. Do not announce the check-in page as live until the new production snapshot has been verified.

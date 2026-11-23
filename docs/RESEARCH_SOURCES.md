@@ -143,3 +143,22 @@ The 15-page *Attachment Protest and the Wider Psychology of Romantic Relationshi
 - Noba, Kenneth Tan & Louis Tay, *Relationships and Well-being*: https://nobaproject.com/modules/relationships-and-well-being
 - Noba, Debi Brannan & Cynthia D. Mohr, *Love, Friendship, and Social Support*: https://nobaproject.com/modules/love-friendship-and-social-support
 - Open Oregon, Stevy Scarbrough, *Psychology of Human Relations* (2023): CC BY-NC-SA 4.0; official PDF: https://openoregon.pressbooks.pub/app/uploads/sites/277/2022/05/Psychology-of-Human-Relations-Textbook.pdf
+
+
+## Quiz, screening and self-check research (reviewed 24 November 2026)
+
+- PHQ Screeners (official): PHQ and GAD-7 instruments/translations are downloadable; the site says no permission is needed to reproduce, translate, display or distribute them. This permission does not make an online score a diagnosis or remove the need for a clinical response pathway. https://www.phqscreeners.com/select-screener
+- NICE NG222, adult depression: positive identification responses should lead to competent assessment/referral; assessment should not rely on symptom count alone. https://www.nice.org.uk/guidance/ng222/chapter/recommendations
+- NICE NG225, self-harm: do not use risk scales to predict suicide/self-harm repetition or decide who receives treatment/discharge; focus on individual needs and safety. https://www.nice.org.uk/guidance/NG225/chapter/recommendations
+- ACOG perinatal patient screening: validated screening requires systems for timely assessment, treatment, monitoring and follow-up. https://www.acog.org/programs/perinatal-mental-health/patient-screening
+- Shidhaye et al. (2026 online-first), Marathi PHQ-9 culturally adapted/validated in rural Marathi-speaking Maharashtra. Scope the finding to that study population; do not assume universal language/population validity. https://pubmed.ncbi.nlm.nih.gov/42663663/ ; DOI: 10.1007/s00127-026-03186-1
+- Bhardwaj et al. (2025), Hindi PHQ-9 psychometric evaluation among adults with cancer receiving community palliative care in northern India; authors call for further regional/population adaptation. https://pubmed.ncbi.nlm.nih.gov/40837001/
+- Begum et al. (2026), Hindi EPDS validation in 181 mothers 48 hours–7 days after birth at a tertiary hospital; do not generalise automatically to all postpartum/perinatal populations or web self-screening. https://pubmed.ncbi.nlm.nih.gov/42813154/ ; https://pmc.ncbi.nlm.nih.gov/articles/PMC13623259/
+- Bhardwaj et al. (2023), culturally sensitive Marathi EPDS translation/adaptation for perinatal depression in rural Maharashtra. https://doi.org/10.1016/j.jadr.2022.100458
+- International PCOS guideline (2023): clinician screening for depression/anxiety uses regionally validated tools; moderate/severe symptoms need further assessment/referral/treatment. It also recommends asking about quality-of-life impact and care priorities. https://pmc.ncbi.nlm.nih.gov/articles/PMC10477934/
+- EMA PMDD guideline: prospective daily symptom monitoring over two consecutive cycles is the diagnostic-study standard described; retrospective recall is not a substitute. Do not copy DRSP into the website without an appropriate rights basis. https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-treatment-premenstrual-dysphoric-disorder-pmdd_en.pdf
+- NICE endometriosis guidance: a pain/symptom diary may aid clinician discussion. https://www.nice.org.uk/guidance/ng73/chapter/Recommendations
+- RWS Greene Climacteric Scale FAQ: the scale and translations have not been adapted for web/IVR administration; permission is required and modified items cannot retain the Greene scale name. https://lifesciences.rws.com/greeneclimactericscale/faqs
+- Fraley's ECR-R FAQ: ECR-R measures attachment-related anxiety and avoidance, requires reverse-keying, is available for non-commercial research without author permission, and commercial use requires permission; the author cautions against categorical style assignment. https://labs.psychology.illinois.edu/~rcfraley/measures/ecrr.htm
+
+See `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md` for study details, instrument distinctions and Aaramora product recommendations; `docs/CHECKIN_TOOL_SPEC.md` defines the implemented tool.

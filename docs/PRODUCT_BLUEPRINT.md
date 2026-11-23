@@ -95,3 +95,16 @@ The separate relationship page contains all 40 concepts from the uploaded resear
 
 ## Reading library
 A separate `reading-library.html` page provides source-linked open resources, licence information and legitimate publisher/library routes for copyrighted attachment books. Aaramora does not bypass paywalls or mirror unlicensed scans. Each resource shows whether it is CC BY, CC BY-NC-SA, or publisher/library access only.
+
+
+## Check-ins and self-reflection tools (24 November 2026)
+
+The dedicated `check-ins.html` page is a non-scored guide finder and preparation space:
+- an optional guide-finder routes to an existing education page without estimating a condition or assigning a label;
+- a women's-health appointment planner formats visitor-authored concerns and questions into a local print view;
+- an original blank two-cycle paper log helps visitors note dates, cycle day, symptoms and daily-life impact for clinician discussion;
+- support numbers remain visible without completing a quiz.
+
+It does not reproduce or score PHQ-9, GAD-7, EPDS, DRSP, Greene Climacteric Scale, ECR-R or ECR-RS. Research and licensing analysis: `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md`; interaction and privacy requirements: `docs/CHECKIN_TOOL_SPEC.md`.
+
+Clinical screeners remain out of the current MVP because a validated instrument requires target-population and language suitability, clinical interpretation, follow-up and urgent-response ownership. A question set alone is not a care pathway.

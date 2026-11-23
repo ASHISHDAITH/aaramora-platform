@@ -48,6 +48,7 @@ class WebsiteHealthContentTests(unittest.TestCase):
         cls.home = (ROOT / "index.html").read_text(encoding="utf-8")
         cls.well = (ROOT / "wellbeing.html").read_text(encoding="utf-8")
         cls.rel = (ROOT / "relationships.html").read_text(encoding="utf-8")
+        cls.checkins = (ROOT / "check-ins.html").read_text(encoding="utf-8")
         cls.well_audit = Audit(); cls.well_audit.feed(cls.well)
         cls.rel_audit = Audit(); cls.rel_audit.feed(cls.rel)
 
@@ -119,12 +120,27 @@ class WebsiteHealthContentTests(unittest.TestCase):
         self.assertFalse([a for a in self.well_audit.anchors if a not in ids])
 
 
+
+    def test_checkins_are_non_diagnostic_private_and_printable(self):
+        self.assertIn('href="check-ins.html"', self.home)
+        for phrase in ["not a screening test","not a diagnosis","appointment-form","guide-form","cycle-log","print-cycle","print-appointment","DRSP questionnaire"]:
+            self.assertIn(phrase, self.checkins)
+        for href in ["tel:112","tel:181","tel:14416"]:
+            self.assertIn(href, self.checkins)
+        for token in ["localStorage","sessionStorage","XMLHttpRequest","sendBeacon"]:
+            self.assertNotIn(token, self.checkins)
+        self.assertNotRegex(self.checkins, r"fetch\s*\(")
+        self.assertNotRegex(self.checkins, r'<(?:input|select|textarea|button)\b[^>]*\srequired(?:\s|>)')
+        self.assertLess(self.checkins.index("</main>"), self.checkins.index('id="print-root"'))
+        self.assertIn("Cycle 1", self.checkins)
+        self.assertIn("Cycle 2", self.checkins)
+
     def test_inline_javascript_parses_on_all_site_pages(self):
         node = shutil.which("node")
         if not node:
             self.skipTest("Node.js is not installed in this test environment")
 
-        page_names = ["index.html", "wellbeing.html", "relationships.html", "reading-library.html"]
+        page_names = ["index.html", "wellbeing.html", "relationships.html", "reading-library.html", "check-ins.html"]
         checked_scripts = 0
         for page_name in page_names:
             html = (ROOT / page_name).read_text(encoding="utf-8")
@@ -150,6 +166,13 @@ class WebsiteHealthContentTests(unittest.TestCase):
                     if temp_path:
                         Path(temp_path).unlink(missing_ok=True)
         self.assertGreater(checked_scripts, 0, "No inline JavaScript blocks were checked")
+
+    def test_checkins_internal_anchors_resolve(self):
+        parser = Audit()
+        parser.feed(self.checkins)
+        ids = set(parser.ids)
+        self.assertEqual(len(parser.ids), len(ids), "duplicate check-in page IDs")
+        self.assertFalse([a for a in parser.anchors if a not in ids])
 
     def test_relationship_internal_anchors_resolve(self):
         ids = set(self.rel_audit.ids)

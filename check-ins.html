@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#F5F2E9">
+<meta name="description" content="Optional private guide-finding and appointment preparation. No diagnosis, scores or saved answers.">
+<title>Check-ins and Appointment Preparation | Aaramora</title>
+<style>
+:root{--paper:#F5F2E9;--surface:#FFFEFA;--ink:#203B32;--muted:#586B62;--forest:#23483C;--sage:#DCE8DB;--line:#D7DED4;--focus:#1D5E9B;--lilac:#EAE4EF;--clay:#EAD8CB;--body:Arial,"Noto Sans","Noto Sans Devanagari",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body)}a{color:inherit}button,select,textarea,input{font:inherit}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.top-support{background:#E5EDE4;border-bottom:1px solid #D2DED1;color:#24463A}.top-support .wrap{min-height:43px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:6px 0;font-size:.87rem}.top-support a{font-weight:800;text-underline-offset:3px}
+header{position:sticky;top:0;z-index:20;background:rgba(245,242,233,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800}.mark{width:38px;height:38px;border-radius:13px;background:#DFE9DD;display:grid;place-items:center;color:#315B48}.navlinks{display:flex;align-items:center;gap:17px}.navlinks a{font-size:.88rem;text-decoration:none;color:#40564C;font-weight:650}.quick,.menu{min-height:42px;border-radius:999px;border:1px solid var(--line);background:transparent;padding:8px 13px;color:#40564C;font-weight:650;cursor:pointer}.menu{display:none;border-radius:12px;background:white}
+h1,h2,h3{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}.eyebrow{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:#5A7667;font-weight:800}.hero{padding:57px 0 35px}.hero-grid{display:grid;grid-template-columns:1fr .8fr;gap:38px;align-items:center}h1{font-size:clamp(2.6rem,5vw,4.5rem);line-height:1.03;margin:15px 0 18px}.lead{font-size:1.06rem;line-height:1.75;color:#4B6156;max-width:720px}.hero-art{min-height:230px;border-radius:30px;background:linear-gradient(145deg,#E7EEE5,#DDE8E9);display:grid;place-items:center;overflow:hidden}.hero-art svg{width:90%;max-width:420px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.button{min-height:47px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:10px 17px;font-weight:750;text-decoration:none;border:1px solid #C7D4C7;background:white;color:var(--ink)}.button.primary{background:var(--forest);color:white;border-color:var(--forest)}
+.section{padding:48px 0}.alt{background:#EFEEE6}.section-head{max-width:760px;margin-bottom:24px}h2{font-size:clamp(2rem,3.5vw,2.9rem);line-height:1.15;margin:10px 0 12px}.notice{padding:17px 19px;border-radius:16px;background:#E9E4EF;border:1px solid #DAD1E3;color:#4E5060;font-size:.92rem;margin:18px 0}.notice strong{color:#363C50}.urgent{background:#F5E8E2;border:1px solid #E3CFC4;border-radius:19px;padding:18px 20px;display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}.urgent strong{color:#493D3A}.urgent p{margin:4px 0 0;color:#5C514C;font-size:.9rem}.urgent-links{display:flex;gap:10px;flex-wrap:wrap}.urgent-links a{display:inline-flex;min-height:42px;align-items:center;justify-content:center;padding:8px 14px;border-radius:999px;background:white;border:1px solid #D7C8BE;font-weight:800;text-decoration:none}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 10px 32px rgba(31,57,46,.04)}.panel h3{font:500 1.48rem/1.2 Georgia,serif;color:#29483A;margin:7px 0 10px}.panel>p{font-size:.92rem;color:#58685E}.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.choice{display:flex;gap:11px;align-items:flex-start;border:1px solid #D7DED4;border-radius:15px;padding:13px;background:#FBFCF8;min-height:64px;cursor:pointer}.choice:has(input:checked){border-color:#7D9D82;background:#ECF3EB}.choice input{margin-top:5px;accent-color:#315B48;flex:0 0 auto}.choice span{font-size:.92rem;color:#354D40;font-weight:650}.field{display:grid;gap:6px;margin:15px 0}.field label,.fieldset-legend{font-weight:750;font-size:.9rem;color:#354D40}.field select,.field textarea{width:100%;min-height:45px;border:1px solid #C9D4C8;border-radius:12px;background:white;color:#203B32;padding:10px 12px}.field textarea{min-height:95px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.smallbtn{min-height:44px;border-radius:999px;padding:9px 16px;background:var(--forest);color:white;border:1px solid var(--forest);font-weight:750;cursor:pointer}.smallbtn.secondary{background:white;color:var(--forest);border-color:#BFCDBE}.smallbtn:disabled{opacity:.55;cursor:not-allowed}.result{display:none;background:#EDF3EB;border:1px solid #D4E0D2;border-radius:15px;padding:16px;margin-top:16px;color:#40564C}.result.show{display:block}.result p:last-child{margin-bottom:0}.result a{font-weight:800;text-underline-offset:3px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.subnote{font-size:.82rem;color:#66766C;margin-top:10px}.planner-grid{display:grid;grid-template-columns:1fr .78fr;gap:18px;align-items:start}.planner-aside{background:#E8EEE6;border:1px solid #D5DED1;border-radius:19px;padding:19px}.planner-aside h3{font:500 1.28rem Georgia,serif}.planner-aside p,.planner-aside li{font-size:.88rem;color:#53665A}.planner-aside ul{padding-left:19px}
+.print-sheet{display:none}.print-sheet h2{font-size:1.8rem}.print-sheet p,.print-sheet li{font-size:11pt}.print-summary{border:1px solid #B8C7B8;padding:14px;border-radius:10px;margin:12px 0}.print-summary p{margin:7px 0}.tracker-table{width:100%;border-collapse:collapse;margin:12px 0 24px;font-size:.78rem}.tracker-table caption{text-align:left;font:500 1.25rem Georgia,serif;padding:7px 0;color:#29483A}.tracker-table th,.tracker-table td{border:1px solid #C8D2C6;padding:7px;text-align:left;height:34px}.tracker-table th{background:#EDF3EB}.tracker-intro{font-size:.9rem;color:#58685E}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.mini-card{background:#FFFEFA;border:1px solid var(--line);border-radius:18px;padding:18px}.mini-card h3{font:500 1.2rem Georgia,serif;margin:0 0 8px;color:#31513E}.mini-card p{font-size:.88rem;color:#58685E}.mini-card a{font-weight:800;text-underline-offset:3px}.footer{background:#EAE9E0;padding:33px 0;color:#53645A;font-size:.84rem}.footerlinks{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px}.footer a{color:#40574A;text-underline-offset:4px}
+@media(max-width:850px){.hero-grid,.planner-grid{grid-template-columns:1fr}.hero-art{min-height:190px;max-width:650px;width:100%;margin:auto}.cards{grid-template-columns:1fr}.navlinks{display:none;position:absolute;left:0;right:0;top:70px;padding:15px 20px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:inline-block}}
+@media(max-width:650px){.wrap{width:calc(100% - 28px)}.nav{height:64px}.navlinks{top:64px}.quick{font-size:.78rem;padding:7px 10px}.hero{padding:42px 0 30px}.choice-grid,.grid2{grid-template-columns:1fr}.section{padding:39px 0}.panel{padding:17px}.urgent{padding:16px}.urgent-links a{min-width:105px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+@media print{
+ @page{margin:12mm}
+ body{background:#fff;color:#111;font:11pt/1.4 Arial,sans-serif}
+ body[data-print-target] main,body[data-print-target] header,body[data-print-target] .top-support,body[data-print-target] footer{display:none!important}
+ body[data-print-target] #print-root{display:block!important}
+ body[data-print-target="appointment"] #appointment-print,
+ body[data-print-target="cycle"] #cycle-print{display:block!important;position:static!important;width:100%!important;padding:0!important;border:0!important;box-shadow:none!important;background:#fff!important}
+ .tracker-table th,.tracker-table td{height:31px}
+ .tracker-table{font-size:9pt;page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="top-support"><div class="wrap"><span><strong>Need support now?</strong> India · Tele-MANAS <a href="tel:14416">14416</a> · Emergency <a href="tel:112">112</a></span><span><a href="tel:181">Women Helpline 181</a> · <a href="index.html">Aaramora home</a></span></div></div>
+<header><div class="wrap nav"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">✧</span>Aaramora</a><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a><a href="#guide-finder">Find a starting point</a><a href="#womens-health-planner">Women's health planner</a><a href="#cycle-log">Cycle log</a><a href="reading-library.html">Reading library</a></nav><div style="display:flex;gap:8px"><button class="quick" id="quick-exit" type="button">Quick exit</button><button class="menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button></div></div></header>
+<main id="main">
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Private check-ins · small next steps</div><h1>Find a next step, not a label.</h1><p class="lead">Choose what feels relevant, explore a guide or prepare for a conversation with a professional. You can skip anything. This is not a diagnosis or clinical screening test. There are no scores, labels or pass/fail results here.</p><div class="hero-actions"><a class="button primary" href="#guide-finder">Find a starting point</a><a class="button" href="#womens-health-planner">Prepare for an appointment</a></div></div><div class="hero-art" role="img" aria-label="A gentle path through a garden with two stepping stones and a small warm light"><svg viewBox="0 0 460 250" fill="none" aria-hidden="true"><circle cx="364" cy="54" r="34" fill="#F0DCAF"/><path d="M0 155C85 111 148 132 218 160c75 29 142 16 242-12v102H0V155Z" fill="#B8CEBC"/><path d="M0 204c87-27 160-13 226 13 71 27 148 14 234-10v43H0v-46Z" fill="#79A286"/><path d="M146 250c24-48 48-71 92-102 31-22 49-45 60-77" stroke="#F4EBDD" stroke-width="15" stroke-linecap="round"/><path d="M102 189c17-17 32-18 46 1-16 14-31 14-46-1Z" fill="#638E71"/><path d="M280 182c18-19 35-17 49 3-17 13-34 12-49-3Z" fill="#638E71"/><circle cx="298" cy="114" r="9" fill="#E7C879"/></svg></div></div></section>
+<section class="section"><div class="wrap"><div class="urgent"><div><strong>When a situation is urgent</strong><p>If someone is in immediate danger or needs emergency medical help in India, call 112. For mental-health support and conversation, Tele-MANAS is available at 14416. These routes do not depend on finishing a quiz.</p></div><div class="urgent-links"><a href="tel:112">Call 112</a><a href="tel:14416">Call 14416</a><a href="tel:181">Call 181</a></div></div></div></section>
+
+<section class="section alt" id="guide-finder"><div class="wrap"><div class="section-head"><div class="eyebrow">A guide finder, not a screening test</div><h2>What would you like help understanding?</h2><p class="lead">This optional check-in simply opens a relevant information page. It cannot tell you whether you have a condition. Your answers stay in this open page and are not saved or sent.</p></div>
+<div class="panel"><form id="guide-form"><fieldset style="border:0;padding:0;margin:0"><legend class="fieldset-legend">Choose one starting point, or leave it blank.</legend><div class="choice-grid">
+<label class="choice"><input type="radio" name="guide-choice" value="mood"><span>Low mood, emptiness or losing interest</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="worry"><span>Worry, tension or feeling on edge</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="panic"><span>Sudden fear or a strong body alarm</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="stress"><span>Stress, overload or too many demands</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="trauma"><span>Distressing memories or reminders</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="sleep"><span>Sleep problems or difficult nights</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="thoughts"><span>Repeating thoughts, rumination or checking</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="relationship"><span>Relationship strain, conflict or boundaries</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="women"><span>Periods, pelvic pain, PMOS, menopause or postpartum health</span></label>
+<label class="choice"><input type="radio" name="guide-choice" value="unsure"><span>I am not sure yet</span></label>
+</div></fieldset><div class="field"><label for="help-preference">What would feel most useful right now? (optional)</label><select id="help-preference"><option value="">Skip this question</option><option value="learn">Understand the experience</option><option value="steps">Find a small, practical next step</option><option value="appointment">Prepare to speak with a professional</option><option value="person">Find support from a person</option></select></div><div class="actions"><button class="smallbtn" type="submit">Show a starting point</button><button class="smallbtn secondary" type="reset">Clear choices</button></div></form><div class="result" id="guide-result" role="status" aria-live="polite"></div><p class="subnote">A selection is not a diagnosis, symptom score, prediction or measure of severity. Similar experiences can have different causes.</p></div></div></section>
+
+<section class="section" id="womens-health-planner"><div class="wrap"><div class="section-head"><div class="eyebrow">Women's health · appointment preparation</div><h2>Your concerns deserve time and context.</h2><p class="lead">Use this optional planner to organise what you may want to tell a clinician. It does not identify PMOS, endometriosis, PMDD, menopause or another condition.</p></div>
+<div class="planner-grid"><div class="panel"><form id="appointment-form">
+<div class="field"><label for="health-area">What would you most like to discuss?</label><select id="health-area"><option value="">Not sure / several things</option><option>Periods or cycle changes</option><option>Pelvic, period, bowel or bladder pain</option><option>PMOS / PCOS concerns</option><option>Menopause or perimenopause</option><option>Pregnancy or postpartum wellbeing</option><option>Another concern</option></select></div>
+<fieldset style="border:0;padding:0;margin:16px 0"><legend class="fieldset-legend">Which areas have you noticed? Choose only what you want to share.</legend><div class="choice-grid">
+<label class="choice"><input type="checkbox" name="health-sign" value="Period timing, frequency or cycle changes"><span>Period timing, frequency or cycle changes</span></label>
+<label class="choice"><input type="checkbox" name="health-sign" value="Heavy bleeding or bleeding between periods"><span>Heavy bleeding or bleeding between periods</span></label>
+<label class="choice"><input type="checkbox" name="health-sign" value="Pelvic, period, sexual, bowel or bladder pain"><span>Pelvic, period, sexual, bowel or bladder pain</span></label>
+<label class="choice"><input type="checkbox" name="health-sign" value="Mood, worry, irritability or emotional changes"><span>Mood, worry, irritability or emotional changes</span></label>
+<label class="choice"><input type="checkbox" name="health-sign" value="Sleep, energy or fatigue changes"><span>Sleep, energy or fatigue changes</span></label>
+<label class="choice"><input type="checkbox" name="health-sign" value="Memory or concentration changes"><span>Memory or concentration changes</span></label>
+<label class="choice"><input type="checkbox" name="health-sign" value="Skin, hair, body image or metabolic concerns"><span>Skin, hair, body image or metabolic concerns</span></label>
+<label class="choice"><input type="checkbox" name="health-sign" value="Pregnancy, postpartum or menopause-related changes"><span>Pregnancy, postpartum or menopause-related changes</span></label>
+</div></fieldset>
+<div class="grid2"><div class="field"><label for="health-duration">How long has this been happening?</label><select id="health-duration"><option value="">Not sure / prefer not to say</option><option>Days</option><option>Weeks</option><option>Months</option><option>It comes and goes</option><option>It has changed over time</option></select></div><div class="field"><label for="health-impact">How does it affect daily life?</label><select id="health-impact"><option value="">Prefer not to say</option><option>It does not affect my usual activities much</option><option>It makes some activities harder</option><option>It often disrupts work, study, sleep or relationships</option><option>It makes usual activities very difficult</option></select></div></div>
+<div class="field"><label for="health-questions">What would you most like the clinician to understand or answer? (optional)</label><textarea id="health-questions" placeholder="You can leave this blank. Avoid details you do not want visible on a shared or monitored device."></textarea></div>
+<div class="actions"><button class="smallbtn" type="button" id="build-appointment">Prepare my appointment notes</button><button class="smallbtn secondary" type="reset">Clear this page</button></div></form><div class="result" id="appointment-result" role="status" aria-live="polite"></div><div class="actions"><button class="smallbtn" type="button" id="print-appointment" disabled>Print / save notes as PDF</button></div><p class="subnote">This page uses temporary in-memory form values only. It does not save, upload or analyse your answers. Do not use a device you believe is monitored if that may put you at risk.</p></div>
+<aside class="planner-aside"><h3>Questions you can take to the appointment</h3><ul><li>What else might explain these symptoms?</li><li>Which examination or tests are useful, and why?</li><li>What are the benefits, risks and alternatives for each option?</li><li>How could this affect sleep, mood, fertility or other health concerns?</li><li>When should I seek urgent help or return for review?</li></ul><p>You can ask for an explanation in a language you are comfortable using. You do not need to answer every question on this website before seeking care.</p><p><a href="index.html#womens-health">Read the women's-health information corner →</a></p></aside></div>
+</div></section>
+
+<section class="section alt" id="cycle-log"><div class="wrap"><div class="section-head"><div class="eyebrow">For symptoms that may follow a cycle</div><h2>A paper log can show timing better than a one-time quiz.</h2><p class="lead">For possible PMDD or recurring premenstrual symptoms, a clinician may ask for prospective daily notes across at least two consecutive menstrual cycles. This blank log is not the DRSP scale and cannot diagnose PMDD.</p></div>
+<div class="panel"><p class="tracker-intro">Print the blank pages and use them on paper if useful. Record what you notice in your own words: mood, physical symptoms, cycle timing and impact on daily life. Skip any column that does not fit. Do not use a score or threshold from this worksheet.</p><div class="actions"><button class="smallbtn" type="button" id="print-cycle">Print two-cycle paper log</button></div></div>
+<div class="notice"><strong>Urgent symptoms should not wait for a diary.</strong> Seek urgent medical advice for severe or sudden pelvic/abdominal pain, fainting, very heavy bleeding with weakness/dizziness, or other worrying physical symptoms. In an immediate emergency in India, call 112.</div></div></section>
+
+<section class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">Why Aaramora does not diagnose through quizzes</div><h2>Clinical screeners need a care pathway behind them.</h2><p class="lead">Recognised tools can support clinical practice, but a questionnaire alone does not diagnose a condition or decide what care is right.</p></div><div class="cards">
+<article class="mini-card"><h3>Depression and anxiety</h3><p>PHQ-9 and GAD-7 are screening instruments. Positive responses need suitable assessment and follow-up. Aaramora links to official resources rather than scoring them in this static prototype.</p><a href="https://www.phqscreeners.com/select-screener" target="_blank" rel="noopener noreferrer">Official PHQ/GAD resources →</a></article>
+<article class="mini-card"><h3>Pregnancy and postpartum</h3><p>EPDS and PHQ-9 may be used in perinatal care. Screening needs a named clinical response for positive answers and urgent concerns. Postpartum psychosis requires emergency assessment.</p><a href="https://www.acog.org/programs/perinatal-mental-health/patient-screening" target="_blank" rel="noopener noreferrer">ACOG screening workflow →</a></article>
+<article class="mini-card"><h3>Relationships and attachment</h3><p>The relationship reflections are original, unvalidated prompts. They help notice one person's behaviour; they do not assign an attachment style, score a partner or judge relationship safety.</p><a href="relationships.html#safety">Open the relationship corner →</a></article>
+</div></div></section>
+</main>
+<div id="print-root"><section class="print-sheet panel" id="appointment-print" aria-label="Appointment notes for printing"></section><section class="print-sheet" id="cycle-print" aria-label="Two-cycle symptom log for printing"><h2>Two-cycle symptom notes</h2><p>Blank paper worksheet for a conversation with a qualified clinician. This is not a diagnostic instrument or the DRSP questionnaire.</p><div id="cycle-tables"></div><p>Bring the notes to a clinician if useful. A daily log can help describe timing, but it does not establish a diagnosis by itself.</p></section></div>
+<footer class="footer"><div class="wrap"><div class="footerlinks"><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a><a href="reading-library.html">Reading library</a><a href="#guide-finder">Guide finder</a><a href="#womens-health-planner">Appointment planner</a></div><p>Aaramora provides information and help navigation. It is not a diagnostic service, clinic, therapy provider or emergency response service. If you need urgent help, use the support routes above.</p></div></footer>
+<script>
+(function(){
+const routeMap={
+ mood:{title:"Low mood and loss of interest",copy:"You chose an experience that may be worth reading about. This page cannot tell you whether you have depression.",href:"wellbeing.html#depression",label:"Read the depression guide"},
+ worry:{title:"Worry and feeling on edge",copy:"Worry can have different causes. A guide can help you learn about anxiety without giving you a diagnosis.",href:"wellbeing.html#anxiety",label:"Read the anxiety guide"},
+ panic:{title:"Sudden fear or a body alarm",copy:"Panic-like symptoms can overlap with physical health problems. A first, new or unusual episode deserves appropriate medical assessment.",href:"wellbeing.html#panic",label:"Read about panic attacks"},
+ stress:{title:"Stress and overload",copy:"Stress can be shaped by workload, safety, relationships, money, health and other conditions. Relaxation alone may not solve the cause.",href:"wellbeing.html#stress",label:"Read about acute stress surges"},
+ trauma:{title:"Trauma-related distress",copy:"Distressing responses do not automatically mean PTSD. You do not need to recount an event to read information or find support.",href:"wellbeing.html#trauma",label:"Read about trauma-related distress"},
+ sleep:{title:"Sleep and difficult nights",copy:"Sleep changes can have psychological, physical, medication-related and environmental causes.",href:"wellbeing.html#sleep",label:"Read about sleep difficulties"},
+ thoughts:{title:"Repeating thoughts and checking",copy:"Repetitive thoughts do not automatically mean OCD. Learn about rumination and when a full assessment may help.",href:"wellbeing.html#rumination",label:"Read about overthinking and rumination"},
+ relationship:{title:"Relationship stress",copy:"Start with the relationship safety information. Communication exercises are not the right first step where there is fear, coercion or violence.",href:"relationships.html#safety",label:"Open the safety-first relationship corner"},
+ women:{title:"Women's health concerns",copy:"Symptoms can overlap and a short quiz cannot identify PMOS, endometriosis, PMDD, menopause or another condition. Preparing a clear history can help a clinical conversation.",href:"#womens-health-planner",label:"Use the women's-health appointment planner"},
+ unsure:{title:"It is okay not to know yet",copy:"You can read a few guides, prepare questions or talk with a person. There is no need to choose a label.",href:"wellbeing.html#conditions",label:"Browse mental wellbeing guides"}
+};
+const guideForm=document.getElementById("guide-form");
+const guideResult=document.getElementById("guide-result");
+guideForm.addEventListener("submit",event=>{
+ event.preventDefault();
+ const key=new FormData(guideForm).get("guide-choice");
+ guideResult.replaceChildren();
+ guideResult.className="result show";
+ if(!key){guideResult.textContent="You can skip this check-in. Choose a topic only if one feels useful, or use the human support links above.";return;}
+ const selected=routeMap[key]||routeMap.unsure;
+ const h=document.createElement("strong");h.textContent=selected.title;
+ const p=document.createElement("p");p.textContent=selected.copy+" This is a guide suggestion, not a result or score.";
+ const a=document.createElement("a");a.href=selected.href;a.textContent=selected.label;
+ guideResult.append(h,p,a);
+ const preference=document.getElementById("help-preference").value;
+ if(preference==="person"){const extra=document.createElement("p");extra.textContent="You can call Tele-MANAS at 14416 for mental-health support in India. For immediate danger, call 112.";guideResult.append(extra);}
+ if(preference==="appointment"&&key==="women"){const extra=document.createElement("p");extra.textContent="The appointment planner below can help you organise questions without sending them anywhere.";guideResult.append(extra);}
+});
+guideForm.addEventListener("reset",()=>{guideResult.className="result";guideResult.replaceChildren();});
+const appointmentForm=document.getElementById("appointment-form");
+const appointmentResult=document.getElementById("appointment-result");
+const printAppointment=document.getElementById("print-appointment");
+const appointmentPrint=document.getElementById("appointment-print");
+function checkedValues(){return [...appointmentForm.querySelectorAll('input[name="health-sign"]:checked')].map(x=>x.value);}
+document.getElementById("build-appointment").addEventListener("click",()=>{
+ const signs=checkedValues();
+ appointmentPrint.replaceChildren();
+ const title=document.createElement("h2");title.textContent="My women's-health appointment notes";
+ const intro=document.createElement("p");intro.textContent="Prepared privately on this device. These notes are a prompt for discussion, not a diagnosis.";
+ const box=document.createElement("div");box.className="print-summary";
+ const list=[["Main concern",document.getElementById("health-area").value||"Not specified"],["What I have noticed",signs.length?signs.join("; "):"Not specified"],["How long",document.getElementById("health-duration").value||"Not specified"],["Impact on daily life",document.getElementById("health-impact").value||"Not specified"],["What I want to ask",document.getElementById("health-questions").value.trim()||"Not specified"]];
+ list.forEach(([label,value])=>{const p=document.createElement("p");const strong=document.createElement("strong");strong.textContent=label+": ";p.append(strong,document.createTextNode(value));box.append(p);});
+ const note=document.createElement("p");note.textContent="Questions to discuss: What else could explain this? Which checks are appropriate? What are the options and trade-offs? When should I return or seek urgent help?";
+ appointmentPrint.append(title,intro,box,note);
+ appointmentResult.replaceChildren();
+ const status=document.createElement("p");status.textContent="Your notes are ready below. They remain in this page only. You can review them or print/save them as a PDF.";
+ appointmentResult.append(status);appointmentResult.className="result show";printAppointment.disabled=false;
+});
+appointmentForm.addEventListener("reset",()=>{
+ appointmentResult.className="result";appointmentResult.replaceChildren();appointmentPrint.replaceChildren();printAppointment.disabled=true;
+});
+function printTarget(name){document.body.dataset.printTarget=name;window.print();delete document.body.dataset.printTarget;}
+printAppointment.addEventListener("click",()=>printTarget("appointment"));
+const cycleTables=document.getElementById("cycle-tables");
+["Cycle 1","Cycle 2"].forEach(cycle=>{
+ const table=document.createElement("table");table.className="tracker-table";
+ const caption=document.createElement("caption");caption.textContent=cycle;table.append(caption);
+ const thead=document.createElement("thead");const head=document.createElement("tr");
+ ["Date","Cycle day (optional)","Symptoms / mood / pain","Effect on daily life / notes"].forEach(text=>{const th=document.createElement("th");th.scope="col";th.textContent=text;head.append(th);});thead.append(head);table.append(thead);
+ const tbody=document.createElement("tbody");
+ for(let day=1;day<=31;day++){const tr=document.createElement("tr");for(let col=0;col<4;col++){const td=document.createElement("td");td.textContent="";tr.append(td);}tbody.append(tr);}
+ table.append(tbody);cycleTables.append(table);
+});
+document.getElementById("print-cycle").addEventListener("click",()=>printTarget("cycle"));
+document.getElementById("quick-exit").addEventListener("click",()=>window.location.replace("about:blank"));
+const menu=document.getElementById("menu-toggle"),links=document.getElementById("navlinks");
+menu.addEventListener("click",()=>{const open=menu.getAttribute("aria-expanded")==="true";menu.setAttribute("aria-expanded",String(!open));links.classList.toggle("open",!open);menu.textContent=open?"Menu":"Close";});
+links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.textContent="Menu";}));
+})();
+</script>
+</body>
+</html>

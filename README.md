@@ -31,6 +31,7 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - Overthinking Unload, Little Garden, untimed Puzzle Sanctuary, Creative Studio and Safe Corner.
 - Mental wellbeing guides covering depression, anxiety, panic, acute stress surges, trauma-related distress, rumination, sleep, burnout, grief and OCD-related experiences.
 - Relationships corner with 40 searchable concepts, three optional non-diagnostic reflections, a non-scored safety check and practical guidance for different sides of a relationship cycle.
+- Check-ins page with a non-scored guide finder, private women's-health appointment planner and printable original two-cycle symptom log.
 - Women's-health corner with eight topic areas and the shared “how it may feel / what may help / when to seek support” structure.
 - Reading library with open educational resources, explicit licence notes and publisher links for copyrighted books.
 - Resource shelf and future community concept (not a live forum).
@@ -78,7 +79,7 @@ Never commit real user messages, journals, screening answers, health records, pa
 
 
 ## Automated checks
-GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on pushes and pull requests. The checks cover core page routes, wellbeing content structure, women's-health consistency, all 40 relationship concepts, optional quiz/privacy requirements, support links, internal anchors and inline JavaScript syntax on all four site pages.
+GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on pushes and pull requests. The checks cover core page routes, wellbeing content structure, women's-health consistency, all 40 relationship concepts, optional quiz/privacy requirements, support links, internal anchors and inline JavaScript syntax on all five site pages.
 
 
 ## Brand film

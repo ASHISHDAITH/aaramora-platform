@@ -41,3 +41,13 @@ Add a short “what this page cannot tell you” note for every quiz or symptom 
 
 ## Relationship-concept pages
 Use how it may feel, what may help, when to seek support and a status note (research dimension, clinical construct, emerging concept or popular label). Do not turn descriptive concepts into diagnostic quizzes. Preserve source cautions and the difference between ordinary attachment needs and coercive or harmful behaviour.
+
+
+## Self-check and questionnaire rules
+
+- Distinguish a guide finder, unvalidated self-reflection, appointment-preparation worksheet and clinical screening instrument. Never present one as another.
+- No diagnosis probability, severity band, attachment category, compatibility verdict or suicide/self-harm risk score from a website quiz.
+- Use validated instruments only when the exact version, permissions, intended population/language, clinical owner, follow-up and urgent-response procedure have been approved.
+- A print worksheet or symptom diary must be described as notes for a clinician, not a diagnostic test. Do not copy protected scales such as DRSP or web-inappropriate/licensed menopause instruments.
+- Never make human support conditional on completing a self-check. Every item should be optional and skippable.
+- State storage and print behaviour before collection. Current Aaramora check-ins are in-page memory only, with no transmission or persistence.

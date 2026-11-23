@@ -77,3 +77,12 @@ The checks above do not complete the following:
 - Added an automated check that extracts each inline JavaScript block from `index.html`, `wellbeing.html`, `relationships.html` and `reading-library.html`, then runs Node.js `--check`.
 - GitHub Actions run [45266854917](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45266854917), commit `43483cadf081ffe7e630287ca2fd87faa27da95d`, completed successfully.
 - Result: **19 tests passed** (`Ran 19 tests`, `OK`), including the all-pages inline JavaScript syntax check.
+
+
+## Quiz and self-check research — 24 November 2026
+- Added `docs/QUIZ_AND_SELF_CHECK_RESEARCH.md` covering PHQ-9/GAD-7, EPDS, regional validation research, PMOS/PCOS screening guidance, PMDD prospective diaries, endometriosis symptom logs, menopause instrument permissions, adult attachment measures and self-harm risk-score cautions.
+- Added `check-ins.html`: optional non-scored guide finder, women's-health appointment preparation and an original blank two-cycle paper log.
+- Added `docs/CHECKIN_TOOL_SPEC.md` and linked the page from homepage, mental-wellbeing and relationship navigation.
+- The current page does not score clinical instruments, diagnose, assign labels, store answers or send data.
+- The new static tests cover optional controls, privacy, support links, print layout, internal anchors and inline JavaScript syntax on all five pages. CI result is pending.
+- This is educational UX, not clinical approval. Qualified clinical, safeguarding, language and accessibility review remain required.

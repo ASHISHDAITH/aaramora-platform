@@ -144,4 +144,4 @@
 
 
 ## Inline script syntax
-- [ ] Every inline JavaScript block on index, wellbeing, relationships and reading-library pages passes `node --check` in CI.
+- [ ] Every inline JavaScript block on index, wellbeing, relationships, reading-library and check-ins pages passes `node --check` in CI.
