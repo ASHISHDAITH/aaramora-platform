@@ -2182,5 +2182,24 @@
       },
       "titleLanguage": "pt"
     }
-  ]
+  ],
+  "languageAliases": {
+    "Manipuri": [
+      "Manipuri (Meitei)",
+      "Meitei (Manipuri)",
+      "Meitei"
+    ],
+    "Meitei (Manipuri)": [
+      "Manipuri",
+      "Manipuri (Meitei)",
+      "Meitei"
+    ],
+    "Filipino/Tagalog": [
+      "Filipino",
+      "Tagalog"
+    ],
+    "Persian": [
+      "Farsi"
+    ]
+  }
 }
