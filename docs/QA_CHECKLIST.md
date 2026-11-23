@@ -126,6 +126,13 @@
 - [ ] Re-check official source and edition before publishing any download link.
 
 - [ ] OpenStax Psychology 2e uses current CC BY-NC-SA 4.0 publisher wording and AI-ingestion restriction.
+- [ ] Sacred-text cards identify the exact source institution and distinguish original-language text from translations, commentaries and digital editions.
+- [ ] Tanzil Quran text is kept verbatim with its required source notice; QuranEnc translation conditions are checked per version.
+- [ ] Sikher translation/transliteration rights are checked at item level, not inferred from software licensing.
+- [ ] Public-domain claims for Project Gutenberg editions include the relevant territory caveat and point to ebook landing pages.
+- [ ] World English Bible naming and alteration conditions are preserved.
+- [ ] DOAB metadata permissions are not presented as permission to republish the listed books; Open Library borrow controls are respected.
+- [ ] The reading-library hero photograph includes photographer/source credit and the original Aaramora quote is not misattributed.
 - [ ] BCcampus Capacity to Connect attribution and recommended original-source statement accompany any mirror.
 - [ ] Noba modules and Open Oregon textbook show their non-commercial ShareAlike terms.
 - [ ] Reading resources link to official publisher pages and direct publisher/repository downloads only.
