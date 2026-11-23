@@ -132,3 +132,11 @@
 - Local source validator passed for 26 records; complete Python suite: 60 tests passed.
 - Local Chromium audit on the candidate commit: 1280/768/390/360/320px widths with no horizontal overflow; axe-core 4.10.3 reported 0 violations (47 rule passes, 0 incomplete); no JavaScript console/page errors; Urdu lang/dir inspected.
 - Independent human review remains open. Four reviewer-pack files were added under `docs/review/`; statuses are `pending` / `not_contacted`. No outreach or paid audit has been ordered.
+
+
+
+## Support-link touch target and final candidate checks · 24 November 2026
+- Increased support-contact target height to 44px and inter-target gap to 24px after a live axe scan flagged the original compact support link at one viewport.
+- Local browser re-check at 1440, 390 and 320 CSS px: both support contacts measure 44px high, axe-core 4.10.3 reports 0 violations (47 passes, 0 incomplete), and no horizontal overflow or page/console errors were reported.
+- Latest full Python suite after this change: 62 tests passed; catalogue validator passed.
+- Human testing remains outstanding as specified in docs/review/ACCESSIBILITY_MANUAL_TEST_PLAN.md.
