@@ -1,6 +1,7 @@
 # First-Visit Design System v2
 
-**Product label:** The platform (final name intentionally unresolved)  
+**Product name:** AARAMORA  
+**Tagline:** A gentle place to begin again.  
 **Audience:** Adults in India, including people arriving under stress, with limited time, low-end Android devices, constrained data, or a preference for English, Hindi, Marathi or Romanised Hindi.  
 **Role:** Mental-health information and help navigation. Not therapy, diagnosis, crisis response or an AI companion.
 
@@ -12,18 +13,32 @@
 
 | Token | Value | Use |
 |---|---|---|
-| Paper | `#F5F2E9` | Main background |
+| Paper | `#F6F3EB` | Main background |
 | Warm surface | `#FFFEFA` | Cards and reading surfaces |
-| Forest | `#23483C` | Primary actions / dark support surface |
-| Ink | `#203B32` | Main text |
-| Muted ink | `#586B62` | Supporting text |
-| Sage | `#DCE8DB` | Calm surfaces |
-| Pale blue | `#DFE9E8` | Secondary surfaces |
-| Lilac | `#EAE4EF` | Occasional accent |
-| Clay | `#EAD8CB` | Warm accent |
-| Focus | `#1D5E9B` | Visible keyboard focus |
+| Forest | `#20483D` | Primary actions / dark support surface |
+| Ink | `#203C34` | Main text |
+| Muted ink | `#64746A` | Supporting text |
+| Sage | `#DFE9DE` | Calm surfaces |
+| Pale blue | `#E2EBE9` | Secondary surfaces |
+| Lilac | `#E7E1EA` | Occasional accent |
+| Clay | `#EBD8CC` | Warm accent |
+| Gold | `#DDBA76` | Small decorative highlight only |  
+| Border | `#D9E1D8` | Quiet outlines and dividers |  
+| Focus | `#1E5E91` | Visible keyboard focus |
 
 Colours are visual design choices, not treatment or calming claims. Check actual component states for WCAG 2.2 AA contrast. Use 4.5:1 minimum for normal text, 3:1 for large text and relevant non-text UI elements.
+
+## AARAMORA homepage visual direction
+
+The homepage uses an editorial, botanical direction rather than a generic wellness dashboard:
+- Warm paper background, deep forest-green text and primary actions, restrained sage, pale blue, muted lilac and clay.
+- Large serif hero typography paired with a system-first sans-serif body stack.
+- Spacious section rhythm, soft 24–32 px radii, thin green-grey borders and low-contrast shadows.
+- Photography is used in three optional pathway cards: journaling, supportive conversation and a clinician visit. Each image has useful alt text, lazy loading and a visible creator/source credit. Stock images must never be presented as AARAMORA members, testimonials or actual staff.
+- The hero brand film is the 16:9 AARAMORA master, 33.325 seconds, with native controls, `preload=none`, `playsinline`, a poster and no autoplay. A separate link opens the 9:16 social edit.
+- On smaller screens the hero stacks; pathway cards collapse into one column. The video remains 16:9 with native controls.
+
+The current Pexels photographs are externally served image files. They contain no tracking SDK, but visitor browsers make requests to the image host; a later privacy/performance pass may self-host optimized licensed copies. Retain source, creator and licence metadata if images are replaced.
 
 ## Typography
 
