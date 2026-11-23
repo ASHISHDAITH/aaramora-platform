@@ -1,0 +1,32 @@
+name: Reading library source-link check
+
+on:
+  schedule:
+    - cron: "15 4 * * 1"
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/library.json"
+      - "scripts/check_catalogue.py"
+      - "scripts/check_library_links.py"
+      - ".github/workflows/reading-library-link-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-library-sources:
+    name: Verify reading-library source links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate catalogue data
+        run: python scripts/check_catalogue.py
+      - name: Check metadata links only
+        run: python scripts/check_library_links.py
