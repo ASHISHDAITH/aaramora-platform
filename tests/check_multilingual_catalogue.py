@@ -102,7 +102,7 @@ class MultilingualCatalogueTests(unittest.TestCase):
                 self.assertTrue(records[record_id]["provenance"]["sourceUrl"].startswith("https://"))
                 self.assertTrue(records[record_id]["editorialReview"]["note"])
         punjabi = records["pa-guru-granth-sahib-folio-1"]
-        self.assertIn("single selected page", punjabi["access"]["notes"])
+        self.assertIn("not a full-text reader", punjabi["access"]["notes"])
         self.assertIn("not the full scripture", punjabi["languageCoverageLabel"])
         tamil = records["ta-thirukkural-project-madurai"]
         self.assertIn("header page is kept intact", tamil["rights"]["reuse"])
