@@ -53,11 +53,12 @@ https://pubmed.ncbi.nlm.nih.gov/40226719/
 https://pmc.ncbi.nlm.nih.gov/articles/PMC11919030/
 
 - 24 studies (1,395 participants) were included; 20 studies (1,333 participants) were meta-analysed.
-- Yoga showed a short-term symptom effect compared with passive controls.
-- The pooled symptom difference was not statistically significant compared with active controls.
-- Evidence quality varied from moderate to very low.
+- **Depression severity:** a short-term effect was statistically significant compared with passive controls (SMD = −0.43; 95% CI −0.80 to −0.07), but not compared with active controls (SMD = −0.22; 95% CI −0.67 to 0.23).
+- **Remission:** higher remission rates were reported compared with passive controls (OR = 3.20; 95% CI 1.45–7.10) and active controls (OR = 2.04; 95% CI 1.13–3.69).
+- **Evidence quality:** moderate for remission versus passive controls and low versus active controls; depression-severity evidence was very low quality for both comparator groups. Quality-of-life findings were heterogeneous.
+- **Safety:** pooled comparisons did not show statistically significant differences, but certainty was very low and adverse-event reporting was heterogeneous. A non-significant difference is not proof of zero risk.
 
-**AARAMORA wording:** The comparison matters. A benefit against a passive control does not mean yoga is clearly better than another active treatment. Evidence quality varied from moderate to very low.
+**AARAMORA wording:** Keep the outcomes separate. Depression severity improved versus passive but not active controls; remission rates were higher versus both. Certainty varied from moderate to very low, and the safety evidence is weak. This single review does not establish that every yoga practice is safe or that a brief, unsupervised website practice treats depression.
 
 ## Evidence badges: rule for this page
 
