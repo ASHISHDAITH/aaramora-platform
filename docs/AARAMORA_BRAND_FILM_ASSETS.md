@@ -39,12 +39,35 @@ Tagline: **A gentle place to begin again.**
 This manifest records the inspected local exports. The MP4 binary files have **not yet been uploaded to GitHub**. The GitHub connector available in this session supports text writes but no direct binary asset upload/release action. Upload the two unique MP4s from a local checkout using the commands below.
 
 ```powershell
-New-Item -ItemType Directory -Force assets/brand-film | Out-Null
-Copy-Item "$env:USERPROFILE\Downloads\AARAMORA_MASTER_16_9(2).mp4" "assets/brand-film/aaramora-master-16x9.mp4"
-Copy-Item "$env:USERPROFILE\Downloads\AARAMORA_INSTAGRAM_9_16(2).mp4" "assets/brand-film/aaramora-instagram-9x16.mp4"
-git add assets/brand-film
-git commit -m "Add AARAMORA brand film exports"
-git push origin main
+$repoRoot = git rev-parse --show-toplevel
+if (-not $repoRoot) { throw "Run this inside your local aaramora-platform clone." }
+
+$mediaDir = "C:\viedo\AARAMORA_FINAL"
+$targetDir = Join-Path $repoRoot "assets/brand-film"
+$master = Join-Path $mediaDir "AARAMORA_MASTER_16_9.mp4"
+$instagram = Join-Path $mediaDir "AARAMORA_INSTAGRAM_9_16.mp4"
+$clean = Join-Path $mediaDir "AARAMORA_CLEAN_NO_ADDED_AUDIO.mp4"
+
+foreach ($path in @($master, $instagram, $clean)) {
+  if (-not (Test-Path -LiteralPath $path)) { throw "Missing media file: $path" }
+}
+
+New-Item -ItemType Directory -Force $targetDir | Out-Null
+Copy-Item -LiteralPath $master -Destination (Join-Path $targetDir "aaramora-master-16x9.mp4") -Force
+Copy-Item -LiteralPath $instagram -Destination (Join-Path $targetDir "aaramora-instagram-9x16.mp4") -Force
+
+$masterHash = (Get-FileHash -LiteralPath $master -Algorithm SHA256).Hash
+$cleanHash = (Get-FileHash -LiteralPath $clean -Algorithm SHA256).Hash
+if ($masterHash -eq $cleanHash) {
+  Write-Host "Clean file is identical to the landscape master; not adding a duplicate."
+} else {
+  Write-Warning "Clean file differs from the master. Inspect its audio stream with ffprobe before deciding whether to add it."
+}
+
+git -C $repoRoot add -- assets/brand-film
+git -C $repoRoot status --short
+git -C $repoRoot commit -m "Add AARAMORA brand film exports"
+git -C $repoRoot push origin main
 ```
 
-Adjust source paths if the downloaded MP4s are stored outside Downloads.
+This stages the two unique campaign exports. The clean file is compared by SHA-256 first; if it differs, inspect its audio stream before adding it as a separate asset.
