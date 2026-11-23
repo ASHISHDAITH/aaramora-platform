@@ -152,3 +152,18 @@
 
 ## Inline script syntax
 - [ ] Every inline JavaScript block on index, wellbeing, relationships, reading-library and check-ins pages passes `node --check` in CI.
+
+
+## Yoga and breath page release gate
+- [ ] Yoga/depression review summaries name population, sample size, comparator and timeframe.
+- [ ] Do not imply benefit versus usual care means superiority over active treatments.
+- [ ] Study-level evidence badges use the review's own certainty wording; no invented A/B/C/D grade.
+- [ ] Page says the specific AARAMORA practices have not been tested as treatments.
+- [ ] No promise that yoga cures depression, anxiety, trauma, insomnia or other conditions.
+- [ ] No forced deep breathing, rapid breathing, breath retention, rigid counts, extreme poses, eyes-closed requirements or mandatory completion.
+- [ ] Clear stop guidance for dizziness, faintness, unusual breathlessness, pain or increased distress.
+- [ ] Pregnancy, older age, injuries and medical conditions include advice to seek individual modification guidance.
+- [ ] Hindi/Marathi scripts have native-speaker review, clinician review and qualified yoga-professional review before recording.
+- [ ] Each audio has an equivalent transcript, visible play/pause/stop, no autoplay and no tracking.
+- [ ] No audio file is described as published until the actual reviewed recording is committed and tested.
+- [ ] WHO stress-guide derivatives follow CC BY-NC-SA 3.0 IGO, attribution, translation disclaimer and no-endorsement/logo rules.
