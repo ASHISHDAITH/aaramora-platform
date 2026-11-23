@@ -119,3 +119,16 @@
 - Production browser check: four routes HTTP 200; 26 dynamic cards and 46 original static cards; independent language/tradition/access/rights/format/search cases passed; 390px mobile layout has no horizontal overflow; keyboard skip link works; axe-core 4.10.3 reported zero violations and zero incomplete items on the audited Reading Library page.
 - Hindi and Marathi Yoga & Breath draft transcript panels are visible in production; their drafts remain unapproved and are not audio recordings.
 - Native-language, cultural-context, and manual assistive-technology reviews remain pending for the multilingual catalogue.
+
+
+
+## Follow-up hardening and reviewer pack · 24 November 2026
+- Fixed runtime language-filter regression: the catalogue now loads `languageAliasesMap` before filtering; it no longer references an out-of-scope fetch variable.
+- Verified alias filters in a local production-like Chromium run: Manipuri → NDLI only; Meitei (Manipuri) → NDLI only; French → Monte-Cristo Tome I only; Marathi → GRETIL, NDLI and Jnaneshwari (3).
+- Language-specific heading markup now includes BCP 47 `lang` and explicit Urdu RTL with English descriptor LTR.
+- External result links and expandable language-group source links use contextual accessible names.
+- Keyboard focus scroll padding increased to 180px to leave clearance under the sticky header. Focus auto-scroll was checked after the smooth-scroll movement settled.
+- Forced-colors support and minimum 32px header/nav link height are present; reduced-motion preference sets scrolling to auto.
+- Local source validator passed for 26 records; complete Python suite: 60 tests passed.
+- Local Chromium audit on the candidate commit: 1280/768/390/360/320px widths with no horizontal overflow; axe-core 4.10.3 reported 0 violations (47 rule passes, 0 incomplete); no JavaScript console/page errors; Urdu lang/dir inspected.
+- Independent human review remains open. Four reviewer-pack files were added under `docs/review/`; statuses are `pending` / `not_contacted`. No outreach or paid audit has been ordered.
