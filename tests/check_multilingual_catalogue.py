@@ -169,6 +169,52 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn("Manipuri (Meitei)", ndli["languages"])
         self.assertIn("languageAliases", SCHEMA["required"])
 
+
+    def test_catalogue_items_are_tagged_for_all_six_content_formats(self):
+        allowed = {"book", "video", "audiobook", "article", "blog", "image"}
+        counts = {kind: 0 for kind in allowed}
+        for record in DATA["records"]:
+            with self.subTest(record=record["id"]):
+                types = record.get("contentTypes")
+                self.assertIsInstance(types, list)
+                self.assertTrue(types)
+                self.assertEqual(len(types), len(set(types)))
+                self.assertTrue(set(types).issubset(allowed))
+                for kind in types:
+                    counts[kind] += 1
+        self.assertTrue(all(counts.values()), f"Missing a populated content format: {counts}")
+        self.assertEqual(48, len(DATA["records"]))
+
+    def test_new_creator_media_and_scripture_sources_keep_source_rights(self):
+        records = {item["id"]: item for item in DATA["records"]}
+        video = records["school-of-life-attachment-video"]
+        self.assertEqual(["video"], video["contentTypes"])
+        self.assertIn("The School of Life", video["contributors"][0]["name"])
+        self.assertIn("do not download", video["rights"]["reuse"].lower())
+        self.assertIn("YouTube", video["access"]["formats"][0])
+        audio = records["librivox-multilingual-catalogue"]
+        self.assertEqual(["audiobook"], audio["contentTypes"])
+        self.assertIn("LibriVox", audio["provenance"]["sourceName"])
+        tanzil = records["tanzil-quran-text"]
+        self.assertEqual("open-license", tanzil["rights"]["status"])
+        self.assertIn("verbatim", tanzil["rights"]["reuse"])
+        gurbani = records["gurbani-prakash-audio"]
+        self.assertIn("Sikh", gurbani["traditions"])
+        self.assertEqual("pending", gurbani["editorialReview"]["culturalContext"])
+        pexels = records["pexels-rare-book-photo"]
+        self.assertEqual("Esra Korkmaz", pexels["contributors"][0]["name"])
+
+    def test_content_format_filters_exist_and_are_connected_to_records(self):
+        for marker in ('id="catalogue-kind-filter"', 'data-content-type="book"',
+                       'data-content-type="video"', 'data-content-type="audiobook"',
+                       'data-content-type="article"', 'data-content-type="blog"',
+                       'data-content-type="image"', 'selectedContentType'):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, HTML)
+        self.assertIn('record.contentTypes||[]', HTML)
+        self.assertIn('data-content-type-link="book"', HTML)
+        self.assertIn('data-content-type-link="image"', HTML)
+
     def test_forced_colors_and_minimum_link_targets_are_present(self):
         self.assertIn("@media(forced-colors:active)", HTML)
         self.assertIn(".top .wrap a,.navlinks a{display:inline-flex;align-items:center;min-height:32px}", HTML)
