@@ -95,6 +95,10 @@ header .nav{background:var(--paper)}
 input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 .skip-link{font-weight:800;line-height:1.3}
 
+
+.record-review{padding:10px 12px;border-radius:10px;background:#F5F0E5;border:1px solid #E2D8C3;color:#574A35!important;font-size:.82rem!important;line-height:1.5}
+.record-review strong{color:#3F4F42}
+
 </style></head>
 <body>
 <div class="top" role="region" aria-label="Support and site links"><div class="wrap"><a class="skip-link" href="#main-content">Skip to main content</a><div class="support-links"><a class="support-link" href="tel:14416"><span>Tele-MANAS</span><strong>14416</strong></a><a class="support-link" href="tel:112"><span>Emergency</span><strong>112</strong></a></div><span><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a></span></div></div>
@@ -337,9 +341,11 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
     return '<article class="catalogue-record"><div class="record-tags"><span class="record-tag">'+esc(record.access.label)+'</span><span class="record-tag neutral">'+esc(record.rights.status.replace(/-/g," "))+'</span></div>' +
       '<h3>'+esc(record.title)+'</h3><p class="record-subtitle">'+esc(record.editionTitle)+'</p>' +
       '<p>'+esc(record.access.notes)+'</p><p><strong>Languages:</strong> '+languageMarkup+overflow+'</p>' +
+      ((record.scripts||[]).length ? '<p><strong>Scripts:</strong> '+esc(record.scripts.join(" · "))+'</p>' : '') +
       '<p><strong>Subjects:</strong> '+esc((record.subjects || []).slice(0,6).join(" · "))+'</p>' +
       '<p class="record-rights"><strong>Rights:</strong> '+esc(record.rights.licence)+'. '+esc(record.rights.reuse)+'</p>' +
       '<p><strong>Accessibility:</strong> '+esc(record.accessibility.searchableText)+'; '+esc(record.accessibility.reflowable)+'.</p>' +
+      '<p class="record-review"><strong>Editorial review:</strong> '+esc(record.editorialReview?.note || "Native-language and cultural review pending.")+'</p>' +
       '<div class="record-actions">'+links.join("")+'</div>' +
       '<p class="record-verified">Source record checked '+esc(dateLabel(record.verification.checkedAt))+' · Review due '+esc(dateLabel(record.verification.nextReviewAt))+'</p></article>';
   }
@@ -373,8 +379,9 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
     const visible=records.filter(record=>{
       const searchable=normalise([
         record.title,record.editionTitle,record.languageCoverageLabel,
-        (record.languages||[]).join(" "),(record.subjects||[]).join(" "),
-        (record.traditions||[]).join(" "),record.access.label,record.access.notes,
+        (record.languages||[]).join(" "),(record.scripts||[]).join(" "),
+        (record.subjects||[]).join(" "),(record.traditions||[]).join(" "),
+        record.access.label,record.access.notes,
         record.rights.licence,record.rights.notes
       ].join(" "));
       return (!query || searchable.includes(query)) &&
@@ -389,7 +396,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
       ? (String(b.verification.checkedAt).localeCompare(String(a.verification.checkedAt)) || a.title.localeCompare(b.title))
       : a.title.localeCompare(b.title));
     els.results.innerHTML=visible.map(renderCard).join("");
-    els.status.textContent=visible.length+" of "+records.length+" source records match. Languages, access and rights are recorded at source/edition level.";
+    els.status.textContent=visible.length+" of "+records.length+" catalogue entries match. Language, script, edition, access and rights notes are shown at source level; editorial review status is visible on each card.";
   }
   fetch(url,{cache:"no-cache"})
     .then(response=>{if(!response.ok)throw new Error("Catalogue returned HTTP "+response.status);return response.json();})
