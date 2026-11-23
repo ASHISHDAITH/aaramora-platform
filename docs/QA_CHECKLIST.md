@@ -84,3 +84,33 @@
 - [ ] 112, 181 and 14416 verified against official sources before launch; re-check Women Helpline State/UT coverage.
 - [ ] Clinician and safeguarding specialist approve content and safety logic.
 - [ ] Hindi, Marathi and Romanised Hindi translations reviewed by native speakers and clinicians where possible.
+
+
+## Universal health-topic guide release gate
+- [ ] Every condition guide explains what it is, how it may feel, what may help, and when to seek support.
+- [ ] Symptoms are not presented as a diagnosis or definitive checklist.
+- [ ] Self-care is distinguished from professional treatment.
+- [ ] No medicine dose, supplement stack, cure guarantee or individual treatment instruction.
+- [ ] Emerging or mixed research is labelled as such and does not imply causation.
+- [ ] Stress surge, panic attack, PTSD, OCD and burnout are distinguished accurately.
+- [ ] PMOS terminology, PCOS/PCOD aliases and memory/brain-health caveats are checked.
+- [ ] Postpartum psychosis is clearly marked as a medical emergency.
+- [ ] Every page has named clinical reviewer, sources, review date and expiry.
+
+
+## Universal health-topic consistency
+- [ ] Every mental and women's-health topic uses a consistent how-it-may-feel / what-may-help / when-to-seek-support structure.
+- [ ] Symptoms are possible experiences, not diagnostic checklists.
+- [ ] Self-care is separated from clinician-delivered treatment.
+- [ ] No drug dose, supplement stack, cure guarantee or personalised treatment instruction.
+- [ ] Emerging and mixed evidence is identified as uncertain.
+- [ ] PMOS/PCOS terminology and cognition caveats are checked.
+- [ ] Postpartum psychosis is marked as an emergency requiring same-day assessment.
+
+## 40-concept relationship library
+- [ ] All 40 concepts from the uploaded report appendix are present exactly once.
+- [ ] Each concept includes how it may feel, what may help and when to seek support.
+- [ ] Research dimensions, clinical overlaps, emerging concepts and popular terms are distinguished.
+- [ ] Three optional reflection quizzes remain unscored and non-diagnostic.
+- [ ] Unanswered safety-check items are not interpreted as No.
+- [ ] Coercive control, threats, stalking and violence route to individual safety support.

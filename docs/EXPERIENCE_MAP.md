@@ -79,3 +79,17 @@ PMOS page shows **PMOS (formerly PCOS)** and keeps PCOS as a search synonym whil
 7. Reach human support where fear, coercion, threats, sexual pressure or violence is present.
 
 Quiz answers are not stored, transmitted, analysed or used for advertising. Community remains outside the current build.
+
+
+## Journey G — Visitor wants to understand a health concern
+1. Choose a mental-wellbeing or women's-health topic.
+2. Read how the experience may feel without being diagnosed by the website.
+3. Review general supportive steps and evidence-based care options.
+4. See when a clinician or urgent service is appropriate.
+5. Review what is uncertain and open original sources.
+6. Prepare questions for a human appointment if useful.
+
+The content is education and help navigation, not a cure promise, clinical assessment or medicine plan.
+
+## Relationship concept library
+Visitors can browse or search the 40-term glossary, open only the concepts they need and read how a pattern may feel, what may help and when to seek support. Concept labels distinguish research frameworks, clinical overlaps, emerging concepts and popular terms. No scores or partner labels are generated.

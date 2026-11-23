@@ -71,3 +71,23 @@ Two original, unvalidated reflection quizzes show only behaviours a visitor mark
 A non-scored safety check appears before quiz/communication content. Any Yes or Not sure about fear, control, sexual pressure, threats, stalking or physical harm routes to private support and away from joint repair exercises. It cannot certify that a relationship is safe.
 
 See `docs/RELATIONSHIPS_RESEARCH.md`, `docs/RELATIONSHIP_QUIZ_SPEC.md` and root `SAFETY.md`. A qualified clinician and a domestic-violence/safeguarding specialist must approve this content before public release.
+
+
+## Shared health-topic pattern (24 November 2026)
+
+New pages use a consistent structure: what the term means; how it may feel; what may help; when to seek support; and what remains uncertain. See `wellbeing.html` for depression, anxiety, panic, acute stress surges, trauma/PTSD, rumination, sleep, work burnout, grief/loneliness and OCD-related experiences. The women's-health corner uses the same visitor-facing pattern for PMOS, endometriosis, menstrual issues, PMS/PMDD, menopause, thyroid, anaemia and postpartum mental health.
+
+Use “what may help”, not a cure promise. No self-diagnosis, medication directions or supplement regimens. Research/terminology and clinical caveats are in `docs/MENTAL_WELLBEING_AND_WOMENS_HEALTH_RESEARCH.md`. Universal writing requirements: `docs/HEALTH_TOPIC_CONTENT_STANDARD.md`.
+
+
+## Shared health-topic content pattern
+Across mental wellbeing and women's health, every topic should explain:
+- How it may feel day to day.
+- What may help, separating supportive habits from evidence-based care.
+- When to seek professional or urgent support.
+- What remains uncertain where evidence is emerging or mixed.
+
+`wellbeing.html` covers depression, anxiety, panic, acute stress surges, trauma/PTSD, rumination, sleep, burnout, grief and OCD-related experiences. The women's-health corner uses the same structure for PMOS, endometriosis, menstrual concerns, PMS/PMDD, menopause, thyroid, anaemia and postpartum mental health. This is education and help navigation, not diagnosis or a treatment plan.
+
+## 40-concept relationship library
+The separate relationship page contains all 40 concepts from the uploaded research report appendix, each with how it may feel, what may help and when to seek support. The library has client-side search and no diagnostic scores. Three optional reflection quizzes remain separate from the non-scored safety check.

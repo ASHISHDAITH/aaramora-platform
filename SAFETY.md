@@ -44,3 +44,7 @@ Every clinical or safety page needs an author, qualified reviewer, sources, revi
 
 ## 8. Community
 No live public peer community until trained moderation, report/block, privacy review, safeguarding, escalation protocols and a clinical lead are in place. No algorithmic amplification, follower counts or popularity ranking of distress.
+
+
+## Relationship concept library safeguards
+The 40-term glossary is educational and not diagnostic. Preserve differences between attachment dimensions, dyadic patterns, cognitive processes, relational injuries, clinical overlaps, emerging research and popular social terms. Trauma bonding and coercive control must route to safety-focused guidance. No partner monitoring, block bypassing, manipulation or forced reconciliation.

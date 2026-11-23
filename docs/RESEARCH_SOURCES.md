@@ -90,3 +90,29 @@ See `WOMENS_HEALTH_RESEARCH.md` for evidence interpretation, limitations, sugges
 - National Domestic Violence Hotline, couples therapy safety explainer (US context only): https://www.thehotline.org/resources/should-i-go-to-couples-therapy-with-my-abusive-partner/
 
 See `docs/RELATIONSHIPS_RESEARCH.md` for full citations, study limitations, reading list and copyright/sourcing rules.
+
+
+## Mental wellbeing and women's-health sources (reviewed 24 November 2026)
+- WHO Depression fact sheet (11 Sep 2026): https://www.who.int/news-room/fact-sheets/detail/Depression
+- WHO Anxiety disorders (15 Sep 2026): https://www.who.int/en/news-room/fact-sheets/detail/anxiety-disorders
+- WHO Doing What Matters in Times of Stress: https://www.who.int/publications/i/item/9789240003927
+- WHO 2026 psychological self-help implementation manual: https://www.who.int/publications/i/item/9789240120785
+- WHO burnout ICD-11 clarification: https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon
+- NHS anxiety/fear/panic: https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/anxiety-fear-panic/
+- NHS panic disorder: https://www.nhs.uk/mental-health/conditions/panic-disorder/
+- NHS PTSD: https://www.nhs.uk/mental-health/conditions/ptsd-post-traumatic-stress-disorder/
+- NHS insomnia: https://www.nhs.uk/conditions/insomnia/
+- NHS PMDD: https://www.nhs.uk/conditions/pmdd-premenstrual-dysphoric-disorder/
+- NHS postpartum psychosis: https://www.nhs.uk/mental-health/conditions/post-partum-psychosis/
+- WHO Endometriosis: https://www.who.int/news-room/fact-sheets/detail/endometriosis
+- Monash updated PMOS guideline (2026): https://www.monash.edu/medicine/mchri/pcos/guideline
+- 2026 PMOS naming consensus (Lancet): https://doi.org/10.1016/S0140-6736(26)00717-8
+- 2024 CARDIA midlife PCOS brain-health cohort: https://pubmed.ncbi.nlm.nih.gov/38295344/
+- 2026 PMOS cognition systematic review/meta-analysis: https://pubmed.ncbi.nlm.nih.gov/42396950/
+- 2023 International PCOS/PMOS guideline recommendations including depression/anxiety screening: https://pmc.ncbi.nlm.nih.gov/articles/PMC10477934/
+- India WCD Women Helpline 181: https://wcd.gov.in/women/help
+- Student support routes/Tele-MANAS/112: https://ntf.education.gov.in/student-support-resources/
+
+
+## User-provided relationship research report integrated
+The 15-page *Attachment Protest and the Wider Psychology of Romantic Relationships* (24 November 2026) was used for the attachment framework, 40-term appendix, evidence grades, relationship-cycle model and practical pathways. Its method is described as a targeted narrative/scoping synthesis, not an exhaustive systematic review. See `docs/RELATIONSHIP_CONCEPT_CONTENT_MAP.md`.
