@@ -8,7 +8,7 @@ import sys
 import time
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlparse
+from urllib.parse import quote, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,10 +31,20 @@ def collect_urls(data: dict) -> list[str]:
     return sorted(url for url in urls if isinstance(url, str) and url.startswith("https://"))
 
 
+def request_url(url: str) -> str:
+    """Percent-encode Unicode path/query characters for HTTP clients."""
+    parts = urlsplit(url)
+    path = quote(parts.path, safe="/%:@!def request_status(url: str) -> tuple[str, str]:
+'()*+,;=-._~")
+    query = quote(parts.query, safe="=&?/:;+,$@!~*'()-._%")
+    return urlunsplit((parts.scheme, parts.netloc, path, query, ""))
+
+
 def request_status(url: str) -> tuple[str, str]:
     headers = {"User-Agent": USER_AGENT, "Accept": "text/html,application/json;q=0.8,*/*;q=0.5"}
+    encoded_url = request_url(url)
     try:
-        request = Request(url, headers=headers, method="HEAD")
+        request = Request(encoded_url, headers=headers, method="HEAD")
         with urlopen(request, timeout=TIMEOUT_SECONDS) as response:
             return "ok", f"HTTP {response.status} · {response.geturl()}"
     except HTTPError as error:
@@ -51,7 +61,7 @@ def request_status(url: str) -> tuple[str, str]:
     try:
         range_headers = dict(headers)
         range_headers["Range"] = "bytes=0-0"
-        request = Request(url, headers=range_headers, method="GET")
+        request = Request(encoded_url, headers=range_headers, method="GET")
         with urlopen(request, timeout=TIMEOUT_SECONDS) as response:
             # Consume at most one byte. The body is never saved or processed.
             response.read(1)
