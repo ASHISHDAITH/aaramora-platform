@@ -88,7 +88,7 @@
 - Native-language, cultural-context and item-level accessibility reviews are explicitly pending; they have not been signed off by AARAMORA reviewers.
 
 ## Multilingual edition catalogue expansion · 24 November 2026
-- Catalogue expanded from 11 to 26 entries, including 12 named edition/folio/book records and 3 additional language indexes/platforms.
+- Catalogue expanded from 11 to 26 entries, including 11 named edition/folio/book records and 4 additional language indexes/platforms.
 - Every entry now has scripts and editorialReview fields. New edition cards render both script labels and the native/cultural/accessibility review note.
 - Tests assert that edition-specific source URLs exist, selected works are not described beyond their linked scope, and restricted sources remain link-only.
 - Native-language, cultural-context and item-level accessibility reviews are explicitly pending; they have not been signed off by AARAMORA reviewers.
