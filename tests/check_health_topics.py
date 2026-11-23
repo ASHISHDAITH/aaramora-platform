@@ -50,7 +50,7 @@ class WebsiteHealthContentTests(unittest.TestCase):
     def test_pmos_terms_and_uncertainty_are_present(self):
         self.assertIn("PMOS", self.home)
         self.assertIn("PCOD", self.home)
-        self.assertIn("not statistically significant", self.home)
+        self.assertIn("statistically non-significant", self.home)
 
     def test_all_40_relationship_concepts_are_present(self):
         terms = ["Attachment protest","Hyperactivation","Deactivation","Anxious attachment","Avoidant attachment",
