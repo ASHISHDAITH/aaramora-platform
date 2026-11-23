@@ -27,9 +27,9 @@ class ReadingLibraryChecks(unittest.TestCase):
                 self.assertIn(phrase, HTML)
 
     def test_existing_hero_and_credit_remain(self):
-        self.assertIn("Pavel Danilyuk", HTML)
-        self.assertIn("Let the page be a pause, not another thing to finish.", HTML)
-        self.assertIn('alt="An open vintage book', HTML)
+        self.assertIn("Esra Korkmaz", HTML)
+        self.assertIn("A book does not ask you to hurry; it simply leaves the next page open.", HTML)
+        self.assertIn('alt="Vintage book pages', HTML)
 
     def test_catalogue_enhancements_exist(self):
         self.assertIn('id="language-catalogue"', HTML)
@@ -43,6 +43,14 @@ class ReadingLibraryChecks(unittest.TestCase):
         self.assertIn('fetch(url,{cache:"no-cache"})', HTML)
         self.assertIn('data/library.json', HTML)
         self.assertIn("For reflection and cultural reading, not as treatment.", HTML)
+
+    def test_format_navigation_has_six_clear_resource_categories(self):
+        for kind in ("book", "video", "audiobook", "article", "blog", "image"):
+            with self.subTest(kind=kind):
+                self.assertIn(f'data-content-type="{kind}"', HTML)
+                self.assertIn(f'data-content-type-link="{kind}"', HTML)
+        self.assertIn("selectedContentType", HTML)
+        self.assertIn("kindLabels", HTML)
 
     def test_header_is_opaque_and_support_contacts_are_grouped(self):
         self.assertIn("background:var(--paper)!important", HTML)
