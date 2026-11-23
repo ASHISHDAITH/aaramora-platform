@@ -46,7 +46,7 @@ Do not create another Vercel project just to retry the connection; the current p
 
 - Vercel's deployment API reports `READY`, `target=production`, the stable `aaramora-platform.vercel.app` alias, and `aliasError=null` for deployment `dpl_E45batFEw39PSg1GKyBkN5gQZRb3`.
 - Vercel's source-file listing confirms all nine expected HTML/SVG files are present, including `check-ins.html`, `reading-library.html` and `yoga-and-breath.html`.
-- The web-fetch/browser environment could not retrieve the new Vercel page, so a full visitor-side browser smoke test remains pending. The deployment API and source-file tree are verified, but do not substitute for opening the page as a visitor. Test all six routes, the yoga page's evidence links and draft-transcript link, all nine library section links, library search on several sample terms, mobile layout, the Pexels image and brand-film playback in a regular browser.
+- The earlier web-fetch environment could not retrieve the Vercel page. A later headless Chromium visitor-side smoke test and axe-core 4.10.3 scan did run against production; see the latest release section below. Manual NVDA/VoiceOver/TalkBack review, native-language review and clinician/safeguarding review remain outstanding.
 - Confirm the video CDN returns the complete MP4s in a regular browser and check browser developer tools for failed requests before announcing the site publicly.
 
 ## No backend or health-data collection
@@ -112,3 +112,6 @@ Each card now shows its known writing system separately from language and an exp
 ## Live-browser audit of the multilingual library · 24 November 2026
 
 The live Reading Library page, JSON catalogue and JSON schema returned HTTP 200. The browser rendered all 46 original static cards, all 26 catalogue entries and 10 page sections. Independent filters were exercised for Marathi, Sikh, audio access, permission-required rights, academic level, EPUB format and the GRETIL search. At 390px width the page had no horizontal overflow. The first keyboard Tab focused the visible skip link, and Enter moved to main content. Axe-core 4.10.3 reported zero WCAG 2.2 AA/best-practice violations on the audited page (46 passes, no incomplete findings). This was an automated browser/axe scan, not a human NVDA/VoiceOver/TalkBack or native-reader review.
+
+
+The metadata-only link checker percent-encodes non-ASCII URL paths before making HEAD/range requests. The checker does not parse or download source page bodies or book files.
