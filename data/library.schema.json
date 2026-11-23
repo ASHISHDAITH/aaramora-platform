@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aaramora-platform.vercel.app/data/library.schema.json",
+  "title": "AARAMORA multilingual reading catalogue",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "lastReviewedAt",
+    "editorialPolicy",
+    "languageGroups",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "lastReviewedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "editorialPolicy": {
+      "type": "string"
+    },
+    "languageGroups": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "scope",
+          "languages"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "languages": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "recordType",
+          "title",
+          "editionTitle",
+          "contributors",
+          "traditions",
+          "subjects",
+          "languages",
+          "languageCoverageLabel",
+          "readingLevel",
+          "access",
+          "rights",
+          "accessibility",
+          "provenance",
+          "verification"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "recordType": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "editionTitle": {
+            "type": "string"
+          },
+          "contributors": {
+            "type": "array"
+          },
+          "traditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subjects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "languageCoverageLabel": {
+            "type": "string"
+          },
+          "readingLevel": {
+            "enum": [
+              "all-levels",
+              "introductory",
+              "academic",
+              "primary-source"
+            ]
+          },
+          "access": {
+            "type": "object",
+            "required": [
+              "type",
+              "label",
+              "url",
+              "formats",
+              "notes"
+            ],
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "formats": {
+                "type": "array"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          },
+          "rights": {
+            "type": "object",
+            "required": [
+              "status",
+              "licence",
+              "jurisdiction",
+              "reuse",
+              "notes"
+            ],
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "licence": {
+                "type": "string"
+              },
+              "jurisdiction": {
+                "type": "string"
+              },
+              "reuse": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          },
+          "accessibility": {
+            "type": "object",
+            "required": [
+              "searchableText",
+              "reflowable",
+              "screenReaderNotes",
+              "formats"
+            ]
+          },
+          "provenance": {
+            "type": "object",
+            "required": [
+              "sourceName",
+              "sourceUrl"
+            ]
+          },
+          "verification": {
+            "type": "object",
+            "required": [
+              "checkedAt",
+              "nextReviewAt",
+              "method"
+            ],
+            "properties": {
+              "checkedAt": {
+                "type": "string",
+                "format": "date"
+              },
+              "nextReviewAt": {
+                "type": "string",
+                "format": "date"
+              },
+              "method": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
