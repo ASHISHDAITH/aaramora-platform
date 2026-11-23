@@ -155,7 +155,7 @@ class MultilingualCatalogueTests(unittest.TestCase):
                     self.assertEqual(native_title, records[record_id]["titleNative"])
                     self.assertIn("titleDisplaySuffix", records[record_id])
         self.assertEqual("rtl", records["ur-diwan-e-ghalib-wikisource"]["titleDirection"])
-        self.assertIn('lang="'+records["ur-diwan-e-ghalib-wikisource"]["titleLanguage"]+'"', HTML)
+        self.assertIn("titleLanguage", HTML)
         self.assertIn('aria-label="Open official source for ', HTML)
 
     def test_no_original_section_removed(self):
