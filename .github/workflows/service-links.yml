@@ -27,6 +27,6 @@ jobs:
         with:
           python-version: "3.x"
       - name: Validate source register
-        run: python -m unittest tests/check_service_links.py -v
+        run: python -m unittest discover -s tests -p 'check_service_links.py' -v
       - name: Check official source URLs only
         run: python scripts/check_service_links.py
