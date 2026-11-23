@@ -1,0 +1,32 @@
+name: Official support-source link check
+
+on:
+  schedule:
+    - cron: "30 4 * * 1"
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/service-links.json"
+      - "scripts/check_service_links.py"
+      - "tests/check_service_links.py"
+      - ".github/workflows/service-links.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-official-support-sources:
+    name: Verify official support-source URLs
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate source register
+        run: python -m unittest tests/check_service_links.py -v
+      - name: Check official source URLs only
+        run: python scripts/check_service_links.py
