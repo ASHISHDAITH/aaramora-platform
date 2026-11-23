@@ -40,6 +40,18 @@ The homepage uses an editorial, botanical direction rather than a generic wellne
 
 The current Pexels photographs are externally served image files. They contain no tracking SDK, but visitor browsers make requests to the image host; a later privacy/performance pass may self-host optimized licensed copies. Retain source, creator and licence metadata if images are replaced.
 
+## Simple-first homepage update
+
+The homepage uses progressive disclosure so first-time visitors see fewer choices at once:
+- Keep five common destinations visible: Explore, Mental wellbeing, Relationships, Women's health and Find support.
+- Group Gentle activities, Guides, Check-ins & planners, Reading library and Our promises inside a clearly labelled “More” menu. All destinations remain available; this is a grouping change, not feature removal.
+- Keep the support ribbon visible at the top.
+- Use one short explanation and two clear actions in the hero. The lower-priority “See how AARAMORA works” link remains available.
+- Show the 16:9 AARAMORA brand film in the hero with native controls. Do not autoplay. The 9:16 edit remains available as a separate link.
+- Use direct headings and short descriptions on the three image-led pathways: Write it down, Talk to someone and Find professional help.
+- On mobile, the navigation is a compact Menu control. The grouped destinations remain accessible inside the expanded menu.
+- Preserve all page sections, tools, routes, support links, language choices and quick exit. A layout simplification must not delete functionality.
+
 ## Typography
 
 - Body: system-first sans stack with explicit Devanagari fallback (`Noto Sans Devanagari`).
