@@ -99,6 +99,6 @@ The current public static deployment is marked READY by Vercel and serves all fi
 
 ## Current verification
 
-The latest GitHub Actions content-check run passed after the simplified homepage update. It includes the static content, route and JavaScript checks across all five site pages. Latest reading-library checks before the deployment documentation refresh: [45278865301](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45278865301). The current README update will trigger another check run. This is not a browser, screen-reader, clinical or production security certification.
+The latest GitHub Actions content-check run passed after the simplified homepage update. It includes the static content, route and JavaScript checks across all five site pages. The Reading Library static content, route, rights-wording and JavaScript checks passed. The workflow runs on every push and pull request; see the [GitHub Actions history](https://github.com/ASHISHDAITH/aaramora-platform/actions) for the current run. This is not a browser, screen-reader, clinical or production security certification.
 
 The current production deployment is live at the URL above. A final browser smoke test from a normal visitor session is still required. Deployment does not constitute clinical, safeguarding, accessibility or security approval.
