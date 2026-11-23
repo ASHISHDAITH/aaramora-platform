@@ -51,3 +51,17 @@ Use how it may feel, what may help, when to seek support and a status note (rese
 - A print worksheet or symptom diary must be described as notes for a clinician, not a diagnostic test. Do not copy protected scales such as DRSP or web-inappropriate/licensed menopause instruments.
 - Never make human support conditional on completing a self-check. Every item should be optional and skippable.
 - State storage and print behaviour before collection. Current Aaramora check-ins are in-page memory only, with no transmission or persistence.
+
+
+## Movement, yoga and breathing pages
+
+- Describe yoga, movement and breath awareness as optional supportive practices, not cures, trauma treatments or substitutes for clinical care.
+- Separate findings by population, outcome, timeframe and comparator. A benefit versus usual care or passive control does not establish superiority to active treatments.
+- Distinguish evidence of association from causal or individual dose recommendations. An across-study association between session frequency and effect is not an instruction to practise more often.
+- Use the certainty wording of the actual review for the exact comparison. Do not invent A/B/C/D grades or present local content badges as a formal GRADE assessment unless an explicit, reviewed rubric exists.
+- No forced breathwork, rapid breathing, breath retention, forceful breath counts, extreme postures, eyes-closed requirements or mandatory completion.
+- Make it clear that a visitor may sit, lie down, keep eyes open, move or stop. Stop if dizzy, faint, unusually breathless, in pain or more distressed.
+- People who are pregnant, older, injured or have health conditions may need individual modification and should speak with a clinician and qualified instructor about their situation.
+- Audio must never autoplay. Provide an equivalent transcript and visible play, pause and stop controls. Audio scripts require qualified content review and native-language review before recording or publication.
+- A short guided-rest script inspired by Yoga Nidra must not be presented as a traditional full Yoga Nidra protocol, yoga therapy or a clinically tested intervention.
+- Do not reproduce or adapt WHO material without following the exact licence and attribution terms. The WHO stress guide permits non-commercial adaptation under CC BY-NC-SA 3.0 IGO; translations need the prescribed disclaimer and same or similar licence.
