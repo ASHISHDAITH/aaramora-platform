@@ -1,0 +1,953 @@
+{
+  "schemaVersion": "1.0.0",
+  "lastReviewedAt": "2026-11-24",
+  "editorialPolicy": "AARAMORA is a discovery catalogue. It links to official sources and records the access model, language scope and item-level rights caveats. It does not mirror copyrighted books, scrape restricted sites, bypass access controls or treat a collection-level statement as a book-level licence.",
+  "languageGroups": [
+    {
+      "id": "india-scheduled",
+      "label": "India · Eighth Schedule",
+      "scope": "The 22 languages listed in the Eighth Schedule to the Constitution of India.",
+      "languages": [
+        "Assamese",
+        "Bengali",
+        "Bodo",
+        "Dogri",
+        "Gujarati",
+        "Hindi",
+        "Kannada",
+        "Kashmiri",
+        "Konkani",
+        "Maithili",
+        "Malayalam",
+        "Manipuri",
+        "Marathi",
+        "Nepali",
+        "Odia",
+        "Punjabi",
+        "Sanskrit",
+        "Santali",
+        "Sindhi",
+        "Tamil",
+        "Telugu",
+        "Urdu"
+      ]
+    },
+    {
+      "id": "india-additional",
+      "label": "India · additional regional-language discovery",
+      "scope": "Additional Indian-language categories listed in NDLI discovery pages. This is a starting list, not a complete inventory of India's languages.",
+      "languages": [
+        "Bhojpuri",
+        "Bundelkhandi",
+        "Chhattisgarhi",
+        "Garhwali",
+        "Garo",
+        "Khasi",
+        "Rajasthani"
+      ]
+    },
+    {
+      "id": "international",
+      "label": "International · NDLI language categories",
+      "scope": "International language categories listed by the National Digital Library of India.",
+      "languages": [
+        "Arabic",
+        "Afrikaans",
+        "Bulgarian",
+        "Catalan",
+        "Chinese",
+        "Croatian",
+        "Czech",
+        "Danish",
+        "Dutch",
+        "English",
+        "Finnish",
+        "French",
+        "German",
+        "Greek",
+        "Hebrew",
+        "Hungarian",
+        "Irish",
+        "Italian",
+        "Japanese",
+        "Korean",
+        "Norwegian",
+        "Persian",
+        "Polish",
+        "Portuguese",
+        "Romanian",
+        "Russian",
+        "Spanish",
+        "Swedish",
+        "Turkish",
+        "Ukrainian"
+      ]
+    },
+    {
+      "id": "classical",
+      "label": "Classical and scholarly text languages",
+      "scope": "Languages represented in GRETIL scholarly text collections. Availability and rights are title-specific.",
+      "languages": [
+        "Pali",
+        "Prakrit",
+        "Tibetan",
+        "Old Javanese"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "ndli-multilingual-discovery",
+      "recordType": "discovery-catalogue",
+      "title": "National Digital Library of India (NDLI)",
+      "editionTitle": "Multilingual discovery catalogue · IIT Kharagpur",
+      "contributors": [
+        {
+          "name": "Indian Institute of Technology Kharagpur / Ministry of Education, Government of India",
+          "role": "platform and sponsoring institution"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "books",
+        "literature",
+        "research",
+        "manuscripts",
+        "religion",
+        "philosophy",
+        "history",
+        "science",
+        "audio-video",
+        "learning resources"
+      ],
+      "languages": [
+        "Assamese",
+        "Bengali",
+        "Bodo",
+        "Dogri",
+        "Gujarati",
+        "Hindi",
+        "Kannada",
+        "Kashmiri",
+        "Konkani",
+        "Maithili",
+        "Malayalam",
+        "Manipuri",
+        "Marathi",
+        "Nepali",
+        "Odia",
+        "Punjabi",
+        "Sanskrit",
+        "Santali",
+        "Sindhi",
+        "Tamil",
+        "Telugu",
+        "Urdu",
+        "Bhojpuri",
+        "Bundelkhandi",
+        "Chhattisgarhi",
+        "Garhwali",
+        "Garo",
+        "Khasi",
+        "Rajasthani",
+        "Arabic",
+        "Afrikaans",
+        "Bulgarian",
+        "Catalan",
+        "Chinese",
+        "Croatian",
+        "Czech",
+        "Danish",
+        "Dutch",
+        "English",
+        "Finnish",
+        "French",
+        "German",
+        "Greek",
+        "Hebrew",
+        "Hungarian",
+        "Irish",
+        "Italian",
+        "Japanese",
+        "Korean",
+        "Norwegian",
+        "Persian",
+        "Polish",
+        "Portuguese",
+        "Romanian",
+        "Russian",
+        "Spanish",
+        "Swedish",
+        "Turkish",
+        "Ukrainian"
+      ],
+      "languageCoverageLabel": "NDLI language listings include 22 scheduled Indian languages, additional regional-language categories and 30 international-language categories.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "discovery",
+        "label": "Discover at NDLI · access and downloads vary by provider",
+        "url": "https://www.ndl.iitkgp.ac.in/ndl_ch",
+        "formats": [
+          "HTML",
+          "Books",
+          "Articles",
+          "Manuscripts",
+          "Audio",
+          "Video",
+          "Learning resources"
+        ],
+        "notes": "Search and open the individual provider record. Some resources are freely accessible; some require registration or are available under provider licensing. Download controls are determined by the content provider."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "No single catalogue-wide content licence",
+        "jurisdiction": "Depends on the contributing institution and exact item",
+        "reuse": "No redistribution permission is inferred from an NDLI catalogue record.",
+        "notes": "NDLI describes itself as a discovery and federated repository. Its FAQ says access is free to users while certain copyrighted resources are supplied under provider licensing; downloads are available only where the provider permits them.",
+        "policyUrl": "https://www.ndl.iitkgp.ac.in/faq"
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the linked provider page. Do not assume a scanned PDF is searchable or screen-reader accessible.",
+        "formats": [
+          "HTML",
+          "PDF",
+          "EPUB",
+          "Audio",
+          "Video",
+          "Manuscript scan"
+        ]
+      },
+      "provenance": {
+        "sourceName": "National Digital Library of India · IIT Kharagpur",
+        "sourceUrl": "https://www.ndl.iitkgp.ac.in/ndl_ch",
+        "languageCoverageUrl": "https://www.ndl.iitkgp.ac.in/ndl_se",
+        "policyUrl": "https://www.ndl.iitkgp.ac.in/faq"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "heritage-scripture-server",
+      "recordType": "scripture-source",
+      "title": "Heritage Scripture Server · IIT Kanpur",
+      "editionTitle": "Structured Sanskrit source texts, translations, commentaries and transliterations",
+      "contributors": [
+        {
+          "name": "Indian Institute of Technology Kanpur · Heritage project",
+          "role": "platform"
+        }
+      ],
+      "traditions": [
+        "Hindu"
+      ],
+      "subjects": [
+        "Bhagavad Gita",
+        "Vedas",
+        "Upanishads",
+        "Yoga Sutras",
+        "Brahma Sutras",
+        "Ramayana",
+        "Sanskrit literature",
+        "commentaries"
+      ],
+      "languages": [
+        "Sanskrit",
+        "Tamil",
+        "Telugu"
+      ],
+      "languageCoverageLabel": "Sanskrit source text, with selected transliteration and translation layers. The server documents 11 scripts; verify the language of each individual record.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "api-read-only",
+        "label": "Read at source · API key required for most API endpoints",
+        "url": "https://heritage.iitk.ac.in/docs",
+        "formats": [
+          "HTML",
+          "Read-only API",
+          "Transliteration"
+        ],
+        "notes": "Use the public reader or request an API key. API calls are subject to published rate limits and the Heritage Content Access Licence."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "Heritage Content Access Licence (May 2026)",
+        "jurisdiction": "Rights vary by source text, translation and commentary",
+        "reuse": "Ancient Sanskrit moolam and transliterations derived only from source texts are public domain. Modern translations and commentaries remain copyrighted; stated non-commercial use requires full attribution. No bulk harvesting or loss of provenance.",
+        "notes": "Do not apply source-text status to translations, commentaries, AI drafts or community works. Keep attribution close to any permitted use.",
+        "policyUrl": "https://heritage.iitk.ac.in/license"
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "HTML",
+          "Read-only API",
+          "Transliteration"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Heritage Scripture Server · IIT Kanpur",
+        "sourceUrl": "https://heritage.iitk.ac.in/",
+        "metadataUrl": "https://heritage.iitk.ac.in/docs",
+        "policyUrl": "https://heritage.iitk.ac.in/license"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "vedic-heritage-portal",
+      "recordType": "cultural-archive",
+      "title": "Vedic Heritage Portal",
+      "editionTitle": "Vedic manuscripts, recensions, oral traditions and audiovisual documentation",
+      "contributors": [
+        {
+          "name": "Indira Gandhi National Centre for the Arts · Ministry of Culture, Government of India",
+          "role": "institutional programme"
+        }
+      ],
+      "traditions": [
+        "Hindu"
+      ],
+      "subjects": [
+        "Vedas",
+        "Vedic recensions",
+        "manuscripts",
+        "oral traditions",
+        "chants",
+        "commentaries",
+        "Indian cultural heritage"
+      ],
+      "languages": [
+        "Sanskrit"
+      ],
+      "languageCoverageLabel": "The Ministry of Culture describes multilingual Indian-language resources and audiovisual material. Confirm the exact language and edition on each record.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Explore the official Vedic Heritage Portal",
+        "url": "https://culture.gov.in/sanskriti/vedic-heritage-portal",
+        "formats": [
+          "HTML",
+          "Audio-video",
+          "Manuscript records"
+        ],
+        "notes": "This is a discovery and reading destination. Follow the individual source and download controls."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Item-specific; no blanket reuse licence verified",
+        "jurisdiction": "Per source institution and edition",
+        "reuse": "Link to the record. Do not copy manuscript images, recordings, translations or commentary until item reuse permission is confirmed.",
+        "notes": "Multiple Indian languages and formats are described at programme level, but this does not establish rights for each item."
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "HTML",
+          "Audio-video",
+          "Manuscript records"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Ministry of Culture · Vedic Heritage Portal",
+        "sourceUrl": "https://culture.gov.in/sanskriti/vedic-heritage-portal"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "gretil-indian-texts",
+      "recordType": "scholarly-text-collection",
+      "title": "GRETIL · Göttingen Register of Electronic Texts in Indian Languages",
+      "editionTitle": "Scholarly e-text index and source files",
+      "contributors": [
+        {
+          "name": "Göttingen Register of Electronic Texts in Indian Languages",
+          "role": "scholarly collection"
+        }
+      ],
+      "traditions": [
+        "Hindu",
+        "Buddhist",
+        "Jain",
+        "Secular"
+      ],
+      "subjects": [
+        "Sanskrit literature",
+        "Pali Canon",
+        "Prakrit",
+        "Indology",
+        "Dravidian texts",
+        "Tibetan texts",
+        "dictionaries",
+        "commentaries"
+      ],
+      "languages": [
+        "Sanskrit",
+        "Pali",
+        "Prakrit",
+        "Hindi",
+        "Marathi",
+        "Tamil",
+        "Malayalam",
+        "Tibetan",
+        "Old Javanese"
+      ],
+      "languageCoverageLabel": "Documented sections include Sanskrit, Pali, Prakrit, Hindi, Marathi, Tamil, Malayalam, Tibetan and Old Javanese.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read scholarly records and source downloads",
+        "url": "https://gretil.sub.uni-goettingen.de/gretilbk.htm",
+        "formats": [
+          "HTML",
+          "UTF-8 text",
+          "Scholarly e-text"
+        ],
+        "notes": "GRETIL is a register of texts from varying sources and quality. Use the source link for provenance and encoding notes."
+      },
+      "rights": {
+        "status": "source-restricted",
+        "licence": "No single collection-wide open licence; original rights remain with copyright holders",
+        "jurisdiction": "Per contributing source and text",
+        "reuse": "GRETIL states that files are for scholarly reference, excludes commercial use and leaves copyright with original rights holders. Link to records; do not mirror the collection.",
+        "notes": "The language list describes collection categories, not a guarantee that every work exists in every listed language.",
+        "policyUrl": "https://gretil.sub.uni-goettingen.de/gretil.html"
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "HTML",
+          "UTF-8 text",
+          "Scholarly e-text"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Göttingen Register of Electronic Texts in Indian Languages",
+        "sourceUrl": "https://gretil.sub.uni-goettingen.de/gretilbk.htm",
+        "policyUrl": "https://gretil.sub.uni-goettingen.de/gretil.html"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "wikisource-multilingual",
+      "recordType": "public-text-index",
+      "title": "Wikisource · multilingual source-text library",
+      "editionTitle": "Community-maintained source texts in many language editions",
+      "contributors": [
+        {
+          "name": "Wikimedia contributors",
+          "role": "community editors"
+        }
+      ],
+      "traditions": [
+        "Hindu",
+        "Sikh",
+        "Islamic",
+        "Christian",
+        "Buddhist",
+        "Jain",
+        "Jewish",
+        "Secular",
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "literature",
+        "history",
+        "philosophy",
+        "poetry",
+        "religion",
+        "primary sources",
+        "public-domain texts"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Many language editions are available. Open the language portal and check the language edition and page-level rights notice.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "read-online",
+        "label": "Browse language editions and source texts",
+        "url": "https://wikisource.org/",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "PDF",
+          "Print"
+        ],
+        "notes": "Availability, proofreading status and export formats vary by language edition and individual work."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Per-page public-domain or Creative Commons notice",
+        "jurisdiction": "Per work, contributor, translation and jurisdiction",
+        "reuse": "Check the rights notice on the exact text page. The Wikisource platform or community licence does not automatically clear every source work.",
+        "notes": "Use as a discovery destination and preserve page-level provenance."
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "PDF",
+          "Print"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Wikisource · Wikimedia",
+        "sourceUrl": "https://wikisource.org/"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "project-gutenberg-languages",
+      "recordType": "public-domain-catalogue",
+      "title": "Project Gutenberg · books by language",
+      "editionTitle": "Public-domain ebook catalogue",
+      "contributors": [
+        {
+          "name": "Project Gutenberg volunteers",
+          "role": "ebook preparation and catalogue"
+        }
+      ],
+      "traditions": [
+        "Secular",
+        "Hindu",
+        "Buddhist",
+        "Christian",
+        "Jewish",
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "classic novels",
+        "poetry",
+        "history",
+        "philosophy",
+        "religion",
+        "drama",
+        "essays"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Use the source's live language index. Each ebook page states its own rights and country limitations.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "download-at-source",
+        "label": "Read online or download eligible ebooks",
+        "url": "https://www.gutenberg.org/browse/languages",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ],
+        "notes": "Prefer the ebook landing page. Do not bulk-scrape catalogue pages or assume every edition is public domain in every country."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "Project Gutenberg rights statement applies per ebook",
+        "jurisdiction": "Project Gutenberg's public-domain assessment is United States specific; check the reader's local law",
+        "reuse": "Check the exact ebook's rights page and territory. Do not treat every translation or image as cleared.",
+        "notes": "Catalogue availability does not itself settle rights in every jurisdiction.",
+        "policyUrl": "https://www.gutenberg.org/policy/permission"
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "HTML",
+          "EPUB",
+          "Kindle",
+          "Plain text"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Project Gutenberg",
+        "sourceUrl": "https://www.gutenberg.org/browse/languages",
+        "policyUrl": "https://www.gutenberg.org/policy/permission"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "librivox-multilingual-audio",
+      "recordType": "audiobook-catalogue",
+      "title": "LibriVox · public-domain audiobook catalogue",
+      "editionTitle": "Volunteer-read audiobooks searchable by language",
+      "contributors": [
+        {
+          "name": "LibriVox volunteers",
+          "role": "readers and coordinators"
+        }
+      ],
+      "traditions": [
+        "Secular",
+        "Hindu",
+        "Buddhist",
+        "Christian",
+        "Jewish",
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "audiobooks",
+        "poetry",
+        "fiction",
+        "history",
+        "philosophy",
+        "religion"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "The live catalogue has a language filter. Select the language on LibriVox to see currently available recordings.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "audio-download",
+        "label": "Listen or download from the LibriVox catalogue",
+        "url": "https://librivox.org/search",
+        "formats": [
+          "Audio",
+          "MP3"
+        ],
+        "notes": "Catalogue language availability changes as volunteers add recordings."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "LibriVox recordings are stated to be public domain in the USA",
+        "jurisdiction": "United States; check local copyright law elsewhere",
+        "reuse": "Verify the source text and recording status in the listener's country before redistribution.",
+        "notes": "A public-domain recording claim in the USA is not a universal public-domain determination."
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "Audio",
+          "MP3"
+        ]
+      },
+      "provenance": {
+        "sourceName": "LibriVox",
+        "sourceUrl": "https://librivox.org/search"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "open-library-discovery",
+      "recordType": "bibliographic-catalogue",
+      "title": "Open Library · bibliographic discovery and borrowing",
+      "editionTitle": "Work, edition, author and library-loan catalogue",
+      "contributors": [
+        {
+          "name": "Internet Archive / Open Library contributors",
+          "role": "catalogue and lending platform"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary",
+        "Hindu",
+        "Sikh",
+        "Islamic",
+        "Christian",
+        "Buddhist",
+        "Jain",
+        "Jewish",
+        "Secular"
+      ],
+      "subjects": [
+        "books",
+        "editions",
+        "authors",
+        "ISBN",
+        "bibliography",
+        "library borrowing"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Search the catalogue by language and inspect the exact edition record.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "discovery",
+        "label": "Discover editions; borrow only where a loan is offered",
+        "url": "https://openlibrary.org/",
+        "formats": [
+          "HTML",
+          "Metadata",
+          "Borrowed digital book"
+        ],
+        "notes": "A catalogue entry is not proof of a downloadable file. Digital lending uses publisher/library controls and may be time-limited."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Metadata and book files have separate rights",
+        "jurisdiction": "Per edition and lending agreement",
+        "reuse": "Use the official API for human-directed discovery, cache results and identify your application. Do not scrape HTML or make bulk single-book requests. For bulk metadata, use monthly data dumps or contact Open Library.",
+        "notes": "Open Library's API documentation says it is not intended as a bulk data backend or high-traffic commercial infrastructure.",
+        "policyUrl": "https://openlibrary.org/developers/api"
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "HTML",
+          "Metadata",
+          "Borrowed digital book"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Open Library",
+        "sourceUrl": "https://openlibrary.org/",
+        "metadataUrl": "https://openlibrary.org/developers/api",
+        "policyUrl": "https://openlibrary.org/developers/api"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "doab-oapen-open-access",
+      "recordType": "open-access-scholarly-catalogue",
+      "title": "DOAB and OAPEN · open-access scholarly books",
+      "editionTitle": "Publisher-listed academic monographs and edited volumes",
+      "contributors": [
+        {
+          "name": "Directory of Open Access Books / OAPEN Foundation",
+          "role": "open-access discovery and hosting"
+        }
+      ],
+      "traditions": [
+        "General / cross-disciplinary",
+        "Hindu",
+        "Buddhist",
+        "Jain",
+        "Islamic",
+        "Christian",
+        "Jewish",
+        "Secular"
+      ],
+      "subjects": [
+        "academic books",
+        "research",
+        "history",
+        "philosophy",
+        "religion",
+        "social sciences",
+        "humanities"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language varies by publisher and edition; inspect each book record.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "discovery",
+        "label": "Discover open-access titles and follow publisher licence",
+        "url": "https://www.doabooks.org/",
+        "formats": [
+          "HTML",
+          "PDF",
+          "EPUB",
+          "Metadata"
+        ],
+        "notes": "DOAB and OAPEN link or host specific publisher editions. A listing alone does not describe every title's rights."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "Each publication has its own licence; OAPEN metadata feeds are CC0",
+        "jurisdiction": "Per publication licence and publisher terms",
+        "reuse": "Metadata reuse does not grant permission to reproduce the book file. Open each publication's rights statement before reuse.",
+        "notes": "OAPEN says its metadata feeds are CC0 1.0; individual publications carry their own publisher terms.",
+        "policyUrl": "https://oapen.org/librarians/metadata"
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "HTML",
+          "PDF",
+          "EPUB",
+          "Metadata"
+        ]
+      },
+      "provenance": {
+        "sourceName": "DOAB / OAPEN",
+        "sourceUrl": "https://www.doabooks.org/",
+        "metadataUrl": "https://oapen.org/librarians/metadata",
+        "policyUrl": "https://oapen.org/librarians/metadata"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "openn-south-asian-manuscripts",
+      "recordType": "manuscript-collection",
+      "title": "OPenn · South Asian manuscripts and archival materials",
+      "editionTitle": "Penn Libraries open manuscript and image records",
+      "contributors": [
+        {
+          "name": "University of Pennsylvania Libraries",
+          "role": "repository and curatorial institution"
+        }
+      ],
+      "traditions": [
+        "Hindu",
+        "Buddhist",
+        "Jain",
+        "Islamic",
+        "Sikh",
+        "Secular"
+      ],
+      "subjects": [
+        "manuscripts",
+        "South Asian history",
+        "Sanskrit",
+        "Jain studies",
+        "Buddhist studies",
+        "archival provenance"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language is item-specific; inspect the manuscript catalogue record and item-level rights label.",
+      "readingLevel": "academic",
+      "access": {
+        "type": "read-online",
+        "label": "Explore manuscript records and item images",
+        "url": "https://openn.library.upenn.edu/",
+        "formats": [
+          "IIIF",
+          "Manuscript images",
+          "Metadata"
+        ],
+        "notes": "Use the item page and its metadata to identify language, script, collection, institution and image rights."
+      },
+      "rights": {
+        "status": "item-specific",
+        "licence": "OPenn uses item-level CC0, CC BY and CC BY-SA labels for participating material",
+        "jurisdiction": "Per manuscript and image item",
+        "reuse": "Reuse only the specific item whose rights label permits it; do not infer collection-wide permission.",
+        "notes": "OPenn's contributing guidance explains CC0, CC BY and CC BY-SA item marks.",
+        "policyUrl": "https://openn.library.upenn.edu/Contributing.html"
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "IIIF",
+          "Manuscript images",
+          "Metadata"
+        ]
+      },
+      "provenance": {
+        "sourceName": "OPenn · University of Pennsylvania Libraries",
+        "sourceUrl": "https://openn.library.upenn.edu/",
+        "policyUrl": "https://openn.library.upenn.edu/Contributing.html"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    },
+    {
+      "id": "banidb-sikh-source",
+      "recordType": "scripture-source",
+      "title": "BaniDB · Gurbani source and API",
+      "editionTitle": "Khalis Foundation Gurbani database service",
+      "contributors": [
+        {
+          "name": "Khalis Foundation",
+          "role": "maintainer"
+        }
+      ],
+      "traditions": [
+        "Sikh"
+      ],
+      "subjects": [
+        "Guru Granth Sahib",
+        "Gurbani",
+        "Nitnem",
+        "Punjabi",
+        "Gurmukhi",
+        "scripture"
+      ],
+      "languages": [
+        "Punjabi"
+      ],
+      "languageCoverageLabel": "Punjabi / Gurmukhi source material; check the individual interface for transliteration and translation options.",
+      "readingLevel": "primary-source",
+      "access": {
+        "type": "read-online",
+        "label": "Open BaniDB and review its service terms",
+        "url": "https://www.banidb.com/",
+        "formats": [
+          "HTML",
+          "API"
+        ],
+        "notes": "AARAMORA links to BaniDB only. It does not copy or integrate the Gurbani database."
+      },
+      "rights": {
+        "status": "permission-required",
+        "licence": "BaniDB Terms of Service and NPOSL-3.0 (subordinate to service terms)",
+        "jurisdiction": "Service terms and applicable copyright law",
+        "reuse": "Do not mirror or integrate data without first obtaining and reviewing required written permissions and accepting the service obligations. Terms specify use of the full Gurbani dataset if integrated, database refresh within 90 days, BaniDB acknowledgement and logo, and monthly contribution requirements or financial contribution in lieu.",
+        "notes": "BaniDB terms also restrict reproduction, redistribution and commercial use without written permission. A public API endpoint is not a blanket data licence.",
+        "policyUrl": "https://www.banidb.com/tos/"
+      },
+      "accessibility": {
+        "searchableText": "Varies by item",
+        "reflowable": "Varies by item",
+        "screenReaderNotes": "Check the specific source record and edition before recommending it as accessible.",
+        "formats": [
+          "HTML",
+          "API"
+        ]
+      },
+      "provenance": {
+        "sourceName": "BaniDB · Khalis Foundation",
+        "sourceUrl": "https://www.banidb.com/",
+        "policyUrl": "https://www.banidb.com/tos/"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "AARAMORA checked the named source page and its public access or rights notes. This does not verify every individual title or edition."
+      }
+    }
+  ]
+}
