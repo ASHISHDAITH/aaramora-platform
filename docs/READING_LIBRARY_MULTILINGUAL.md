@@ -64,3 +64,55 @@ Pali, Prakrit, Tibetan and Old Javanese are separate discovery tags because they
 - .github/workflows/reading-library-link-check.yml runs a weekly source-link review.
 
 The filters remain a discovery tool. A source card appearing for a language does not mean all titles from that institution are available in that language.
+
+## Named editions and language-specific indexes · 24 November 2026
+
+The catalogue now contains 26 entries: 11 institutional/source records plus 15 additional language-specific editions or discovery indexes. The records added in this update are:
+
+| Language | Linked record | What the record represents | Rights/access caveat |
+|---|---|---|---|
+| Hindi | Ramcharitmanas · Hindi Wikisource | A long, page-indexed Hindi text with source-side export options | Confirm the exact source print edition, scan, contributors and page-level terms before reuse. |
+| Marathi | Jñāneśvarī / Bhāvārthadīpikā | Dnyaneshwar's Marathi Bhagavad Gita commentary; page links chapters | Source page warns of a duplicated passage/chapter issue. AARAMORA does not claim a critical edition or line-checked transcription. |
+| Bengali | Gītāñjali (1913) | Bengali third-edition page, Indian Press, Allahabad | Wikisource identifies the work as public domain in the United States and discusses territorial differences. Page contributions carry Wikimedia terms; do not treat US status as worldwide clearance. |
+| Punjabi | Guru Granth Sahib Ji · selected folio 1 | One page from a digitized PDF with Gurmukhi transcription | It is one selected folio, not a full scripture edition. The page states CC BY-SA for contributed transcription; scan/source rights may differ. |
+| Urdu | Dīvān-e Ghālib | Urdu Wikisource page with ghazal, qasida, masnavi, rubai and other sections | Page says contributed text uses CC BY-SA; underlying edition and images can have separate rights. |
+| Odia | Odia Bhagabata · first Skandha | Jagannath Das's first Skandha page only | Source offers page-level export controls; item rights and text accuracy remain to be checked. |
+| Tamil | Tirukkural · Project Madurai UTF-8 | Tiruvalluvar text in Tamil Unicode/UTF-8 | Project Madurai says this exact file may be redistributed if its header page is retained. That condition is not a licence for other editions or translations. |
+| Gujarati | Gujarati Wikisource full-book list | Discovery index of full-book titles, authors and genres | Each listed title is a separate rights/edition check. |
+| Kannada | Kannada Wikisource portal | Portal lists active projects including Jaimini Bharata and Pampa Bharata | Collection discovery only; individual text, transcription and scan rights must be checked. |
+| Malayalam | Malayalam Wikisource book list | Project list of works it describes as out of copyright | The list itself says it is incomplete. Confirm every work, author death date, edition and scan separately. |
+| Arabic | Safahat · Hindawi Foundation | Arabic reading platform for books licensed and translated by Hindawi | Hindawi says those books are free to read/download on Safahat. That does not create a right to mirror or republish them. |
+| French | Le comte de Monte-Cristo, Tome I | Project Gutenberg eBook 17989 | Project Gutenberg labels this edition public domain in the USA; other territories must be checked. This record is Tome I only. |
+| German | Faust: Der Tragödie erster Teil | Project Gutenberg eBook 2229 | US public-domain statement only; later translations, notes and artwork are separate. |
+| Spanish | Don Quijote | Project Gutenberg eBook 2000 | US public-domain statement only; local law and the exact edition still matter. |
+| Portuguese | Os Lusíadas | Project Gutenberg eBook 3333 | US public-domain statement only; later notes, translation and artwork are separate. |
+
+### Editorial-review status
+
+Every catalogue record exposes an explicit editorial review object. At this release:
+
+- Native-language review: pending.
+- Religious/cultural-context review: pending.
+- Edition fidelity and transcription comparison: pending where no independent collation is noted.
+- Manual accessibility review of the underlying source text: pending.
+
+These statuses must not be changed to reviewed until a named qualified reviewer has checked the specific language/edition and the review has been recorded. A source page check is not native-speaker approval, religious endorsement, clinical approval or legal advice.
+
+### Exact sources
+
+- Hindi Ramcharitmanas: https://hi.wikisource.org/wiki/रामचरितमानस
+- Marathi Jñāneśvarī: https://mr.wikisource.org/wiki/ज्ञानेश्वरी
+- Bengali Gītāñjali (1913): https://bn.wikisource.org/wiki/গীতাঞ্জলি_(১৯১৩)
+- Punjabi selected folio: https://pa.wikisource.org/wiki/ਪੰਨਾ:Guru_Granth_Sahib_Ji.pdf/1
+- Urdu Dīvān-e Ghālib: https://ur.wikisource.org/wiki/دیوان_غالب
+- Odia Bhagabata first Skandha: https://or.wikisource.org/wiki/ଓଡ଼ିଆ_ଭାଗବତ/୧
+- Tamil Tirukkural UTF-8: https://www.projectmadurai.org/pm_etexts/utf8/pmuni0001.html
+- Gujarati full-book index: https://gu.wikisource.org/wiki/વિકિસ્રોત:પુસ્તકો
+- Kannada Wikisource: https://kn.wikisource.org/wiki/ಮುಖ್ಯ_ಪುಟ
+- Malayalam book list: https://ml.wikisource.org/wiki/വിക്കിഗ്രന്ഥശാല:വിക്കിപദ്ധതി/പുസ്തകപ്പട്ടിക
+- Arabic Safahat: https://safahat.org/ · Hindawi Foundation information: https://www.hindawi.org/en/about
+- French Monte-Cristo I: https://www.gutenberg.org/ebooks/17989
+- German Faust Part I: https://www.gutenberg.org/ebooks/2229
+- Spanish Don Quijote: https://www.gutenberg.org/ebooks/2000
+- Portuguese Os Lusíadas: https://www.gutenberg.org/ebooks/3333
+
