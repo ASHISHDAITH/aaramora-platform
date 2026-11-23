@@ -36,10 +36,12 @@ class RelationshipPageTests(unittest.TestCase):
         self.assertIn('id="safety-form"', self.page)
         self.assertIn('id="attachment-quiz"', self.page)
         self.assertIn('id="conflict-quiz"', self.page)
+        self.assertIn('id="boundaries-quiz"', self.page)
 
     def test_quiz_prompts_are_unvalidated_and_not_diagnostic(self):
         self.assertIn("not validated psychological instruments", self.page)
         self.assertIn("cannot diagnose", self.page)
+        self.assertEqual(self.page.count('class="concept-item"'), 40)
 
     def test_internal_anchors_resolve_and_ids_are_unique(self):
         ids = set(self.parser.ids)

@@ -39,3 +39,12 @@
 - Verify all numbers, routing details and emergency information again immediately before release.
 
 **Interpretation:** these are the checks reported in the supplied QA results. They are not an independent full browser, accessibility, clinical or production security certification.
+
+
+## Follow-up repository QA — 24 November 2026
+
+- The first GitHub Actions run (commit `7dc13ce`) executed 18 tests and had one failure: a stale PMOS cognition wording assertion expected “not statistically significant”, while the page uses “statistically non-significant”. The assertion has been corrected to match the evidence-qualified page wording.
+- The relationship test now verifies the third optional boundaries reflection and the complete 40-concept library.
+- The content-check workflow supports manual `workflow_dispatch` as well as push and pull-request triggers.
+- The corrected run must complete successfully before the content-check CI gate can be called passing.
+- Vercel discovery found no existing Vercel project linked to `ASHISHDAITH/aaramora-platform`; the connected Hobby team currently has other Git-linked projects only.
