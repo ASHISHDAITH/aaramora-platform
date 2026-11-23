@@ -190,3 +190,22 @@ AARAMORA now keeps language groups and source records in `data/library.json`; `d
 ### Automation and review
 
 `scripts/check_catalogue.py` validates required source, access, rights, language and review-date fields. `scripts/check_library_links.py` performs polite HEAD/range checks against the metadata source URLs only; no book text, scans or full page bodies are downloaded. The weekly workflow flags confirmed 404/410 responses and reports blocks or transient failures as inconclusive. A human editor still needs to review source availability, edition accuracy, cultural wording and licences before describing an item as freely downloadable or reusable.
+
+## Edition-level multilingual additions · 24 November 2026
+
+The source catalogue now has 26 records. Fifteen additions give specific edition or index destinations in Hindi, Marathi, Bengali, Punjabi, Urdu, Odia, Tamil, Gujarati, Kannada, Malayalam, Arabic, French, German, Spanish and Portuguese. See docs/READING_LIBRARY_MULTILINGUAL.md for the edition-by-edition table and rights notes.
+
+### Editorial limits
+- A link to a source page is not a statement that the entire work is free to redistribute.
+- Project Gutenberg records explicitly say public domain in the United States; the catalogue does not extend that claim to every territory.
+- The Bengali Gitanjali 1913 source page identifies the publisher/imprint and says US public-domain status is based on pre-1931 publication; it separately explains other territorial rules. The original work and Wikimedia contributor layer must not be collapsed into a single worldwide licence.
+- Project Madurai's Tirukkural UTF-8 page carries © Project Madurai 1998–2000 and permits redistribution of that exact file provided the header page is retained. Do not remove the header or extend the permission to other editions.
+- The Punjabi Guru Granth Sahib entry is one selected folio/page from a digital PDF, not a full-scripture digital edition. The page says the transcription is CC BY-SA; image/scan and wider database rights are separate.
+- The Marathi Jnaneshwari page warns about a duplicate passage/chapter issue. AARAMORA marks it as a source link, not a checked critical edition.
+- The Odia Bhagabata entry links only to the first Skandha page. Do not imply it represents all skandhas.
+- Hindawi says its licensed Arabic books remain free to read and download via Safahat. This is access at the publisher's platform, not a right to mirror the books.
+- BaniDB remains linked only. No Gurbani data has been copied or integrated.
+
+### Native-review release gate
+All 26 records currently have editorialReview.nativeLanguage=pending, editorialReview.culturalContext=pending, and editorialReview.accessibility=pending. These values can only be changed after named native-language, tradition/context, and assistive-technology reviewers document the specific edition they checked. Metadata verification alone cannot approve pronunciation, translation fidelity, theological wording, OCR quality or reading accessibility.
+
