@@ -1080,14 +1080,14 @@
           "MOBI",
           "PDF"
         ],
-        "notes": "The source page exposes a page index and EPUB/MOBI/PDF export controls. This catalogue record points to that edition page; it does not host a copied scan or verify every page against a printed edition."
+        "notes": "The Hindi page includes a page index for the seven Kands and offers EPUB, MOBI and PDF export. Its prefatory material discusses textual variants, changes and interpolations; compare the exact edition before quoting verses."
       },
       "rights": {
         "status": "item-specific",
         "licence": "Wikisource page and contributor terms; underlying source edition and scan rights require separate checking",
         "jurisdiction": "Work, edition, source scan and transcription may have different status by territory",
         "reuse": "Use the source reader/export controls. Do not mirror the scan or transcription until the exact source edition, page-level rights and contributor conditions have been checked.",
-        "notes": "The page itself discusses textual variants and possible interpolations. AARAMORA does not present this transcription as a critical edition."
+        "notes": "The source's own prefatory material discusses variants and interpolations. Its public-domain label for the listed 1925 text does not clear any separately protected later commentary, scan, image or contribution."
       },
       "accessibility": {
         "searchableText": "Source page searchable; verify text quality and transcription against the scan",
@@ -1115,7 +1115,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleNative": "रामचरितमानस",
+      "titleLanguage": "hi",
+      "titleDisplaySuffix": "Hindi Wikisource edition"
     },
     {
       "id": "mr-jnaneshwari-wikisource",
@@ -1188,7 +1191,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleNative": "ज्ञानेश्वरी",
+      "titleLanguage": "mr",
+      "titleDisplaySuffix": "Marathi Wikisource"
     },
     {
       "id": "bn-gitanjali-1913-wikisource",
@@ -1231,9 +1237,9 @@
       },
       "rights": {
         "status": "item-specific",
-        "licence": "Wikisource page notes CC BY-SA for contributed text and marks this 1913 work public domain in the United States",
+        "licence": "The page states the 1913 edition is public domain in the United States because it was published before 1 January 1931; it also notes public-domain status in countries applying an author-life-plus-80-year term, based on Tagore's 1941 death. The contributed Wikisource text carries its own CC BY-SA notice.",
         "jurisdiction": "The page says US public-domain status is based on publication before 1931 and discusses other countries separately; verify local law",
-        "reuse": "The source page says this edition is public domain in the United States, but this status may not apply outside the United States; check the rights of this specific edition in the reader's territory. Preserve CC BY-SA obligations for qualifying contributor contributions and do not apply US public-domain status worldwide.",
+        "reuse": "Check the exact edition and jurisdiction. The source page distinguishes United States publication-date rules from countries applying author-life-plus-80 years. Preserve CC BY-SA obligations for qualifying Wikisource contributions. Do not treat the page's US public-domain statement as worldwide clearance.",
         "notes": "Wikisource's page states Tagore died in 1941 and gives a territory-specific public-domain explanation. AARAMORA links only; no text copied."
       },
       "accessibility": {
@@ -1260,7 +1266,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleNative": "গীতাঞ্জলি (১৯১৩)",
+      "titleLanguage": "bn",
+      "titleDisplaySuffix": "Gitanjali"
     },
     {
       "id": "pa-guru-granth-sahib-folio-1",
@@ -1306,7 +1315,7 @@
         "licence": "The Wikisource page indicates CC BY-SA for the contributed transcription; the underlying scan/source edition can carry separate conditions",
         "jurisdiction": "Contributed transcription licence and source scan rights must be assessed separately",
         "reuse": "Do not treat the page-level CC BY-SA notice as blanket permission for the original scan, complete scripture database, translations or recitations. Preserve attribution/share-alike conditions for material actually covered by the page notice.",
-        "notes": "BaniDB remains a separate service with its own terms. AARAMORA links to this Wikisource folio and does not copy Gurbani data."
+        "notes": "The page identifies this as a proofread folio/page and states that its contributed text is available under CC BY-SA. This page-level notice does not clear all scans, source editions, translations, recitations or third-party recordings."
       },
       "accessibility": {
         "searchableText": "Source page searchable; verify text quality and transcription against the scan",
@@ -1331,7 +1340,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleNative": "ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ",
+      "titleLanguage": "pa",
+      "titleDisplaySuffix": "selected folio 1"
     },
     {
       "id": "ur-diwan-e-ghalib-wikisource",
@@ -1372,7 +1384,7 @@
           "MOBI",
           "PDF"
         ],
-        "notes": "The source page is identified as Urdu and lists multiple poetry sections. It exposes export links; edition and transcription quality should be checked before quoting."
+        "notes": "The Urdu contents list includes a preface, ghazals, qasidas, masnavis, khamsa, marsiya and salam, qit'at, rubaiyat, supplements and bibliography. The page is an edition-specific digital text; compare it with the intended printed edition before quoting."
       },
       "rights": {
         "status": "open-license",
@@ -1406,7 +1418,11 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleNative": "دیوان غالب",
+      "titleLanguage": "ur",
+      "titleDisplaySuffix": "Diwan-e-Ghalib",
+      "titleDirection": "rtl"
     },
     {
       "id": "or-odia-bhagabata-skandha-1",
@@ -1446,7 +1462,7 @@
           "MOBI",
           "PDF"
         ],
-        "notes": "The page identifies Jagannath Das as author and the linked text as the first skandha. Export options are offered by Wikisource; this record does not imply the whole multi-skandha work is on this one page."
+        "notes": "The linked page identifies Jagannath Das as author and explicitly labels the content as the first Skandha, with 19 chapter links and source-side EPUB/MOBI/PDF export. This entry is limited to that Skandha, not the complete work."
       },
       "rights": {
         "status": "item-specific",
@@ -1480,7 +1496,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleNative": "ଓଡ଼ିଆ ଭାଗବତ",
+      "titleLanguage": "or",
+      "titleDisplaySuffix": "first Skandha"
     },
     {
       "id": "ta-thirukkural-project-madurai",
@@ -1556,7 +1575,10 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleNative": "திருக்குறள்",
+      "titleLanguage": "ta",
+      "titleDisplaySuffix": "Tirukkural"
     },
     {
       "id": "gu-wikisource-full-book-index",
@@ -1668,7 +1690,7 @@
           "HTML",
           "PDF print/export"
         ],
-        "notes": "The source page identifies itself as a free Kannada library and lists active projects including Jaimini Bharata and Pampa Bharata, plus sample books. Check each title's status and edition."
+        "notes": "The official main page describes Kannada Wikisource as a free, editable library and lists active projects including Jaimini Bharata and Pampa Bharata. Its page statistics distinguish problematic, unproofread, proofread and published pages; check the proofread status of each title before recommending it as a reading edition."
       },
       "rights": {
         "status": "item-specific",
@@ -1743,14 +1765,14 @@
           "HTML",
           "Linked scans and source pages"
         ],
-        "notes": "This is a catalogue/proofreading project list, not one book. The page says the list focuses on works considered out of copyright under the project's description of Indian law; verify each listed work and scan separately."
+        "notes": "This project page says its purpose is to maintain a list of works whose copyright term has expired and that may be digitised. It invites readers to add missing works and links a bibliography; this is an incomplete discovery list, not a rights-clearance register."
       },
       "rights": {
         "status": "item-specific",
         "licence": "No catalogue-wide reuse permission; check each title and scan",
         "jurisdiction": "Page describes an India life-plus-60-year rule; verify the law and death/publication facts for every author/work",
         "reuse": "Treat this as discovery only. Do not copy the scan or transcription until the individual work, edition, contributor licence and territorial status are confirmed.",
-        "notes": "The source page says the list is incomplete and invites additions. AARAMORA does not treat the index as a legal clearance register."
+        "notes": "The page's own explanation describes an author-life-plus-60-year rule and says the list is incomplete. Do not rely on that summary as a legal determination; check current law, author death date, publication, edition, scan and contributor terms for each title."
       },
       "accessibility": {
         "searchableText": "Source page searchable; verify text quality and transcription against the scan",
@@ -1929,7 +1951,8 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleLanguage": "fr"
     },
     {
       "id": "de-faust-pg",
@@ -2004,7 +2027,8 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleLanguage": "de"
     },
     {
       "id": "es-don-quijote-pg",
@@ -2079,7 +2103,8 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleLanguage": "es"
     },
     {
       "id": "pt-os-lusiadas-pg",
@@ -2154,7 +2179,8 @@
         "culturalContext": "pending",
         "accessibility": "pending",
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
-      }
+      },
+      "titleLanguage": "pt"
     }
   ]
 }
