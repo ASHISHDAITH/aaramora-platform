@@ -127,3 +127,11 @@ The current production deployment is live at the URL above. A final browser smok
 - 26 catalogue records, 46 original static cards retained, 55 Python tests passed. Live Chromium/axe audit: zero automated WCAG violations; 390px mobile width no horizontal overflow.
 - Manual source-link audit: 32 reachable, 0 confirmed dead, 8 inconclusive; these eight need rechecking rather than being treated as broken.
 - Native-language, religious/cultural-context and manual screen-reader reviews remain pending.
+
+
+### Independent review and sign-off pack
+- `docs/review/REVIEWER_PACK.md`: assignment requirements and sign-off forms for native-language, cultural/religious, rights and accessibility reviews.
+- `docs/review/REVIEW_REGISTER.csv`: one row per catalogue record, with required specialist roles and `not_contacted` status.
+- `docs/review/ACCESSIBILITY_MANUAL_TEST_PLAN.md`: NVDA, VoiceOver, TalkBack, keyboard, 320 CSS px/400% zoom, forced-colors and reduced-motion test plan.
+- `docs/review/OUTREACH_DRAFTS.md`: unsubmitted academic, cultural and accessibility outreach messages.
+- No reviewer or institution has yet accepted a review; all independent human-review fields remain pending. The public contacts are referral leads, not endorsements.
