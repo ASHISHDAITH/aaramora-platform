@@ -58,6 +58,9 @@ class ReadingLibraryChecks(unittest.TestCase):
     def test_support_contacts_keep_44px_minimum_height(self):
         self.assertIn(".top .wrap .support-link{min-height:44px;padding:5px 12px}", HTML)
 
+    def test_focused_skip_link_uses_own_topbar_row(self):
+        self.assertIn(".skip-link:focus{position:relative;left:auto;top:auto;display:inline-flex;flex-basis:100%;width:max-content;margin-bottom:4px}", HTML)
+
     def test_internal_fragment_links_resolve(self):
         ids = set(re.findall(r'\bid="([^"]+)"', HTML))
         fragments = re.findall(r'href="#([^"]+)"', HTML)
