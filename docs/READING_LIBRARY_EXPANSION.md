@@ -157,3 +157,36 @@ The page-level search filters the visible resource cards by their rendered text.
 ## Review limitations
 
 This is an initial editorial/source register, not legal advice or a complete global clearance opinion. Public-domain status can vary by country. Open licences have conditions and may exclude third-party portions. Religious texts need respectful handling and appropriate review by readers knowledgeable in the relevant language and tradition. New entries require a final link check and rights review before they are described as downloadable or reusable.
+
+
+## Multilingual catalogue research and implementation (24 November 2026)
+
+AARAMORA now keeps language groups and source records in `data/library.json`; `data/library.schema.json` describes the data contract. The Reading Library renders a separate catalogue with filters and leaves the existing static shelves in place as a fallback.
+
+### Language groups
+
+- **India · Eighth Schedule:** Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili, Malayalam, Manipuri, Marathi, Nepali, Odia, Punjabi, Sanskrit, Santali, Sindhi, Tamil, Telugu and Urdu (22 languages).
+- **Additional Indian-language discovery:** Awadhi, Bhojpuri, Garo, Khasi, Meitei/Manipuri, Mizo, Tulu, Bhili/Bhilodi, Gondi, Kurukh, Kokborok, Ho, Haryanvi, Garhwali, Ladakhi, Rajasthani and Chhattisgarhi. This is an expandable set, not an exhaustive list or a claim that every source holds every title in each language.
+- **World-language discovery:** an initial 51-language filter set, including Arabic, Chinese, English, French, German, Spanish, Portuguese, Russian, Japanese, Korean, Persian, Urdu, Indonesian, Malay, Thai, Vietnamese, Filipino/Tagalog, Swahili, Amharic and other languages. This is a starting set, not a complete census of world languages.
+- **Classical and scholarly languages:** Pali, Prakrit, Tibetan and Old Javanese.
+
+### Verified source notes
+
+- NDLI Browse by Language: https://www.ndl.iitkgp.ac.in/pa_browse/inLanguage
+  - The page exposes browse facets such as Assamese, Awadhi, Bengali, Bhojpuri, Dogri, English, Gujarati, Hindi, Kannada, Khasi, Konkani, Maithili, Malayalam, Meitei Mayek, Marathi, Mizo, Nepali, Odia, Punjabi, Sanskrit, Santali, Sinhala, Sindhi, Tamil, Telugu and Urdu. NDLI's school-education page separately lists contents in Indian languages including Bodo/Boro, Garo and Kashmiri. Portal sections and categories overlap and are not one exhaustive language inventory.
+- NDLI FAQ: https://www.ndl.iitkgp.ac.in/faq
+  - NDLI says it aggregates metadata from multiple institutions; it does not host all linked content. Downloads are available only when the content provider permits them. Some resources depend on provider licences or registration.
+- Heritage Scripture Server about page: https://heritage.iitk.ac.in/about
+  - The current interface documents 11 scripts: Assamese, Bengali, Devanagari, Gujarati, Kannada, Malayalam, Odia, Punjabi, Roman (IAST/ISO), Tamil and Telugu. A script display is not the same thing as a translation language. The API docs say most endpoints need an API key.
+- Heritage licence: https://heritage.iitk.ac.in/license
+  - Original ancient Sanskrit source texts (moolam) are public domain under the platform statement. Modern translations and commentaries are copyrighted derived works with attribution and non-commercial conditions. The licence prohibits bulk extraction for AI/competing databases and requires preservation of provenance.
+- GRETIL text index: https://gretil.sub.uni-goettingen.de/gretilbk.htm
+  - Current index sections list Pali, Prakrit, Hindi, Marathi, Tamil, Malayalam, Old Javanese and Tibetan alongside Sanskrit collections. GRETIL says the files are strictly for scholarly reference, commercial use is excluded and copyright remains with original rightsholders.
+- BaniDB terms: https://www.banidb.com/tos/
+  - Application use has service-specific obligations (full dataset, updates at least every 90 days for copied databases, attribution/logo and monthly contributions or financial alternative). Reproduction, redistribution and commercial use are restricted without written permission. AARAMORA links to BaniDB but does not ingest its data.
+- OAPEN metadata: https://oapen.org/librarians/metadata
+  - OAPEN metadata feeds are CC0 1.0; individual book files have their own publisher licences.
+
+### Automation and review
+
+`scripts/check_catalogue.py` validates required source, access, rights, language and review-date fields. `scripts/check_library_links.py` performs polite HEAD/range checks against the metadata source URLs only; no book text, scans or full page bodies are downloaded. The weekly workflow flags confirmed 404/410 responses and reports blocks or transient failures as inconclusive. A human editor still needs to review source availability, edition accuracy, cultural wording and licences before describing an item as freely downloadable or reusable.
