@@ -64,6 +64,76 @@ This register supports `reading-library.html`. It is a curated set of source ins
 - Open Library: https://openlibrary.org/ ; API: https://openlibrary.org/developers/api ; lending FAQ: https://help.openlibrary.org/
   - Use cataloguing/API rules for discovery; borrow a title only where an authorised loan control is offered. Do not bulk-scrape HTML, bypass lending restrictions or assume every catalogue entry permits a download.
 
+## Additional sources included in the expanded catalogue
+
+### Mental-health workbooks, full-text references and open books
+
+- Centre for Clinical Interventions (CCI): https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself
+  - Free workbooks for personal use across anxiety, depression, panic, health anxiety, sleep, self-esteem, perfectionism and worry/rumination. CCI states that the material is not a substitute for professional diagnosis or treatment. Its copyright notice permits personal downloads but says reproduction or republication needs express permission. AARAMORA links to CCI instead of hosting the PDFs. Rights page: https://www.cci.health.wa.gov.au/Home/Utilities/Copyright-and-Disclaimer
+- NCBI Bookshelf: https://www.ncbi.nlm.nih.gov/books/
+  - Free online access to books, reports and clinical reference material. Rights are set at title/contribution level; inspect the copyright/permissions notice for each item.
+- PubMed Central Open Access Subset: https://pmc.ncbi.nlm.nih.gov/tools/openftlist/
+  - A reusable subset of full-text articles. PMC contains other free-to-read articles that remain traditionally copyrighted, so the OA filter and the article-level licence statement matter. Copyright guidance: https://pmc.ncbi.nlm.nih.gov/about/copyright/
+- Open Textbook Library: https://open.umn.edu/opentextbooks/
+  - Catalogue criteria require complete textbooks with an open licence that allows use and adaptation. Verify the exact licence and third-party components on each book page.
+- Directory of Open Access Books: https://www.doabooks.org/
+  - DOAB's CC0 statement applies to catalogue metadata. The books it indexes have their own publisher licences; metadata rights do not grant permission to copy book chapters or files.
+- BCcampus Open Collection: https://collection.bccampus.ca/
+  - Open textbook catalogue with book-level licences and attribution statements. Check the exact edition and licence for each item.
+
+### Hindu, Sikh, Islamic, Christian, Buddhist and Jain sources
+
+- Heritage IIT Kanpur Gita Supersite and content licence: https://heritage.iitk.ac.in/gitasupersite ; https://heritage.iitk.ac.in/license
+  - The May 2026 licence distinguishes original ancient Sanskrit source texts from authored translations and commentaries. Do not assume a modern translation is public domain because the source scripture is ancient. Use the exact language/edition notice and do not treat general access as permission for bulk copying or AI ingestion.
+- Sikher Project: https://sikher.com/
+  - The project describes a multilingual Gurbani resource with many translations and transliterations. Its material has mixed GPL, Creative Commons and other rights; check the specific translator, dataset and notice. The project’s software licence does not by itself license every translated text. Specific indexes: https://sikher.com/wiki/sikh-scriptures/guru-granth-sahib/guru-granth-sahib-in-english/ and https://sikher.com/wiki/sikh-scriptures/guru-granth-sahib/guru-granth-sahib-download/
+- SikhiToTheMax: https://www.sikhitothemax.org/
+  - A searchable Gurbani reader. Link to the site and follow its own per-edition terms; do not treat the presence of a search or download feature as blanket redistribution permission.
+- Tanzil Quran text and licence: https://tanzil.net/ ; https://tanzil.net/docs/Text_License
+  - CC BY 3.0 permits verbatim redistribution of the specified text; alteration is not allowed and the required copyright notice, source attribution and Tanzil link must accompany copies.
+- QuranEnc translation terms: https://quranenc.com/en/home/about/conditions
+  - Its stated conditions allow translations to be downloaded and republished without modification if the publisher/source and version are identified, transcript information is retained, source notes are handled as required, and the version is kept current. This does not automatically extend to other translations, recitations, commentary, artwork or typesetting.
+- World English Bible, eBible.org: https://ebible.org/engwebu/copyright.htm
+  - eBible.org dedicates the WEB text to the public domain while retaining a trademark in the name. Changed text should not be presented as the unaltered World English Bible. Other Bible editions carry separate rights.
+- SuttaCentral: https://suttacentral.net/licensing?lang=en
+  - SuttaCentral distinguishes public-domain source texts, its own CC0 material and legacy translations with third-party rights. It requests that its content not be scraped or used to build generative-AI datasets. The AARAMORA card links to source editions and does not copy the text.
+- Jain eLibrary: https://jainelibrary.org/
+  - Large Jain text and learning collection, but rights vary by item. Some JAINA Education Series titles are stated to be non-copyrighted for private/personal/non-commercial use or distribution on a cost basis; this must not be generalised to the full library. Read the notice on each file before copying or redistributing it.
+
+### Regional-language literature and classical editions
+
+- Wikisource language editions: Hindi https://hi.wikisource.org/ ; Marathi https://mr.wikisource.org/ ; Punjabi https://pa.wikisource.org/ ; Urdu https://ur.wikisource.org/ ; Sanskrit https://sa.wikisource.org/
+  - Community-edited libraries across Indic scripts. Check the rights note on each work and edition; a page being on Wikisource does not automatically grant a universal right to reuse every scan, translation or image.
+- Project Madurai: https://projectmadurai.org/ ; FAQ: https://www.projectmadurai.org/faq.html
+  - Tamil literary archive. Its FAQ says works are included when public-domain or with consent from authors/rights holders. The FAQ is old; use it as source background, not a substitute for a current item-level rights check.
+- Ambuda: https://www.ambuda.org/
+  - Volunteer-run Sanskrit library with texts such as the Rāmāyaṇa, Mahābhārata, kāvya, śāstra and stotras. Inspect each work's source and edition details before copying its text, transcription or editorial material.
+- Project Gutenberg records for public-domain editions:
+  - Bhagavad Gītā, Sir Edwin Arnold, *The Song Celestial* (ebook 2388): https://www.gutenberg.org/ebooks/2388
+  - Rāmāyaṇa, Ralph T. H. Griffith (ebook 24869): https://www.gutenberg.org/ebooks/24869
+  - Dhammapada, F. Max Müller (ebook 2017): https://www.gutenberg.org/ebooks/2017
+  - *The Buddha's Path of Virtue*, F. L. Woodward (ebook 35185): https://www.gutenberg.org/ebooks/35185
+  - Project Gutenberg identifies these editions as public domain in the United States. Readers and distributors elsewhere, including India, need to check the local term for the specific translation/edition before reuse. Link to the individual ebook landing page rather than a static file.
+
+### GitHub discovery indexes
+
+- dreamingechoes/awesome-mental-health: https://github.com/dreamingechoes/awesome-mental-health
+  - CC0 resource list with a particular software/technology audience; check the current repository notice. Linked sites and articles keep their own rights.
+- theimpossibleastronaut/awesome-mentalhealth: https://github.com/theimpossibleastronaut/awesome-mentalhealth
+  - Another community-maintained index. Check current maintenance, each repository's own licence and the rights of all linked resources.
+- cityofnewyork/mental-health-for-all: https://github.com/cityofnewyork/mental-health-for-all
+  - Useful source for resource-directory information architecture; NYC service details are not an India service directory and must not be carried over as local referrals.
+- ArchiveLabs/awesome-open-access-books: https://github.com/ArchiveLabs/awesome-open-access-books
+  - Discovery list of open-book publishers and portals. Every destination's book-level rights remain separate.
+- getbookshelves/free-ebooks: https://github.com/getbookshelves/free-ebooks
+  - Discovery list of legal free-ebook sources. Do not infer a licence for books listed in that index.
+- Implementation references displayed in the GitHub shelf: Radix Colors https://github.com/radix-ui/colors ; Workbox https://github.com/GoogleChrome/workbox ; axe-core https://github.com/dequelabs/axe-core ; AI4Bharat IndicTrans2 https://github.com/AI4Bharat/IndicTrans2 ; Lucide https://github.com/lucide-icons/lucide .
+  - These are technology references, not permission to reuse their code, models or data without reading each project's current licence, model terms and security notes.
+
+## Search behaviour
+
+The page-level search filters the visible resource cards by their rendered text. It does not query external services, make network requests, create user profiles, or save search terms. Search is a client-side convenience, not a full catalogue index or semantic search engine.
+
 ## Hero image and editorial line
 
 - Pexels image: Pavel Danilyuk, “Photograph of a book with dry flowers”: https://www.pexels.com/photo/photograph-of-a-book-with-dry-flowers-6873903/
