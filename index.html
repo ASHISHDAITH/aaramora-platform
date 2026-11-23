@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#F5F2E9">
-<meta name="description" content="A quiet, privacy-first place for mental wellbeing information, gentle activities, women's health education and routes to human support in India.">
-<title>A Place to Begin | Mental wellbeing and women's health prototype</title>
+<meta name="description" content="AARAMORA is a privacy-first place for mental wellbeing information, gentle activities, women's health education and routes to human support in India.">
+<title>AARAMORA | A gentle place to begin again</title>
 <style>
 :root{
   --paper:#F5F2E9; --paper-deep:#ECE9DF; --surface:#FFFEFA;
@@ -306,11 +306,11 @@ details p{color:var(--muted);margin:12px 0 0;font-size:.94rem}
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="#top" aria-label="The platform home">
+    <a class="brand" href="#top" aria-label="AARAMORA home">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 32 32" fill="none"><path d="M16 4.2c3.6 4.4 6 7.8 6 11.6a6 6 0 1 1-12 0c0-3.8 2.4-7.2 6-11.6Z" fill="#E2BD6E"/><path d="M16 11v10M11.5 25h9" stroke="#315B48" stroke-width="2" stroke-linecap="round"/></svg>
       </span>
-      <span>A Place to Begin</span>
+      <span>AARAMORA</span>
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
@@ -392,7 +392,7 @@ details p{color:var(--muted);margin:12px 0 0;font-size:.94rem}
   </div>
 </section>
 
-<section class="brand-film-section" id="brand-film" aria-labelledby="brand-film-title" hidden>
+<section class="brand-film-section" id="brand-film" aria-labelledby="brand-film-title">
   <div class="wrap brand-film-grid">
     <div class="brand-film-copy">
       <div class="eyebrow">AARAMORA · Our first story</div>
@@ -400,12 +400,12 @@ details p{color:var(--muted);margin:12px 0 0;font-size:.94rem}
       <p class="lead">A short film about making room for your thoughts, finding care you can trust and feeling heard by another person.</p>
       <p class="prototype-note">This film is an introduction to the platform, not a promise of treatment or recovery. You can watch, pause or skip it.</p>
       <div class="brand-film-actions">
-        <a class="button button-secondary" href="assets/brand-film/aaramora-instagram-9x16.mp4" target="_blank" rel="noopener noreferrer">View the vertical film</a>
+        <a class="button button-secondary" href="https://cdn.jsdelivr.net/gh/ASHISHDAITH/aaramora-platform@main/assets/brand-film/aaramora-instagram-9x16.mp4" target="_blank" rel="noopener noreferrer">View the vertical film</a>
       </div>
     </div>
     <div class="brand-film-frame">
       <video class="brand-film-video" id="brand-film-video" controls preload="none" playsinline poster="assets/healing-garden.svg" aria-label="AARAMORA brand film: a quiet morning, a care conversation, journaling, a garden and human connection">
-        <source src="assets/brand-film/aaramora-master-16x9.mp4" type="video/mp4">
+        <source src="https://cdn.jsdelivr.net/gh/ASHISHDAITH/aaramora-platform@main/assets/brand-film/aaramora-master-16x9.mp4" type="video/mp4">
         Your browser does not support embedded video. Use the vertical film link or open the video file directly.
       </video>
       <p class="prototype-note" style="margin:10px 4px 2px">Audio is user-controlled. The film does not autoplay.</p>
@@ -1054,17 +1054,6 @@ document.querySelectorAll("[data-pause]").forEach((button) => {
     output.innerHTML = `<strong>${msg[0]}</strong><p>${msg[1]}</p>`;
   });
 });
-// Show the brand-film module only when the landscape media asset is present on the host.
-(async () => {
-  const filmSection = document.getElementById("brand-film");
-  if (!filmSection) return;
-  try {
-    const response = await fetch("assets/brand-film/aaramora-master-16x9.mp4", { method: "HEAD", cache: "no-store" });
-    if (response.ok) filmSection.hidden = false;
-  } catch (_) {
-    // Keep the module hidden on file:// previews and before the MP4 is uploaded.
-  }
-})();
 const menuToggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("main-nav");
 menuToggle.addEventListener("click", () => {
