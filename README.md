@@ -24,7 +24,7 @@ No npm install, database, account, remote fonts, analytics, AI API or backend is
 - India human-support routes, optional pause prompts and low-stimulation Night Help.
 - Overthinking Unload, Little Garden, untimed Puzzle Sanctuary, Creative Studio and Safe Corner.
 - Guided next steps, resource shelf and future community concept (not a live forum).
-- Women's Health: PMOS (formerly PCOS), endometriosis, heavy/painful periods, PMS/PMDD, menopause, thyroid, iron deficiency/anaemia and postpartum mental health.
+- Women's Health: PMOS (formerly PCOS), endometriosis, heavy/painful periods, PMS/PMDD, menopause, thyroid, iron deficiency/anaemia and postpartum mental health.\n- Relationships corner: attachment protest, attachment anxiety/avoidance concepts, pursue–withdraw patterns, conflict repair, boundaries, consent, breakups and family pressure, with unvalidated self-reflection tools and a safety-first route.
 
 ## Research and design materials
 
@@ -32,9 +32,9 @@ No npm install, database, account, remote fonts, analytics, AI API or backend is
 - `docs/PRODUCT_BLUEPRINT.md` — complete product role, journeys, feature scope, governance and roadmap.
 - `docs/DESIGN_RESEARCH_AND_DIRECTION.md` and `docs/DESIGN_SYSTEM.md` — design rationale and UI rules.
 - `docs/EXPERIENCE_MAP.md` — visitor journeys and information architecture.
-- `docs/WOMENS_HEALTH_RESEARCH.md` — women's-health research and clinical review boundaries.
+- `docs/WOMENS_HEALTH_RESEARCH.md` — women's-health research and clinical review boundaries.\n- `relationships.html` — dedicated relationship education corner and in-page reflection quizzes.\n- `docs/RELATIONSHIPS_RESEARCH.md` — curated attachment, conflict, relationship-education and interpersonal-violence references.\n- `docs/RELATIONSHIP_QUIZ_SPEC.md` — quiz design, outputs, privacy and release gates.\n- `SAFETY.md` — cross-site safety rules.
 - `docs/RESEARCH_SOURCES.md` — source register.
-- `docs/QA_CHECKLIST.md`, `docs/QA_RESULTS.md` and `docs/VALIDATION_NOTES.md` — quality gates, checks and remaining reviews.
+- `docs/QA_CHECKLIST.md`, `docs/QA_RESULTS.md` and `docs/VALIDATION_NOTES.md` — quality gates, checks and remaining reviews.\n- `tests/check_relationships.py` — static checks for relationship page safety, links and privacy boundaries.
 - `research/benchmark50.csv` — 50-site benchmark candidate list (not a verified ranking).
 - `research/mental-health-website-benchmark-report.md` — benchmark shortlist and product strategy.
 - `research/visual-report.html` — browser-viewable visual concept report.
@@ -45,7 +45,7 @@ No npm install, database, account, remote fonts, analytics, AI API or backend is
 
 This is an early **information and help-navigation prototype**, not therapy, diagnosis, prescribing, telemedicine or emergency response. It cannot promise trauma relief. Activities are optional; the prototype has no accounts, server-side health data, analytics, AI calls or persistent private journals.
 
-Health copy requires qualified clinical and native-language review before public release. Crisis resources must be rechecked against official sources at launch. Community remains a future concept until moderation, safeguarding, escalation and privacy operations are in place.
+Relationship reflection prompts are custom and unvalidated, not attachment-style or relationship diagnoses. The safety check is not a validated abuse risk assessment. Relationship-safety content requires review by a qualified clinician and safeguarding specialist. Health copy requires qualified clinical and native-language review before public release. Crisis resources must be rechecked against official sources at launch. Community remains a future concept until moderation, safeguarding, escalation and privacy operations are in place.
 
 ## Privacy
 

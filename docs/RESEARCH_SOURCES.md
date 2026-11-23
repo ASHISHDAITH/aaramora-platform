@@ -71,3 +71,22 @@ Research checked: 30 October 2026. These references inform design choices; they 
 - NHS postpartum psychosis: https://www.nhs.uk/mental-health/conditions/post-partum-psychosis/
 
 See `WOMENS_HEALTH_RESEARCH.md` for evidence interpretation, limitations, suggested public-facing wording and clinical governance gates.
+
+## Relationships corner references (research checked 24 November 2026)
+- Overall, Pietromonaco & Simpson (2022), adult attachment insecurity in couple/family relationships: https://doi.org/10.1038/s44159-021-00011-1
+- Hazan & Shaver (1987), romantic love as attachment: https://doi.org/10.1037/0022-3514.52.3.511
+- Bartholomew & Horowitz (1991), four-category model: https://doi.org/10.1037/0022-3514.61.2.226
+- Fraley & Shaver (2000), adult romantic attachment: https://doi.org/10.1037/1089-2680.4.2.132
+- Fraley (2019), attachment in adulthood: https://doi.org/10.1146/annurev-psych-010418-102813
+- Patel, Mahar & Webster (2022), romantic attachment and electronic messaging: https://doi.org/10.1089/cyber.2021.0060
+- Seedall et al. (2024), attachment and demand/withdraw in couple conflict: https://doi.org/10.1111/jmft.12729
+- Bradbury & Bodenmann (2020), interventions for couples: https://doi.org/10.1146/annurev-clinpsy-071519-020546
+- Doss et al. (2022), evidence-based couple relationship distress treatment review: https://doi.org/10.1111/jmft.12552
+- Renner (2026), updated/replication review of couple therapy models: https://doi.org/10.1111/jmft.70162
+- WHO, clinical handbook on care for women subjected to intimate-partner/sexual violence: https://www.who.int/publications/i/item/WHO-RHR-14.26
+- WHO, LIVES first-line support: https://www.who.int/publications/i/item/9789241517102
+- ACOG, Healthy Relationships: https://www.acog.org/womens-health/faqs/healthy-relationships
+- India WCD Women Helpline 181: https://wcd.gov.in/public/women/help
+- National Domestic Violence Hotline, couples therapy safety explainer (US context only): https://www.thehotline.org/resources/should-i-go-to-couples-therapy-with-my-abusive-partner/
+
+See `docs/RELATIONSHIPS_RESEARCH.md` for full citations, study limitations, reading list and copyright/sourcing rules.

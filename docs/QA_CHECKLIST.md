@@ -70,3 +70,17 @@
 - [ ] Postpartum psychosis wording and urgent route clinically reviewed.
 - [ ] English, Hindi, Marathi and Romanised Hindi content reviewed by native speakers; health copy also clinically reviewed.
 - [ ] Appointment-preparation worksheet does not send private notes to a server, analytics provider or AI service.
+
+## Relationships corner release gate
+- [ ] Relationship page reachable from home navigation and Explore card.
+- [ ] Attachment protest is explained as a descriptive concept, not a diagnosis.
+- [ ] Custom quizzes are explicitly labelled unvalidated; no scores, cutoffs or attachment labels.
+- [ ] Safety check appears before communication advice and quizzes.
+- [ ] Any Yes or Not sure routes to private safety support, not couple-repair steps.
+- [ ] All No results do not claim the relationship is safe.
+- [ ] No quiz data is stored, sent, tracked or placed in URLs.
+- [ ] No partner scoring, tracking, block bypassing, compatibility verdict or stay/leave advice.
+- [ ] Couples communication suggestions are explicitly limited to situations without coercion or fear.
+- [ ] 112, 181 and 14416 verified against official sources before launch; re-check Women Helpline State/UT coverage.
+- [ ] Clinician and safeguarding specialist approve content and safety logic.
+- [ ] Hindi, Marathi and Romanised Hindi translations reviewed by native speakers and clinicians where possible.

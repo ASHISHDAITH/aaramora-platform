@@ -60,3 +60,14 @@ Preserve the uploaded design system: warm paper, forest green, sage, pale blue, 
 
 ## Success measures
 Measure whether visitors can find a relevant route, understand service boundaries, use controls with keyboard/screen readers, locate human support and understand privacy. Do not optimise for time-on-site, daily streaks, disclosure volume or repeated engagement.
+
+
+## Relationships corner (added 24 November 2026)
+
+A separate `relationships.html` page is linked from the home navigation and Explore card. It provides plain-language education on attachment protest, attachment anxiety/avoidance dimensions, pursue–withdraw interaction, conflict repair, boundaries, consent, digital trust, breakups and family pressure.
+
+Two original, unvalidated reflection quizzes show only behaviours a visitor marked Sometimes/Often. They provide no score, clinical cutoff, attachment identity, partner score, compatibility result or stay/leave advice. Answers remain in page memory only and are not stored or transmitted.
+
+A non-scored safety check appears before quiz/communication content. Any Yes or Not sure about fear, control, sexual pressure, threats, stalking or physical harm routes to private support and away from joint repair exercises. It cannot certify that a relationship is safe.
+
+See `docs/RELATIONSHIPS_RESEARCH.md`, `docs/RELATIONSHIP_QUIZ_SPEC.md` and root `SAFETY.md`. A qualified clinician and a domestic-violence/safeguarding specialist must approve this content before public release.

@@ -67,3 +67,15 @@ The Kiran story is a short fictional metaphor about choice and pace, not a traum
 6. Can leave without saving, signing up or sharing private health history.
 
 PMOS page shows **PMOS (formerly PCOS)** and keeps PCOS as a search synonym while the terminology transitions.
+
+## Journey F — Visitor has a relationship question
+
+1. Open the separate Relationships corner without sign-up.
+2. Read the boundary note: education and reflection, not diagnosis or therapy.
+3. See the safety-first route before self-help communication advice.
+4. Choose a guide or optional reflection quiz.
+5. View only selected behaviour themes, with no score, label or partner assessment.
+6. Use direct, respectful communication scripts only if safe.
+7. Reach human support where fear, coercion, threats, sexual pressure or violence is present.
+
+Quiz answers are not stored, transmitted, analysed or used for advertising. Community remains outside the current build.
