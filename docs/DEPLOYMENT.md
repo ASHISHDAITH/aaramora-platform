@@ -3,23 +3,24 @@
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
 **Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_Fqfdf9uht4kjBwMnZAaPJ6WkSSjX`  
+**Latest deployment:** `dpl_HRQ1LQCvVZYRQnRcewg9vYnQf1Qi`  
 **Status:** READY · production · stable alias assigned
 
 ## Current release
 
 A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
 
-The refreshed deployment is a static snapshot of commit `3aef65fdc1f56bc3d9803ac7843ea275910f595e` on `main`. It contains:
-- `index.html`
+The latest deployment is a static snapshot of commit `f8c28f8aaf4a785257a3653416a8c7f57da521ee` on `main`. It contains:
+- `index.html` — simplified navigation, shorter hero copy and the 16:9 brand film in the hero
 - `wellbeing.html`
 - `relationships.html`
+- `check-ins.html`
 - `reading-library.html`
 - `assets/healing-garden.svg`
 - `assets/safe-corner.svg`
 - `assets/thought-river.svg`
 
-The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The refreshed homepage places the 16:9 master in the hero and references it through jsDelivr's GitHub CDN. The 9:16 version remains a separate link. Video playback is user-initiated; it does not autoplay. Three image-led pathway cards use free-to-use Pexels stock photography, with creator/source credits and descriptive alt text; those image requests are served externally by Pexels.
+The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The homepage now shows five common navigation destinations and groups the remaining destinations under “More”; all original links, sections and tools are retained. It uses shorter hero copy and places the 16:9 master in the hero, with the 9:16 version as a separate link. Video playback is user-initiated; it does not autoplay. Three image-led pathway cards use free-to-use Pexels stock photography, with creator/source credits and descriptive alt text; those image requests are served externally by Pexels.
 
 The Vercel deployment was created directly from the listed source files because Git repository integration was blocked. The project has Vercel SSO/password deployment protection disabled so the public static site can be visited without membership in the Vercel workspace.
 
@@ -39,8 +40,8 @@ Do not create another Vercel project just to retry the connection; the current p
 ## Verification notes
 
 - Vercel's deployment API reports `READY`, `target=production`, the stable `aaramora-platform.vercel.app` alias, and `aliasError=null`.
-- Vercel's source-file listing confirms all seven expected HTML/SVG files are present in the deployment.
-- The external browser-fetch tools in the execution environment could not retrieve the Vercel or Pexels image hosts, so an independent visitor-side browser smoke test remains pending. Open the production URL in a regular browser and test each route, internal navigation, mobile layout, image loading, video playback and the vertical-film link.
+- Vercel's source-file listing confirms all eight expected HTML/SVG files are present, including `check-ins.html`.
+- The external browser-fetch tools in the execution environment could not retrieve the Vercel or Pexels image hosts, so an independent visitor-side browser smoke test remains pending. Open the production URL in a regular browser and test all five routes, internal navigation including the “More” menu, mobile layout, image loading, video playback and the vertical-film link.
 - Confirm the video CDN returns the complete MP4s in a regular browser and check browser developer tools for failed requests before announcing the site publicly.
 
 ## No backend or health-data collection
@@ -61,9 +62,7 @@ A successful static deployment does not mean the platform is clinically approved
 Keep the public description clear: AARAMORA is an information and help-navigation prototype, not therapy, diagnosis, prescribing or an emergency response service.
 
 
-## Check-in page update — committed, not yet deployed
-The fifth static page, `check-ins.html`, and its research/specification files are committed to GitHub main at latest commit `91d361a2d80d5d6f046832a42b34a9bb1832d268`. It contains a non-diagnostic guide finder, women's-health appointment/print planner and original blank two-cycle symptom log. GitHub Actions run [45272441074](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45272441074) passed 21 tests, including the new page's inline JavaScript syntax check.
+## Check-ins page
 
-The currently verified Vercel production snapshot remains commit `3aef65fdc1f56bc3d9803ac7843ea275910f595e` and does not contain the new page. An attempt to refresh the existing production project through the connected Vercel deployment API returned HTTP 403 Forbidden; the Vercel sandbox-session API also returned 403. No deployment was created by these attempts. Do not announce `/check-ins.html` as live until Vercel shows a newer READY deployment and the route is tested in a regular browser.
+The `check-ins.html` page is included in the current production deployment. It contains the non-diagnostic guide finder, women's-health appointment/print planner and original blank two-cycle symptom log. The latest deployment's Vercel source file listing confirms the page is present. The route should still be checked in a regular browser as part of the visitor-side smoke test.
 
-To publish manually from a local clone after GitHub access is available: pull the current `main`, link the local repository to the existing Vercel project with `vercel link --project aaramora-platform --scope httpsgithubcomefigma54-devpp`, then run `vercel deploy --prod`. Confirm the resulting deployment is READY and that `/check-ins` is accessible. GitHub automatic deployments require the Vercel GitHub App to have access to the repository.
