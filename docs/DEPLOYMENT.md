@@ -3,14 +3,14 @@
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
 **Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_E9X4QwnFefiDtnHxXX4uyDpRzSPq`  
-**Status:** READY · production
+**Latest deployment:** `dpl_Fqfdf9uht4kjBwMnZAaPJ6WkSSjX`  
+**Status:** READY · production · stable alias assigned
 
 ## Current release
 
 A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
 
-The deployment is a static snapshot of commit `243b51188437d79a901b560df2e21dc573a8f793` on `main`. It contains:
+The refreshed deployment is a static snapshot of commit `3aef65fdc1f56bc3d9803ac7843ea275910f595e` on `main`. It contains:
 - `index.html`
 - `wellbeing.html`
 - `relationships.html`
@@ -19,7 +19,7 @@ The deployment is a static snapshot of commit `243b51188437d79a901b560df2e21dc57
 - `assets/safe-corner.svg`
 - `assets/thought-river.svg`
 
-The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The homepage references those exact files through jsDelivr's GitHub CDN. Video playback is user-initiated; it does not autoplay.
+The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The refreshed homepage places the 16:9 master in the hero and references it through jsDelivr's GitHub CDN. The 9:16 version remains a separate link. Video playback is user-initiated; it does not autoplay. Three image-led pathway cards use free-to-use Pexels stock photography, with creator/source credits and descriptive alt text; those image requests are served externally by Pexels.
 
 The Vercel deployment was created directly from the listed source files because Git repository integration was blocked. The project has Vercel SSO/password deployment protection disabled so the public static site can be visited without membership in the Vercel workspace.
 
@@ -38,9 +38,9 @@ Do not create another Vercel project just to retry the connection; the current p
 
 ## Verification notes
 
-- Vercel's deployment API reports `READY`, `target=production`, and `aliasError=null`.
+- Vercel's deployment API reports `READY`, `target=production`, the stable `aaramora-platform.vercel.app` alias, and `aliasError=null`.
 - Vercel's source-file listing confirms all seven expected HTML/SVG files are present in the deployment.
-- This execution environment's browser and shell fetchers could not retrieve the new Vercel host, so an independent HTTP/browser smoke test is still pending. Open the production URL in a regular browser and test each route, internal navigation, mobile layout, video playback and the vertical-film link.
+- The external browser-fetch tools in the execution environment could not retrieve the Vercel or Pexels image hosts, so an independent visitor-side browser smoke test remains pending. Open the production URL in a regular browser and test each route, internal navigation, mobile layout, image loading, video playback and the vertical-film link.
 - Confirm the video CDN returns the complete MP4s in a regular browser and check browser developer tools for failed requests before announcing the site publicly.
 
 ## No backend or health-data collection
