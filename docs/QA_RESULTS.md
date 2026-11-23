@@ -140,3 +140,11 @@
 - Local browser re-check at 1440, 390 and 320 CSS px: both support contacts measure 44px high, axe-core 4.10.3 reports 0 violations (47 passes, 0 incomplete), and no horizontal overflow or page/console errors were reported.
 - Latest full Python suite after this change: 62 tests passed; catalogue validator passed.
 - Human testing remains outstanding as specified in docs/review/ACCESSIBILITY_MANUAL_TEST_PLAN.md.
+
+
+
+## Focused skip-link and touch-target recheck · 24 November 2026
+- Focused skip link moves into its own flex row in the top bar. It no longer overlays the Tele-MANAS phone target on narrow screens.
+- Live-style Chromium + axe-core 4.10.3 with the skip link focused at 1440px, 390px and 320px: zero violations.
+- Support links: 44px height, 24px gap; no horizontal overflow at 1440px, 390px or 320px.
+- Latest local validation: 26 records, 4 language groups, 22 scheduled Indian languages; 63 Python tests passed.
