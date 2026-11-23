@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import unittest
+from scripts.check_library_links import request_url
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "reading-library.html").read_text(encoding="utf-8")
@@ -115,6 +116,21 @@ class MultilingualCatalogueTests(unittest.TestCase):
             with self.subTest(record=record["id"]):
                 self.assertEqual("pending", record["editorialReview"]["nativeLanguage"])
                 self.assertEqual("pending", record["editorialReview"]["culturalContext"])
+
+
+    def test_unicode_source_urls_are_percent_encoded_for_http_requests(self):
+        urls = [
+            "https://bn.wikisource.org/wiki/গীতাঞ্জলি_(১৯১৩)",
+            "https://mr.wikisource.org/wiki/ज्ञानेश्वरी",
+            "https://pa.wikisource.org/wiki/ਪੰਨਾ:Guru_Granth_Sahib_Ji.pdf/1",
+            "https://ur.wikisource.org/wiki/دیوان_غالب",
+            "https://or.wikisource.org/wiki/ଓଡ଼ିଆ_ଭାଗବତ/୧",
+        ]
+        for url in urls:
+            with self.subTest(url=url):
+                encoded = request_url(url)
+                self.assertTrue(encoded.isascii())
+                self.assertIn("%", encoded)
 
     def test_no_original_section_removed(self):
         for anchor in ("free-downloads", "scripture-shelf", "workbooks-and-articles", "relationship-open-learning", "attachment-books", "faith-wisdom", "novels-and-classics", "github-shelves", "licensing"):
