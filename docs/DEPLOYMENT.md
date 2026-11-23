@@ -107,3 +107,8 @@ Each card now shows its known writing system separately from language and an exp
 The Reading Library catalogue has grown to 26 entries. It now includes exact source pages for the Hindi Ramcharitmanas, Marathi Jnaneshwari, Bengali Gitanjali 1913, one Punjabi Guru Granth Sahib folio, Urdu Diwan-e-Ghalib, the first Skandha of the Odia Bhagabata, Tamil Tirukkural, Gujarati/Kannada/Malayalam book catalogues, the Arabic Safahat platform and four Project Gutenberg editions in French, German, Spanish and Portuguese.
 
 Each card now shows its known writing system separately from language and an explicit editorial-review note. Native-language, cultural-context and source-text accessibility review remain pending. The source pages have not been converted into AARAMORA-hosted book files.
+
+
+## Live-browser audit of the multilingual library · 24 November 2026
+
+The live Reading Library page, JSON catalogue and JSON schema returned HTTP 200. The browser rendered all 46 original static cards, all 26 catalogue entries and 10 page sections. Independent filters were exercised for Marathi, Sikh, audio access, permission-required rights, academic level, EPUB format and the GRETIL search. At 390px width the page had no horizontal overflow. The first keyboard Tab focused the visible skip link, and Enter moved to main content. Axe-core 4.10.3 reported zero WCAG 2.2 AA/best-practice violations on the audited page (46 passes, no incomplete findings). This was an automated browser/axe scan, not a human NVDA/VoiceOver/TalkBack or native-reader review.
