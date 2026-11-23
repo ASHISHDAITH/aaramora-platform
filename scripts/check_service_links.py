@@ -50,19 +50,29 @@ def check_url(url: str) -> tuple[str, str]:
         "User-Agent": USER_AGENT,
         "Accept": "text/html,application/json;q=0.8,*/*;q=0.5",
     }
+
+    # First try a cheap HEAD request. Some government hosts route or filter
+    # HEAD differently from browser GET requests, so a HEAD 404 is not final.
+    head_detail = "HEAD request did not complete"
+    retry_with_range = False
     try:
         request = Request(url, headers=headers, method="HEAD")
         with urlopen(request, timeout=TIMEOUT_SECONDS) as response:
             return "ok", f"HTTP {response.status} · {response.geturl()}"
     except HTTPError as error:
-        if error.code in CONFIRMED_DEAD:
-            return "dead", f"HTTP {error.code}"
-        if error.code not in RESTRICTED_HEAD:
-            return "inconclusive", f"HTTP {error.code}"
+        head_detail = f"HEAD HTTP {error.code}"
+        if error.code in CONFIRMED_DEAD or error.code in RESTRICTED_HEAD:
+            retry_with_range = True
+        else:
+            return "inconclusive", f"{head_detail} (not treated as a dead link)"
     except (URLError, TimeoutError, OSError) as error:
-        return "inconclusive", f"network issue: {error}"
+        return "inconclusive", f"HEAD network/TLS issue: {error}"
 
-    # Some official government hosts reject HEAD. Ask for one byte only.
+    if not retry_with_range:
+        return "inconclusive", head_detail
+
+    # Retry with a one-byte range. Only a single byte is consumed; page bodies
+    # are never saved, parsed or processed.
     try:
         range_headers = dict(headers)
         range_headers["Range"] = "bytes=0-0"
@@ -72,10 +82,10 @@ def check_url(url: str) -> tuple[str, str]:
             return "ok", f"HTTP {response.status} · one-byte range · {response.geturl()}"
     except HTTPError as error:
         if error.code in CONFIRMED_DEAD:
-            return "dead", f"HTTP {error.code}"
-        return "inconclusive", f"HTTP {error.code} (access may be restricted)"
+            return "dead", f"{head_detail}; range request HTTP {error.code}"
+        return "inconclusive", f"{head_detail}; range request HTTP {error.code} (access may be restricted)"
     except (URLError, TimeoutError, OSError) as error:
-        return "inconclusive", f"network issue: {error}"
+        return "inconclusive", f"{head_detail}; range request network/TLS issue: {error}"
 
 
 def write_summary(results: list[tuple[str, str, str]]) -> None:
