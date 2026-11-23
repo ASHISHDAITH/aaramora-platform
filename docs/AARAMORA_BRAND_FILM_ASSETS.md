@@ -18,8 +18,8 @@ Vertical export SHA-256: `053d2f79b0990325b408542c4e2c1f13ead8c5e88e39cfa950f0f7
 
 ## Website usage
 
-- Use `/assets/brand-film/aaramora-master-16x9.mp4` for the homepage film, preferably as a muted, autoplaying, looped background/video with a poster image, captions or an adjacent text alternative, and a pause control.
-- Use `/assets/brand-film/aaramora-instagram-9x16.mp4` for vertical social previews and mobile-first campaign placements.
+- The homepage film section uses `assets/brand-film/aaramora-master-16x9.mp4` as a user-initiated video with native controls, `preload=none`, `playsinline` and a poster image. It does not autoplay.
+- Use `assets/brand-film/aaramora-instagram-9x16.mp4` for vertical social previews and mobile-first campaign placements.
 - Do not autoplay audio. Respect reduced-motion and data-saver preferences. Provide a poster image and accessible description.
 - Avoid loading the video on low-bandwidth connections unless the visitor explicitly starts it.
 
