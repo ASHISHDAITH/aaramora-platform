@@ -6,8 +6,8 @@ Approved first campaign exports supplied on 2026-11-24.
 
 | Local filename | Intended repository path | Format | Duration | Resolution | FPS | Codec | Size |
 |---|---|---:|---:|---:|---:|---|---:|
-| AARAMORA_MASTER_16_9(2).mp4 | public/media/brand-film/aaramora-master-16x9.mp4 | 16:9 | 33.325 s | 1920x1080 | 30 | H.264 + AAC | 12,114,271 bytes |
-| AARAMORA_INSTAGRAM_9_16(2).mp4 | public/media/brand-film/aaramora-instagram-9x16.mp4 | 9:16 | 33.325 s | 1080x1920 | 30 | H.264 + AAC | 10,346,721 bytes |
+| AARAMORA_MASTER_16_9(2).mp4 | assets/brand-film/aaramora-master-16x9.mp4 | 16:9 | 33.325 s | 1920x1080 | 30 | H.264 + AAC | 12,114,271 bytes |
+| AARAMORA_INSTAGRAM_9_16(2).mp4 | assets/brand-film/aaramora-instagram-9x16.mp4 | 9:16 | 33.325 s | 1080x1920 | 30 | H.264 + AAC | 10,346,721 bytes |
 | AARAMORA_CLEAN_NO_ADDED_AUDIO(2).mp4 | Not stored separately | 16:9 | 33.325 s | 1920x1080 | 30 | H.264 + AAC | 12,114,271 bytes |
 
 ## Important verification note
@@ -18,8 +18,8 @@ Vertical export SHA-256: `053d2f79b0990325b408542c4e2c1f13ead8c5e88e39cfa950f0f7
 
 ## Website usage
 
-- Use `/media/brand-film/aaramora-master-16x9.mp4` for the homepage film, preferably as a muted, autoplaying, looped background/video with a poster image, captions or an adjacent text alternative, and a pause control.
-- Use `/media/brand-film/aaramora-instagram-9x16.mp4` for vertical social previews and mobile-first campaign placements.
+- Use `/assets/brand-film/aaramora-master-16x9.mp4` for the homepage film, preferably as a muted, autoplaying, looped background/video with a poster image, captions or an adjacent text alternative, and a pause control.
+- Use `/assets/brand-film/aaramora-instagram-9x16.mp4` for vertical social previews and mobile-first campaign placements.
 - Do not autoplay audio. Respect reduced-motion and data-saver preferences. Provide a poster image and accessible description.
 - Avoid loading the video on low-bandwidth connections unless the visitor explicitly starts it.
 
@@ -40,8 +40,8 @@ This manifest records the inspected local exports. The MP4 binary files have **n
 
 ```powershell
 New-Item -ItemType Directory -Force public/media/brand-film | Out-Null
-Copy-Item "$env:USERPROFILE\Downloads\AARAMORA_MASTER_16_9(2).mp4" "public/media/brand-film/aaramora-master-16x9.mp4"
-Copy-Item "$env:USERPROFILE\Downloads\AARAMORA_INSTAGRAM_9_16(2).mp4" "public/media/brand-film/aaramora-instagram-9x16.mp4"
+Copy-Item "$env:USERPROFILE\Downloads\AARAMORA_MASTER_16_9(2).mp4" "assets/brand-film/aaramora-master-16x9.mp4"
+Copy-Item "$env:USERPROFILE\Downloads\AARAMORA_INSTAGRAM_9_16(2).mp4" "assets/brand-film/aaramora-instagram-9x16.mp4"
 git add public/media/brand-film
 git commit -m "Add AARAMORA brand film exports"
 git push origin main
