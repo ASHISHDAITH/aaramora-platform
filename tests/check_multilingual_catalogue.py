@@ -108,7 +108,7 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn("header page is kept intact", tamil["rights"]["reuse"])
         bengali = records["bn-gitanjali-1913-wikisource"]
         self.assertIn("United States", bengali["rights"]["licence"])
-        self.assertIn("outside the United States", bengali["rights"]["reuse"])
+        self.assertIn("worldwide", bengali["rights"]["reuse"])
 
     def test_language_catalogue_does_not_mark_native_review_as_complete_without_review(self):
         for record in DATA["records"]:
