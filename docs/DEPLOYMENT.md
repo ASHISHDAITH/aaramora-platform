@@ -174,3 +174,8 @@ Four independent-review files now exist under `docs/review/`. They are reviewer 
 
 ### Support-contact touch target correction · 24 November 2026
 The Tele-MANAS and Emergency 112 support links now have a 44px minimum height and 24px gap. This avoids tightly clustered phone links on narrow screens. The latest candidate passes the 62-test Python suite and local axe/viewport checks. Human assistive-technology testing remains pending.
+
+
+
+### Focused keyboard state verified · final candidate
+A production-like Chromium audit found that the skip link was positioned over the Tele-MANAS target at narrow widths while focused. The focused skip link now occupies its own top-bar row. The target links are 44px high with 24px spacing. Axe-core 4.10.3 returned zero violations/incomplete findings at 1440px, 390px and 320px both with and without the skip link focused. All 63 tests pass.
