@@ -3,14 +3,14 @@
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
 **Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_ExFwq5vakQ7x5cB1pYfzDxTVTNGt`  
+**Latest deployment:** `dpl_AeJo4qnPrbhdzU5Qfr77r6kJLSGY`  
 **Status:** READY · production · stable alias assigned
 
 ## Current release
 
 A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
 
-The latest deployment is a static snapshot of commit `05eec4ca64501910ecc2492607cc24f945bb5c48` on `main`. It contains:
+The latest deployment is a static snapshot of commit `f4d5fe44062a69cfb68dd5e169403b531c2d71c3` on `main`. It contains:
 - `index.html` — simplified navigation, shorter hero copy and the 16:9 brand film in the hero
 - `wellbeing.html`
 - `relationships.html`
