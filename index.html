@@ -8,13 +8,13 @@
 <title>AARAMORA | A gentle place to begin again</title>
 <style>
 :root{
-  --paper:#F5F2E9; --paper-deep:#ECE9DF; --surface:#FFFEFA;
-  --ink:#203B32; --ink-soft:#40564C; --muted:#586B62;
-  --sage:#DCE8DB; --sage-deep:#BCD0BD; --blue:#DFE9E8;
-  --lilac:#EAE4EF; --clay:#EAD8CB; --gold:#E9C779;
-  --line:#D7DED4; --focus:#1D5E9B; --forest:#23483C;
-  --radius:24px; --shadow:0 14px 44px rgba(31,57,46,.075);
-  --max:1180px; --body:Arial,"Noto Sans","Noto Sans Devanagari",system-ui,sans-serif;
+  --paper:#F6F3EB; --paper-deep:#EEEAE0; --surface:#FFFEFA;
+  --ink:#203C34; --ink-soft:#415A4F; --muted:#64746A;
+  --sage:#DFE9DE; --sage-deep:#B8CDB9; --blue:#E2EBE9;
+  --lilac:#E7E1EA; --clay:#EBD8CC; --gold:#DDBA76;
+  --line:#D9E1D8; --focus:#1E5E91; --forest:#20483D;
+  --radius:26px; --shadow:0 18px 52px rgba(31,57,46,.085);
+  --max:1260px; --body:"Aptos","Segoe UI",Arial,"Noto Sans","Noto Sans Devanagari",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
@@ -286,6 +286,93 @@ details p{color:var(--muted);margin:12px 0 0;font-size:.94rem}
 @media(max-width:850px){.resource-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.resource-section{padding:56px 0}.resource-grid{grid-template-columns:1fr}}
 
+
+/* AARAMORA visual refresh · November 2026 */
+.support-ribbon{background:#E5EDE5;border-bottom-color:#D3DED3}
+.site-header{background:rgba(246,243,235,.94);border-bottom-color:rgba(210,220,211,.9)}
+.header-inner{height:82px}
+.brand{font-size:1.06rem;letter-spacing:-.035em}
+.brand-mark{background:#E0EADF;border-radius:15px}
+.main-nav{gap:clamp(12px,1.55vw,23px)}
+.main-nav a{font-size:.88rem;letter-spacing:-.01em}
+.language-select,.quick-exit{border-color:#D5DED5}
+.button{min-height:52px;padding:13px 22px}
+.button-primary{background:#20483D;box-shadow:0 7px 18px rgba(32,72,61,.13)}
+.button-primary:hover{background:#183B32}
+.eyebrow{color:#597969;letter-spacing:.18em}
+.hero{padding:72px 0 68px}
+.hero-grid{grid-template-columns:.96fr 1.04fr;gap:clamp(34px,4.2vw,62px)}
+h1{font-size:clamp(3.25rem,5.65vw,5.65rem);line-height:.99;max-width:670px;margin:18px 0 22px;letter-spacing:-.047em}
+.hero-copy{max-width:600px;font-size:clamp(1.04rem,1.28vw,1.17rem);line-height:1.72;color:#4E6258}
+.hero-actions{gap:11px;margin-top:29px}
+.hero-footnote{max-width:570px;margin-top:21px}
+.intro-boundary{margin-top:23px}
+.hero-media{position:relative;min-width:0;padding:clamp(14px,1.45vw,20px);border-radius:32px;background:linear-gradient(145deg,#E3ECE3 0%,#E8EDE7 48%,#E8E1D6 100%);border:1px solid #D4DED4;box-shadow:0 24px 68px rgba(34,64,51,.12)}
+.hero-media:before{content:"";position:absolute;width:210px;height:210px;right:-65px;top:-80px;border-radius:50%;background:rgba(238,220,185,.35);pointer-events:none}
+.hero-media-head{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:3px 5px 14px}
+.hero-media-label,.visual-path-kicker{display:block;color:#607B6A;text-transform:uppercase;font-size:.7rem;font-weight:850;letter-spacing:.15em}
+.hero-media-head h2{font:500 clamp(1.45rem,2.1vw,2rem)/1.12 Georgia,"Times New Roman",serif;color:#24483A;letter-spacing:-.035em;margin:7px 0 0}
+.hero-media-duration{flex:0 0 auto;border:1px solid rgba(70,104,81,.2);background:rgba(255,254,250,.62);border-radius:999px;padding:6px 11px;color:#52695B;font-size:.78rem;font-weight:750;white-space:nowrap}
+.hero-video-shell{position:relative;z-index:1;overflow:hidden;border-radius:22px;background:#203C34;box-shadow:0 13px 30px rgba(28,55,44,.16)}
+.hero-video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#203C34}
+.hero-media-foot{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 5px 1px;color:#54695D;font-size:.82rem}
+.hero-media-foot a{color:#244F40;font-weight:800;text-decoration:none;border-bottom:1px solid #9EB5A3;padding-bottom:2px}
+.hero-media-foot a:hover{border-color:#244F40}
+.visual-path-section{padding:78px 0 80px;background:#F0EEE6;border-block:1px solid #E2E0D6}
+.visual-path-intro{display:grid;grid-template-columns:1fr .82fr;gap:45px;align-items:end;margin-bottom:28px}
+.visual-path-intro h2{max-width:650px}
+.visual-path-intro .lead{margin:0 0 4px}
+.visual-path-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.visual-path-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:#FFFEFA;border:1px solid #DDE1D8;border-radius:24px;text-decoration:none;box-shadow:0 8px 30px rgba(37,62,49,.045);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.visual-path-card:hover{transform:translateY(-3px);border-color:#B4C8B6;box-shadow:0 18px 38px rgba(37,62,49,.09)}
+.visual-path-image{height:clamp(175px,18vw,230px);position:relative;overflow:hidden;background:#DDE7DD}
+.visual-path-image:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(18,42,32,.24));pointer-events:none}
+.visual-path-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s ease}
+.visual-path-card:hover .visual-path-image img{transform:scale(1.025)}
+.visual-path-number{position:absolute;z-index:1;left:15px;top:15px;display:grid;place-items:center;min-width:37px;height:37px;border-radius:50%;background:rgba(255,254,250,.88);color:#254638;font-size:.78rem;font-weight:850}
+.visual-path-content{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:22px 22px 23px;flex:1}
+.visual-path-content h3{font:500 clamp(1.35rem,1.8vw,1.65rem)/1.18 Georgia,"Times New Roman",serif;letter-spacing:-.025em;color:#213E34;margin:2px 0 0}
+.visual-path-content p{font-size:.9rem;line-height:1.62;color:#647268;margin:0 0 9px}
+.visual-path-link{margin-top:auto;color:#315C49;font-size:.85rem;font-weight:800}
+.visual-path-link span{padding-left:4px}
+.visual-path-note{margin:17px 0 0;color:#748176;font-size:.76rem;line-height:1.6}
+.visual-path-note a{color:#526D5D;text-underline-offset:3px}
+.section{padding:82px 0}
+.section-alt{background:#F5F2EA}
+.choice-card{border-radius:22px;box-shadow:0 5px 20px rgba(37,62,49,.035)}
+.choice-card:hover{box-shadow:0 14px 32px rgba(37,62,49,.09)}
+.story-section{background:#E8E8DF}
+.story-art{background:linear-gradient(145deg,#DBE8DC,#E9E2D5)}
+.womens-section{background:#F1ECE6}
+.support-section{background:#20483D}
+.footer{background:#EAE9E0}
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:33px}
+  .hero-media{max-width:790px;width:100%;margin-inline:auto}
+  .visual-path-intro{grid-template-columns:1fr;gap:10px}
+  .visual-path-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .visual-path-card:last-child{grid-column:span 2}
+  .header-inner{gap:13px}
+}
+@media(max-width:650px){
+  .header-inner{height:66px}
+  .main-nav{top:66px}
+  .hero{padding:42px 0 48px}
+  h1{font-size:clamp(2.85rem,12.2vw,3.8rem);line-height:1.02}
+  .hero-media{padding:11px;border-radius:24px}
+  .hero-media-head h2{font-size:1.38rem}
+  .hero-media-foot{font-size:.75rem;align-items:flex-start;flex-direction:column;gap:7px}
+  .visual-path-section{padding:55px 0}
+  .visual-path-grid{grid-template-columns:1fr;gap:13px}
+  .visual-path-card:last-child{grid-column:auto}
+  .visual-path-image{height:220px}
+  .visual-path-content{padding:19px}
+  .section{padding:58px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .visual-path-card,.visual-path-image img{transition:none}
+}
+
 </style>
 </head>
 <body>
@@ -357,59 +444,78 @@ details p{color:var(--muted);margin:12px 0 0;font-size:.94rem}
       <p class="intro-boundary">This platform offers information and help navigation. It is not therapy, diagnosis or an emergency service.</p>
     </div>
 
-    <div class="hero-scene" role="img" aria-label="A gentle illustrated garden path, open window and a small warm firefly light">
-      <svg class="scene-svg" viewBox="0 0 660 470" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="sceneBg" x1="330" y1="0" x2="330" y2="470" gradientUnits="userSpaceOnUse"><stop stop-color="#EAF0E7"/><stop offset="1" stop-color="#D3E2DE"/></linearGradient>
-          <radialGradient id="lightGlow"><stop stop-color="#FFF4C3" stop-opacity=".95"/><stop offset="1" stop-color="#FFF4C3" stop-opacity="0"/></radialGradient>
-        </defs>
-        <circle cx="516" cy="105" r="72" fill="#F0E4C9" opacity=".8"/>
-        <path d="M0 275C105 218 194 233 278 273c77 37 156 27 220-5 61-31 115-28 162-4v206H0V275Z" fill="#BED1BE"/>
-        <path d="M0 332c97-39 185-23 271 18 84 40 165 32 234 2 61-26 105-24 155-5v128H0V332Z" fill="#9ABAA0"/>
-        <path d="M0 390c108-46 188-19 268 20 93 45 171 32 247 7 55-18 97-19 145-5v89H0v-111Z" fill="#6F987E"/>
-        <path d="M154 470c31-62 71-96 122-122 51-26 78-49 100-92 25-49 57-71 111-96" stroke="#F3E9D5" stroke-width="18" stroke-linecap="round"/>
-        <path d="M154 470c31-62 71-96 122-122 51-26 78-49 100-92 25-49 57-71 111-96" stroke="#D5C8A9" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 12"/>
-        <ellipse cx="312" cy="344" rx="24" ry="9" fill="#E8DDC9"/><ellipse cx="355" cy="291" rx="20" ry="8" fill="#E8DDC9"/><ellipse cx="397" cy="235" rx="17" ry="6" fill="#E8DDC9"/>
-        <g opacity=".95">
-          <path d="M68 370c-17-31-8-56 12-69-2 27 5 44 19 57-7-28 2-48 22-60 4 27-1 48-17 61 20-8 37-5 51 6-22 19-52 23-87 5Z" fill="#6D9678"/>
-          <path d="M556 365c-11-25-5-44 11-57 0 20 7 36 21 47-5-22 2-40 19-49 3 23-2 39-16 50 18-6 32-4 44 6-20 17-45 18-79 3Z" fill="#6B9276"/>
-          <path d="M102 407c-8-20-4-35 8-46 1 17 6 28 17 38-4-17 2-32 15-39 2 18-2 31-13 40 15-4 25-2 34 6-16 13-36 14-61 1Z" fill="#557F68"/>
-        </g>
-        <!-- A tiny light character: decorative, not an interactive persona -->
-        <circle cx="466" cy="170" r="67" fill="url(#lightGlow)"/>
-        <g transform="translate(448 151)">
-          <path d="M17 14c-8-11-19-12-24-5-5 8 2 17 12 17 6 0 10-4 12-12Z" fill="#F6DFA0"/>
-          <path d="M22 14c8-11 19-12 24-5 5 8-2 17-12 17-6 0-10-4-12-12Z" fill="#E8C778"/>
-          <ellipse cx="20" cy="21" rx="6.5" ry="11" fill="#496E54"/>
-          <circle cx="18" cy="19" r="1.5" fill="#FFF9E7"/><circle cx="23" cy="19" r="1.5" fill="#FFF9E7"/>
-          <path d="M20 31v8M13 39h14" stroke="#496E54" stroke-width="2" stroke-linecap="round"/>
-          <path d="M14 7c-7-9-14-9-19-7M26 7c7-9 14-9 19-7" stroke="#6C8C6E" stroke-width="1.8" stroke-linecap="round"/>
-        </g>
-        <g fill="#FFF9E8" opacity=".85"><circle cx="137" cy="103" r="2"/><circle cx="223" cy="74" r="1.5"/><circle cx="352" cy="115" r="2"/><circle cx="581" cy="75" r="1.5"/></g>
-      </svg>
-      <span class="scene-caption">A light can show one step. You choose the path.</span>
+    <div class="hero-media" id="brand-film" aria-labelledby="hero-film-heading">
+      <div class="hero-media-head">
+        <div>
+          <span class="hero-media-label">AARAMORA · BRAND FILM</span>
+          <h2 id="hero-film-heading">A gentle place to begin again.</h2>
+        </div>
+        <span class="hero-media-duration">33 sec</span>
+      </div>
+      <div class="hero-video-shell">
+        <video class="hero-video" id="brand-film-video" controls preload="none" playsinline
+          poster="https://images.unsplash.com/photo-1752659503681-e41cb64fb870?auto=format&fit=crop&w=1400&q=82"
+          aria-label="AARAMORA's short film about a quiet morning, a care conversation, journaling, a garden and human connection">
+          <source src="https://cdn.jsdelivr.net/gh/ASHISHDAITH/aaramora-platform@main/assets/brand-film/aaramora-master-16x9.mp4" type="video/mp4">
+          Your browser does not support embedded video. Use the vertical film link below or open the video file directly.
+        </video>
+      </div>
+      <div class="hero-media-foot">
+        <span>Six quiet scenes · sound is optional</span>
+        <a href="https://cdn.jsdelivr.net/gh/ASHISHDAITH/aaramora-platform@main/assets/brand-film/aaramora-instagram-9x16.mp4" target="_blank" rel="noopener noreferrer">Watch vertical edit <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="brand-film-section" id="brand-film" aria-labelledby="brand-film-title">
-  <div class="wrap brand-film-grid">
-    <div class="brand-film-copy">
-      <div class="eyebrow">AARAMORA · Our first story</div>
-      <h2 id="brand-film-title">A gentle place to begin again.</h2>
-      <p class="lead">A short film about making room for your thoughts, finding care you can trust and feeling heard by another person.</p>
-      <p class="prototype-note">This film is an introduction to the platform, not a promise of treatment or recovery. You can watch, pause or skip it.</p>
-      <div class="brand-film-actions">
-        <a class="button button-secondary" href="https://cdn.jsdelivr.net/gh/ASHISHDAITH/aaramora-platform@main/assets/brand-film/aaramora-instagram-9x16.mp4" target="_blank" rel="noopener noreferrer">View the vertical film</a>
+<section class="visual-path-section" aria-labelledby="visual-path-title">
+  <div class="wrap">
+    <div class="visual-path-intro">
+      <div>
+        <div class="eyebrow">A few ways to begin</div>
+        <h2 id="visual-path-title">Care can start in different places.</h2>
       </div>
+      <p class="lead">A private thought, a conversation, or a question you have been carrying. Choose what feels useful. There is no sequence to follow.</p>
     </div>
-    <div class="brand-film-frame">
-      <video class="brand-film-video" id="brand-film-video" controls preload="none" playsinline poster="assets/healing-garden.svg" aria-label="AARAMORA brand film: a quiet morning, a care conversation, journaling, a garden and human connection">
-        <source src="https://cdn.jsdelivr.net/gh/ASHISHDAITH/aaramora-platform@main/assets/brand-film/aaramora-master-16x9.mp4" type="video/mp4">
-        Your browser does not support embedded video. Use the vertical film link or open the video file directly.
-      </video>
-      <p class="prototype-note" style="margin:10px 4px 2px">Audio is user-controlled. The film does not autoplay.</p>
+    <div class="visual-path-grid">
+      <a class="visual-path-card" href="#experiences">
+        <div class="visual-path-image">
+          <img src="https://images.unsplash.com/photo-1752659503681-e41cb64fb870?auto=format&fit=crop&w=1400&q=82" alt="A woman writing in a notebook beside a window" loading="lazy" decoding="async">
+          <span class="visual-path-number">01</span>
+        </div>
+        <div class="visual-path-content">
+          <span class="visual-path-kicker">Make a little room</span>
+          <h3>Give a thought somewhere to land.</h3>
+          <p>Use an optional private reflection tool. Write only what you are comfortable writing.</p>
+          <span class="visual-path-link">Explore reflection tools <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="visual-path-card" href="#supporter">
+        <div class="visual-path-image">
+          <img src="https://images.unsplash.com/photo-1707997085351-522591e45014?auto=format&fit=crop&w=1400&q=82" alt="Two women talking together on a garden path" loading="lazy" decoding="async">
+          <span class="visual-path-number">02</span>
+        </div>
+        <div class="visual-path-content">
+          <span class="visual-path-kicker">Find your people</span>
+          <h3>You do not have to hold every thought alone.</h3>
+          <p>Explore ways to listen, ask for support and have a conversation at your own pace.</p>
+          <span class="visual-path-link">Read about connection <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="visual-path-card" href="#support">
+        <div class="visual-path-image">
+          <img src="https://images.unsplash.com/photo-1758691462878-6edc3d3da1be?auto=format&fit=crop&w=1400&q=82" alt="A doctor speaking with a patient during a clinic appointment" loading="lazy" decoding="async">
+          <span class="visual-path-number">03</span>
+        </div>
+        <div class="visual-path-content">
+          <span class="visual-path-kicker">Get clear information</span>
+          <h3>Find a person who can help with the next question.</h3>
+          <p>Understand support options and prepare for a conversation with a qualified professional.</p>
+          <span class="visual-path-link">Find human support <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
     </div>
+    <p class="visual-path-note">Illustrative photography only. These images are not AARAMORA visitors, reviewers, clinicians or testimonials. Photos: <a href="https://unsplash.com/photos/a-woman-writes-in-a-notebook-by-a-window-fhMxU5TCNhw" target="_blank" rel="noopener">Sweet Life</a>, <a href="https://unsplash.com/photos/two-women-standing-on-a-path-talking-to-each-other-ra-SHVOXFBo" target="_blank" rel="noopener">Anastasiia Parukh</a> and <a href="https://unsplash.com/photos/doctor-consults-with-patient-in-medical-office-iyeUwItlIPk" target="_blank" rel="noopener">Vitaly Gariev</a> via Unsplash.</p>
   </div>
 </section>
 
