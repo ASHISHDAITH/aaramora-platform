@@ -43,8 +43,31 @@
 
 ## Follow-up repository QA — 24 November 2026
 
-- The first GitHub Actions run (commit `7dc13ce`) executed 18 tests and had one failure: a stale PMOS cognition wording assertion expected “not statistically significant”, while the page uses “statistically non-significant”. The assertion has been corrected to match the evidence-qualified page wording.
-- The relationship test now verifies the third optional boundaries reflection and the complete 40-concept library.
-- The content-check workflow supports manual `workflow_dispatch` as well as push and pull-request triggers.
-- The corrected run must complete successfully before the content-check CI gate can be called passing.
-- Vercel discovery found no existing Vercel project linked to `ASHISHDAITH/aaramora-platform`; the connected Hobby team currently has other Git-linked projects only.
+### Automated CI
+- Initial CI run `45263329157` failed one assertion because the test expected “not statistically significant” while the page correctly said “statistically non-significant”.
+- The assertion was corrected and the relationship test expanded to check all 40 concept cards and all three optional reflections.
+- Latest CI run: [45266028057](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45266028057), commit `4fe947eaeba87ac0dd4ad09683c8fda09402cf35`, conclusion **success**.
+- Result: **18 tests passed**. The workflow runs on push, pull request and manual `workflow_dispatch`.
+
+### Deployment
+- No live Aaramora deployment has been verified.
+- The connected Vercel Hobby team does not currently list a project linked to `ASHISHDAITH/aaramora-platform`.
+- Vercel project lookup/creation through the connected account returned HTTP 403 Forbidden. No project or deployment was created.
+- A Vercel GitHub App authorization for this repository, or a user-completed import from the Vercel dashboard, is still required. See `docs/DEPLOYMENT.md`.
+
+### Brand-film binary uploads
+- The export manifest is committed, but the two unique MP4 binaries are not in the Git repository.
+- The current task workspace did not contain the MP4 files, and the available GitHub write connector supports UTF-8 text rather than direct binary uploads.
+- Add the two unique exports from the original local files when available. The duplicate “clean/no added audio” file must not be treated as silent; the manifest records that it is byte-identical to the master and contains AAC audio.
+
+### Remaining release gates
+The checks above do not complete the following:
+- Browser interaction and visual audit on real Android and iOS devices.
+- Keyboard-only and screen-reader tests with NVDA, VoiceOver and TalkBack.
+- Formal WCAG 2.2 AA audit for each page, language and state.
+- Native-speaker review of English/Hindi/Marathi/Romanised Hindi content as appropriate.
+- Qualified clinical review of mental-health, women's-health and crisis copy.
+- Safeguarding specialist review of relationship content and safety routing.
+- Lived-experience co-design and usability sessions.
+- Production privacy/security review and deployed network-traffic verification.
+- Final official verification of helplines and referral coverage immediately before launch.

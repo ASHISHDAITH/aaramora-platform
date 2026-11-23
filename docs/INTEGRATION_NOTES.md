@@ -21,4 +21,4 @@
 - Quick Exit navigates to a blank page but does not erase browser history, network logs or shared-device activity.
 
 ## Current state
-The static prototype and documentation are now in this repository. This is not a production Next.js application or a deployed clinical service. Clinical review, language review, accessibility and device testing, lived-experience co-design, privacy/security review, and crisis-information revalidation remain release gates.
+The static prototype and documentation are in this repository. GitHub Actions content checks pass (18 tests), but this is not a production Next.js application or a deployed clinical service. The Vercel Git/project connection is blocked by a 403 permission response, so no live URL is verified. Clinical review, language review, accessibility and device testing, lived-experience co-design, privacy/security review, crisis-information revalidation and upload of the two unique MP4 brand-film exports remain release gates.

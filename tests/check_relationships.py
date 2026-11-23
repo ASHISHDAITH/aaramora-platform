@@ -32,7 +32,7 @@ class RelationshipPageTests(unittest.TestCase):
     def test_home_links_to_relationship_corner(self):
         self.assertIn('href="relationships.html"', self.home)
 
-    def test_safety_gate_and_two_reflection_quizzes_exist(self):
+    def test_safety_gate_and_three_reflection_quizzes_exist(self):
         self.assertIn('id="safety-form"', self.page)
         self.assertIn('id="attachment-quiz"', self.page)
         self.assertIn('id="conflict-quiz"', self.page)

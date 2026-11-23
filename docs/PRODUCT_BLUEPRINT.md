@@ -66,11 +66,11 @@ Measure whether visitors can find a relevant route, understand service boundarie
 
 A separate `relationships.html` page is linked from the home navigation and Explore card. It provides plain-language education on attachment protest, attachment anxiety/avoidance dimensions, pursue–withdraw interaction, conflict repair, boundaries, consent, digital trust, breakups and family pressure.
 
-Two original, unvalidated reflection quizzes show only behaviours a visitor marked Sometimes/Often. They provide no score, clinical cutoff, attachment identity, partner score, compatibility result or stay/leave advice. Answers remain in page memory only and are not stored or transmitted.
+Three original, unvalidated reflection quizzes (attachment protest, conflict patterns, and boundaries/mutual respect) show only themes a visitor marked Sometimes/Often. They provide no score, clinical cutoff, attachment identity, partner score, compatibility result or stay/leave advice. Answers remain in page memory only and are not stored or transmitted.
 
 A non-scored safety check appears before quiz/communication content. Any Yes or Not sure about fear, control, sexual pressure, threats, stalking or physical harm routes to private support and away from joint repair exercises. It cannot certify that a relationship is safe.
 
-See `docs/RELATIONSHIPS_RESEARCH.md`, `docs/RELATIONSHIP_QUIZ_SPEC.md` and root `SAFETY.md`. A qualified clinician and a domestic-violence/safeguarding specialist must approve this content before public release.
+The page also contains a searchable reference library of all 40 concepts from the uploaded relationship research report, with how-it-may-feel, what-may-help and when-to-seek-support notes. See `docs/RELATIONSHIPS_RESEARCH.md`, `docs/RELATIONSHIP_CONCEPT_CONTENT_MAP.md`, `docs/RELATIONSHIP_QUIZ_SPEC.md` and root `SAFETY.md`. A qualified clinician and a domestic-violence/safeguarding specialist must approve this content before public release.
 
 
 ## Shared health-topic pattern (24 November 2026)
