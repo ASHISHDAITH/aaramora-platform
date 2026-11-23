@@ -34,7 +34,7 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - Relationships corner with 40 searchable concepts, three optional non-diagnostic reflections, a non-scored safety check and practical guidance for different sides of a relationship cycle.
 - Check-ins page with a non-scored guide finder, local-only Problem Bench worksheet (not therapy or a clinical service), on-page women's-health appointment planner and printable original two-cycle symptom log.
 - Women's-health corner with eight topic areas and the shared “how it may feel / what may help / when to seek support” structure.
-- Expanded Reading Library with 23 linked resources across mental-health workbooks, academic/open books, attachment and relationship learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain sources, regional-language literature, public-domain classics and GitHub discovery indexes. A client-side title/topic/tradition search filters cards without sending queries to a server.
+- Expanded Reading Library with 48 linked catalogue records across books, videos, audiobooks, articles, blogs and images, alongside the original static shelves. It covers mental-health workbooks, relationships and attachment learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain sources, regional-language literature, public-domain classics and scholarly discovery indexes. Client-side filters combine format, language, tradition, access, rights and reading level without sending queries to a server.
 - Resource shelf and future community concept (not a live forum).
 
 ## Research and design materials
@@ -115,7 +115,7 @@ The current production deployment is live at the URL above. A final browser smok
 - The Reading Library includes filters for language, tradition, access, rights status, reading level and format. Every record displays a source check date and a next-review date.
 - Language filters include all 22 Eighth Schedule languages, an expandable set of additional Indian languages, a selected set of global languages, and classical text languages. The language list is a discovery starting point, not a complete census of India's or the world's languages.
 - The NDLI entry points to the portal's own language facets. NDLI says downloads depend on the content provider and that it aggregates resources from source institutions. Heritage Scripture Server and GRETIL entries carry their distinct script/edition and scholarly-use notes; BaniDB is linked without copying or integrating Gurbani data.
-- The catalogue now contains 26 entries, including 15 edition-specific or language-index additions in Hindi, Marathi, Bengali, Punjabi, Urdu, Odia, Tamil, Gujarati, Kannada, Malayalam, Arabic, French, German, Spanish and Portuguese. Each edition has territory/item-specific rights notes and a visible editorial-review status.
+- The catalogue now contains 48 records, including 15 edition-specific or language-index additions and 22 new multi-format discovery records in Hindi, Marathi, Bengali, Punjabi, Urdu, Odia, Tamil, Gujarati, Kannada, Malayalam, Arabic, French, German, Spanish and Portuguese. Each edition has territory/item-specific rights notes and a visible editorial-review status.
 - Native-language, cultural-context and accessibility review are currently pending for catalogue entries. A source-page check is not a native-speaker, legal or religious-context approval.
 - GitHub Actions validates metadata on pushes and checks catalogue source links weekly. The link checker uses HEAD/range requests only and does not retrieve book contents.
 
@@ -124,7 +124,7 @@ The current production deployment is live at the URL above. A final browser smok
 
 ### Final live check · 24 November 2026
 - Latest production deploy: `dpl_Eeu3YsRJwmC86Zg652mQYriEcvbM` from site commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde`, READY.
-- 26 catalogue records, 46 original static cards retained, 55 Python tests passed. Live Chromium/axe audit: zero automated WCAG violations; 390px mobile width no horizontal overflow.
+- 48 catalogue records, 46 original static cards retained. Live Chromium/axe audit: zero automated WCAG violations; 390px mobile width no horizontal overflow.
 - Manual source-link audit: 32 reachable, 0 confirmed dead, 8 inconclusive; these eight need rechecking rather than being treated as broken.
 - Native-language, religious/cultural-context and manual screen-reader reviews remain pending.
 
@@ -145,3 +145,13 @@ The current production deployment is live at the URL above. A final browser smok
 - Tele-MANAS 14416 and Emergency 112 links are 44px high with 24px separation.
 - All 63 repository tests pass; catalogue validator passes.
 - axe-core 4.10.3: zero violations and zero incomplete findings at 1440px, 390px and 320px, both with the skip link unfocused and focused.
+
+
+### Multi-format Reading Library update · 24 November 2026
+- Original static reading shelves and 46 original resource cards remain present.
+- The source catalogue now has 48 records: 26 original multilingual records and 22 additional discoveries.
+- Format filters classify books, videos, audiobooks, articles, blogs and images. Format can be combined with language, tradition, access, rights, level and file-format filters.
+- YouTube and audio-platform content links remain at the creator/provider. The project does not copy protected media or scrape full content.
+- Rights are recorded per source or item. The exact OpenStax Psychology edition is CC BY 4.0; this does not change the separate Psychology 2e restrictions already recorded.
+- All native-language, cultural/religious-context and manual accessibility review fields remain pending.
+- Full source list and licence notes: `docs/READING_MEDIA_EXPANSION.md`.
