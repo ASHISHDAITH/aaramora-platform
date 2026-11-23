@@ -183,3 +183,19 @@
 - [ ] Catalogue JSON passes `python scripts/check_catalogue.py` and all tests pass.
 - [ ] Weekly metadata-only link-check workflow runs; 403/429/5xx or transient network blocks are reported as inconclusive, not falsely marked dead.
 - [ ] The new catalogue never hides or replaces the original static book cards when JavaScript or the JSON file fails.
+
+## Individual multilingual editions · editorial review gate
+- [ ] Hindi Ramcharitmanas record remains linked to its exact Hindi Wikisource page; exact source edition and scan rights checked before mirroring.
+- [ ] Marathi Jnaneshwari record preserves the source warning about duplicated chapter/passage; compare with a scholarly printed edition before quoting.
+- [ ] Bengali Gitanjali 1913 record distinguishes original Bengali edition, English translations, US public-domain statement and other territories.
+- [ ] Punjabi Guru Granth Sahib record identifies one selected folio only; separate contributed transcription licence from the underlying scan/source edition.
+- [ ] Urdu Diwan-e-Ghalib record separates Wikisource contribution licence from source edition/images.
+- [ ] Odia Bhagabata record clearly identifies first Skandha only.
+- [ ] Tamil Tirukkural record preserves Project Madurai's full-header redistribution condition.
+- [ ] Gujarati, Kannada and Malayalam indexes are identified as catalogues, not blanket reuse permissions.
+- [ ] Arabic Safahat free reading/downloading is not represented as a right to mirror Hindawi books.
+- [ ] Project Gutenberg French, German, Spanish and Portuguese records keep the USA-specific public-domain caveat.
+- [ ] Each catalogue record shows scripts separately from languages where script information is known.
+- [ ] Every entry shows native-language, cultural-context and accessibility review status; do not mark pending reviews complete without named human reviewers.
+- [ ] Native-language reviewers check script rendering, diacritics, OCR/transcription quality, edition fidelity and search aliases.
+- [ ] Religious/tradition reviewers approve descriptions and sacred-use wording before editorial promotion.
