@@ -28,7 +28,7 @@ class ReadingLibraryChecks(unittest.TestCase):
 
     def test_existing_hero_and_credit_remain(self):
         self.assertIn("Pavel Danilyuk", HTML)
-        self.assertIn("A page can be a little lamp.", HTML)
+        self.assertIn("Let the page be a pause, not another thing to finish.", HTML)
         self.assertIn('alt="An open vintage book', HTML)
 
     def test_catalogue_enhancements_exist(self):
