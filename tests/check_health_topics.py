@@ -56,12 +56,21 @@ class WebsiteHealthContentTests(unittest.TestCase):
     def test_three_optional_reflections_and_safety_gate(self):
         for form_id in ["safety-form","attachment-quiz","conflict-quiz","boundaries-quiz"]:
             self.assertIn('id="' + form_id + '"', self.rel)
-        self.assertNotRegex(self.rel, r'\srequired(?:\s|>)')
+        self.assertNotRegex(self.rel, r'<(?:input|select|textarea|button)\b[^>]*\srequired(?:\s|>)')
 
     def test_quizzes_do_not_persist_or_network(self):
         for token in ["localStorage","sessionStorage","XMLHttpRequest","sendBeacon"]:
             self.assertNotIn(token, self.rel)
         self.assertNotRegex(self.rel, r"fetch\s*\(")
+
+    def test_reading_library_and_open_downloads(self):
+        library = (ROOT / "reading-library.html").read_text(encoding="utf-8")
+        self.assertIn('href="reading-library.html"', self.home)
+        self.assertIn("Capacity to Connect", library)
+        self.assertIn("Attachment Through the Life Course", library)
+        self.assertIn("Psychology of Human Relations", library)
+        self.assertIn("CC BY-NC-SA 4.0", library)
+        self.assertIn("prior written permission", library)
 
     def test_support_routes_are_present(self):
         for href in ["tel:112","tel:181","tel:14416"]:

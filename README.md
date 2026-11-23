@@ -57,3 +57,6 @@ Never commit real user messages, journals, screening answers, health records, pa
 - The GitHub source reference for OpenStax is `openstax/OpenStaxOnTheGo`; its repository AGPL licence covers software, while the book asset has its own source licence. The current official OpenStax site is the preferred download source.
 - Never bypass DRM, paywalls, private repository permissions or import copyrighted book copies without permission.
 - A public GitHub repository or its root licence does not automatically license every bundled third-party book, image or dataset.
+
+- `reading-library.html` also lists focused Noba attachment/relationship modules and a downloadable *Psychology of Human Relations* PDF.
+- OpenStax Psychology 2e is shown under its current CC BY-NC-SA 4.0 terms. Its current preface prohibits LLM/AI ingestion without prior written permission.

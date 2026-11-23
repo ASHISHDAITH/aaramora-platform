@@ -134,3 +134,12 @@ The 15-page *Attachment Protest and the Wider Psychology of Romantic Relationshi
 - Cassidy & Shaver, *Handbook of Attachment* (3rd ed.): Guilford official page. https://www.guilford.com/books/Handbook-of-Attachment/Cassidy-Shaver/9781462536641
 - Johnson, *Attachment Theory in Practice*: Guilford official page. https://www.guilford.com/books/Attachment-Theory-in-Practice/Susan-Johnson/9781462538249
 - Gottman & Silver, *The Seven Principles for Making Marriage Work*: Penguin Random House official page. https://www.penguinrandomhouse.com/books/248395/the-seven-principles-for-making-marriage-work-by-john-gottman-phd-and-nan-silver/9781101902912/
+
+
+## Reading library licence correction and additional relationship OER (24 November 2026)
+- OpenStax *Psychology 2e* current preface states CC BY-NC-SA 4.0, not the CC BY 4.0 statement appearing in an older cached PDF. It also prohibits LLM/generative-AI ingestion without prior written permission. The repository `openstax/osbooks-psychology` is the official book source; respect the current preface and do not ingest the book into research-toolkit AI pipelines. https://openstax.org/books/psychology-2e/pages/preface ; https://github.com/openstax/osbooks-psychology
+- BCcampus *Capacity to Connect* is CC BY 4.0 except where noted; the publisher permits copying and redistribution with attribution and recommends including the original source URL. Direct official PDF: https://opentextbc.ca/capacitytoconnect/open/download?type=pdf
+- Noba, R. Chris Fraley, *Attachment Through the Life Course*: CC BY-NC-SA 4.0; https://nobaproject.com/modules/attachment-through-the-life-course
+- Noba, Kenneth Tan & Louis Tay, *Relationships and Well-being*: https://nobaproject.com/modules/relationships-and-well-being
+- Noba, Debi Brannan & Cynthia D. Mohr, *Love, Friendship, and Social Support*: https://nobaproject.com/modules/love-friendship-and-social-support
+- Open Oregon, Stevy Scarbrough, *Psychology of Human Relations* (2023): CC BY-NC-SA 4.0; official PDF: https://openoregon.pressbooks.pub/app/uploads/sites/277/2022/05/Psychology-of-Human-Relations-Textbook.pdf

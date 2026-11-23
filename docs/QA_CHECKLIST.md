@@ -124,3 +124,8 @@
 - [ ] Copyrighted titles link to official publisher or lawful library access, never unauthorised mirrors.
 - [ ] Public GitHub access is not treated as permission to copy bundled books.
 - [ ] Re-check official source and edition before publishing any download link.
+
+- [ ] OpenStax Psychology 2e uses current CC BY-NC-SA 4.0 publisher wording and AI-ingestion restriction.
+- [ ] BCcampus Capacity to Connect attribution and recommended original-source statement accompany any mirror.
+- [ ] Noba modules and Open Oregon textbook show their non-commercial ShareAlike terms.
+- [ ] Reading resources link to official publisher pages and direct publisher/repository downloads only.
