@@ -3,20 +3,20 @@
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
 **Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_AeJo4qnPrbhdzU5Qfr77r6kJLSGY`  
+**Latest deployment:** `dpl_CYKUri19P8g1uM4hu5tKHbiiZgjG`  
 **Status:** READY · production · stable alias assigned
 
 ## Current release
 
 A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
 
-The latest deployment is a static snapshot of commit `f4d5fe44062a69cfb68dd5e169403b531c2d71c3` on `main`. It contains:
+The latest deployment is a static snapshot of commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde` on `main`. It contains:
 - `index.html` — simplified navigation, shorter hero copy and the 16:9 brand film in the hero
 - `wellbeing.html`
 - `relationships.html`
 - `check-ins.html`
 - `reading-library.html`
-- `yoga-and-breath.html` — evidence summaries, optional low-intensity practices, safety notes and links to draft Hindi/Marathi transcript files (no audio has been recorded or published)
+- `yoga-and-breath.html` — four evidence summaries, optional low-intensity practices, safety notes, and expandable Hindi/Marathi guided-rest and breathing draft transcripts (no audio has been recorded or published)
 - `assets/healing-garden.svg`
 - `assets/safe-corner.svg`
 - `assets/thought-river.svg`
@@ -25,7 +25,15 @@ The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The home
 
 The Reading Library now contains nine subject shelves and 23 linked catalogue cards spanning open mental-health workbooks, academic books, relationship learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain texts, regional-language literature, public-domain classics and GitHub discovery indexes. Its search filters rendered cards in the browser only; it sends no search query to a server and stores no search history. The hero uses a credited Pexels still-life image with an original AARAMORA reading note. It links to source institutions rather than copying third-party books or restricted texts.
 
-The Yoga & Breath page is a separate evidence-honest guide with summaries of four systematic reviews (2013, 2021, 2023 and 2024), gentle optional practices and safety boundaries. Study populations, outcomes, comparators and certainty are distinguished. The page does not claim yoga cures depression or replaces care, and it does not use invented A/B/C/D evidence grades. Draft Hindi/Marathi guided-rest and comfortable-breathing scripts are stored in `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md`; they require native-speaker, clinician and qualified yoga-professional review and are not recordings.
+The Yoga & Breath page is an evidence-honest guide with summaries of four systematic reviews (2013, 2021, 2023 and 2024), optional low-intensity practices, safety boundaries and expandable Hindi/Marathi draft transcripts. Study populations, outcomes, comparators and certainty are distinguished. The page does not claim yoga cures depression or replaces care, and it does not use invented A/B/C/D evidence grades. Four original Hindi/Marathi scripts (guided rest and comfortable breathing) are now displayed on the page and stored in `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md`; they target 5–7 minutes and remain draft text. No audio recordings have been submitted or published because a voice selection and the required native-speaker, clinician and qualified yoga-professional reviews remain outstanding.
+
+The Check-ins page now includes the Problem Bench worksheet at `check-ins.html#problem-bench`. It is a local-only, optional, non-scored reflection worksheet, not a clinical service, not problem-solving therapy and not the Friendship Bench programme. The Friendship Bench and Goa HAP evidence is explicitly attributed to trained, supervised human-delivered programmes; their trial outcomes are not applied to AARAMORA's website feature. The existing guide finder, women's-health appointment planner and two-cycle log remain in place.
+
+The WHO stress-guide companion is an original AARAMORA draft, not a translation or copy of the WHO guide and not endorsed by WHO. See `docs/WHO_STRESS_GUIDE_ADAPTATION.md` and the unsent enquiry draft `docs/WHO_OUTREACH_DRAFT.md`. Any true adaptation must follow the WHO licence, attribution, disclaimer, no-logo and third-party-rights requirements.
+
+The official India support-source register is in `data/service-links.json`. Weekly metadata-only URL checks are implemented for Tele-MANAS, ERSS 112 and Women Helpline 181. The WCD source currently notes that 181 coverage excludes West Bengal; the page shows this caveat. Link checks cannot verify staffing, network access or service quality.
+
+Content checks passed on commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde` ([run 45285497757](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285497757)). The reading-library metadata source-link check passed on the preceding code-compatible commit `081ca9a4177fec08bbee9cd420d70cc3381975c8` ([run 45285225515](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285225515)).
 
 The Vercel deployment was created directly from the listed source files because Git repository integration was blocked. The project has Vercel SSO/password deployment protection disabled so the public static site can be visited without membership in the Vercel workspace.
 
