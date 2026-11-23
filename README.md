@@ -30,9 +30,9 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - India human-support routes, optional pause prompts and low-stimulation Night Help.
 - Overthinking Unload, Little Garden, untimed Puzzle Sanctuary, Creative Studio and Safe Corner.
 - Mental wellbeing guides covering depression, anxiety, panic, acute stress surges, trauma-related distress, rumination, sleep, burnout, grief and OCD-related experiences.
-- Yoga & Breath guide with study-specific evidence summaries, optional low-intensity practices, safety boundaries and Hindi/Marathi transcript drafts pending native-language and clinical/yoga review.
+- Yoga & Breath guide with four study-specific evidence summaries, optional low-intensity practices, safety boundaries and four expandable Hindi/Marathi transcript drafts; no audio has been recorded, and native-language, clinical and qualified yoga-professional review remain pending.
 - Relationships corner with 40 searchable concepts, three optional non-diagnostic reflections, a non-scored safety check and practical guidance for different sides of a relationship cycle.
-- Check-ins page with a non-scored guide finder, local-only Problem Bench worksheet, on-page women's-health appointment planner and printable original two-cycle symptom log.
+- Check-ins page with a non-scored guide finder, local-only Problem Bench worksheet (not therapy or a clinical service), on-page women's-health appointment planner and printable original two-cycle symptom log.
 - Women's-health corner with eight topic areas and the shared “how it may feel / what may help / when to seek support” structure.
 - Expanded Reading Library with 23 linked resources across mental-health workbooks, academic/open books, attachment and relationship learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain sources, regional-language literature, public-domain classics and GitHub discovery indexes. A client-side title/topic/tradition search filters cards without sending queries to a server.
 - Resource shelf and future community concept (not a live forum).
