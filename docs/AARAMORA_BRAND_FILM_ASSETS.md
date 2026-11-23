@@ -38,7 +38,7 @@ Tagline: **A gentle place to begin again.**
 
 ## Current upload status
 
-<badge>Committed to GitHub</badge>
+**Status: committed to GitHub**
 
 Both unique MP4 files are present on the `main` branch at the paths listed in the Files table. They were added in commit `12126e3223df930568ed2ffc71a118cc90803782`.
 
