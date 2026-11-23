@@ -60,3 +60,7 @@ Never commit real user messages, journals, screening answers, health records, pa
 
 - `reading-library.html` also lists focused Noba attachment/relationship modules and a downloadable *Psychology of Human Relations* PDF.
 - OpenStax Psychology 2e is shown under its current CC BY-NC-SA 4.0 terms. Its current preface prohibits LLM/AI ingestion without prior written permission.
+
+
+## Automated checks
+GitHub Actions runs `python -m unittest discover -s tests -p 'check_*.py' -v` on pushes and pull requests. The checks cover core page routes, wellbeing content structure, women's-health consistency, all 40 relationship concepts, optional quiz/privacy requirements, support links and internal anchors.

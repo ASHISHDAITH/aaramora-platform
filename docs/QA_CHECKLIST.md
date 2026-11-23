@@ -136,3 +136,8 @@
 - [ ] All eight cards include a When to seek support section; urgent red flags remain explicit.
 - [ ] PMOS mood/cognition information is evidence-qualified and does not claim causation or brain damage.
 - [ ] PMOS/PCOS and PCOD wording reflects current naming while preserving familiar search terms.
+
+
+## Automated test execution
+- [ ] GitHub Actions content-checks workflow runs on pushes and pull requests.
+- [ ] `python -m unittest discover -s tests -p 'check_*.py' -v` passes before release.
