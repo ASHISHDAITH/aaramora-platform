@@ -80,7 +80,9 @@
           "rights",
           "accessibility",
           "provenance",
-          "verification"
+          "verification",
+          "scripts",
+          "editorialReview"
         ],
         "properties": {
           "id": {
@@ -216,6 +218,47 @@
               },
               "method": {
                 "type": "string"
+              }
+            }
+          },
+          "scripts": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "editorialReview": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "nativeLanguage",
+              "culturalContext",
+              "accessibility",
+              "note"
+            ],
+            "properties": {
+              "nativeLanguage": {
+                "enum": [
+                  "pending",
+                  "reviewed"
+                ]
+              },
+              "culturalContext": {
+                "enum": [
+                  "pending",
+                  "reviewed"
+                ]
+              },
+              "accessibility": {
+                "enum": [
+                  "pending",
+                  "reviewed"
+                ]
+              },
+              "note": {
+                "type": "string",
+                "minLength": 20
               }
             }
           }
