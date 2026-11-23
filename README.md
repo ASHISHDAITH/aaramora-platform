@@ -8,7 +8,13 @@ This repository contains the integrated static website prototype and the researc
 
 ## Run the website
 
-Open `index.html` in a modern browser, or run `python -m http.server 8000` and visit http://localhost:8000.
+Open `index.html` in a modern browser, or run:
+
+```bash
+python -m http.server 8000
+```
+
+Then visit http://localhost:8000.
 
 No npm install, database, account, remote fonts, analytics, AI API or backend is required for this prototype.
 
@@ -23,17 +29,23 @@ No npm install, database, account, remote fonts, analytics, AI API or backend is
 ## Research and design materials
 
 - `docs/ORIGINAL_RESEARCH_BRIEF.md` — original product concept, candidate sites, feature ideas, sitemap and roadmap.
-- `docs/` — design system, first-visit experience, women's-health research, sources, QA checklist and validation notes.
+- `docs/PRODUCT_BLUEPRINT.md` — complete product role, journeys, feature scope, governance and roadmap.
+- `docs/DESIGN_RESEARCH_AND_DIRECTION.md` and `docs/DESIGN_SYSTEM.md` — design rationale and UI rules.
+- `docs/EXPERIENCE_MAP.md` — visitor journeys and information architecture.
+- `docs/WOMENS_HEALTH_RESEARCH.md` — women's-health research and clinical review boundaries.
+- `docs/RESEARCH_SOURCES.md` — source register.
+- `docs/QA_CHECKLIST.md`, `docs/QA_RESULTS.md` and `docs/VALIDATION_NOTES.md` — quality gates, checks and remaining reviews.
 - `research/benchmark50.csv` — 50-site benchmark candidate list (not a verified ranking).
-- `research/mental-health-website-benchmark-report.md` — concept report, product strategy, feature differentiation and safety plan.
-- `research/visual-report.html` — visual concept report, with original SVG artwork in `assets/`.
+- `research/mental-health-website-benchmark-report.md` — benchmark shortlist and product strategy.
+- `research/visual-report.html` — browser-viewable visual concept report.
+- `assets/` — original Healing Garden, Safe Corner and Thought River SVG illustrations.
 - `CONTRIBUTING.md` and `SECURITY.md` — contribution and privacy rules.
 
-## Boundaries
+## Product and safety boundaries
 
-This is an early information and help-navigation prototype, not therapy, diagnosis, prescribing, telemedicine or emergency response. It cannot promise trauma relief. Activities are optional and temporary. There are no accounts, backend, analytics, AI calls or persistent user journals.
+This is an early **information and help-navigation prototype**, not therapy, diagnosis, prescribing, telemedicine or emergency response. It cannot promise trauma relief. Activities are optional; the prototype has no accounts, server-side health data, analytics, AI calls or persistent private journals.
 
-Health copy requires qualified clinical and native-language review before public release. Crisis information must be rechecked against official sources at launch. Community remains a future concept until moderation, safeguarding, escalation and privacy operations are in place.
+Health copy requires qualified clinical and native-language review before public release. Crisis resources must be rechecked against official sources at launch. Community remains a future concept until moderation, safeguarding, escalation and privacy operations are in place.
 
 ## Privacy
 
