@@ -83,7 +83,8 @@
           "provenance",
           "verification",
           "scripts",
-          "editorialReview"
+          "editorialReview",
+          "contentTypes"
         ],
         "properties": {
           "id": {
@@ -278,6 +279,22 @@
               "ltr",
               "rtl"
             ]
+          },
+          "contentTypes": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "book",
+                "video",
+                "audiobook",
+                "article",
+                "blog",
+                "image"
+              ]
+            }
           }
         }
       }
