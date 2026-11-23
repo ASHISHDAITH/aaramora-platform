@@ -1,0 +1,27 @@
+record_id,display_title,language_or_scope,native_language_reviewer,cultural_context_reviewer,rights_reviewer,accessibility_reviewer,status
+ndli-multilingual-discovery,National Digital Library of India (NDLI),22 scheduled plus selected additional Indian languages,CIIL referral requested,Not assigned,Not assigned,Not assigned,not_contacted
+heritage-scripture-server,Heritage Scripture Server · IIT Kanpur,Sanskrit Tamil Telugu and scripts,Relevant language specialist,Tradition/edition specialist where needed,Not assigned,Not assigned,not_contacted
+vedic-heritage-portal,Vedic Heritage Portal,Sanskrit,CIIL/Sanskrit specialist,Hindu studies / textual specialist,Not assigned,Not assigned,Not assigned,not_contacted
+gretil-indian-texts,GRETIL,Multiple classical/modern text languages,Native editor per exact title,Specialist per exact title,Not assigned,Not assigned,not_contacted
+wikisource-multilingual,Wikisource multilingual index,Per individual edition,Reviewer per exact title,Reviewer per exact tradition,Not assigned,Not assigned,not_contacted
+project-gutenberg-languages,Project Gutenberg language catalogue,Per individual edition,Reviewer per exact title,As needed per work,Not assigned,Not assigned,not_contacted
+librivox-multilingual-audio,LibriVox multilingual catalogue,Per recording language,Native listener and pronunciation reviewer,As needed per work,Recording rights reviewer,Audio accessibility tester,not_contacted
+open-library-discovery,Open Library,Per individual edition,Reviewer per exact title,As needed per work,Not assigned,Not assigned,not_contacted
+doab-oapen-open-access,DOAB and OAPEN,Per publication,Reviewer per publication,As needed per work,Qualified rights reviewer,Not assigned,not_contacted
+openn-south-asian-manuscripts,OPenn,Per manuscript / script,Script specialist per item,Provenance / cultural specialist,Not assigned,Manuscript image accessibility reviewer,not_contacted
+banidb-sikh-source,BaniDB · Gurbani source and API,Punjabi / Gurmukhi,Native Punjabi/Gurmukhi editor,Sikh studies specialist,Provider terms reviewer,Screen reader reviewer,not_contacted
+hi-ramcharitmanas-wikisource,Ramcharitmanas Hindi edition,Hindi / Devanagari,Native Hindi literary editor,Ramayana/Bhakti textual specialist,Not assigned,Not assigned,not_contacted
+mr-jnaneshwari-wikisource,Jnaneshwari / Bhavarthadipika,Marathi / Devanagari,Marathi classical-text editor,Warkari/Bhakti and Gita-commentary specialist,Not assigned,Not assigned,not_contacted
+bn-gitanjali-1913-wikisource,Gitanjali 1913,Bengali,Native Bengali literary editor,Tagore/edition specialist,Qualified rights reviewer,Not assigned,not_contacted
+pa-guru-granth-sahib-folio-1,Guru Granth Sahib selected folio,Punjabi / Gurmukhi,Native Punjabi/Gurmukhi editor,Sikh scripture specialist,Scan/transcription rights reviewer,Screen reader reviewer,not_contacted
+ur-diwan-e-ghalib-wikisource,Diwan-e-Ghalib,Urdu / Nastaliq,Native Urdu editor,Urdu literary specialist,Edition rights reviewer,RTL screen reader tester,not_contacted
+or-odia-bhagabata-skandha-1,Odia Bhagabata first Skandha,Odia script,Native Odia literary editor,Odia Vaishnava literature specialist,Edition rights reviewer,Not assigned,not_contacted
+ta-thirukkural-project-madurai,Tirukkural,Tamil,Native Tamil classical editor,Tamil literary specialist,Project Madurai permission reviewer,Not assigned,not_contacted
+gu-wikisource-full-book-index,Gujarati Wikisource full-book list,Gujarati,Native Gujarati editor,Not required unless item-specific issue,Item-specific rights reviewer,Not assigned,not_contacted
+kn-wikisource-kannada-portal,Kannada Wikisource,Kannada,Native Kannada editor,Not required unless item-specific issue,Item-specific rights reviewer,Not assigned,not_contacted
+ml-wikisource-malayalam-book-list,Malayalam Wikisource list,Malayalam,Native Malayalam editor,Not required unless item-specific issue,Copyright-term reviewer,Not assigned,not_contacted
+ar-safahat-arabic-reading,Safahat Arabic platform,Arabic,Native Arabic editor,Specific subject reviewer per title,Publisher terms reviewer,RTL screen reader tester,not_contacted
+fr-comte-monte-cristo-pg,Le comte de Monte-Cristo Tome I,French,Native French editor,Historical-literature editor,US/territory-specific rights reviewer,Not assigned,not_contacted
+de-faust-pg,Faust Part I,German,Native German editor,Classical-literature editor,US/territory-specific rights reviewer,Not assigned,not_contacted
+es-don-quijote-pg,Don Quijote,Spanish,Native Spanish editor,Classical-literature editor,US/territory-specific rights reviewer,Not assigned,not_contacted
+pt-os-lusiadas-pg,Os Lusíadas,Portuguese,Native Portuguese editor,Classical-literature editor,US/territory-specific rights reviewer,Not assigned,not_contacted
