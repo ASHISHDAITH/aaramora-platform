@@ -209,3 +209,7 @@ The source catalogue now has 26 records. Fifteen additions give specific edition
 ### Native-review release gate
 All 26 records currently have editorialReview.nativeLanguage=pending, editorialReview.culturalContext=pending, and editorialReview.accessibility=pending. These values can only be changed after named native-language, tradition/context, and assistive-technology reviewers document the specific edition they checked. Metadata verification alone cannot approve pronunciation, translation fidelity, theological wording, OCR quality or reading accessibility.
 
+
+
+### Metadata link-check implementation update
+The metadata-only link checker now percent-encodes non-ASCII URL paths before HTTP requests. This supports pages whose URL paths contain Devanagari, Bengali, Gurmukhi, Arabic-derived, Odia and other Unicode scripts. It still uses HEAD first and a one-byte range request only for selected HEAD blocks; no source page body or book file is downloaded or parsed.
