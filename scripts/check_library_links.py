@@ -64,6 +64,12 @@ def request_status(url: str) -> tuple[str, str]:
         return "inconclusive", f"network issue: {error}"
 
 
+def safe_console(value: object) -> str:
+    """Render URLs safely even when the runner's stdout encoding is ASCII."""
+    encoding = sys.stdout.encoding or "utf-8"
+    return str(value).encode(encoding, errors="backslashreplace").decode(encoding)
+
+
 def write_summary(lines: list[str]) -> None:
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
     if not summary_path:
@@ -83,7 +89,7 @@ def main() -> int:
     for index, url in enumerate(urls):
         status, detail = request_status(url)
         results.append((status, url, detail))
-        print(f"{status.upper():12} {url} · {detail}")
+        print(safe_console(f"{status.upper():12} {url} · {detail}"))
         if index + 1 < len(urls):
             time.sleep(PAUSE_SECONDS)
     write_summary(results)
