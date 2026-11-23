@@ -54,7 +54,8 @@ See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography,
 - `docs/QA_CHECKLIST.md`, `docs/QA_RESULTS.md` and `docs/VALIDATION_NOTES.md` — quality gates, completed checks and remaining reviews.
 - `docs/DEPLOYMENT.md` — live Vercel deployment status, verification notes and the remaining Git-integration step.
 - `docs/AARAMORA_BRAND_FILM_ASSETS.md` — export manifest, verified file hashes and committed media paths.
-- `tests/check_relationships.py`, `tests/check_health_topics.py` and `tests/check_reading_library.py` — automated static content, safety and reading-library rights checks.
+- `tests/check_relationships.py`, `tests/check_health_topics.py`, `tests/check_reading_library.py` and `tests/check_multilingual_catalogue.py` — automated static content, safety, source-rights and multilingual catalogue checks.
+- `scripts/check_catalogue.py` validates catalogue record structure and required source/rights/review fields; `scripts/check_library_links.py` checks metadata URLs without downloading books.
 - `research/benchmark50.csv` — 50-site benchmark candidate list (not a verified rank order).
 - `research/mental-health-website-benchmark-report.md` and `research/visual-report.html` — research and visual concept report.
 - `assets/` — original Healing Garden, Safe Corner and Thought River SVG illustrations.
@@ -105,3 +106,13 @@ The current public static deployment is marked READY by Vercel and serves six HT
 The latest GitHub Actions content-check run passed after the simplified homepage update. It includes the static content, route and JavaScript checks across all five site pages. The Reading Library static content, route, rights-wording and JavaScript checks passed. The workflow runs on every push and pull request; see the [GitHub Actions history](https://github.com/ASHISHDAITH/aaramora-platform/actions) for the current run. This is not a browser, screen-reader, clinical or production security certification.
 
 The current production deployment is live at the URL above. A final browser smoke test from a normal visitor session is still required. Deployment does not constitute clinical, safeguarding, accessibility or security approval.
+
+
+## Multilingual reading catalogue
+
+- `data/library.json` is the reviewed metadata source for the multilingual discovery cards. It contains titles, language tags, source links, access models, rights notes, accessibility metadata and verification dates. It does not contain third-party book text or scans.
+- `data/library.schema.json` describes the catalogue record structure and required fields.
+- The Reading Library includes filters for language, tradition, access, rights status, reading level and format. Every record displays a source check date and a next-review date.
+- Language filters include all 22 Eighth Schedule languages, an expandable set of additional Indian languages, a selected set of global languages, and classical text languages. The language list is a discovery starting point, not a complete census of India's or the world's languages.
+- The NDLI entry points to the portal's own language facets. NDLI says downloads depend on the content provider and that it aggregates resources from source institutions. Heritage Scripture Server and GRETIL entries carry their distinct script/edition and scholarly-use notes; BaniDB is linked without copying or integrating Gurbani data.
+- GitHub Actions validates metadata on pushes and checks catalogue source links weekly. The link checker uses HEAD/range requests only and does not retrieve book contents.
