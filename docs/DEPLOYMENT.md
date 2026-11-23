@@ -71,3 +71,27 @@ Keep the public description clear: AARAMORA is an information and help-navigatio
 
 The `check-ins.html` page is included in the current production deployment. It contains the non-diagnostic guide finder, women's-health appointment/print planner and original blank two-cycle symptom log. The latest deployment's Vercel source file listing confirms the page is present. The route should still be checked in a regular browser as part of the visitor-side smoke test.
 
+
+
+## Latest verified production release · 24 November 2026
+
+**Current production deployment:** `dpl_2Q3n6GmFCn13Lpizgx93LZJGQ6Wy`  
+**State:** READY · `target=production` · stable alias assigned  
+**Source:** `main` at `ba193318500e06e04c6a506ea3363b3aab552ea7`  
+**Production alias:** https://aaramora-platform.vercel.app
+
+This release enhances the Reading Library without removing its existing shelves or cards:
+
+- All nine pre-existing Reading Library sections remain present.
+- All 46 original static resource cards remain present and each shows a listing-metadata review date. This date is not a legal clearance of every edition; the source terms must still be checked.
+- A new multilingual catalogue renders from `data/library.json` using the fields in `data/library.schema.json`.
+- Search and filters cover language, tradition, access type, rights status, reading level and format.
+- Language groups include 22 Eighth Schedule languages, 17 additional Indian-language discovery terms, 51 initial world-language filters and 4 classical/scholarly language tags. These are discovery aids, not a complete census and not a guarantee that every linked source has a book in every language.
+- Eleven institutional/source records include access notes, rights restrictions, provenance, accessibility notes, checked dates and next-review dates.
+- BaniDB is linked only; Gurbani data is not copied or integrated. NDLI remains a discovery layer; download permission is determined by each provider. Heritage Scripture Server scripts are distinguished from translation languages, and GRETIL is labelled for scholarly reference only.
+- `scripts/check_catalogue.py` validates required record fields. `scripts/check_library_links.py` checks metadata URLs using HEAD/range requests only; it does not download book content. A weekly workflow is configured.
+
+**Automated checks:** GitHub Actions run [45282847618](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45282847618) passed the existing content/safety suite, Reading Library checks, multilingual catalogue tests and catalogue validator. The initial weekly link-check workflow run [45282656364](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45282656364) also passed.
+
+The Vercel API reports the deployment as READY and assigns the stable production alias. This tool could not load the live Vercel HTML/JSON in a normal browser session, so a human visitor-side smoke test of the live filters, source links and small-screen layout remains outstanding. Automated tests are not a substitute for keyboard, screen-reader, clinical, religious/cultural or legal review.
+
