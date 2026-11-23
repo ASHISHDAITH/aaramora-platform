@@ -8,46 +8,33 @@ This repository contains the integrated static website prototype and the researc
 
 ## Run the website
 
-Open `index.html` in a modern browser, or run:
-
-```bash
-python -m http.server 8000
-```
-
-Then visit http://localhost:8000.
+Open `index.html` in a modern browser, or run `python -m http.server 8000` and visit http://localhost:8000.
 
 No npm install, database, account, remote fonts, analytics, AI API or backend is required for this prototype.
 
 ## Included experience
 
-- Calm first-visit welcome, optional entry pathways and a fictional story with Kiran, a provisional decorative light character.
-- Always-visible routes to human support in India.
-- Optional pause prompts and low-stimulation Night Help.
-- Overthinking Unload reflection prompts.
-- Little Garden visual activity.
-- Untimed matching puzzle.
-- Creative Studio colour and note activity.
-- Safe Corner visual scenes and guided next-step paths.
-- Resource shelf and a future community concept (not a live forum).
-- Women's Health corner: PMOS (formerly PCOS), endometriosis, heavy/painful periods, PMS/PMDD, menopause, thyroid conditions, iron deficiency/anaemia and postpartum mental health.
+- Calm first-visit welcome, optional entry pathways and the fictional Kiran/firefly visual guide.
+- India human-support routes, optional pause prompts and low-stimulation Night Help.
+- Overthinking Unload, Little Garden, untimed Puzzle Sanctuary, Creative Studio and Safe Corner.
+- Guided next steps, resource shelf and future community concept (not a live forum).
+- Women's Health: PMOS (formerly PCOS), endometriosis, heavy/painful periods, PMS/PMDD, menopause, thyroid, iron deficiency/anaemia and postpartum mental health.
 
-## Documentation
+## Research and design materials
 
-- `docs/ORIGINAL_RESEARCH_BRIEF.md` — supplied concept brief, candidate websites, product ideas, sitemap, feature strategy and roadmap.
-- `docs/DESIGN_RESEARCH_AND_DIRECTION.md` — first-visit design reasoning and references.
-- `docs/DESIGN_SYSTEM.md` — visual tokens, component and interaction guidance.
-- `docs/EXPERIENCE_MAP.md` — visitor journeys and information architecture.
-- `docs/WOMENS_HEALTH_RESEARCH.md` — complete women's-health research and content brief.
-- `docs/RESEARCH_SOURCES.md` — source register.
-- `docs/QA_CHECKLIST.md` and `docs/VALIDATION_NOTES.md` — quality and release gates.
+- `docs/ORIGINAL_RESEARCH_BRIEF.md` — original product concept, candidate sites, feature ideas, sitemap and roadmap.
+- `docs/` — design system, first-visit experience, women's-health research, sources, QA checklist and validation notes.
+- `research/benchmark50.csv` — 50-site benchmark candidate list (not a verified ranking).
+- `research/mental-health-website-benchmark-report.md` — concept report, product strategy, feature differentiation and safety plan.
+- `research/visual-report.html` — visual concept report, with original SVG artwork in `assets/`.
 - `CONTRIBUTING.md` and `SECURITY.md` — contribution and privacy rules.
 
-## Product and safety boundaries
+## Boundaries
 
-This is an early **information and help-navigation prototype**, not therapy, diagnosis, prescribing, telemedicine or emergency response. It cannot promise trauma relief. All activities are optional; the prototype has no accounts, server-side health data, analytics, AI calls or persistent private journals.
+This is an early information and help-navigation prototype, not therapy, diagnosis, prescribing, telemedicine or emergency response. It cannot promise trauma relief. Activities are optional and temporary. There are no accounts, backend, analytics, AI calls or persistent user journals.
 
-Health copy, including women's-health content, requires review by qualified clinicians and native-language reviewers before public release. Crisis resources must be rechecked against official sources immediately before launch. A public peer community is a future concept only and must not launch without moderation, safeguarding, escalation and privacy operations.
+Health copy requires qualified clinical and native-language review before public release. Crisis information must be rechecked against official sources at launch. Community remains a future concept until moderation, safeguarding, escalation and privacy operations are in place.
 
 ## Privacy
 
-Do not commit real user messages, personal journals, screening answers, medical records, participant data, API keys or credentials. Use synthetic fixtures for research and tests. Never send personal health data to free-tier AI APIs.
+Never commit real user messages, journals, screening answers, health records, participant data, API keys or credentials. Use synthetic fixtures. Never send personal health data to free-tier AI APIs.

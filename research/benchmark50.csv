@@ -1,0 +1,51 @@
+rank_candidate,name,category,official_url,benchmark_focus,verification_note
+1,Headspace,Meditation & wellbeing,https://www.headspace.com/,Guided mindfulness sleep approachable UX,Verify current
+2,Calm,Meditation & sleep,https://www.calm.com/,Audio sleep stories ambience,Verify current
+3,Woebot Health,Conversational support,https://woebothealth.com/,CBT-informed interaction,Check service availability/status
+4,Mind UK,Education & advocacy,https://www.mind.org.uk/,Practical guides,Verify current
+5,NHS Every Mind Matters,Public wellbeing,https://www.nhs.uk/every-mind-matters/,Action plans,Verify current
+6,Mental Health America,Education & screening,https://www.mhanational.org/,Screening tools,Verify current
+7,Therapy Aid,Trauma support,https://www.therapyaid.org/,Trauma resources,Verify current
+8,Centre for Clinical Interventions,Self-help worksheets,https://www.cci.health.wa.gov.au/,Structured CBT resources,Verify current
+9,Psychology Tools,CBT resources,https://www.psychologytools.com/,Worksheets,Verify current
+10,Psych Central,Education,https://psychcentral.com/,Mental-health explainers,Verify current
+11,7 Cups,Peer support,https://www.7cups.com/,Listener/peer model,Verify current
+12,Togetherall,Peer support,https://togetherall.com/,Moderated community,Verify current
+13,Supportiv,Peer support,https://www.supportiv.com/,Peer chat,Verify current
+14,The Buddy Project,Peer connection,https://buddyproject.org/,Buddy model,Verify current
+15,NAMI,Advocacy & support,https://www.nami.org/,Education and groups,Verify current
+16,SANE Australia,Support,https://www.sane.org/,Support and information,Verify current
+17,Mental Health Forum,Peer forums,https://www.mentalhealthforum.net/,Discussion,Verify current
+18,DBSA,Peer support,https://www.dbsalliance.org/,Mood support,Verify current
+19,ADAA,Education & community,https://adaa.org/,Anxiety/depression resources,Verify current
+20,The Mighty,Lived-experience community,https://themighty.com/,Stories,Verify current
+21,HealthUnlocked,Health community,https://healthunlocked.com/,Community groups,Verify current
+22,PatientsLikeMe,Patient community,https://www.patientslikeme.com/,Experience sharing/privacy,Verify current
+23,Reddit r/mentalhealth,Peer discussion,https://www.reddit.com/r/mentalhealth/,Open discussion/moderation,Community quality varies
+24,Reddit r/Anxiety,Peer discussion,https://www.reddit.com/r/Anxiety/,Anxiety-specific conversation,Community quality varies
+25,International OCD Foundation,Specialist resources,https://iocdf.org/,OCD support,Verify current
+26,Blue Knot Foundation,Trauma support,https://blueknot.org.au/,Complex trauma,Verify current
+27,RAINN,Survivor support,https://rainn.org/,Sexual violence resources,Verify current
+28,SAMHSA,Public resources,https://www.samhsa.gov/,Treatment/recovery,Verify current
+29,VA National Center for PTSD,PTSD resources,https://www.ptsd.va.gov/,PTSD education,Verify current
+30,Cruse Bereavement Support,Grief support,https://www.cruse.org.uk/,Grief guidance,Verify current
+31,Grief.com,Grief education,https://grief.com/,Grief resources,Verify current
+32,Refuge,Abuse support,https://www.refuge.org.uk/,Domestic abuse help,UK service
+33,Child Mind Institute,Youth mental health,https://childmind.org/,Youth resources,Verify current
+34,The Trevor Project,LGBTQ+ support,https://www.thetrevorproject.org/,Youth crisis support,Verify current
+35,NO MORE,Violence support,https://nomore.org/,Awareness/resources,Verify current
+36,Insight Timer,Meditation library,https://insighttimer.com/,Content breadth,Verify current
+37,Smiling Mind,Mindfulness,https://www.smilingmind.com.au/,Programs,Verify current
+38,Finch,Self-care gamification,https://finchcare.com/,Gentle companion mechanics,Verify current
+39,Wysa,Digital support,https://www.wysa.com/,AI-assisted wellbeing,Verify current
+40,Happify,Wellbeing activities,https://www.happify.com/,Activities,Verify current
+41,MindShift CBT,Anxiety tools,https://www.anxietycanada.com/resources/mindshift-cbt/,CBT skills,Verify current
+42,Healthy Minds Program,Meditation,https://hminnovations.org/meditation,Wellbeing lessons,Verify current
+43,UCLA Mindful,Mindfulness resources,https://www.uclahealth.org/programs/marc,Meditation resources,Verify current
+44,The Tapping Solution,Self-guided exercises,https://www.tapping.com/,Emotional exercises/evidence framing,Verify current
+45,Project Gutenberg,Books,https://www.gutenberg.org/,Free public-domain library,General books
+46,WHO Mental Health,Global health info,https://www.who.int/health-topics/mental-health,Global framing,Verify current
+47,Find A Helpline,Crisis directory,https://findahelpline.com/,Country-level help access,Verify current
+48,Befrienders Worldwide,Crisis support,https://befrienders.org/,Support network,Verify current
+49,Open Path Collective,Therapy access,https://openpathcollective.org/,Affordable therapy directory,Verify current
+50,7Mind,Mindfulness,https://www.7mind.de/,Mindfulness/wellbeing,Verify current
