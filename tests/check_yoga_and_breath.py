@@ -101,11 +101,11 @@ class YogaAndBreathPageTests(unittest.TestCase):
 
     def test_no_external_runtime_assets_or_autoplay(self):
         self.assertEqual([], self.audit.remote_runtime_assets)
-        self.assertNotRegex(self.page, r"<audio\\b[^>]*\\bautoplay")
-        self.assertNotRegex(self.page, r"<video\\b[^>]*\\bautoplay")
+        self.assertNotRegex(self.page, r"<audio\b[^>]*\bautoplay")
+        self.assertNotRegex(self.page, r"<video\b[^>]*\bautoplay")
         self.assertNotIn("localStorage", self.page)
         self.assertNotIn("sessionStorage", self.page)
-        self.assertNotRegex(self.page, r"fetch\\s*\\(")
+        self.assertNotRegex(self.page, r"fetch\s*\(")
 
 
 if __name__ == "__main__":
