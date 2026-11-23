@@ -138,3 +138,10 @@ The current production deployment is live at the URL above. A final browser smok
 
 
 - The Tele-MANAS 14416 and Emergency 112 support links have a 44px minimum height and 24px separation to improve touch-target size; this is covered by a regression test.
+
+
+### Final keyboard and support-contact checks
+- Focused skip link moves into its own top-bar row and no longer obscures Tele-MANAS or Emergency controls.
+- Tele-MANAS 14416 and Emergency 112 links are 44px high with 24px separation.
+- All 63 repository tests pass; catalogue validator passes.
+- axe-core 4.10.3: zero violations and zero incomplete findings at 1440px, 390px and 320px, both with the skip link unfocused and focused.
