@@ -45,6 +45,11 @@ class MultilingualCatalogueTests(unittest.TestCase):
                 self.assertTrue(record["access"]["url"].startswith("https://"))
                 self.assertTrue(record["rights"]["licence"])
                 self.assertTrue(record["rights"]["reuse"])
+                self.assertIsInstance(record["scripts"], list)
+                self.assertIn(record["editorialReview"]["nativeLanguage"], {"pending", "reviewed"})
+                self.assertIn(record["editorialReview"]["culturalContext"], {"pending", "reviewed"})
+                self.assertIn(record["editorialReview"]["accessibility"], {"pending", "reviewed"})
+                self.assertTrue(record["editorialReview"]["note"])
                 self.assertRegex(record["verification"]["checkedAt"], r"^\d{4}-\d{2}-\d{2}$")
                 self.assertRegex(record["verification"]["nextReviewAt"], r"^\d{4}-\d{2}-\d{2}$")
         self.assertGreaterEqual(len(ids), 10)
@@ -72,6 +77,44 @@ class MultilingualCatalogueTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertIn(f'id="{marker}"', HTML)
         self.assertIn("data/library.json", HTML)
+
+ 
+    def test_individual_edition_records_cover_specific_languages(self):
+        expected = {
+            "hi-ramcharitmanas-wikisource": "Hindi",
+            "mr-jnaneshwari-wikisource": "Marathi",
+            "bn-gitanjali-1913-wikisource": "Bengali",
+            "pa-guru-granth-sahib-folio-1": "Punjabi",
+            "ur-diwan-e-ghalib-wikisource": "Urdu",
+            "or-odia-bhagabata-skandha-1": "Odia",
+            "ta-thirukkural-project-madurai": "Tamil",
+            "fr-comte-monte-cristo-pg": "French",
+            "de-faust-pg": "German",
+            "es-don-quijote-pg": "Spanish",
+            "pt-os-lusiadas-pg": "Portuguese",
+            "ar-safahat-arabic-reading": "Arabic",
+        }
+        records = {item["id"]: item for item in DATA["records"]}
+        for record_id, language in expected.items():
+            with self.subTest(record=record_id):
+                self.assertIn(record_id, records)
+                self.assertIn(language, records[record_id]["languages"])
+                self.assertTrue(records[record_id]["provenance"]["sourceUrl"].startswith("https://"))
+                self.assertTrue(records[record_id]["editorialReview"]["note"])
+        punjabi = records["pa-guru-granth-sahib-folio-1"]
+        self.assertIn("single selected page", punjabi["access"]["notes"])
+        self.assertIn("not the full scripture", punjabi["languageCoverageLabel"])
+        tamil = records["ta-thirukkural-project-madurai"]
+        self.assertIn("header page is kept intact", tamil["rights"]["reuse"])
+        bengali = records["bn-gitanjali-1913-wikisource"]
+        self.assertIn("United States", bengali["rights"]["licence"])
+        self.assertIn("outside the United States", bengali["rights"]["reuse"])
+
+    def test_language_catalogue_does_not_mark_native_review_as_complete_without_review(self):
+        for record in DATA["records"]:
+            with self.subTest(record=record["id"]):
+                self.assertEqual("pending", record["editorialReview"]["nativeLanguage"])
+                self.assertEqual("pending", record["editorialReview"]["culturalContext"])
 
     def test_no_original_section_removed(self):
         for anchor in ("free-downloads", "scripture-shelf", "workbooks-and-articles", "relationship-open-learning", "attachment-books", "faith-wisdom", "novels-and-classics", "github-shelves", "licensing"):
