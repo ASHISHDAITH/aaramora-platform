@@ -63,6 +63,12 @@ class YogaAndBreathPageTests(unittest.TestCase):
         ):
             self.assertIn(phrase.lower(), self.page.lower())
 
+    def test_2024_review_separates_severity_from_remission(self):
+        self.assertIn("depression severity:", self.page.lower())
+        self.assertIn("remission:", self.page.lower())
+        self.assertIn("higher remission rates versus both passive and active controls", self.page.lower())
+        self.assertIn("very low quality", self.page.lower())
+
     def test_no_diagnostic_or_cure_claim(self):
         lowered = self.page.lower()
         for phrase in ("yoga cures depression", "guaranteed relief", "replace professional care"):
