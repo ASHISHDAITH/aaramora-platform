@@ -69,3 +69,14 @@
 - Safeguarding specialist review of relationship content.
 - Native-speaker review of Hindi/Marathi/Romanised Hindi.
 - Lived-experience co-design, production privacy/security review and current helpline verification.
+
+
+
+## Reading Library multilingual release record · 24 November 2026
+
+- GitHub Actions content check: [run 45282847618](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45282847618) — success, including catalogue validator.
+- Weekly metadata-only source-link check: [run 45282656364](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45282656364) — success on initial run.
+- Vercel production deployment: `dpl_2Q3n6GmFCn13Lpizgx93LZJGQ6Wy`, commit `ba193318500e06e04c6a506ea3363b3aab552ea7` — READY.
+- Preserved the nine existing Reading Library sections and all 46 original resource cards; added metadata review stamps without removing existing content.
+- Added 11 source records, four language groups, 22 Eighth Schedule languages, additional Indian-language filters and an initial global-language filter set.
+- Remaining manual checks: live visitor-side browser smoke test, mobile widths, keyboard-only navigation, screen-reader result announcements, native-speaker review of language names/descriptions, and item-specific religious/tradition review.
