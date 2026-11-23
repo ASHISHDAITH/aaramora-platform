@@ -45,8 +45,8 @@
 
 ### Automated CI
 - Historical baseline: [run 45266854917](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45266854917), 19 tests, successful.
-- Current check-in update: commit `a311edb4d60888e0b82ead814113a734d18811e7`; [GitHub Actions run 45271916133](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45271916133) completed successfully.
-- Result: **21 tests passed** (`Ran 21 tests`, `OK`). The new checks cover check-in page content, skip/privacy behavior, support links, print structure, internal anchors and Node.js syntax on all five HTML pages.
+- Current check-in update: latest main commit `91d361a2d80d5d6f046832a42b34a9bb1832d268`; [GitHub Actions run 45272441074](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45272441074) completed successfully.
+- Result: **21 tests passed** (`Ran 21 tests`, `OK`). The new checks cover check-in page content, non-diagnostic/skip/privacy wording, support links, print structure, internal anchors and Node.js syntax on all five HTML pages.
 - Workflow runs on pushes, pull requests and manual `workflow_dispatch`.
 
 ### Current repository additions

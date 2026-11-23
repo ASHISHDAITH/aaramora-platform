@@ -98,6 +98,6 @@ The current public static deployment is marked READY by Vercel and serves the fo
 
 ## Current verification
 
-The latest GitHub Actions content-check run passed on the current repository history. It executed 21 Python static tests, including Node.js syntax validation of inline JavaScript on all five source pages. This is not a browser, screen-reader, clinical or production security certification.
+The latest GitHub Actions content-check run passed on the current repository history. It executed 21 Python static tests, including Node.js syntax validation of inline JavaScript on all five source pages. Latest run: [45272441074](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45272441074). This is not a browser, screen-reader, clinical or production security certification.
 
 The current production deployment is live at the URL above. A final browser smoke test from a normal visitor session is still required. Deployment does not constitute clinical, safeguarding, accessibility or security approval.

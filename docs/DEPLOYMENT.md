@@ -62,7 +62,7 @@ Keep the public description clear: AARAMORA is an information and help-navigatio
 
 
 ## Check-in page update — committed, not yet deployed
-The fifth static page, `check-ins.html`, and its research/specification files are committed to GitHub main at commit `a311edb4d60888e0b82ead814113a734d18811e7`. It contains a non-diagnostic guide finder, women's-health appointment/print planner and original blank two-cycle symptom log. GitHub Actions passed 21 tests, including the new page's inline JavaScript syntax check.
+The fifth static page, `check-ins.html`, and its research/specification files are committed to GitHub main at latest commit `91d361a2d80d5d6f046832a42b34a9bb1832d268`. It contains a non-diagnostic guide finder, women's-health appointment/print planner and original blank two-cycle symptom log. GitHub Actions run [45272441074](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45272441074) passed 21 tests, including the new page's inline JavaScript syntax check.
 
 The currently verified Vercel production snapshot remains commit `3aef65fdc1f56bc3d9803ac7843ea275910f595e` and does not contain the new page. An attempt to refresh the existing production project through the connected Vercel deployment API returned HTTP 403 Forbidden; the Vercel sandbox-session API also returned 403. No deployment was created by these attempts. Do not announce `/check-ins.html` as live until Vercel shows a newer READY deployment and the route is tested in a regular browser.
 
