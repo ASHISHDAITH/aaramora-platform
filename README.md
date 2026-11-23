@@ -118,3 +118,5 @@ The current production deployment is live at the URL above. A final browser smok
 - The catalogue now contains 26 entries, including 15 edition-specific or language-index additions in Hindi, Marathi, Bengali, Punjabi, Urdu, Odia, Tamil, Gujarati, Kannada, Malayalam, Arabic, French, German, Spanish and Portuguese. Each edition has territory/item-specific rights notes and a visible editorial-review status.
 - Native-language, cultural-context and accessibility review are currently pending for catalogue entries. A source-page check is not a native-speaker, legal or religious-context approval.
 - GitHub Actions validates metadata on pushes and checks catalogue source links weekly. The link checker uses HEAD/range requests only and does not retrieve book contents.
+
+- The additional set comprises 11 named text editions/folios and 4 source indexes/platforms. The source list distinguishes original-language editions from a selected page/part and from broader discovery catalogues.
