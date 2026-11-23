@@ -174,6 +174,16 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn(".top .wrap a,.navlinks a{display:inline-flex;align-items:center;min-height:32px}", HTML)
         self.assertIn('aria-label="Language coverage source ', HTML)
 
+
+    def test_language_alias_filter_uses_loaded_catalogue_map(self):
+        self.assertIn("let languageAliasesMap = {}", HTML)
+        self.assertIn("languageAliasesMap = data.languageAliases || {}", HTML)
+        self.assertIn("const aliases = languageAliasesMap", HTML)
+        self.assertNotIn("const aliases = data.languageAliases || {}", HTML)
+
+    def test_keyboard_focus_scroll_padding_clears_sticky_header(self):
+        self.assertIn("scroll-padding-top:180px", HTML)
+
     def test_no_original_section_removed(self):
         for anchor in ("free-downloads", "scripture-shelf", "workbooks-and-articles", "relationship-open-learning", "attachment-books", "faith-wisdom", "novels-and-classics", "github-shelves", "licensing"):
             with self.subTest(anchor=anchor):
