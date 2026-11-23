@@ -99,6 +99,25 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
 .record-review{padding:10px 12px;border-radius:10px;background:#F5F0E5;border:1px solid #E2D8C3;color:#574A35!important;font-size:.82rem!important;line-height:1.5}
 .record-review strong{color:#3F4F42}
 
+
+/* High-contrast and touch-target fallbacks for multilingual navigation */
+.top .wrap a,.navlinks a{display:inline-flex;align-items:center;min-height:32px}
+.record-actions a,.card-actions a{display:inline-flex;align-items:center;min-height:28px;padding:3px 2px}
+@media(forced-colors:active){
+  header,.top,.catalogue-notice,.catalogue-toolbar,.catalogue-record,.record-review,.policy{
+    forced-color-adjust:auto;
+    background:Canvas;
+    color:CanvasText;
+    border-color:CanvasText;
+  }
+  a{color:LinkText}
+  .record-tag{border:1px solid CanvasText;color:CanvasText;background:Canvas}
+  :focus-visible{outline:3px solid Highlight!important;outline-offset:3px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+
 </style></head>
 <body>
 <div class="top" role="region" aria-label="Support and site links"><div class="wrap"><a class="skip-link" href="#main-content">Skip to main content</a><div class="support-links"><a class="support-link" href="tel:14416"><span>Tele-MANAS</span><strong>14416</strong></a><a class="support-link" href="tel:112"><span>Emergency</span><strong>112</strong></a></div><span><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a></span></div></div>
@@ -363,7 +382,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
   }
   function renderLanguageGroups(groups) {
     els.groups.innerHTML = groups.map(group=>{
-      const links=(group.sourceUrls||[]).filter(url=>/^https:\/\//i.test(url)).map(url=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Source</a>').join(" · ");
+      const links=(group.sourceUrls||[]).filter(url=>/^https:\/\//i.test(url)).map((url,index)=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" aria-label="Language coverage source '+(index+1)+' for '+esc(group.label)+' (opens in a new tab)">Source '+(index+1)+'</a>').join(" · ");
       return '<details><summary>'+esc(group.label)+' · '+group.languages.length+' languages</summary><p>'+esc(group.scope)+'</p><p>'+group.languages.map(esc).join(" · ")+'</p>'+(links?'<p class="language-source-links">'+links+'</p>':"")+'</details>';
     }).join("");
   }
@@ -397,7 +416,17 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
         record.rights.licence,record.rights.notes
       ].join(" "));
       return (!query || searchable.includes(query)) &&
-        (!language || (record.languages||[]).includes(language)) &&
+        (!language || (() => {
+          const aliases = data.languageAliases || {};
+          const equivalents = new Set([language, ...(aliases[language] || [])]);
+          for (const [canonical, names] of Object.entries(aliases)) {
+            if (canonical === language || names.includes(language)) {
+              equivalents.add(canonical);
+              names.forEach(name => equivalents.add(name));
+            }
+          }
+          return (record.languages || []).some(name => equivalents.has(name));
+        })()) &&
         (!tradition || (record.traditions||[]).includes(tradition)) &&
         (!access || record.access.type===access) &&
         (!rights || record.rights.status===rights) &&
