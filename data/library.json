@@ -1289,7 +1289,7 @@
       "scripts": [
         "Gurmukhi"
       ],
-      "languageCoverageLabel": "Punjabi/Gurmukhi folio transcription. The linked page represents a single selected page from a digitized PDF, not the full scripture.",
+      "languageCoverageLabel": "Punjabi/Gurmukhi transcription of a single selected page from the digitized PDF, not the full scripture.",
       "readingLevel": "primary-source",
       "access": {
         "type": "read-online",
@@ -1299,7 +1299,7 @@
           "HTML transcription",
           "Original PDF folio"
         ],
-        "notes": "This exact page is a transcription of folio/page 1 from Guru Granth Sahib Ji.pdf. Open the source for the page image and its transcription; it is not a full-text reader."
+        "notes": "This is a single selected page: a transcription of folio/page 1 from Guru Granth Sahib Ji.pdf. Open the source for the page image and its transcription; it is not a full-text reader."
       },
       "rights": {
         "status": "source-restricted",
