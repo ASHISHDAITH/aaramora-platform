@@ -18,10 +18,12 @@ Vertical export SHA-256: `053d2f79b0990325b408542c4e2c1f13ead8c5e88e39cfa950f0f7
 
 ## Website usage
 
-- The homepage film section uses `assets/brand-film/aaramora-master-16x9.mp4` as a user-initiated video with native controls, `preload=none`, `playsinline` and a poster image. It does not autoplay.
-- Use `assets/brand-film/aaramora-instagram-9x16.mp4` for vertical social previews and mobile-first campaign placements.
+- The repository stores the two MP4s at the paths in the table above.
+- The homepage uses a user-initiated video with native controls, `preload=none`, `playsinline` and a poster image. It does not autoplay.
+- In the deployed static snapshot, video URLs are served from jsDelivr's GitHub CDN path for the same committed files, avoiding a second binary transfer into the Vercel project.
+- Use the vertical file for social previews and mobile-first campaign placements.
 - Do not autoplay audio. Respect reduced-motion and data-saver preferences. Provide a poster image and accessible description.
-- Avoid loading the video on low-bandwidth connections unless the visitor explicitly starts it.
+- Avoid loading the video until the visitor explicitly starts it.
 
 ## Campaign sequence
 
@@ -36,38 +38,8 @@ Tagline: **A gentle place to begin again.**
 
 ## Current upload status
 
-This manifest records the inspected local exports. The MP4 binary files have **not yet been uploaded to GitHub**. The GitHub connector available in this session supports text writes but no direct binary asset upload/release action. Upload the two unique MP4s from a local checkout using the commands below.
+<badge>Committed to GitHub</badge>
 
-```powershell
-$repoRoot = git rev-parse --show-toplevel
-if (-not $repoRoot) { throw "Run this inside your local aaramora-platform clone." }
+Both unique MP4 files are present on the `main` branch at the paths listed in the Files table. They were added in commit `12126e3223df930568ed2ffc71a118cc90803782`.
 
-$mediaDir = "C:\viedo\AARAMORA_FINAL"
-$targetDir = Join-Path $repoRoot "assets/brand-film"
-$master = Join-Path $mediaDir "AARAMORA_MASTER_16_9.mp4"
-$instagram = Join-Path $mediaDir "AARAMORA_INSTAGRAM_9_16.mp4"
-$clean = Join-Path $mediaDir "AARAMORA_CLEAN_NO_ADDED_AUDIO.mp4"
-
-foreach ($path in @($master, $instagram, $clean)) {
-  if (-not (Test-Path -LiteralPath $path)) { throw "Missing media file: $path" }
-}
-
-New-Item -ItemType Directory -Force $targetDir | Out-Null
-Copy-Item -LiteralPath $master -Destination (Join-Path $targetDir "aaramora-master-16x9.mp4") -Force
-Copy-Item -LiteralPath $instagram -Destination (Join-Path $targetDir "aaramora-instagram-9x16.mp4") -Force
-
-$masterHash = (Get-FileHash -LiteralPath $master -Algorithm SHA256).Hash
-$cleanHash = (Get-FileHash -LiteralPath $clean -Algorithm SHA256).Hash
-if ($masterHash -eq $cleanHash) {
-  Write-Host "Clean file is identical to the landscape master; not adding a duplicate."
-} else {
-  Write-Warning "Clean file differs from the master. Inspect its audio stream with ffprobe before deciding whether to add it."
-}
-
-git -C $repoRoot add -- assets/brand-film
-git -C $repoRoot status --short
-git -C $repoRoot commit -m "Add AARAMORA brand film exports"
-git -C $repoRoot push origin main
-```
-
-This stages the two unique campaign exports. The clean file is compared by SHA-256 first; if it differs, inspect its audio stream before adding it as a separate asset.
+The landscape master is 12,114,271 bytes and the vertical edit is 10,346,721 bytes. The duplicate `CLEAN_NO_ADDED_AUDIO` export is intentionally excluded. No local upload step is pending.
