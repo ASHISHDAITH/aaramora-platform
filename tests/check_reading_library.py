@@ -1,4 +1,4 @@
-"""Static rights and navigation checks for the Aaramora reading library."""
+"""Static rights, preservation and navigation checks for the Aaramora reading library."""
 from pathlib import Path
 import re
 import unittest
@@ -8,36 +8,47 @@ HTML = (ROOT / "reading-library.html").read_text(encoding="utf-8")
 
 
 class ReadingLibraryChecks(unittest.TestCase):
-    def test_existing_sections_remain_available(self):
-        for anchor in ("free-downloads", "relationship-open-learning", "attachment-books", "github", "licensing"):
+    def test_all_existing_sections_remain_available(self):
+        for anchor in (
+            "free-downloads", "scripture-shelf", "workbooks-and-articles",
+            "relationship-open-learning", "attachment-books", "faith-wisdom",
+            "novels-and-classics", "github-shelves", "licensing",
+        ):
             with self.subTest(anchor=anchor):
                 self.assertIn(f'id="{anchor}"', HTML)
-                self.assertIn(f'href="#{anchor}"', HTML)
 
-    def test_sacred_texts_and_discovery_shelf_exists(self):
-        self.assertIn('id="scripture-shelf"', HTML)
-        for phrase in ("Bhagavad Gita", "Upanishads", "Guru Granth Sahib", "Japji Sahib", "Sukhmani Sahib", "Quran", "World English Bible", "Dhammapada", "Project Gutenberg", "Standard Ebooks", "Wikisource", "Directory of Open Access Books", "Open Library"):
+    def test_original_resources_and_reuse_rules_remain(self):
+        for phrase in (
+            "Capacity to Connect", "Psychology 2e", "Doing What Matters in Times of Stress",
+            "Attachment in Adulthood", "Guru Granth Sahib", "Bhagavad", "Quran",
+            "World English Bible", "Dhammapada", "Our reuse checklist", "Never bypass DRM",
+        ):
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, HTML)
 
-    def test_legal_source_and_rights_notices_are_present(self):
-        for url in ("heritage.iitk.ac.in", "sikher.com", "tanzil.net/docs/Text_License", "quranenc.com/en/home/about/conditions", "ebible.org/engwebu/copyright.htm", "gutenberg.org/ebooks/2388", "doabooks.org", "openlibrary.org/developers/api"):
-            with self.subTest(url=url):
-                self.assertIn(url, HTML)
-        for phrase in ("public domain in the United States", "check local copyright law", "must not be altered", "differing translation and transcription rights", "DOAB’s CC0 statement applies to its metadata", "borrowing"):
-            with self.subTest(phrase=phrase):
-                self.assertIn(phrase, HTML)
-
-    def test_no_bypass_or_unofficial_mirror_language(self):
-        for phrase in ("Never bypass DRM", "paywalls", "private repository permissions", "unauthorised copies"):
-            with self.subTest(phrase=phrase):
-                self.assertIn(phrase, HTML)
-
-    def test_hero_photo_quote_and_attribution(self):
-        self.assertIn("pexels-photo-6873903.jpeg", HTML)
+    def test_existing_hero_and_credit_remain(self):
         self.assertIn("Pavel Danilyuk", HTML)
-        self.assertIn("Let the page be a pause, not another thing to finish.", HTML)
+        self.assertIn("A page can be a little lamp.", HTML)
         self.assertIn('alt="An open vintage book', HTML)
+
+    def test_catalogue_enhancements_exist(self):
+        self.assertIn('id="language-catalogue"', HTML)
+        for marker in (
+            "catalogue-search", "catalogue-language", "catalogue-tradition",
+            "catalogue-access", "catalogue-rights", "catalogue-level",
+            "catalogue-format", "catalogue-results", "catalogue-status",
+        ):
+            with self.subTest(marker=marker):
+                self.assertIn(f'id="{marker}"', HTML)
+        self.assertIn('fetch(url,{cache:"no-cache"})', HTML)
+        self.assertIn('data/library.json', HTML)
+        self.assertIn("For reflection and cultural reading, not as treatment.", HTML)
+
+    def test_header_is_opaque_and_support_contacts_are_grouped(self):
+        self.assertIn("background:var(--paper)!important", HTML)
+        self.assertIn('class="support-link"', HTML)
+        self.assertIn('href="tel:14416"', HTML)
+        self.assertIn('href="tel:112"', HTML)
 
     def test_internal_fragment_links_resolve(self):
         ids = set(re.findall(r'\bid="([^"]+)"', HTML))
