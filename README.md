@@ -20,7 +20,7 @@ No npm install, database, account, remote fonts, analytics, AI API or backend is
 
 ## Visual direction
 
-The homepage follows a warm editorial botanical system: paper ivory, forest green, restrained sage, pale blue, muted lilac and clay accents. The 16:9 AARAMORA brand film sits in the hero as a user-controlled player; three credited Pexels photographs support the optional journaling, connection and professional-support pathways. Stock photographs are illustrative only and are not testimonials or representations of actual AARAMORA staff.
+The homepage follows a warm editorial botanical system: paper ivory, forest green, restrained sage, pale blue, muted lilac and clay accents. Its first screen uses a short plain-language introduction, two clear actions and the 16:9 AARAMORA brand film as the main visual. The primary navigation shows five common destinations and groups secondary links under “More”. Three credited Pexels photographs introduce optional journaling, connection and professional-support pathways. Stock photographs are illustrative only and are not testimonials or representations of actual AARAMORA staff.
 
 See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography, responsive rules, image credits and video behavior.
 
@@ -94,10 +94,10 @@ The supplied `CLEAN_NO_ADDED_AUDIO` file is byte-identical to the landscape mast
 
 **Production URL:** https://aaramora-platform.vercel.app
 
-The current public static deployment is marked READY by Vercel and serves the four HTML pages and three SVG assets from its latest verified snapshot (commit `3aef65fdc1f56bc3d9803ac7843ea275910f595e`). The newer `check-ins.html` page and its related documentation are committed to GitHub main, but the attempted Vercel production refresh returned 403 Forbidden; the check-in page is therefore not yet live at the production URL. GitHub-to-Vercel automatic deployment is not connected. See [deployment notes](docs/DEPLOYMENT.md).
+The current public static deployment is marked READY by Vercel and serves all five HTML pages (`index.html`, `wellbeing.html`, `relationships.html`, `check-ins.html`, and `reading-library.html`) plus three SVG assets. The latest snapshot is commit `f8c28f8aaf4a785257a3653416a8c7f57da521ee` and includes the simplified homepage navigation and hero. GitHub-to-Vercel automatic deployment is not connected, so future pushes still require a manual deployment. See [deployment notes](docs/DEPLOYMENT.md).
 
 ## Current verification
 
-The latest GitHub Actions content-check run passed on the current repository history. It executed 21 Python static tests, including Node.js syntax validation of inline JavaScript on all five source pages. Latest run: [45272441074](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45272441074). This is not a browser, screen-reader, clinical or production security certification.
+The latest GitHub Actions content-check run passed after the simplified homepage update. It includes the static content, route and JavaScript checks across all five site pages. Latest run: [45273621406](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45273621406). This is not a browser, screen-reader, clinical or production security certification.
 
 The current production deployment is live at the URL above. A final browser smoke test from a normal visitor session is still required. Deployment does not constitute clinical, safeguarding, accessibility or security approval.
