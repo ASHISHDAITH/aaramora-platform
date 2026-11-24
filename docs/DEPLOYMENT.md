@@ -6,6 +6,18 @@
 **Latest deployment:** `dpl_CYKUri19P8g1uM4hu5tKHbiiZgjG`  
 **Status:** READY · production · stable alias assigned
 
+
+## Latest release correction · 24 November 2026
+
+**Source commit:** `bdf30fa9c9af5987889ddb908345feaf96c7609a`  
+**Content checks:** 68 Python tests passed; catalogue metadata validator passed.  
+**Catalogue:** 49 entries and seven content formats: book, video, audiobook, audio, article, blog and image. The original 46 static cards and the original 26 multilingual records remain.  
+**Hero image:** locally hosted original artwork at `assets/reading-library-book-still-life.webp`; the separately credited Pexels image remains a discovery record.  
+**Source-link audit:** 77 metadata URLs checked, 61 reachable, 0 confirmed dead, 16 inconclusive because of automated-access blocks, timeouts or a provider certificate issue.  
+**Rights corrections:** OpenStax Psychology's separate no-LLM/no-generative-AI-ingestion restriction is recorded; Project Gutenberg audiobook rights are described as US-specific; audio recitations are not mislabeled as complete audiobooks.
+
+These checks do not replace native-language, religious/cultural, legal or assistive-technology review. Those gates remain open. The production deployment will be recorded below after Vercel confirms the final release is READY.
+
 ## Current release
 
 A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
