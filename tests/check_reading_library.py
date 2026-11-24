@@ -27,9 +27,15 @@ class ReadingLibraryChecks(unittest.TestCase):
                 self.assertIn(phrase, HTML)
 
     def test_existing_hero_and_credit_remain(self):
-        self.assertIn("Esra Korkmaz", HTML)
+        self.assertIn("assets/reading-library-book-still-life.webp", HTML)
+        self.assertIn("Original AARAMORA reading-library still life.", HTML)
         self.assertIn("A book does not ask you to hurry; it simply leaves the next page open.", HTML)
-        self.assertIn('alt="Vintage book pages', HTML)
+        self.assertIn('alt="An open antique book', HTML)
+
+    def test_generated_hero_asset_is_committed_and_nonempty(self):
+        hero = ROOT / "assets" / "reading-library-book-still-life.webp"
+        self.assertTrue(hero.is_file(), "Generated hero image must be committed")
+        self.assertGreater(hero.stat().st_size, 20000)
 
     def test_catalogue_enhancements_exist(self):
         self.assertIn('id="language-catalogue"', HTML)
@@ -44,8 +50,8 @@ class ReadingLibraryChecks(unittest.TestCase):
         self.assertIn('data/library.json', HTML)
         self.assertIn("For reflection and cultural reading, not as treatment.", HTML)
 
-    def test_format_navigation_has_six_clear_resource_categories(self):
-        for kind in ("book", "video", "audiobook", "article", "blog", "image"):
+    def test_format_navigation_has_seven_clear_resource_categories(self):
+        for kind in ("book", "video", "audiobook", "audio", "article", "blog", "image"):
             with self.subTest(kind=kind):
                 self.assertIn(f'data-content-type="{kind}"', HTML)
                 self.assertIn(f'data-content-type-link="{kind}"', HTML)
