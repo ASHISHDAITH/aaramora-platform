@@ -1,51 +1,47 @@
 {
   "schemaVersion": 1,
-  "lastEditorialVerification": "2026-11-24",
-  "nextEditorialVerification": "2026-12-24",
+  "updatedAt": "2026-11-24",
   "policy": {
-    "description": "Only Tele-MANAS 14416 and Emergency 112 are publicly listed by AARAMORA. Additional or alternate numbers are withheld until a named human reviewer confirms the official source, access and coverage.",
-    "automatedCheck": "HTTP metadata reachability only. 403, 405, 429, timeouts and network errors are inconclusive and require human review.",
-    "privacy": "The checker sends no user information and downloads no source-page body."
+    "description": "Only Tele-MANAS 14416 and Emergency 112 are publicly listed by AARAMORA. Additional or alternate numbers are not included until a named human reviewer confirms the official source, coverage and current access.",
+    "rule": "Keep crisis and emergency contact details limited to the two entries below. Each public number must have an official source, source-check date, next review date and named human sign-off before any additional contact is added."
   },
   "records": [
     {
       "id": "tele-manas",
-      "service": "Tele-MANAS",
+      "name": "Tele-MANAS",
+      "category": "National mental-health support",
       "displayedNumbers": [
         {
-          "display": "14416",
           "tel": "14416",
-          "purpose": "Primary toll-free mental-health support number"
+          "label": "Tele-MANAS"
         }
       ],
-      "availability": "24 hours / 7 days; confirm current service details on the official source",
-      "geography": "India",
       "officialSourceUrl": "https://www.dghs.mohfw.gov.in/national-mental-health-programme.php",
-      "secondaryOfficialSourceUrl": "https://telemanas.mohfw.gov.in/",
+      "secondarySourceUrl": "https://telemanas.mohfw.gov.in/",
       "lastVerified": "2026-11-24",
       "nextReview": "2026-12-24",
-      "owner": "AARAMORA content editor; named human reviewer not yet assigned",
-      "caveat": "Service details, language availability and routing may change. Do not promise a specific language or response time.",
+      "owner": "AARAMORA content editor",
+      "reviewStatus": "Official government source checked; named human reviewer pending",
       "humanSignOff": "pending",
-      "reviewStatus": "Official source checked; named human sign-off pending"
+      "caveat": "The AARAMORA public site displays only 14416. Service routing and availability can change; check the official source for current information."
     },
     {
       "id": "erss-112",
-      "service": "Emergency Response Support System",
+      "name": "Emergency Response Support System",
+      "category": "National emergency response",
       "displayedNumbers": [
         {
-          "display": "112",
           "tel": "112",
-          "purpose": "Nationwide emergency response number"
+          "label": "Emergency"
         }
       ],
-      "availability": "Nationwide emergency response system",
-      "geography": "India",
       "officialSourceUrl": "https://www.mha.gov.in/emergency-response-support-system-erss",
       "lastVerified": "2026-11-24",
       "nextReview": "2026-12-24",
-      "owner": "AARAMORA content editor; named individual not yet assigned",
-      "caveat": "For immediate emergencies. Local dispatch and service availability are managed by State/UT emergency response systems."
+      "owner": "AARAMORA content editor",
+      "reviewStatus": "Official government source checked; named human reviewer pending",
+      "humanSignOff": "pending",
+      "caveat": "For immediate danger or urgent police, fire or medical response in India. AARAMORA does not dispatch emergency help."
     }
   ]
 }
