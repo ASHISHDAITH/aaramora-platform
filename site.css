@@ -268,3 +268,16 @@ body[data-theme="tonight"] .support-ribbon small{color:#F1EBDD}
 .hero-grid,.hero-grid>*{min-width:0;max-width:100%}
 .hero-photo{min-width:0;max-width:100%}
 .hero-photo img{display:block;width:100%;max-width:100%;min-width:0}
+
+
+/* Reading-shelf titles must reflow for readers using enlarged text. */
+.catalog-grid,.catalog-card,.catalog-card h3,.section-head,.section-head h2{
+ min-width:0;max-width:100%;box-sizing:border-box
+}
+.catalog-card h3,.section-head h2{
+ overflow-wrap:anywhere;word-break:normal
+}
+.brand-mark{
+ width:max-content;min-width:32px;max-width:100%;height:auto;min-height:32px;
+ padding-inline:4px;box-sizing:border-box;flex:0 0 auto
+}
