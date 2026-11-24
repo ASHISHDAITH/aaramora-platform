@@ -51,12 +51,13 @@ The catalogue includes:
 
 These are creator explainers and should be presented as introductory learning, not research consensus, a clinical evaluation or a diagnosis. Link to the creator's YouTube page or use the official player/embed. The site does not download the video.
 
-### Hero photograph
+### Hero artwork and separate image discovery record
 
-- Photographer: **Esra Korkmaz**
-- Pexels source: https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/
-- Source image: https://images.pexels.com/photos/16335051/pexels-photo-16335051.jpeg?cs=srgb&dl=pexels-esrakorkmaz-16335051.jpg&fm=jpg
-- Rights: Pexels License, subject to current licence exclusions and restrictions.
+- The page hero uses an original AARAMORA-generated still life stored locally at `assets/reading-library-book-still-life.webp`.
+- No external photographer attribution is attached to this generated image.
+- The separately catalogued Pexels image is **Esra Korkmaz**, “Photo of pages torn from an old book”: https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/
+- Pexels source image: https://images.pexels.com/photos/16335051/pexels-photo-16335051.jpeg?cs=srgb&dl=pexels-esrakorkmaz-16335051.jpg&fm=jpg
+- Pexels License applies to that separate discovery record, subject to current exclusions and restrictions.
 - The AARAMORA quote is original editorial copy: “A book does not ask you to hurry; it simply leaves the next page open.”
 
 ## Research and rights boundaries
@@ -72,3 +73,12 @@ These are creator explainers and should be presented as introductory learning, n
 ## Maintenance checklist
 
 Before adding or changing a resource, record its title, creator/author, edition/version, canonical URL, format, access type, item-level rights statement, jurisdiction caveat, attribution, accessibility notes, source-check date and next-review date. Do not label an item as downloadable or reusable solely because it opens without a payment prompt.
+
+
+## Format and rights corrections · 24 November 2026
+
+The catalogue now distinguishes **Audio** from **Audiobook**. Audio is used for podcasts, recitations, guided practices and other source audio. Audiobook is reserved for a narrated book/audio-book edition. This is reflected in both the data tags and user-facing filters.
+
+The new Project Gutenberg audio-book record points to the publisher's official Audio Books collection at https://www.gutenberg.org/. The publisher describes human-read titles and the Open Audiobook Collection, and states that its digitizations are free and public domain in the United States. Check each source title, narrator/recording and local copyright position separately.
+
+The identified OpenStax Psychology edition is CC BY 4.0 with attribution, but OpenStax separately states that it must not be used to train or ingest into LLMs or generative-AI offerings without prior written permission. The CC BY licence does not erase that explicit restriction. This source-specific note is stored on the record.
