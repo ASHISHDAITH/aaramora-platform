@@ -46,3 +46,16 @@ Before merge, confirm that the PR contains no deleted files and that the existin
 3. Deploy the exact merged commit to Vercel.
 4. Confirm the deployment is READY and inspect the served commit.
 5. Repeat production smoke checks and complete the human test matrix before making accessibility or clinical quality claims.
+
+
+## Automated checks on initial implementation commit
+
+The initial candidate commit `8df9bc415554669c80245521206cc4417f8d64e8` passed:
+- [GitHub Actions push run 45414344425](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45414344425).
+- [GitHub Actions pull-request run 45414328733](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45414328733).
+- 115 website/content/safety tests.
+- 6 local lexical-retrieval tests.
+- 49-record catalogue validation, including 4 language groups and 22 scheduled Indian languages.
+- Default-deny RAG output remains empty; no model calls are made.
+
+Later documentation-only commits will trigger the same CI workflow again. Human and production gates above remain open.
