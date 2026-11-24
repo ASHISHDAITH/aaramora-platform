@@ -1,6 +1,13 @@
 (()=>{"use strict";
 const menu=document.querySelector(".menu-toggle"),nav=document.querySelector(".main-nav");
-if(menu&&nav)menu.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));});
+if(menu&&nav){
+ const closeMenu=()=>{nav.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.textContent="Menu";};
+ const openMenu=()=>{nav.classList.add("open");menu.setAttribute("aria-expanded","true");menu.textContent="Close";};
+ menu.addEventListener("click",()=>nav.classList.contains("open")?closeMenu():openMenu());
+ nav.addEventListener("click",event=>{if(event.target.closest("a"))closeMenu();});
+ document.addEventListener("keydown",event=>{if(event.key==="Escape"&&nav.classList.contains("open")){closeMenu();menu.focus();}});
+ document.addEventListener("click",event=>{if(nav.classList.contains("open")&&!event.target.closest(".header-inner"))closeMenu();});
+}
 const night=document.getElementById("tonight-toggle");
 if(night)night.addEventListener("click",()=>{const on=document.body.dataset.theme!=="tonight";document.body.dataset.theme=on?"tonight":"day";night.setAttribute("aria-pressed",String(on));night.textContent=on?"☀ Day mode":"☾ Tonight mode";});
 const lang=document.getElementById("support-language");
