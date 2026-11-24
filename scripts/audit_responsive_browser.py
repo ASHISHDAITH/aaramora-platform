@@ -54,6 +54,7 @@ def main():
         "viewports": [],
         "navigation": [],
         "no_javascript": {},
+        "preference_checks": [],
         "errors": [],
     }
     server = start_server()
@@ -199,33 +200,78 @@ def main():
                             full_page=True,
                         )
 
-            no_js_context = browser.new_context(
-                java_script_enabled=False,
-                viewport={"width": 390, "height": 844},
-                service_workers="block",
-            )
-            no_js_context.route(
-                "**/*",
-                lambda route: route.continue_()
-                if route.request.url.startswith(BASE_URL)
-                else route.abort(),
-            )
-            no_js_page = no_js_context.new_page()
-            response = no_js_page.goto(
-                BASE_URL + "/", wait_until="load", timeout=30000
-            )
-            fallback_ok = (
-                response is not None
-                and response.ok
-                and no_js_page.locator(".main-nav").is_visible()
-                and not no_js_page.locator(".menu-toggle").is_visible()
-            )
-            results["no_javascript"] = {"mobile_navigation_visible": fallback_ok}
-            if not fallback_ok:
-                results["errors"].append(
-                    "Mobile navigation is not visible with JavaScript disabled."
+            # Verify the mobile navigation fallback across every page, not just the homepage.
+            for filename in pages:
+                no_js_context = browser.new_context(
+                    java_script_enabled=False,
+                    viewport={"width": 390, "height": 844},
+                    service_workers="block",
                 )
-            no_js_context.close()
+                no_js_context.route(
+                    "**/*",
+                    lambda route: route.continue_()
+                    if route.request.url.startswith(BASE_URL)
+                    else route.abort(),
+                )
+                no_js_page = no_js_context.new_page()
+                response = no_js_page.goto(
+                    BASE_URL + page_path(filename), wait_until="load", timeout=30000
+                )
+                visible = (
+                    response is not None
+                    and response.ok
+                    and no_js_page.locator(".main-nav").is_visible()
+                    and not no_js_page.locator(".menu-toggle").is_visible()
+                    and no_js_page.locator(".main-nav a").count() == 6
+                )
+                results["no_javascript"][filename] = {"mobile_navigation_visible": visible}
+                if not visible:
+                    results["errors"].append(
+                        f"{filename}: six mobile navigation destinations are not exposed without JavaScript"
+                    )
+                no_js_context.close()
+
+            # Browser preference smoke tests. These check CSS response, not human AT conformance.
+            for filename in ["index.html", "get-help.html", "relationships.html", "reading-library.html"]:
+                preference_context = browser.new_context(
+                    viewport={"width": 390, "height": 844},
+                    service_workers="block",
+                    reduced_motion="reduce",
+                    forced_colors="active",
+                )
+                preference_context.route(
+                    "**/*",
+                    lambda route: route.continue_()
+                    if route.request.url.startswith(BASE_URL)
+                    else route.abort(),
+                )
+                preference_page = preference_context.new_page()
+                response = preference_page.goto(
+                    BASE_URL + page_path(filename), wait_until="load", timeout=30000
+                )
+                preference_result = preference_page.evaluate(
+                    """() => ({
+                      forcedColors: matchMedia("(forced-colors: active)").matches,
+                      reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
+                      scrollBehavior: getComputedStyle(document.documentElement).scrollBehavior,
+                      documentWidth: document.documentElement.scrollWidth,
+                      viewportWidth: window.innerWidth
+                    })"""
+                )
+                preference_result["page"] = filename
+                results["preference_checks"].append(preference_result)
+                if response is None or not response.ok:
+                    results["errors"].append(f"{filename}: preference-mode page response was not OK")
+                if not preference_result["forcedColors"]:
+                    results["errors"].append(f"{filename}: forced-colors preference was not emulated")
+                if not preference_result["reducedMotion"]:
+                    results["errors"].append(f"{filename}: reduced-motion preference was not emulated")
+                if preference_result["scrollBehavior"] != "auto":
+                    results["errors"].append(f"{filename}: reduced motion did not disable smooth scrolling")
+                if preference_result["documentWidth"] > preference_result["viewportWidth"] + 1:
+                    results["errors"].append(f"{filename}: overflow in forced-colours/reduced-motion mode")
+                preference_context.close()
+
             context.close()
             browser.close()
     finally:
@@ -239,6 +285,8 @@ def main():
         f"Audited {len(pages)} pages at {len(VIEWPORTS)} widths; "
         f"{len(results['viewports'])} viewport checks; "
         f"{len(results['navigation'])} keyboard menu checks; "
+        f"{len(results['no_javascript'])} no-JavaScript fallbacks; "
+        f"{len(results['preference_checks'])} preference-mode checks; "
         f"errors={len(results['errors'])}."
     )
     if results["errors"]:
