@@ -297,3 +297,52 @@ The cited run audited commit `817be3de1bc64c2c8686dcf0ad019f54964a61be`. A later
 - Production remains unchanged; the existing production deployment is still `dpl_EwEu3vXSSvSS8J6wQqNEX6JLduxE`.
 - The execution environment could not independently fetch the generated Vercel hostname for a live HTTP smoke test. Vercel confirms READY state and matching Git metadata; the preview still needs direct browser review by the project owner.
 - Human gates remain open: real NVDA/VoiceOver/TalkBack sessions; native browser 200%/400% zoom; physical Android/iOS slow/offline tests; full-site visual review; qualified clinical/safeguarding, native Hindi/Marathi and cultural/religious review. No accessibility or clinical certification is claimed.
+
+
+## Final automated quality pass and preview · 24 November 2026
+
+**Verified application-code commit:** `78213611bfee1816404d3733e3963a6fda943a6d`.
+
+**GitHub Actions:** all four checks passed on this exact commit:
+- Push content/safety: [45433039831](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45433039831).
+- Push Chromium/Lighthouse: [45433039789](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45433039789).
+- Pull-request content/safety: [45433058356](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45433058356).
+- Pull-request Chromium/Lighthouse: [45433058660](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45433058660).
+
+**Content, safety and catalogue:**
+- 122 website/content/safety tests passed.
+- 6 local lexical-retrieval tests passed without model/network calls.
+- Catalogue validator passed: 49 entries, 4 language groups, 22 scheduled Indian languages.
+- Preservation checks retain 40 Relationship Corner concepts, nine original Reading Library shelves, the original 49 records and their source/rights metadata.
+- Approved RAG corpus remains empty and LLM calls remain disabled.
+
+**Browser evidence:**
+- 16 menu-bearing pages at 1440, 768, 390 and 320 CSS px: 64 responsive checks.
+- 12 keyboard-menu checks.
+- 16/16 no-JavaScript mobile navigation checks.
+- 4/4 forced-colours and reduced-motion preference checks.
+- 12/12 text-only 200% enlargement emulations across homepage, Get Help, Relationship Corner and Reading Library at 768, 390 and 320 CSS px.
+- Zero page-level overflow and **zero visible internal text overflow** at the 200% emulation gate.
+- Slow-network test passed at 400 ms latency / 128 KiB/s down / 64 KiB/s up; homepage heading visible in 1.26 seconds in the local CI runner.
+- Offline service-worker test passed: syntax and registration passed; offline page, homepage and stylesheet cached; cached homepage and unknown-route offline support card loaded after the local origin was stopped; both approved numbers 14416 and 112 were present.
+- Browser audit reported zero errors.
+
+**Lighthouse:**
+Eight reports (homepage, Get Help, Relationship Corner and Reading Library, mobile and desktop). Every report scored **100** for Performance, Accessibility, Best Practices and SEO. Color-contrast, visible-label/accessibility-name and console-error quality gates passed. CLS was 0 in all eight reports. Reading Library mobile total blocking time measured 20 ms; all other profiles measured 0 ms.
+
+**Evidence artifact:** [aaramora-responsive-visual-audit · run 45433039789](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45433039789/artifacts/14940336195). It includes screenshots, machine-readable viewport / menu / preference / large-text / offline results, and all Lighthouse JSON reports.
+
+**Preview deployment:**
+- Vercel deployment `dpl_5xRBXxtuiBFWmFQfhvj19SLoyCC7`, state READY.
+- Exact source commit `78213611bfee1816404d3733e3963a6fda943a6d`.
+- Preview URL: https://aaramora-platform-dpgflxktd-httpsgithubcomefigma54-devpp.vercel.app
+- Branch alias: https://aaramora-platform-git-quali-a1d2eb-httpsgithubcomefigma54-devpp.vercel.app
+- Production deployment `dpl_EwEu3vXSSvSS8J6wQqNEX6JLduxE` and the stable production domain remain unchanged.
+
+**Verification limits and remaining human gates:**
+- The browser's 200% text check is a DOM/CSS emulation, not a native browser zoom or text-resize session. True 400% zoom / 320 CSS-pixel manual testing is still needed.
+- Direct HTTP smoke testing of the generated Vercel hostname could not be completed from the tooling environment. Vercel reports the deployment READY and confirms matching commit metadata; project-owner browser review of the preview is still required.
+- Human NVDA, VoiceOver and TalkBack sessions; physical Android/iOS offline/slow-network checks; complete visual review across all routes, widths and themes; and qualified clinical, safeguarding, Hindi/Marathi language and cultural/religious reviews remain open.
+- No WCAG certification, clinical approval or cultural/language sign-off is claimed.
+
+This remains a draft, non-production quality candidate. Do not promote it until the human gates are completed and documented.

@@ -70,3 +70,13 @@ The expanded Chromium run passed on audited commit `817be3de1bc64c2c8686dcf0ad01
 Evidence: [workflow 45426136282](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282), artifact [14934504814](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282/artifacts/14934504814), and `docs/review/AUTOMATED_EVIDENCE_2026-11-24.md`.
 
 **Human tests are still required:** run every environment in the matrix above; use actual 200% browser text resize and 400% zoom; test keyboard and focus on physical devices; verify airplane-mode use after a successful online visit and slow-network behavior on Android/iOS; inspect light and Tonight modes; and record tester, versions, actions, expected/actual behavior, defects and re-test. The automated 200% CSS emulation and Lighthouse score do not establish screen-reader usability or WCAG conformance.
+
+
+## Latest candidate · 24 November 2026
+
+- Preview: https://aaramora-platform-dpgflxktd-httpsgithubcomefigma54-devpp.vercel.app (READY, deployment `dpl_5xRBXxtuiBFWmFQfhvj19SLoyCC7`, commit `78213611bfee1816404d3733e3963a6fda943a6d`).
+- Both push and pull-request content and browser workflows passed: content `45433039831` / `45433058356`; browser + Lighthouse `45433039789` / `45433058660`.
+- 122 website/content/safety tests, 6 retrieval tests and 49-record catalogue validation passed. Preservation remains: 40 Relationship Corner concepts and nine Reading Library shelves.
+- Browser: 64 responsive checks, 12 keyboard, 16 no-JavaScript, 4 preference-mode, 12 large-text reflow; zero page or visible internal overflow; slow-network and service-worker offline checks passed.
+- Lighthouse: eight mobile/desktop reports, each scoring 100 for Performance, Accessibility, Best Practices and SEO. Artifact: [14940336195](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45433039789/artifacts/14940336195).
+- Production deployment and stable domain unchanged. Real screen-reader, browser-zoom, physical-device, full-site human visual, clinician/safeguarding, native-language and cultural/religious reviews remain open.
