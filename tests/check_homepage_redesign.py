@@ -8,6 +8,9 @@ class HomepageReleaseTests(unittest.TestCase):
     def test_homepage_has_four_sections_and_four_primary_destinations(self):
         home = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertEqual(4, home.count("<section"))
+        self.assertIn('id="hero-choices"', home)
+        hero = home.split('<section class="hero"', 1)[1].split("</section>", 1)[0]
+        self.assertLess(hero.index('id="hero-choices"'), hero.index('href="about.html"'))
         nav = home.split('<nav class="main-nav"', 1)[1].split("</nav>", 1)[0]
         self.assertEqual(4, nav.count("<a "))
         for target in ("get-help.html", "wellbeing.html", "tools.html", "trust.html"):
@@ -65,6 +68,14 @@ class HomepageReleaseTests(unittest.TestCase):
         for forbidden in ("localStorage", "sessionStorage", "sendBeacon", "XMLHttpRequest"):
             self.assertNotIn(forbidden, script)
         self.assertIn("window.print()", script)
+
+    def test_feedback_link_is_untracked_and_discloses_mailto_limit(self):
+        for filename in ("index.html","get-help.html","access-map.html","tools.html","trust.html","privacy.html"):
+            page=(ROOT/filename).read_text(encoding="utf-8")
+            self.assertIn("Was this helpful? Report a problem",page,filename)
+            self.assertIn("mailto:?subject=AARAMORA%20problem%20report",page,filename)
+        trust=(ROOT/"trust.html").read_text(encoding="utf-8")
+        self.assertIn("public recipient address is not configured",trust.lower())
 
 if __name__ == "__main__":
     unittest.main()
