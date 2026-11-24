@@ -3,21 +3,21 @@
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
 **Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_5oYGpf4g1ZSVbeef2b7vJECrPe6E`  
-**Deployment source:** `main` commit `2d42e47782a9d5ca8e3efde5419ac66f1f408c01`  
+**Latest deployment:** `dpl_8QYy1Fe94fctdBhqX3pT1mTRhiVw`  
+**Deployment source:** `main` commit `67d7b29ed08923a7c5e180d6b2d316802ec9f15a`  
 **Status:** READY · production · stable alias assigned
 
 
 ## Latest release correction · 24 November 2026
 
-**Source commit:** `bdf30fa9c9af5987889ddb908345feaf96c7609a`  
+**Source commit:** `67d7b29ed08923a7c5e180d6b2d316802ec9f15a`  
 **Content checks:** 68 Python tests passed; catalogue metadata validator passed.  
 **Catalogue:** 49 entries and seven content formats: book, video, audiobook, audio, article, blog and image. The original 46 static cards and the original 26 multilingual records remain.  
 **Hero image:** locally hosted original artwork at `assets/reading-library-book-still-life.webp`; the separately credited Pexels image remains a discovery record.  
 **Source-link audit:** 77 metadata URLs checked, 61 reachable, 0 confirmed dead, 16 inconclusive because of automated-access blocks, timeouts or a provider certificate issue.  
-**Rights corrections:** OpenStax Psychology's separate no-LLM/no-generative-AI-ingestion restriction is recorded; Project Gutenberg audiobook rights are described as US-specific; audio recitations are not mislabeled as complete audiobooks.
+**Rights corrections:** OpenStax Psychology's preface says the book must not be used for LLM training or ingested into generative-AI offerings without OpenStax's permission; Project Gutenberg audiobook rights are described as US-specific; audio recitations are not mislabeled as complete audiobooks.
 
-These checks do not replace native-language, religious/cultural, legal or assistive-technology review. Those gates remain open. The production deployment will be recorded below after Vercel confirms the final release is READY.
+These checks do not replace native-language, religious/cultural, legal or assistive-technology review. Those gates remain open. Vercel confirms the current production deployment above is READY and the stable alias is assigned.
 
 ## Current release
 
@@ -96,7 +96,7 @@ The `check-ins.html` page is included in the current production deployment. It c
 
 ## Latest verified production release · 24 November 2026
 
-**Current production deployment:** `dpl_2Q3n6GmFCn13Lpizgx93LZJGQ6Wy`  
+**Previous production deployment:** `dpl_2Q3n6GmFCn13Lpizgx93LZJGQ6Wy`  
 **State:** READY · `target=production` · stable alias assigned  
 **Source:** `main` at `ba193318500e06e04c6a506ea3363b3aab552ea7`  
 **Production alias:** https://aaramora-platform.vercel.app
@@ -130,15 +130,15 @@ The Reading Library catalogue has grown to 26 entries. It now includes exact sou
 Each card now shows its known writing system separately from language and an explicit editorial-review note. Native-language, cultural-context and source-text accessibility review remain pending. The source pages have not been converted into AARAMORA-hosted book files.
 
 
-## Live-browser audit of the multilingual library · 24 November 2026
+## Historical live-browser audit · 26-entry snapshot · 24 November 2026
 
-The live Reading Library page, JSON catalogue and JSON schema returned HTTP 200. The browser rendered all 46 original static cards, all 26 catalogue entries and 10 page sections. Independent filters were exercised for Marathi, Sikh, audio access, permission-required rights, academic level, EPUB format and the GRETIL search. At 390px width the page had no horizontal overflow. The first keyboard Tab focused the visible skip link, and Enter moved to main content. Axe-core 4.10.3 reported zero WCAG 2.2 AA/best-practice violations on the audited page (46 passes, no incomplete findings). This was an automated browser/axe scan, not a human NVDA/VoiceOver/TalkBack or native-reader review.
+For that historical 26-entry release, the live Reading Library page, JSON catalogue and JSON schema returned HTTP 200. The browser rendered all 46 original static cards, all 26 catalogue entries and 10 page sections. This is not a fresh browser audit of the current 49-entry release. Independent filters were exercised for Marathi, Sikh, audio access, permission-required rights, academic level, EPUB format and the GRETIL search. At 390px width the page had no horizontal overflow. The first keyboard Tab focused the visible skip link, and Enter moved to main content. Axe-core 4.10.3 reported zero WCAG 2.2 AA/best-practice violations on the audited page (46 passes, no incomplete findings). This was an automated browser/axe scan, not a human NVDA/VoiceOver/TalkBack or native-reader review.
 
 
 The metadata-only link checker percent-encodes non-ASCII URL paths before making HEAD/range requests. The checker does not parse or download source page bodies or book files.
 
 
-## Latest production release verification · 24 November 2026
+## Historical production browser verification · 26-entry snapshot · 24 November 2026
 
 **Vercel deployment:** `dpl_Eeu3YsRJwmC86Zg652mQYriEcvbM`  
 **Deployment source:** `main` commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde`  
@@ -196,8 +196,8 @@ A production-like Chromium audit found that the skip link was positioned over th
 
 ## Final Reading Library verification · 24 November 2026
 
-- Production deployment: `dpl_5oYGpf4g1ZSVbeef2b7vJECrPe6E`, READY, with the stable alias `aaramora-platform.vercel.app`.
-- Source commit: `2d42e47782a9d5ca8e3efde5419ac66f1f408c01`.
+- Production deployment: `dpl_8QYy1Fe94fctdBhqX3pT1mTRhiVw`, READY, with the stable alias `aaramora-platform.vercel.app`.
+- Source commit: `67d7b29ed08923a7c5e180d6b2d316802ec9f15a`.
 - Content/safety workflow: 68 tests passed; `scripts/check_catalogue.py` passed.
 - Catalogue: 49 records (26 original multilingual records plus 23 additions); seven browse formats; all 46 original static cards retained.
 - Media taxonomy: Audio is separate from Audiobook. The Project Gutenberg Audio Books collection is linked with a US public-domain caveat. OpenStax Psychology's separate no-LLM/no-generative-AI-ingestion restriction is recorded.
