@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "lastReviewedAt": "2026-11-24",
-  "editorialPolicy": "AARAMORA is a multilingual discovery catalogue. It links to official sources and records language scope, access model, provenance, accessibility notes and item-level rights caveats. It does not mirror copyrighted books, scrape restricted sites, bypass access controls or treat a collection-level statement as a book-level licence. Language filters are discovery aids, not a guarantee that a linked source contains every listed language. Every edition-level record carries an explicit review state. A source page check is not a native-language, clinical, religious/cultural, legal or assistive-technology approval. Each record now carries format tags for book, video, audiobook, article, blog or image discovery. Tags describe the linked source, not AARAMORA-hosted copies. Video, audio, articles, blogs and images retain creator- and item-specific rights. Do not bulk scrape platforms, bypass DRM/paywalls or treat free-to-read links as redistribution permission.",
+  "editorialPolicy": "AARAMORA is a multilingual discovery catalogue. It links to official sources and records language scope, access model, provenance, accessibility notes and item-level rights caveats. It does not mirror copyrighted books, scrape restricted sites, bypass access controls or treat a collection-level statement as a book-level licence. Language filters are discovery aids, not a guarantee that a linked source contains every listed language. Every edition-level record carries an explicit review state. A source page check is not a native-language, clinical, religious/cultural, legal or assistive-technology approval. Each record now carries format tags for book, video, audiobook, article, blog or image discovery. Tags describe the linked source, not AARAMORA-hosted copies. Video, audio, articles, blogs and images retain creator- and item-specific rights. Do not bulk scrape platforms, bypass DRM/paywalls or treat free-to-read links as redistribution permission. Audio is distinct from audiobooks: audio denotes podcasts, recitations, guided practices and general audio media; audiobook denotes a narrated book or complete audio-book edition. Format tags describe linked source material, not AARAMORA-hosted copies.",
   "languageGroups": [
     {
       "id": "india-scheduled",
@@ -257,7 +257,7 @@
       "contentTypes": [
         "book",
         "video",
-        "audiobook",
+        "audio",
         "article",
         "image"
       ]
@@ -419,7 +419,7 @@
       "contentTypes": [
         "book",
         "video",
-        "audiobook",
+        "audio",
         "image"
       ]
     },
@@ -837,8 +837,7 @@
         "note": "Source metadata and access route checked. Native-language accuracy, edition fidelity, religious/cultural description and manual assistive-technology review have not been approved by AARAMORA reviewers."
       },
       "contentTypes": [
-        "book",
-        "audiobook"
+        "book"
       ]
     },
     {
@@ -2303,14 +2302,14 @@
           "HTML",
           "PDF"
         ],
-        "notes": "Official introductory psychology textbook. The preface identifies this Psychology edition as CC BY 4.0 and offers free web and PDF access. It is distinct from the separately listed Psychology 2e title."
+        "notes": "Official introductory psychology textbook. Its preface identifies this Psychology edition as CC BY 4.0 and offers free web and PDF access. OpenStax separately says the book may not be ingested into LLMs or generative-AI offerings without prior written permission. This is distinct from the separately listed Psychology 2e title."
       },
       "rights": {
         "status": "open-license",
-        "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0) for the identified text; separate OpenStax restriction on LLM/generative-AI ingestion",
         "jurisdiction": "International licence, subject to third-party exclusions and applicable law",
-        "reuse": "The identified Psychology text may be shared and adapted with attribution. Retain author, title, source and licence details; check third-party figures separately.",
-        "notes": "The CC BY 4.0 notice applies to this identified Psychology edition, not the separate Psychology 2e entry.",
+        "reuse": "The identified Psychology text may be shared and adapted with attribution under CC BY 4.0, subject to third-party exclusions. Retain author, title, source and licence details. OpenStax separately prohibits using the book to train or ingest into LLMs or generative-AI offerings without prior written permission; CC BY attribution is not permission for that use.",
+        "notes": "The CC BY 4.0 notice applies to this identified Psychology edition, not the separate Psychology 2e entry. The publisher's preface also states that LLM/generative-AI ingestion requires prior written permission.",
         "policyUrl": "https://openstax.org/books/psychology/pages/preface"
       },
       "accessibility": {
@@ -2499,7 +2498,8 @@
       },
       "contentTypes": [
         "book",
-        "article"
+        "article",
+        "audio"
       ]
     },
     {
@@ -2577,7 +2577,7 @@
       "contentTypes": [
         "book",
         "article",
-        "audiobook"
+        "audio"
       ]
     },
     {
@@ -2804,7 +2804,8 @@
       "contentTypes": [
         "article",
         "blog",
-        "video"
+        "video",
+        "audio"
       ]
     },
     {
@@ -2879,7 +2880,8 @@
       "contentTypes": [
         "article",
         "blog",
-        "video"
+        "video",
+        "audio"
       ]
     },
     {
@@ -3257,8 +3259,8 @@
         "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
       },
       "contentTypes": [
-        "audiobook",
-        "book"
+        "book",
+        "audio"
       ]
     },
     {
@@ -3335,8 +3337,8 @@
         "note": "Source and rights metadata have been checked for catalogue placement. No independent native-language, cultural/religious-context or manual assistive-technology sign-off is recorded."
       },
       "contentTypes": [
-        "audiobook",
-        "book"
+        "book",
+        "audio"
       ]
     },
     {
@@ -3572,7 +3574,8 @@
       },
       "contentTypes": [
         "book",
-        "article"
+        "article",
+        "audio"
       ]
     },
     {
@@ -3803,7 +3806,7 @@
       "contentTypes": [
         "image",
         "video",
-        "audiobook"
+        "audio"
       ]
     },
     {
@@ -3952,6 +3955,89 @@
       },
       "contentTypes": [
         "video"
+      ]
+    },
+    {
+      "id": "project-gutenberg-audio-books",
+      "recordType": "audiobook-catalogue",
+      "title": "Project Gutenberg · free audio books",
+      "editionTitle": "Official audio-book catalogue · human-read recordings and the Project Gutenberg Open Audiobook Collection",
+      "contributors": [
+        {
+          "name": "Project Gutenberg",
+          "role": "publisher and catalogue"
+        },
+        {
+          "name": "LibriVox volunteer readers",
+          "role": "human-read recordings where identified"
+        },
+        {
+          "name": "Named project partners on individual collection pages",
+          "role": "audio-generation contributors"
+        }
+      ],
+      "traditions": [
+        "Secular",
+        "General / cross-disciplinary"
+      ],
+      "subjects": [
+        "audiobooks",
+        "classic literature",
+        "public-domain books",
+        "spoken-word audio",
+        "multilingual reading"
+      ],
+      "languages": [],
+      "languageCoverageLabel": "Language coverage varies by title and recording; inspect the individual audio-book page.",
+      "readingLevel": "all-levels",
+      "access": {
+        "type": "discovery",
+        "label": "Browse audio books at Project Gutenberg",
+        "url": "https://www.gutenberg.org/",
+        "formats": [
+          "Audio",
+          "Human-read recordings",
+          "Computer-generated audio where listed"
+        ],
+        "notes": "Project Gutenberg's official home page lists audio-book collections, including human-read recordings and its Open Audiobook Collection. The publisher describes these recordings as digitizations of Project Gutenberg texts and identifies their free/public-domain status in the United States. Open each specific title to confirm its language, narrator, audio format and rights notice."
+      },
+      "rights": {
+        "status": "public-domain-edition",
+        "licence": "Project Gutenberg states its audio-book collections are freely available and public domain in the United States; individual recording and text notices still apply",
+        "jurisdiction": "The published public-domain statement is US-specific; users elsewhere must check local copyright and neighbouring-rights rules",
+        "reuse": "Use the individual Project Gutenberg title page and preserve its source/title information. Do not assume every underlying work, translation, narrator, sound recording or artwork is public domain worldwide.",
+        "notes": "The audio collection includes different production types. Public-domain status of an underlying text and rights in a particular performance/recording should be checked separately.",
+        "policyUrl": "https://www.gutenberg.org/policy/permission"
+      },
+      "accessibility": {
+        "searchableText": "Searchability and audio navigation vary by title and player.",
+        "reflowable": "Audio is not reflowable; use the text edition when available.",
+        "screenReaderNotes": "Check the individual player, recording description and any transcript or chapter-navigation support.",
+        "formats": [
+          "Audio",
+          "Human-read recordings",
+          "Computer-generated audio where listed"
+        ]
+      },
+      "provenance": {
+        "sourceName": "Project Gutenberg",
+        "sourceUrl": "https://www.gutenberg.org/",
+        "policyUrl": "https://www.gutenberg.org/policy/permission"
+      },
+      "verification": {
+        "checkedAt": "2026-11-24",
+        "nextReviewAt": "2027-02-24",
+        "method": "Checked the official Project Gutenberg home page's audio-book collection description and public-domain statement on 24 November 2026. This is a catalogue-level source check; individual audio title, narrator and territorial rights still require item-level review."
+      },
+      "scripts": [],
+      "editorialReview": {
+        "nativeLanguage": "pending",
+        "culturalContext": "pending",
+        "accessibility": "pending",
+        "note": "The source and general collection-level rights statement have been checked. No independent native-language, narration-quality, cultural-context or manual assistive-technology sign-off is recorded."
+      },
+      "contentTypes": [
+        "audiobook"
       ]
     }
   ],
