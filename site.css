@@ -91,3 +91,12 @@ body[data-theme="tonight"] .discovery-card h3,body[data-theme="tonight"] .discov
 body[data-theme="tonight"] .discovery-card p:not(.eyebrow){color:#D6DCCC}
 body[data-theme="tonight"] .discovery-reading blockquote{background:#354238;color:#F1E8D5}
 @media(max-width:760px){.discovery-links{grid-template-columns:1fr}.discovery-card{padding:19px}}
+
+/* Floating Tonight Mode toggle — shared across pages that load site.js */
+.tonight-floating{position:fixed;bottom:22px;right:20px;z-index:200;min-height:44px;padding:9px 16px;border-radius:999px;background:#25483A;border:1px solid #25483A;color:#fff;font-weight:800;font-size:.87rem;cursor:pointer;box-shadow:0 4px 18px rgba(32,55,43,.22);transition:background-color .18s ease,border-color .18s ease}
+.tonight-floating:hover{background:#1B3328;border-color:#1B3328}
+.tonight-floating:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+body[data-theme="tonight"] .tonight-floating{background:#F6F0E1;border-color:#F6F0E1;color:#1B2923;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+body[data-theme="tonight"] .tonight-floating:hover{background:#EDE6D2;border-color:#EDE6D2}
+@media(max-width:540px){.tonight-floating{bottom:16px;right:14px;font-size:.82rem;padding:8px 13px}}
+@media(prefers-reduced-motion:reduce){.tonight-floating{transition:none}}
