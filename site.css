@@ -134,7 +134,7 @@ button,.button,.quiet-button,.menu-toggle,.quick-exit,.footer-more summary{min-h
 .site-footer a:focus-visible,.footer-more summary:focus-visible{outline-offset:4px}
 body[data-theme="tonight"] .eyebrow,body[data-theme="tonight"] .kicker{color:#D7DCCF}
 body[data-theme="tonight"] .service-meta,body[data-theme="tonight"] .format-count-note{color:#D7DCCF}
-body[data-theme="tonight"] .verify{color:#53645A}
+body[data-theme="tonight"] .verify{color:#D7DCCF}
 @media(min-width:1100px){
   .hero{padding-block:clamp(48px,6vw,78px)}
   .hero-grid{gap:clamp(34px,5vw,66px)}
