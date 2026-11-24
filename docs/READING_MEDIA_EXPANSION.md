@@ -2,14 +2,14 @@
 
 **Research snapshot:** 24 November 2026
 
-This document records the 22 source discoveries added to the reading catalogue, the media formats assigned to each and the permissions that must be respected. Existing reading shelves and the original 26 multilingual entries remain. The website stores discovery metadata and source links; it does not store the full text, audio or video from these external sources.
+This document records the 23 source discoveries added to the reading catalogue, the media formats assigned to each and the permissions that must be respected. Existing reading shelves and the original 26 multilingual entries remain. The website stores discovery metadata and source links; it does not store the full text, audio or video from these external sources.
 
 ## Browse formats
 
 Each source record is tagged with one or more of the following:
 - **Book:** open textbooks, scriptures, public-domain editions, source text catalogues and lawful library discovery.
 - **Video:** creator-published explainers or media discovery pages.
-- **Audiobook:** public-domain readings, scripture recitations and official audio readers.
+- **Audiobook:** narrated book editions from public-domain or creator-provided sources.
 - **Article:** research articles, workbooks, educational information and source articles.
 - **Blog:** publisher essays and recurring editorial learning.
 - **Image:** individually licensed photographs, archival images and openly licensed image discovery.
@@ -31,15 +31,15 @@ A format tag identifies a type of source. It does not imply that AARAMORA hosts,
 | LibriVox | Audiobook | Multilingual volunteer-read public-domain audiobook catalogue | LibriVox says its recordings are public domain; check the underlying text's copyright by territory. |
 | Project Gutenberg · Audio Books | Audiobook | Human-read titles and the Open Audiobook Collection | The publisher states its digitizations are free and public domain in the United States; check each title and territory. |
 | eBible.org | Audiobook | World English Bible audio discovery | Check the exact recording and narrator's notice. Text, translation and sound recording are separate rights objects. |
-| Gurbani Prakash | Book, audiobook | Gurbani and Nitnem browser reader with recitations | Link to the original reader. Its project describes devotional/non-commercial use of recitations; no general mirroring permission. |
-| Quran.com | Book, audiobook | Qur'an reading and recitation player | Platform terms and individual reciter/translation rights apply. Do not extract or rehost audio or translations. |
+| Gurbani Prakash | Book, audio | Gurbani and Nitnem browser reader with recitations | Link to the original reader. Its project describes devotional/non-commercial use of recitations; no general mirroring permission. |
+| Quran.com | Book, audio | Qur'an reading and recitation player | Platform terms and individual reciter/translation rights apply. Do not extract or rehost audio or translations. |
 | Tanzil | Book | Verified Arabic Qur'an text | Its stated CC BY 3.0 licence permits the specified text to be copied verbatim with attribution; modification is prohibited. It does not license translations/audio. |
 | QuranEnc | Book | Multilingual translation discovery | Follow each translation's conditions. Preserve source, translator/publisher and version details; do not modify. |
 | SuttaCentral | Book, article | Early Buddhist texts, translations and parallels | Original project content and third-party translations have different rights. Link to items; do not scrape or use restricted text in AI datasets. |
 | SuttaCentral sc-data · GitHub | Book | Public source repository index | Public code repository visibility does not license every underlying text or translation. Check the SuttaCentral content licence. |
 | Openverse | Image | Creative Commons/public-domain image discovery | Verify original item, creator and exact licence. A search result does not confer rights. |
-| Wikimedia Commons | Image, video, audiobook | Free-media discovery | Reuse depends on each file's licence, attribution and other conditions. |
-| Pexels · Esra Erdem | Image | Book pages and dried flowers hero photograph | Pexels License applies. The photo page identifies Esra Erdem as photographer; AARAMORA credits the source. |
+| Wikimedia Commons | Image, video, audio | Free-media discovery | Reuse depends on each file's licence, attribution and other conditions. |
+| Pexels · Esra Erdem | Image | Book pages and dried flowers image-discovery record | Pexels License applies. The photo page identifies Esra Erdem as photographer; AARAMORA credits the source. |
 | Pexels video library | Video | Creator-uploaded reading and ambient-video discovery | Check each clip and its creator's source page/terms. Do not bulk-scrape. |
 
 ## Creator and image credits
@@ -57,7 +57,7 @@ These are creator explainers and should be presented as introductory learning, n
 - The page hero uses an original AARAMORA-generated still life stored locally at `assets/reading-library-book-still-life.webp`.
 - No external photographer attribution is attached to this generated image.
 - The separately catalogued Pexels image is **Esra Erdem**, “Photo of pages torn from an old book”: https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/
-- Pexels source image: https://images.pexels.com/photos/16335051/pexels-photo-16335051.jpeg?cs=srgb&dl=pexels-esrakorkmaz-16335051.jpg&fm=jpg
+- Pexels source image: (Use the individual image page's download option and retain the Pexels source link.)
 - Pexels License applies to that separate discovery record, subject to current exclusions and restrictions.
 - The AARAMORA quote is original editorial copy: “A book does not ask you to hurry; it simply leaves the next page open.”
 
@@ -82,4 +82,4 @@ The catalogue now distinguishes **Audio** from **Audiobook**. Audio is used for 
 
 The new Project Gutenberg audio-book record points to the publisher's official Audio Books collection at https://www.gutenberg.org/. The publisher describes human-read titles and the Open Audiobook Collection, and states that its digitizations are free and public domain in the United States. Check each source title, narrator/recording and local copyright position separately.
 
-The identified OpenStax Psychology edition is CC BY 4.0 with attribution, but OpenStax separately states that it must not be used to train or ingest into LLMs or generative-AI offerings without OpenStax's permission. The CC BY licence does not erase that explicit restriction. This source-specific note is stored on the record.
+The identified OpenStax Psychology edition is CC BY 4.0 with attribution. Its preface separately states that the book may not be used to train large language models or otherwise be ingested into LLMs or generative-AI offerings without OpenStax's permission. The CC BY licence does not remove that restriction. This source-specific note is stored on the record.
