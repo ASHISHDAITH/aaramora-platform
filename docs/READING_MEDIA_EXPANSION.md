@@ -82,4 +82,4 @@ The catalogue now distinguishes **Audio** from **Audiobook**. Audio is used for 
 
 The new Project Gutenberg audio-book record points to the publisher's official Audio Books collection at https://www.gutenberg.org/. The publisher describes human-read titles and the Open Audiobook Collection, and states that its digitizations are free and public domain in the United States. Check each source title, narrator/recording and local copyright position separately.
 
-The identified OpenStax Psychology edition is CC BY 4.0 with attribution, but OpenStax separately states that it must not be used to train or ingest into LLMs or generative-AI offerings without prior written permission. The CC BY licence does not erase that explicit restriction. This source-specific note is stored on the record.
+The identified OpenStax Psychology edition is CC BY 4.0 with attribution, but OpenStax separately states that it must not be used to train or ingest into LLMs or generative-AI offerings without OpenStax's permission. The CC BY licence does not erase that explicit restriction. This source-specific note is stored on the record.
