@@ -9,7 +9,7 @@ MANIFEST=json.loads((ROOT/"data/rag-corpus-manifest.json").read_text(encoding="u
 SUPPORT=json.loads((ROOT/"data/service-links.json").read_text(encoding="utf-8"))
 SAFETY=(ROOT/"SAFETY.md").read_text(encoding="utf-8")
 GOVERNANCE=(ROOT/"docs/CONTENT_GOVERNANCE.md").read_text(encoding="utf-8")
-FIXTURES=[json.loads(x) for x in (ROOT/"tests/fixtures/hinglish-redteam-v2.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
+FIXTURES=[json.loads(x) for x in (ROOT/"tests/fixtures/hinglish-redteam-v2.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]\nCRISIS_PACK=[json.loads(x) for x in (ROOT/"tests/fixtures/crisis-multilingual-301-v1.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
 class RagReleaseGateTests(unittest.TestCase):
     def test_prompt_is_draft_and_has_external_deterministic_crisis_gate(self):
         self.assertIn("REVIEW DRAFT",PROMPT)
@@ -49,7 +49,7 @@ class RagReleaseGateTests(unittest.TestCase):
         for forbidden in ("1800-891-4416","1800-89-14416","tel:181"):
             self.assertNotIn(forbidden,SAFETY)
             self.assertNotIn(forbidden,GOVERNANCE)
-    def test_fixture_text_does_not_contain_personal_identifiers(self):
+    def test_301_multilingual_crisis_pack_is_structurally_complete(self):\n        self.assertEqual(301,len(CRISIS_PACK))\n        langs={lang:sum(x["language"]==lang for x in CRISIS_PACK) for lang in ("en","hi","mr","hinglish")}\n        self.assertEqual({"en":67,"hi":67,"mr":67,"hinglish":100},langs)\n        self.assertTrue(all(x["synthetic"] for x in CRISIS_PACK))\n        self.assertTrue(all("review_pending" in x["clinicalLabelStatus"] for x in CRISIS_PACK))\n    def test_fixture_text_does_not_contain_personal_identifiers(self):
         full=" ".join(x["message"] for x in FIXTURES).lower()
         for marker in ("@gmail.com","@yahoo.com","+91-","aadhaar","passport number"):
             self.assertNotIn(marker,full)
