@@ -127,5 +127,6 @@ This is an additive quality release. No original page, relationship concept, rea
 - Updated `site.js` so mobile navigation has explicit breakpoint-aware state, closes on Escape and outside pointer input, and resets on desktop resize. The page exposes a no-JavaScript mobile-navigation fallback.
 - Added `tests/check_responsive_accessibility_quality.py` to check these safeguards and verify the 40 relationship concepts, 49 library records and nine original shelves remain present.
 - Added `docs/RELEASE_QUALITY_PASS_2026-11-24.md` with scope, gates and deployment sequence.
+- GitHub Actions push run `45414344425` and pull-request run `45414328733` passed on candidate commit `8df9bc415554669c80245521206cc4417f8d64e8`: 115 website/content/safety tests, 6 retrieval-only tests and the 49-entry catalogue validator passed; the RAG index remains empty and LLM calls disabled.
 - Human NVDA, VoiceOver, TalkBack, 200%/400% zoom, physical-device offline/slow-network, visual review, Lighthouse and qualified clinical/language/cultural review are still outstanding. No WCAG conformance or clinical sign-off is claimed.
 - Do not merge or deploy until CI passes; after merge, deploy the exact commit and repeat live smoke tests. Production remains on the previously verified release until then.
