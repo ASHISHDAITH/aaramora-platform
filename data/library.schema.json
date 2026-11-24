@@ -290,6 +290,7 @@
                 "book",
                 "video",
                 "audiobook",
+                "audio",
                 "article",
                 "blog",
                 "image"
