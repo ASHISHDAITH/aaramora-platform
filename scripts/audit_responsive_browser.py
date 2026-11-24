@@ -328,8 +328,29 @@ def main():
                             })
                             .filter(element => element.right > window.innerWidth + 1 || element.left < -1 || element.scrollWidth > element.clientWidth + 1)
                             .slice(0, 16);
+                          const criticalInternalOverflow = [...document.body.querySelectorAll("*")]
+                            .filter(element => {
+                              const rect = element.getBoundingClientRect();
+                              const style = getComputedStyle(element);
+                              return rect.width > 0 && rect.height > 0 &&
+                                rect.bottom > 0 && rect.top < window.innerHeight &&
+                                rect.right > 0 && rect.left < window.innerWidth &&
+                                style.display !== "none" && style.visibility !== "hidden" &&
+                                style.position !== "absolute" &&
+                                element.scrollWidth > element.clientWidth + 4;
+                            })
+                            .slice(0, 20)
+                            .map(element => ({
+                              tag: element.tagName.toLowerCase(),
+                              id: element.id || "",
+                              className: typeof element.className === "string" ? element.className : "",
+                              text: (element.innerText || "").trim().replace(/\\s+/g, " ").slice(0, 90),
+                              scrollWidth: element.scrollWidth,
+                              clientWidth: element.clientWidth
+                            }));
                           return {
                             enlargedTextElements: enlarged,
+                            criticalInternalOverflow,
                             documentWidth: document.documentElement.scrollWidth,
                             bodyWidth: document.body.scrollWidth,
                             viewportWidth: window.innerWidth,
@@ -358,6 +379,11 @@ def main():
                         results["errors"].append(
                             f"{filename} at {width}px: horizontal overflow under 200% text enlargement "
                             f"({resize_result['documentWidth']}px document)"
+                        )
+                    if resize_result["criticalInternalOverflow"]:
+                        results["errors"].append(
+                            f"{filename} at {width}px: visible content overflows internally under 200% text enlargement "
+                            f"{resize_result['criticalInternalOverflow'][:8]}"
                         )
                     if not resize_result["headingVisible"]:
                         results["errors"].append(f"{filename} at {width}px: main heading is not visible after text enlargement")
