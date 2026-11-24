@@ -215,7 +215,6 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn("OpenStax's permission", records["openstax-psychology-cc-by"]["rights"]["reuse"])
         pexels = records["pexels-rare-book-photo"]
         self.assertEqual("Esra Erdem", pexels["contributors"][0]["name"])
-
     def test_content_format_filters_exist_and_are_connected_to_records(self):
         for marker in ('id="catalogue-kind-filter"', 'data-content-type="book"',
                        'data-content-type="video"', 'data-content-type="audiobook"',
