@@ -234,3 +234,11 @@
 - **Open manual gates:** no fresh whole-site visual browser audit, screen-reader run by a human, 200%/400% zoom session, slow-network/offline device test or Lighthouse report is claimed for this release. Clinician, safeguarding, Hindi/Marathi native-language, cultural/religious and independent assistive-technology reviews remain pending.
 
 This is an additive quality release. No original page, relationship concept, reading-library shelf, catalogue record, support route or media file was intentionally deleted.
+
+## Additive navigation accessibility correction · 24 November 2026
+
+- Source review confirmed `relationships.html` contained two skip links targeting the same `#main` landmark: a legacy `class="skip"` link and the shared `class="skip-link"` link.
+- Removed only the redundant legacy anchor. The shared skip link and `<main id="main">` target remain unchanged.
+- Added a regression test to `tests/check_navigation_enhancements.py` requiring exactly one shared skip link on the Relationship Corner page.
+- This is a source-level correction. Automated CI must run on the resulting commit; no new browser, screen-reader or assistive-technology result is claimed here.
+- No relationship content, concept, quiz, guide, navigation item, asset or support route was changed.
