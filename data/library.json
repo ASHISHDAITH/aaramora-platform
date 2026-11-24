@@ -3812,11 +3812,11 @@
     {
       "id": "pexels-rare-book-photo",
       "recordType": "media-source",
-      "title": "Vintage book pages with dried flowers · Esra Korkmaz",
+      "title": "Vintage book pages with dried flowers · Esra Erdem",
       "editionTitle": "Pexels photograph · 4336 × 6500 · published 11 April 2023",
       "contributors": [
         {
-          "name": "Esra Korkmaz",
+          "name": "Esra Erdem",
           "role": "photographer"
         }
       ],
@@ -3840,14 +3840,14 @@
           "JPEG",
           "Photography"
         ],
-        "notes": "Moody archival still life featuring vintage pages and dried flowers. The Pexels photo page identifies Esra Korkmaz as photographer and marks the photograph free. AARAMORA keeps the photographer credit."
+        "notes": "Moody archival still life featuring vintage pages and dried flowers. The exact Pexels photo page identifies Esra Erdem as photographer and marks the photograph free. AARAMORA keeps the photographer credit."
       },
       "rights": {
         "status": "source-restricted",
         "licence": "Pexels License; follow current exclusions and restrictions",
         "jurisdiction": "Pexels terms and applicable local law",
         "reuse": "Use under Pexels License. Do not sell an unmodified copy or imply photographer/subject endorsement. Keep the credit link.",
-        "notes": "The source page identifies Esra Korkmaz as the photographer and lists the image dimensions.",
+        "notes": "The exact Pexels source page identifies Esra Erdem as the photographer and lists the image dimensions.",
         "policyUrl": "https://www.pexels.com/legal-pages/license"
       },
       "accessibility": {
@@ -3860,7 +3860,7 @@
         ]
       },
       "provenance": {
-        "sourceName": "Pexels · Esra Korkmaz",
+        "sourceName": "Pexels · Esra Erdem",
         "sourceUrl": "https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/",
         "policyUrl": "https://www.pexels.com/legal-pages/license"
       },
