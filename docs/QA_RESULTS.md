@@ -199,3 +199,17 @@
 - The wellbeing skip link was corrected to target the page's actual main landmark. The homepage's “Find a person” card now opens the Pune Access Map. The offline support card now includes Quick Exit.
 - No fresh whole-site live browser, screen-reader, 200% zoom, slow-network or Lighthouse audit is recorded for this exact production deployment. Earlier local Chromium/axe results in this file apply to the tested candidate pages and should not be interpreted as full-site certification.
 - Named clinical, safeguarding, native-language, cultural/religious and assistive-technology reviews remain pending.
+
+
+## Navigation and discovery quality pass · 24 November 2026
+
+- Preserved all existing pages, sections, relationship concepts, Reading Library catalogue records, book shelves, quizzes, support routes and media assets. No resource data or original shelves were removed.
+- Shared navigation now exposes six destinations: Get help now, Understand, Tools, Relationship Corner, Reading Library and Trust. Added responsive Menu panel, Escape-to-close, outside-click close, aria-expanded updates and current-page indication.
+- All 16 menu-bearing pages load the shared `site.js`; legacy relationship/check-in menu handlers that referenced removed IDs were retired while their page-specific interaction code remains.
+- Homepage retains four sections and the original choice cards, support content and pathways. It adds two discovery cards for Relationship Corner and Reading Library, including the original AARAMORA reading quote.
+- Reading Library has seven media-type filters with live item counts (49 catalogue records; counts overlap because sources may have multiple content types). All nine existing reading sections and all 49 records remain.
+- Shared menu, homepage discovery, media filter and preservation tests added at `tests/check_navigation_enhancements.py`.
+- Current source commit: `cbba9157547dbad3422ac92304b0cbd0660b8d09`.
+- GitHub content-check run `45410412093`: success. 109 main website/content/safety tests, 6 lexical retrieval tests and the 49-record multilingual catalogue validator passed.
+- Production has not yet been redeployed with this commit. Keep the previous production alias until the exact commit's Vercel deployment is READY and the served-page smoke checks pass.
+- This remains a static information/help-navigation prototype. Human clinician, safeguarding, native-language, cultural/religious and independent assistive-technology reviews remain pending. No whole-site WCAG 2.2 AA certification or live AI model evaluation is claimed.
