@@ -68,7 +68,8 @@ for (const route of routes) {
         cumulativeLayoutShift: metric("cumulative-layout-shift"),
         speedIndex: metric("speed-index"),
       },
-      finalUrl: report.finalDisplayedUrl ?? report.finalUrl ?? null,\n      qualityChecks: Object.fromEntries(["color-contrast","label-content-name-mismatch","errors-in-console"].map(id=>[id,report.audits?.[id]?.score ?? null])),
+      finalUrl: report.finalDisplayedUrl ?? report.finalUrl ?? null,
+      qualityChecks: Object.fromEntries(["color-contrast","label-content-name-mismatch","errors-in-console"].map(id=>[id,report.audits?.[id]?.score ?? null])),
     });
   }
 }
@@ -81,7 +82,8 @@ await writeFile(
       baseUrl: base,
       routes,
       reports: summaries,
-      note: "Lighthouse lab scores are diagnostic measurements, not WCAG or clinical certification.",\n      qualityFindings,
+      note: "Lighthouse lab scores are diagnostic measurements, not WCAG or clinical certification.",
+      qualityFindings,
     },
     null,
     2,
@@ -92,4 +94,9 @@ for (const result of summaries) {
   process.stdout.write(
     `${result.route} [${result.preset}] ${JSON.stringify(result.categories)}\n`,
   );
+}
+
+if (qualityFindings.length) {
+  for (const finding of qualityFindings) process.stderr.write(`QUALITY GATE: ${finding}\n`);
+  process.exitCode = 1;
 }
