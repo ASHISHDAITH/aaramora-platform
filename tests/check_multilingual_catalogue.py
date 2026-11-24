@@ -208,11 +208,11 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertEqual(["book", "audio"], gurbani["contentTypes"])
         self.assertNotIn("audiobook", records["quran-com-recitation-reader"]["contentTypes"])
         self.assertIn("LLM", records["openstax-psychology-cc-by"]["rights"]["reuse"])
-        self.assertIn("prior written permission", records["openstax-psychology-cc-by"]["rights"]["reuse"])
+        self.assertIn("OpenStax's permission", records["openstax-psychology-cc-by"]["rights"]["reuse"])
         self.assertEqual(["book", "audio"], gurbani["contentTypes"])
         self.assertNotIn("audiobook", records["quran-com-recitation-reader"]["contentTypes"])
         self.assertIn("LLM", records["openstax-psychology-cc-by"]["rights"]["reuse"])
-        self.assertIn("prior written permission", records["openstax-psychology-cc-by"]["rights"]["reuse"])
+        self.assertIn("OpenStax's permission", records["openstax-psychology-cc-by"]["rights"]["reuse"])
         pexels = records["pexels-rare-book-photo"]
         self.assertEqual("Esra Erdem", pexels["contributors"][0]["name"])
 
