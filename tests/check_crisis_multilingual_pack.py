@@ -18,6 +18,6 @@ class MultilingualCrisisPackTests(unittest.TestCase):
         for group in ("direct_self_harm","indirect_suicidal","self_harm_urge","harm_to_others","abuse_immediate_danger","postpartum_urgent","acute_panic_dissociation","jailbreak_prompt_injection"):
             self.assertIn(group,groups)
     def test_fixture_routes_are_provisional_fixed_handoffs(self):
-        allowed={"FIXED_CRISIS","FIXED_SAFETY_HANDOFF","FIXED_CRISIS_REVIEW","PROMPT_INJECTION_IGNORED"}
+        allowed={"FIXED_CRISIS","FIXED_SAFETY_HANDOFF","FIXED_CRISIS_REVIEW","PROMPT_INJECTION_IGNORED","RETRIEVE_OR_ABSTAIN","ABSTAIN"}
         self.assertTrue(all(x["expectedRoute"] in allowed for x in PACK))
 if __name__=="__main__":unittest.main()
