@@ -117,3 +117,129 @@ The corpus manifest is empty and runtime is disabled. The default corpus builder
 - **Open manual gates:** no fresh whole-site visual browser audit, screen-reader run by a human, 200%/400% zoom session, slow-network/offline device test or Lighthouse report is claimed for this release. Clinician, safeguarding, Hindi/Marathi native-language, cultural/religious and independent assistive-technology reviews remain pending.
 
 This is an additive quality release. No original page, relationship concept, reading-library shelf, catalogue record, support route or media file was intentionally deleted.
+
+## Kiro IDE migration and continuation brief · 24 November 2026
+
+**Primary development environment:** Kiro IDE (vibe-coding workflow).  
+**Source of truth:** this Git repository and its reviewed project documentation.  
+**Production host:** Vercel, stable alias https://aaramora-platform.vercel.app.  
+**Repository:** https://github.com/ASHISHDAITH/aaramora-platform  
+**Default branch:** `main`.  
+**Migration type:** development-environment handoff only. This is not a framework migration, rewrite, redesign reset or content reset.
+
+### 1. Current baseline to preserve
+
+The latest reported production release is source commit `7da5fda5c648ac25477684e9996324e472791385`, Vercel deployment `dpl_EwEu3vXSSvSS8J6wQqNEX6JLduxE` (READY), with the stable alias above. GitHub content-check run `45410648378` is reported successful.
+
+Preserve all existing source files and content, including:
+- The static HTML/CSS/JavaScript architecture and existing routes.
+- All six shared navigation destinations: Get help now, Understand, Tools, Relationship Corner, Reading Library and Trust.
+- Responsive navigation, Escape handling, outside-click close, `aria-expanded`, active-page indication and Quick Exit.
+- The original four homepage sections and pathways, plus the Relationship Corner and Reading Library discovery cards.
+- Relationship Corner's 40 concepts, guides, reflection tools, quizzes and safety information.
+- Reading Library's 49 catalogue records, all nine original shelves, seven format filters and all source links, rights notes and attribution.
+- Pune Access Map's 25 service entries across 10 facilities.
+- All illustrations, images, brand-film media, service worker, CSS, JavaScript, manifest, sitemap, tests, scripts, data and research/documentation files.
+
+Counts are preservation baselines, not goals to reduce or replace. Format totals overlap because one catalogue source can carry multiple formats.
+
+### 2. Kiro operating procedure
+
+At the start of each Kiro session:
+1. Read `brain.md`, `SAFETY.md`, `README.md`, and `CONTRIBUTING.md`.
+2. Read the feature-specific specification, source register, rights note and relevant tests before editing that feature.
+3. Inspect `git status`, current branch and latest commit. Do not overwrite or discard uncommitted user work.
+4. Inspect the live source files and tests. Treat this memory as project direction, not a substitute for source-code inspection.
+5. Write a short implementation plan and identify the exact files expected to change.
+6. Make small additive changes. Preserve existing IDs, routes, content, data records, links, attribution and interactions unless a verified defect requires a narrowly scoped correction.
+7. Run the relevant focused tests, then the full suite and catalogue/source checks.
+8. Review the diff for accidental deletion, weakened safety wording, changed helpline data, removed content, broken links, new third-party calls or exposed private data.
+9. Update `brain.md` and relevant feature/QA documentation in the same change.
+10. Commit and push only after checking the diff and test output. Never force-push or use destructive Git commands as a shortcut.
+11. Vercel production is only updated after a deployment is explicitly triggered and the exact deployed commit is checked. A successful push or GitHub CI run is not proof that production changed.
+12. Run live smoke checks on the deployed version before describing it as live.
+
+### 3. Kiro project instructions to maintain
+
+Use this section as the repository-level working contract for Kiro:
+
+- **Enhance, do not replace.** No wholesale rebuild, page deletion, content pruning, route consolidation, framework conversion or visual reset without a separate, explicit user decision.
+- **Preserve first.** Before and after each task, verify the counts and presence of the 40 relationship concepts, 49 catalogue records, nine original shelves, 25 Pune service entries and 10 facilities.
+- **Static-first.** The current project is a static site. Do not add a backend, database, login, server-side journal, analytics, remote font, model endpoint or third-party runtime dependency merely for convenience.
+- **No invented authority.** Do not claim top-1% status, clinical efficacy, WCAG conformance, verified capacity, endorsements, or human review without evidence and named sign-off.
+- **Respect project architecture.** Inspect existing shared CSS/JS patterns and test approach before creating abstractions or dependencies.
+- **Stay additive and reversible.** Prefer targeted CSS, semantic HTML and small JavaScript changes. Do not replace whole files when a focused patch is sufficient.
+- **No silent content changes.** Do not rewrite sacred texts, scripture translations, source titles, clinical content or rights notes without source-specific checks and the required review.
+- **No secrets or real disclosures.** Never place API keys, personal journals, health records, real visitor submissions or credentials in source, prompts, logs, screenshots, fixtures or commits.
+- **No automatic publishing.** Kiro may prepare and verify a change; production deployment remains a deliberate, separately verified step.
+
+### 4. Safety and public-service invariants
+
+Read `SAFETY.md` before any safety-sensitive change. The site is information and help navigation, not therapy, diagnosis, prescribing, telemedicine, emergency dispatch or an AI companion.
+
+Public national support routes remain exactly:
+- Tele-MANAS: **14416**
+- Emergency Response Support System: **112**
+
+Do not add or substitute a helpline number without named human review of the official source, current availability, geographic coverage and exact wording, with the change recorded in `data/service-links.json`.
+
+Relationship features must not become partner surveillance, location tracking, coercion, manipulation or a verdict about a person. Respect no-contact and requests for space. Quick Exit must not be described as erasing browser history, network logs or shared-device activity.
+
+The future AARAMORA Guide/RAG remains disabled. The approved retrieval corpus remains empty, and there must be no LLM calls, chatbot UI, transcript storage, accounts or long-term memory unless every release gate in the RAG documents has been met and the user explicitly approves that scope. Never scrape, mass-download, bypass DRM/paywalls/borrowing controls, or ingest restricted sources.
+
+### 5. Commands and verification
+
+The current repo is static and does not require a Node application build to serve locally. A simple local preview is:
+
+```bash
+python -m http.server 8000
+```
+
+Open `http://localhost:8000`.
+
+The repository's GitHub Actions workflow runs Python unittest discovery:
+
+```bash
+python -m unittest discover -s tests -p 'check_*.py' -v
+```
+
+Also run the catalogue validator:
+
+```bash
+python scripts/check_catalogue.py
+```
+
+Run relevant additional checks for service links, library links, retrieval fixtures or inline JavaScript when those areas change. Confirm the commands from the current workflows/scripts before relying on them; do not invent a package manager or build command.
+
+### 6. Open release-quality gates
+
+These remain open unless a dated result and evidence are added:
+- Fresh visual review at desktop, tablet and small mobile widths.
+- Human NVDA, VoiceOver and TalkBack testing.
+- 200% text enlargement and 400% zoom/reflow.
+- Slow-network and real-device offline testing.
+- Current Lighthouse performance and accessibility reports.
+- Qualified clinical, safeguarding, Hindi/Marathi native-language and religious/cultural review.
+- Human sign-off on the exact public support-route copy and source register.
+
+Automated tests and Vercel READY status do not close these gates. Do not claim WCAG 2.2 AA certification or clinical approval.
+
+### 7. First Kiro task sequence
+
+1. Open the existing repository folder in Kiro; do not create a new project scaffold.
+2. Confirm the checked-out branch and working tree. Make a backup branch before broad multi-file work.
+3. Run the existing test suite and catalogue validator before changing anything; record baseline output.
+4. Inspect the homepage and shared navigation at desktop, tablet and narrow mobile sizes. Record defects without deleting or simplifying existing content.
+5. Continue the open manual quality gates in `docs/review/ACCESSIBILITY_MANUAL_TEST_PLAN.md` and the existing QA documents.
+6. Fix issues in small, reviewable batches. Add regression tests for each defect.
+7. Verify content-preservation counts and public support routes after every change batch.
+8. Update this memory and relevant docs; review the full Git diff.
+9. Push to GitHub, verify Actions, and deploy to Vercel only as a deliberate release step.
+10. Smoke-test the stable domain and record the exact source commit, deployment ID and results.
+
+### 8. Change log and handoff note
+
+This section records the move to Kiro as the primary coding IDE. It does not assert that Kiro has already opened, indexed, edited, tested or deployed the repository. The next Kiro session must inspect the actual local checkout and current Git state before acting.
+
+**Non-negotiable instruction:** make AARAMORA more polished, coherent, accessible, fast and trustworthy while preserving everything that already exists. Never trade away safety, content, source rights, privacy or working pathways for visual novelty.
+
