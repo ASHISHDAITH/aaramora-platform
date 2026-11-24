@@ -39,6 +39,13 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn('@media(forced-colors:active)', css)
         self.assertIn('@media(prefers-contrast:more)', css)
 
+    def test_large_text_reflow_keeps_trust_cta_and_closed_footer_panel_in_flow(self):
+        css = self.read("site.css")
+        self.assertIn(".trust-strip>*{min-width:0;max-width:100%}", css)
+        self.assertIn(".trust-cta{white-space:normal}", css)
+        self.assertIn(".footer-more:not([open]) .footer-more-panel{display:none}", css)
+        self.assertIn("max-width:calc(100vw - 32px)", css)
+
     def test_reduced_motion_and_mobile_reflow_rules_are_present(self):
         css = self.read("site.css")
         self.assertIn('@media(prefers-reduced-motion:reduce)', css)

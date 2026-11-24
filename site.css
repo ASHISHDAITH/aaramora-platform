@@ -215,3 +215,22 @@ body[data-theme="tonight"] #concept-count,
 body[data-theme="tonight"] .concept-note,
 body[data-theme="tonight"] .concept-item summary small,
 body[data-theme="tonight"] .support-ribbon small{color:#F1EBDD}
+
+
+/* Reflow support for large text: keep Trust content and disclosure panels inside the viewport. */
+.trust-strip>*{min-width:0;max-width:100%}
+.trust-strip h2,.trust-strip p,.trust-points,.trust-points>span,.trust-cta{
+  min-width:0;max-width:100%;overflow-wrap:anywhere
+}
+.trust-cta{white-space:normal}
+.footer-more:not([open]) .footer-more-panel{display:none}
+.footer-more-panel{
+  box-sizing:border-box;min-width:min(190px,calc(100vw - 32px));
+  max-width:calc(100vw - 32px)
+}
+.footer-more-panel a{min-width:0;overflow-wrap:anywhere}
+@media(max-width:540px){
+  .trust-strip{grid-template-columns:minmax(0,1fr)}
+  .trust-strip>*{min-width:0}
+  .trust-cta{width:max-content;max-width:100%;white-space:normal}
+}
