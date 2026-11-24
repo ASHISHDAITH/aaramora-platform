@@ -159,3 +159,12 @@
 - 100 synthetic Hinglish starter messages with jailbreak cases are checked structurally only; they have not been run against a model or classifier.
 - Native-language, clinician, safeguarding and independent accessibility approvals remain pending.
 - A separate manual live-site browser audit was not completed in this release step; Vercel readiness and CI do not establish that audit.
+
+
+## Phase 2 retrieval and expanded fixture checks · 24 November 2026
+
+- Local lexical retrieval script: `scripts/search_reviewed_corpus.py`. No model, embedding or network calls.
+- Current approved index: 0 passages; search abstains with `no_approved_passages`.
+- Multilingual starter pack: 301 synthetic fixtures (67 English, 67 Hindi, 67 Marathi, 100 Hinglish). CI structural checks only; native-language, clinical and safeguarding reviews remain pending.
+- Latest CI on the pre-pack commit included 92 main-suite tests and 6 retrieval tests; the new 301-pack gate is being added and must pass before release.
+- No LLM/classifier execution or clinician sign-off is claimed.
