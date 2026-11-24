@@ -170,8 +170,8 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn("languageAliases", SCHEMA["required"])
 
 
-    def test_catalogue_items_are_tagged_for_all_six_content_formats(self):
-        allowed = {"book", "video", "audiobook", "article", "blog", "image"}
+    def test_catalogue_items_are_tagged_for_all_seven_content_formats(self):
+        allowed = {"book", "video", "audiobook", "audio", "article", "blog", "image"}
         counts = {kind: 0 for kind in allowed}
         for record in DATA["records"]:
             with self.subTest(record=record["id"]):
@@ -183,7 +183,7 @@ class MultilingualCatalogueTests(unittest.TestCase):
                 for kind in types:
                     counts[kind] += 1
         self.assertTrue(all(counts.values()), f"Missing a populated content format: {counts}")
-        self.assertEqual(48, len(DATA["records"]))
+        self.assertEqual(49, len(DATA["records"]))
 
     def test_new_creator_media_and_scripture_sources_keep_source_rights(self):
         records = {item["id"]: item for item in DATA["records"]}
@@ -195,18 +195,25 @@ class MultilingualCatalogueTests(unittest.TestCase):
         audio = records["librivox-multilingual-catalogue"]
         self.assertEqual(["audiobook"], audio["contentTypes"])
         self.assertIn("LibriVox", audio["provenance"]["sourceName"])
+        self.assertEqual(["audiobook"], records["project-gutenberg-audio-books"]["contentTypes"])
+        self.assertIn("public domain in the United States", records["project-gutenberg-audio-books"]["rights"]["licence"])
         tanzil = records["tanzil-quran-text"]
         self.assertEqual("open-license", tanzil["rights"]["status"])
         self.assertIn("verbatim", tanzil["rights"]["reuse"])
         gurbani = records["gurbani-prakash-audio"]
         self.assertIn("Sikh", gurbani["traditions"])
         self.assertEqual("pending", gurbani["editorialReview"]["culturalContext"])
+        self.assertEqual(["book", "audio"], gurbani["contentTypes"])
+        self.assertNotIn("audiobook", records["quran-com-recitation-reader"]["contentTypes"])
+        self.assertIn("LLM", records["openstax-psychology-cc-by"]["rights"]["reuse"])
+        self.assertIn("prior written permission", records["openstax-psychology-cc-by"]["rights"]["reuse"])
         pexels = records["pexels-rare-book-photo"]
         self.assertEqual("Esra Korkmaz", pexels["contributors"][0]["name"])
 
     def test_content_format_filters_exist_and_are_connected_to_records(self):
         for marker in ('id="catalogue-kind-filter"', 'data-content-type="book"',
                        'data-content-type="video"', 'data-content-type="audiobook"',
+                       'data-content-type="audio"',
                        'data-content-type="article"', 'data-content-type="blog"',
                        'data-content-type="image"', 'selectedContentType'):
             with self.subTest(marker=marker):
@@ -214,6 +221,7 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn('record.contentTypes||[]', HTML)
         self.assertIn('data-content-type-link="book"', HTML)
         self.assertIn('data-content-type-link="image"', HTML)
+        self.assertIn('data-content-type-link="audio"', HTML)
 
     def test_forced_colors_and_minimum_link_targets_are_present(self):
         self.assertIn("@media(forced-colors:active)", HTML)
