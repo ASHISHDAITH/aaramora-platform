@@ -20,7 +20,7 @@ No npm install, database, account, remote fonts, analytics, AI API or backend is
 
 ## Visual direction
 
-The homepage follows a warm editorial botanical system: paper ivory, forest green, restrained sage, pale blue, muted lilac and clay accents. Its first screen uses a short plain-language introduction, two clear actions and the 16:9 AARAMORA brand film as the main visual. The primary navigation shows five common destinations and groups secondary links under “More”. Three credited Pexels photographs introduce optional journaling, connection and professional-support pathways. Stock photographs are illustrative only and are not testimonials or representations of actual AARAMORA staff.
+The homepage follows the Sandhya paper-and-forest palette with Kiran’s restrained turmeric glow, an opaque sticky header and four primary destinations: Get help now, Understand, Tools and Trust. Original local SVG illustrations are used for the entry pathways. The versioned brand film is served from first-party repository assets and is not loaded from a mutable CDN branch.
 
 See [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) for color tokens, typography, responsive rules, image credits and video behavior.
 
@@ -190,3 +190,17 @@ The current production deployment is live at the URL above. A final browser smok
 **Production URL:** https://aaramora-platform.vercel.app  
 **Current source commit:** `9b4988ee5222b1e07461dc8d3db82487eba8b518`  
 **Vercel latest deployment:** `dpl_3EAf6wm2M2FFW6MhpH2FPW26GqUP` · `READY`
+
+
+## RAG assistant status · 24 November 2026
+
+The AARAMORA Guide is a future, disabled feature. There is no chatbot UI, model endpoint, conversation storage or public generation. The source-controlled prompt v2 is a review draft; the English crisis response is also a draft and must not be deployed before named clinician and safeguarding approval.
+
+- `docs/RAG_CHATBOT_IMPLEMENTATION.md` records the staged rollout and release gates.
+- `docs/rag/SYSTEM_PROMPT_V2.md` contains the prompt draft; deterministic pre-generation crisis handling remains an application responsibility.
+- `docs/rag/CRISIS_TEMPLATE_REVIEW_DRAFT.md` is for clinician/safeguarding review only.
+- `docs/RAG_INGESTION_POLICY.md` and `data/rag-ingestion-policy.json` implement default-deny source rights.
+- `data/rag-corpus-manifest.json` is empty. Draft health pages are not eligible for retrieval.
+- `scripts/build_reviewed_corpus.py` builds a local retrieval index only from signed, current, rights-verified items. It makes no network or model calls.
+- `tests/fixtures/hinglish-redteam-v2.jsonl` contains 100 synthetic Hinglish starter cases, including prompt injection attempts. These fixtures have structural CI coverage only; they have not been evaluated against a model or clinician-labelled detector.
+- The design report requires 300+ crisis messages across English, Hindi, Marathi and Hinglish and documented clinical sign-off before real users. The 100 starter cases do not satisfy that gate.
