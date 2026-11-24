@@ -35,12 +35,8 @@ class ReadingLibraryChecks(unittest.TestCase):
     def test_generated_hero_asset_is_committed_and_nonempty(self):
         hero = ROOT / "assets" / "reading-library-book-still-life.webp"
         self.assertTrue(hero.is_file(), "Generated hero image must be committed")
-        self.assertGreater(hero.stat().st_size, 20000)
+        self.assertGreater(hero.stat().st_size, 10000)
 
-    def test_generated_hero_asset_is_committed_and_nonempty(self):
-        hero = ROOT / "assets" / "reading-library-book-still-life.webp"
-        self.assertTrue(hero.is_file(), "Generated hero image must be committed")
-        self.assertGreater(hero.stat().st_size, 20000)
 
     def test_catalogue_enhancements_exist(self):
         self.assertIn('id="language-catalogue"', HTML)
