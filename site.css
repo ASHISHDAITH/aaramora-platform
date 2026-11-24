@@ -74,3 +74,20 @@ body.printing-summary>*{visibility:hidden!important}body.printing-summary .print
 .kind-count{display:inline-flex;align-items:center;justify-content:center;min-width:1.55em;height:1.55em;padding:0 .32em;border-radius:999px;background:#E4EAE2;color:#385646;font-size:.72rem;font-weight:850;font-variant-numeric:tabular-nums}
 .kind-chip.is-active .kind-count{background:rgba(255,255,255,.18);color:#fff}
 @media(max-width:600px){.catalogue-kind-filter{gap:7px}.kind-chip{min-height:42px;padding:8px 11px}}
+
+/* Two deeper discovery paths: keep the first visit simple while giving existing shelves a visible doorway. */
+.discovery-heading{margin:30px 0 12px}
+.discovery-heading h3{font:500 clamp(1.35rem,2.3vw,1.8rem)/1.2 Georgia,serif;margin:7px 0;color:var(--ink)}
+.discovery-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.discovery-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:23px 24px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,#FFFEFA 0%,#F0F4ED 100%);box-shadow:0 8px 22px rgba(36,61,47,.045)}
+.discovery-card .eyebrow{margin:0}
+.discovery-card h3{font:500 clamp(1.25rem,2vw,1.55rem)/1.25 Georgia,serif;margin:0;color:#25483A}
+.discovery-card p:not(.eyebrow){margin:0;color:#586A60;font-size:.9rem;max-width:58ch}
+.discovery-icon{display:grid;place-items:center;width:38px;height:38px;border:1px solid #D9E2D7;border-radius:50%;background:#E8EEE6;color:#B17B20;font-size:1.25rem}
+.discovery-card>a{display:inline-flex;align-items:center;min-height:44px;margin-top:auto;padding-top:8px;color:#244B3A;font-weight:850;text-underline-offset:4px}
+.discovery-reading blockquote{margin:4px 0 0;padding:11px 14px;border-left:3px solid #D4AF65;background:#F7F0E2;border-radius:0 12px 12px 0;font:italic 1rem/1.45 Georgia,serif;color:#485B4E}
+body[data-theme="tonight"] .discovery-card{background:#27372F;border-color:#49564D}
+body[data-theme="tonight"] .discovery-card h3,body[data-theme="tonight"] .discovery-card>a{color:#F3EBD9}
+body[data-theme="tonight"] .discovery-card p:not(.eyebrow){color:#D6DCCC}
+body[data-theme="tonight"] .discovery-reading blockquote{background:#354238;color:#F1E8D5}
+@media(max-width:760px){.discovery-links{grid-template-columns:1fr}.discovery-card{padding:19px}}
