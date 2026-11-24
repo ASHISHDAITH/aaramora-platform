@@ -33,6 +33,8 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn('.verify{color:#53645A}', css)
         self.assertIn('body[data-theme="tonight"] .verify{color:#D7DCCF}', css)
         self.assertIn('body[data-theme="tonight"] .muted,body[data-theme="tonight"] .service-meta,body[data-theme="tonight"] .verify,body[data-theme="tonight"] .format-count-note{color:#F6F0E1}', css)
+        self.assertIn('.support-line,.support-links{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap}', css)
+        self.assertIn('.support-ribbon .support-line a,.support-ribbon .support-links a,.support-ribbon .support-link', css)
         self.assertIn('@media(forced-colors:active)', css)
         self.assertIn('@media(prefers-contrast:more)', css)
 
