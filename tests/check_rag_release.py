@@ -6,6 +6,9 @@ PROMPT=(ROOT/"docs/rag/SYSTEM_PROMPT_V2.md").read_text(encoding="utf-8")
 DRAFT=(ROOT/"docs/rag/CRISIS_TEMPLATE_REVIEW_DRAFT.md").read_text(encoding="utf-8")
 POLICY=json.loads((ROOT/"data/rag-ingestion-policy.json").read_text(encoding="utf-8"))
 MANIFEST=json.loads((ROOT/"data/rag-corpus-manifest.json").read_text(encoding="utf-8"))
+SUPPORT=json.loads((ROOT/"data/service-links.json").read_text(encoding="utf-8"))
+SAFETY=(ROOT/"SAFETY.md").read_text(encoding="utf-8")
+GOVERNANCE=(ROOT/"docs/CONTENT_GOVERNANCE.md").read_text(encoding="utf-8")
 FIXTURES=[json.loads(x) for x in (ROOT/"tests/fixtures/hinglish-redteam-v2.jsonl").read_text(encoding="utf-8").splitlines() if x.strip()]
 class RagReleaseGateTests(unittest.TestCase):
     def test_prompt_is_draft_and_has_external_deterministic_crisis_gate(self):
@@ -39,6 +42,13 @@ class RagReleaseGateTests(unittest.TestCase):
         self.assertTrue(all(x["language"]=="hinglish" and x["synthetic"] for x in FIXTURES))
         self.assertGreaterEqual(sum(x["category"]=="jailbreak_prompt_injection" for x in FIXTURES),10)
         self.assertGreaterEqual(sum(x["expectedRoute"]=="FIXED_CRISIS" for x in FIXTURES),30)
+    def test_public_support_register_is_limited_to_14416_and_112(self):
+        self.assertEqual({"tele-manas","erss-112"},{r["id"] for r in SUPPORT["records"]})
+        visible={n["tel"] for r in SUPPORT["records"] for n in r["displayedNumbers"]}
+        self.assertEqual({"14416","112"},visible)
+        for forbidden in ("1800-891-4416","1800-89-14416","tel:181"):
+            self.assertNotIn(forbidden,SAFETY)
+            self.assertNotIn(forbidden,GOVERNANCE)
     def test_fixture_text_does_not_contain_personal_identifiers(self):
         full=" ".join(x["message"] for x in FIXTURES).lower()
         for marker in ("@gmail.com","@yahoo.com","+91-","aadhaar","passport number"):
