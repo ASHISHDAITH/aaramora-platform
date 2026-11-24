@@ -39,7 +39,7 @@ A format tag identifies a type of source. It does not imply that AARAMORA hosts,
 | SuttaCentral sc-data · GitHub | Book | Public source repository index | Public code repository visibility does not license every underlying text or translation. Check the SuttaCentral content licence. |
 | Openverse | Image | Creative Commons/public-domain image discovery | Verify original item, creator and exact licence. A search result does not confer rights. |
 | Wikimedia Commons | Image, video, audiobook | Free-media discovery | Reuse depends on each file's licence, attribution and other conditions. |
-| Pexels · Esra Korkmaz | Image | Book pages and dried flowers hero photograph | Pexels License applies. The photo page identifies Esra Korkmaz as photographer; AARAMORA credits the source. |
+| Pexels · Esra Erdem | Image | Book pages and dried flowers hero photograph | Pexels License applies. The photo page identifies Esra Erdem as photographer; AARAMORA credits the source. |
 | Pexels video library | Video | Creator-uploaded reading and ambient-video discovery | Check each clip and its creator's source page/terms. Do not bulk-scrape. |
 
 ## Creator and image credits
@@ -56,7 +56,7 @@ These are creator explainers and should be presented as introductory learning, n
 
 - The page hero uses an original AARAMORA-generated still life stored locally at `assets/reading-library-book-still-life.webp`.
 - No external photographer attribution is attached to this generated image.
-- The separately catalogued Pexels image is **Esra Korkmaz**, “Photo of pages torn from an old book”: https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/
+- The separately catalogued Pexels image is **Esra Erdem**, “Photo of pages torn from an old book”: https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/
 - Pexels source image: https://images.pexels.com/photos/16335051/pexels-photo-16335051.jpeg?cs=srgb&dl=pexels-esrakorkmaz-16335051.jpg&fm=jpg
 - Pexels License applies to that separate discovery record, subject to current exclusions and restrictions.
 - The AARAMORA quote is original editorial copy: “A book does not ask you to hurry; it simply leaves the next page open.”
