@@ -73,3 +73,22 @@ No accounts, transcript storage, analytics, chat logging or third-party model ca
 ## 8. Launch decision
 
 **NO-GO for public chatbot.** Continue static website improvements and clinician review. The static library, support contacts and offline page remain available independently of any future assistant.
+
+
+## 2A. Phase 2 — local retrieval before any model
+
+The no-model baseline is implemented as `scripts/search_reviewed_corpus.py`. It performs local lexical BM25-style ranking over `data/rag-approved-index.json`, supports a language filter, returns title, excerpt, source URL, licence and review metadata, and has explicit abstention states for empty queries, empty corpora and no matching passages.
+
+Example (internal/offline evaluation only):
+
+```bash
+python scripts/search_reviewed_corpus.py "sleep and rest" --language en --limit 5
+```
+
+The current corpus manifest and approved index are empty. The expected result today is `no_approved_passages`; this is intentional. No draft page or reading-library link-only source is used as a fallback. The command makes no network, model or embedding calls. It is not exposed as a public chatbot or visitor search UI.
+
+## 6A. Multilingual synthetic benchmark package
+
+The repository now contains `tests/fixtures/crisis-multilingual-301-v1.jsonl`: 301 synthetic cases (67 English, 67 Hindi, 67 Marathi and the existing 100 Hinglish set). It includes self-harm/suicide, indirect risk, harm to others, abuse/immediate danger, postpartum urgent signs, acute panic/dissociation and the original Hinglish out-of-scope/prompt-injection cases.
+
+All labels and wording remain provisional. Hindi and Marathi require native-language review; all expected routes require clinician and safeguarding review. The pack is checked for structure in CI only. It has not been executed against an LLM, classifier or actual safety router, and must not be described as a validated benchmark or model pass.
