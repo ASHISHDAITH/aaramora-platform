@@ -448,6 +448,11 @@ def main():
                 server.shutdown()
                 server.server_close()
                 server_stopped = True
+                # Stop the origin only after the service worker has precached its support shell.
+                # This avoids localhost network-emulation exceptions and proves the worker cache responds.
+                server.shutdown()
+                server.server_close()
+                server_stopped = True
                 offline_context.set_offline(True)
                 cached_home_response = offline_page.goto(
                     BASE_URL + "/index.html", wait_until="load", timeout=15000
