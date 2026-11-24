@@ -99,11 +99,11 @@ The supplied `CLEAN_NO_ADDED_AUDIO` file is byte-identical to the landscape mast
 
 **Production URL:** https://aaramora-platform.vercel.app
 
-The current public static deployment is marked READY by Vercel and serves six HTML pages (`index.html`, `wellbeing.html`, `relationships.html`, `check-ins.html`, `reading-library.html`, and `yoga-and-breath.html`) plus three SVG assets. The latest production snapshot is commit `ba193318500e06e04c6a506ea3363b3aab552ea7` (Vercel deployment `dpl_2Q3n6GmFCn13Lpizgx93LZJGQ6Wy`, READY) and includes the multilingual Reading Library catalogue, the Yoga & Breath guide and all existing site pages. The production alias is https://aaramora-platform.vercel.app. GitHub-to-Vercel automatic deployment is not connected, so future pushes still require a manual deployment. See [deployment notes](docs/DEPLOYMENT.md).
+The current public static deployment is marked READY by Vercel and serves six HTML pages (`index.html`, `wellbeing.html`, `relationships.html`, `check-ins.html`, `reading-library.html`, and `yoga-and-breath.html`) plus three SVG assets. The latest production snapshot is commit `67d7b29ed08923a7c5e180d6b2d316802ec9f15a` (Vercel deployment `dpl_8QYy1Fe94fctdBhqX3pT1mTRhiVw`, READY) and includes the multilingual Reading Library catalogue, the Yoga & Breath guide and all existing site pages. The production alias is https://aaramora-platform.vercel.app. GitHub-to-Vercel automatic deployment is not connected, so future pushes still require a manual deployment. See [deployment notes](docs/DEPLOYMENT.md).
 
 ## Current verification
 
-The latest GitHub Actions content-check run passed on commit `ba193318500e06e04c6a506ea3363b3aab552ea7` ([run 45282847618](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45282847618)). It includes the existing site content/route/JavaScript checks, the Reading Library preservation and rights checks, multilingual catalogue tests, and `scripts/check_catalogue.py`. The metadata-only weekly source-link workflow also passed its initial run ([run 45282656364](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45282656364)). The workflow runs on every push and pull request; see the [GitHub Actions history](https://github.com/ASHISHDAITH/aaramora-platform/actions) for the current run. This is not a browser, screen-reader, clinical or production security certification.
+The latest Reading Library content/safety suite passed 68 tests on the final tested code snapshot ([run 45297318096](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45297318096)). It includes the existing site content/route/JavaScript checks, the Reading Library preservation and rights checks, multilingual catalogue tests, and `scripts/check_catalogue.py`. The last completed metadata-only source-link audit checked 77 URLs: 61 reachable, 0 confirmed dead and 16 inconclusive due to provider-side blocking, timeouts or certificate verification. A follow-up run after text-only metadata corrections is still in progress. The workflow runs on every push and pull request; see the [GitHub Actions history](https://github.com/ASHISHDAITH/aaramora-platform/actions) for the current run. This is not a browser, screen-reader, clinical or production security certification.
 
 The current production deployment is live at the URL above. A final browser smoke test from a normal visitor session is still required. Deployment does not constitute clinical, safeguarding, accessibility or security approval.
 
@@ -123,7 +123,7 @@ The current production deployment is live at the URL above. A final browser smok
 
 
 ### Final live check · 24 November 2026
-- Latest production deploy: pending final release build.
+- Latest production deploy: `dpl_8QYy1Fe94fctdBhqX3pT1mTRhiVw`, READY on `67d7b29`.
 - 49 catalogue records, 46 original static cards retained. The category filter supports seven types: books, videos, audiobooks, audio, articles, blogs and images.
 - Metadata-only source-link audit: 77 URLs checked, 61 reachable, 0 confirmed dead and 16 inconclusive because providers blocked or timed out automated requests. Inconclusive does not mean dead.
 - Native-language, religious/cultural-context and manual screen-reader reviews remain pending.
@@ -149,7 +149,7 @@ The current production deployment is live at the URL above. A final browser smok
 
 ### Multi-format Reading Library update · 24 November 2026
 - Original static reading shelves and 46 original resource cards remain present.
-- The source catalogue now has 48 records: 26 original multilingual records and 22 additional discoveries.
+- The source catalogue now has 49 records: 26 original multilingual records and 23 additional discoveries.
 - Format filters classify books, videos, audiobooks, general audio, articles, blogs and images. Format can be combined with language, tradition, access, rights, level and file-format filters.
 - YouTube and audio-platform content links remain at the creator/provider. The project does not copy protected media or scrape full content.
 - Rights are recorded per source or item. The exact OpenStax Psychology edition is CC BY 4.0; this does not change the separate Psychology 2e restrictions already recorded.
