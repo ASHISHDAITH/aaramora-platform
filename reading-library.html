@@ -131,15 +131,15 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
 </style></head>
 <body>
 <div class="top" role="region" aria-label="Support and site links"><div class="wrap"><a class="skip-link" href="#main-content">Skip to main content</a><div class="support-links"><a class="support-link" href="tel:14416"><span>Tele-MANAS</span><strong>14416</strong></a><a class="support-link" href="tel:112"><span>Emergency</span><strong>112</strong></a></div><span><a href="index.html">Home</a><a href="wellbeing.html">Mental wellbeing</a><a href="relationships.html">Relationships</a></span></div></div>
-<header><div class="wrap nav"><a class="brand" href="index.html">Aaramora · Reading Library</a><nav class="navlinks" aria-label="Library navigation"><a href="#language-catalogue" data-content-type-link="book">Books</a><a href="#language-catalogue" data-content-type-link="video">Videos</a><a href="#language-catalogue" data-content-type-link="audiobook">Audiobooks</a><a href="#language-catalogue" data-content-type-link="article">Articles</a><a href="#language-catalogue" data-content-type-link="blog">Blogs</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#language-catalogue" data-content-type-link="image">Images</a><a href="#github-shelves">GitHub sources</a><a href="#licensing">Rights</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html">Aaramora · Reading Library</a><nav class="navlinks" aria-label="Library navigation"><a href="#language-catalogue" data-content-type-link="book">Books</a><a href="#language-catalogue" data-content-type-link="video">Videos</a><a href="#language-catalogue" data-content-type-link="audiobook">Audiobooks</a><a href="#language-catalogue" data-content-type-link="audio">Audio</a><a href="#language-catalogue" data-content-type-link="article">Articles</a><a href="#language-catalogue" data-content-type-link="blog">Blogs</a><a href="#faith-wisdom">Faith &amp; wisdom</a><a href="#language-catalogue" data-content-type-link="image">Images</a><a href="#github-shelves">GitHub sources</a><a href="#licensing">Rights</a></nav></div></header>
 <main id="main-content">
 <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Read · explore · reflect</div><h1>Find a page worth staying with.</h1><p class="lead">Explore mental-health workbooks, relationship books, sacred texts, thoughtful novels and open-access research. Start with a subject or tradition that matters to you. Each entry links to its original source and explains what is free to read, download or reuse.</p><div class="hero-actions"><a class="button" href="#browse-shelves">Browse the shelves</a><a class="button alt" href="#faith-wisdom">Explore faith &amp; wisdom</a></div></div><figure class="hero-photo">
-<img src="https://images.pexels.com/photos/16335051/pexels-photo-16335051.jpeg?cs=srgb&amp;dl=pexels-esrakorkmaz-16335051.jpg&amp;fm=jpg" alt="Vintage book pages with dried flowers arranged on a dark background" width="1200" height="800" fetchpriority="high" decoding="async">
-<figcaption>Book still life photographed by <a href="https://www.pexels.com/photo/photo-of-pages-torn-from-an-old-book-16335051/" target="_blank" rel="noopener noreferrer">Esra Korkmaz · Pexels</a>.</figcaption>
+<img src="assets/reading-library-book-still-life.webp" alt="An open antique book with a dried flower on a dark wooden reading table" width="1200" height="675" fetchpriority="high" decoding="async">
+<figcaption>Original AARAMORA reading-library still life.</figcaption>
 <div class="quote-card"><blockquote>“A book does not ask you to hurry; it simply leaves the next page open.”</blockquote><p>An original AARAMORA reading note</p></div>
 </figure></div></section>
 
-<nav class="shelf-nav wrap" id="browse-shelves" aria-label="Browse by format"><a href="#language-catalogue" data-content-type-link="book">Books</a><a href="#language-catalogue" data-content-type-link="video">Videos</a><a href="#language-catalogue" data-content-type-link="audiobook">Audiobooks</a><a href="#language-catalogue" data-content-type-link="article">Articles</a><a href="#language-catalogue" data-content-type-link="blog">Blogs</a><a href="#language-catalogue" data-content-type-link="image">Images</a><a href="#faith-wisdom">Sacred texts</a><a href="#github-shelves">GitHub collections</a><a href="#licensing">Reuse rules</a></nav>
+<nav class="shelf-nav wrap" id="browse-shelves" aria-label="Browse by format"><a href="#language-catalogue" data-content-type-link="book">Books</a><a href="#language-catalogue" data-content-type-link="video">Videos</a><a href="#language-catalogue" data-content-type-link="audiobook">Audiobooks</a><a href="#language-catalogue" data-content-type-link="audio">Audio</a><a href="#language-catalogue" data-content-type-link="article">Articles</a><a href="#language-catalogue" data-content-type-link="blog">Blogs</a><a href="#language-catalogue" data-content-type-link="image">Images</a><a href="#faith-wisdom">Sacred texts</a><a href="#github-shelves">GitHub collections</a><a href="#licensing">Reuse rules</a></nav>
 
 <section class="section alt" id="language-catalogue">
   <div class="wrap">
@@ -158,6 +158,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
       <button type="button" class="kind-chip" data-content-type="book" aria-pressed="false">Books</button>
       <button type="button" class="kind-chip" data-content-type="video" aria-pressed="false">Videos</button>
       <button type="button" class="kind-chip" data-content-type="audiobook" aria-pressed="false">Audiobooks</button>
+      <button type="button" class="kind-chip" data-content-type="audio" aria-pressed="false">Audio</button>
       <button type="button" class="kind-chip" data-content-type="article" aria-pressed="false">Articles</button>
       <button type="button" class="kind-chip" data-content-type="blog" aria-pressed="false">Blogs</button>
       <button type="button" class="kind-chip" data-content-type="image" aria-pressed="false">Images</button>
@@ -361,8 +362,8 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
   let languageAliasesMap = {};
   let selectedContentType = "";
   let loadedRecords = [];
-  const allowedContentTypes = new Set(["","book","video","audiobook","article","blog","image"]);
-  const kindLabels = {book:"Book",video:"Video",audiobook:"Audiobook",article:"Article",blog:"Blog",image:"Image"};
+  const allowedContentTypes = new Set(["","book","video","audiobook","audio","article","blog","image"]);
+  const kindLabels = {book:"Book",video:"Video",audiobook:"Audiobook",audio:"Audio",article:"Article",blog:"Blog",image:"Image"};
   const kindButtons = Array.from(document.querySelectorAll("[data-content-type]"));
   function syncKindButtons() {
     kindButtons.forEach(button=>{
