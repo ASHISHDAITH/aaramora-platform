@@ -5,9 +5,9 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 
 class HomepageReleaseTests(unittest.TestCase):
-    def test_homepage_has_five_sections_and_four_primary_destinations(self):
+    def test_homepage_has_four_sections_and_four_primary_destinations(self):
         home = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertEqual(5, home.count("<section"))
+        self.assertEqual(4, home.count("<section"))
         nav = home.split('<nav class="main-nav"', 1)[1].split("</nav>", 1)[0]
         self.assertEqual(4, nav.count("<a "))
         for target in ("get-help.html", "wellbeing.html", "tools.html", "trust.html"):
