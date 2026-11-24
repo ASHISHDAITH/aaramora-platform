@@ -320,10 +320,13 @@ def main():
                                 width: Math.round(rect.width),
                                 clientWidth: element.clientWidth,
                                 scrollWidth: element.scrollWidth,
+                                minWidth: getComputedStyle(element).minWidth,
+                                position: getComputedStyle(element).position,
+                                transform: getComputedStyle(element).transform,
                                 display: getComputedStyle(element).display
                               };
                             })
-                            .filter(element => element.right > window.innerWidth + 1 || element.left < -1)
+                            .filter(element => element.right > window.innerWidth + 1 || element.left < -1 || element.scrollWidth > element.clientWidth + 1)
                             .slice(0, 16);
                           return {
                             enlargedTextElements: enlarged,

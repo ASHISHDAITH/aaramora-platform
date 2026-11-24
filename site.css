@@ -234,3 +234,31 @@ body[data-theme="tonight"] .support-ribbon small{color:#F1EBDD}
   .trust-strip>*{min-width:0}
   .trust-cta{width:max-content;max-width:100%;white-space:normal}
 }
+
+
+/* 200% text reflow: allow the Trust strip and catalogue controls to shrink and wrap. */
+.trust-strip{grid-template-columns:minmax(0,1fr) minmax(0,auto)}
+.trust-strip>*{min-width:0;max-width:100%;box-sizing:border-box}
+.trust-strip h2,.trust-strip p,.trust-points>span,.trust-cta{overflow-wrap:anywhere}
+.trust-points{min-width:0;max-width:100%;align-items:flex-start}
+.trust-cta{white-space:normal;max-width:100%;width:max-content;line-height:1.35}
+@media(max-width:820px){
+ .trust-strip{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:600px){
+ .trust-strip{gap:12px}
+ .trust-points{gap:7px 10px}
+ .trust-cta{width:fit-content}
+}
+.top .wrap,.nav,.navlinks,.hero-grid,.hero-grid>*,.library-search,
+.catalogue-kind-filter,.catalogue-toolbar,.catalogue-toolbar>*,
+.catalogue-field,.catalogue-results,.catalogue-record,.record-actions{
+ min-width:0;max-width:100%;box-sizing:border-box
+}
+.nav{width:100%;flex-wrap:wrap}
+.navlinks{width:100%;display:flex;flex-wrap:wrap;overflow-wrap:anywhere}
+.navlinks a{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.catalogue-kind-filter{align-items:flex-start}
+.catalogue-kind-filter>*{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.kind-chip{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.catalogue-field input,.catalogue-field select{min-width:0;max-width:100%}
