@@ -80,7 +80,7 @@ Never commit real user messages, journals, screening answers, health records, pa
 - A public GitHub repository or its root licence does not automatically license every bundled third-party book, image or dataset.
 
 - `reading-library.html` also lists focused Noba attachment/relationship modules and a downloadable *Psychology of Human Relations* PDF.
-- OpenStax Psychology 2e is linked under its current CC BY-NC-SA 4.0 terms. Its current preface prohibits LLM/AI ingestion without prior written permission. SuttaCentral also asks that its content not be scraped or used to build generative-AI datasets; AARAMORA links to its editions rather than copying them.
+- OpenStax Psychology 2e is linked under its current CC BY-NC-SA 4.0 terms. Its current preface prohibits LLM/AI ingestion without OpenStax's permission. SuttaCentral also asks that its content not be scraped or used to build generative-AI datasets; AARAMORA links to its editions rather than copying them.
 
 
 ## Automated checks
@@ -161,7 +161,7 @@ The current production deployment is live at the URL above. A final browser smok
 - The media taxonomy distinguishes `Audio` (recitations, podcasts, guided audio) from `Audiobook` (narrated book editions).
 - Project Gutenberg's official Audio Books page is included as a discovery source with a US-only public-domain caveat.
 - The hero uses original AARAMORA artwork committed at `assets/reading-library-book-still-life.webp`; the credited Pexels image remains a separate image-discovery record.
-- The OpenStax Psychology item records that the publisher's preface separately requires prior written permission before LLM/generative-AI ingestion, despite CC BY 4.0 attribution terms.
+- The OpenStax Psychology item records that the publisher's preface separately requires OpenStax's permission before LLM/generative-AI ingestion, despite CC BY 4.0 attribution terms.
 - The source audit on the 49-entry catalogue checked 77 URLs: 61 reachable, 0 confirmed dead, 16 inconclusive. Automated provider blocks and timeouts are not described as broken links.
 - Native-language, religious/cultural-context, legal and manual assistive-technology reviews remain pending; no independent sign-off is claimed.
 
@@ -170,6 +170,6 @@ The current production deployment is live at the URL above. A final browser smok
 - "Audio" and "Audiobook" are separate filters. Recitations, podcasts and guided recordings are tagged Audio; full narrated book editions are tagged Audiobook.
 - Project Gutenberg's official Audio Books collection is linked with a United States-only public-domain caveat.
 - The hero uses an original locally hosted WebP at `assets/reading-library-book-still-life.webp`; the Esra Korkmaz Pexels photograph remains separately attributed in image discovery, not used as the hero.
-- The OpenStax Psychology entry records that the publisher requires prior written permission for LLM/generative-AI ingestion, separately from its CC BY 4.0 attribution licence.
+- The OpenStax Psychology entry records that the publisher requires OpenStax's permission for LLM/generative-AI ingestion, separately from its CC BY 4.0 attribution licence.
 - The catalogue still links to providers and creators; it does not bypass paywalls/DRM or re-host protected books, articles, video or audio.
 - Native-language, religious/cultural-context, rights and manual assistive-technology review remain pending; automated tests do not replace those reviews.
