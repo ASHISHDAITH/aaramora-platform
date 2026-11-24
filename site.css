@@ -172,6 +172,7 @@ body[data-theme="tonight"] .verify{color:#D7DCCF}
   :root{--line:#AAB9AA;--focus:#004F85}
   .quick-card,.pathway,.resource-card,.content-panel,.discovery-card,.support-card{border-width:2px}
   .muted,.service-meta,.verify{color:#3F5146}
+  body[data-theme="tonight"] .muted,body[data-theme="tonight"] .service-meta,body[data-theme="tonight"] .verify,body[data-theme="tonight"] .format-count-note{color:#F6F0E1}
 }
 @media(forced-colors:active){
   .brand-mark,.discovery-icon,.kind-count{border:1px solid ButtonText}
