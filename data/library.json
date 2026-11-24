@@ -2302,14 +2302,14 @@
           "HTML",
           "PDF"
         ],
-        "notes": "Official introductory psychology textbook. Its preface identifies this Psychology edition as CC BY 4.0 and offers free web and PDF access. OpenStax separately says the book may not be ingested into LLMs or generative-AI offerings without prior written permission. This is distinct from the separately listed Psychology 2e title."
+        "notes": "Official introductory psychology textbook. Its preface identifies this Psychology edition as CC BY 4.0 and offers free web and PDF access. OpenStax separately says the book may not be ingested into LLMs or generative-AI offerings without OpenStax's permission. This is distinct from the separately listed Psychology 2e title."
       },
       "rights": {
         "status": "open-license",
         "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0) for the identified text; separate OpenStax restriction on LLM/generative-AI ingestion",
         "jurisdiction": "International licence, subject to third-party exclusions and applicable law",
-        "reuse": "The identified Psychology text may be shared and adapted with attribution under CC BY 4.0, subject to third-party exclusions. Retain author, title, source and licence details. OpenStax separately prohibits using the book to train or ingest into LLMs or generative-AI offerings without prior written permission; CC BY attribution is not permission for that use.",
-        "notes": "The CC BY 4.0 notice applies to this identified Psychology edition, not the separate Psychology 2e entry. The publisher's preface also states that LLM/generative-AI ingestion requires prior written permission.",
+        "reuse": "The identified Psychology text may be shared and adapted with attribution under CC BY 4.0, subject to third-party exclusions. Retain author, title, source and licence details. OpenStax separately prohibits using the book to train or ingest into LLMs or generative-AI offerings without OpenStax's permission; CC BY attribution is not permission for that use.",
+        "notes": "The CC BY 4.0 notice applies to this identified Psychology edition, not the separate Psychology 2e entry. The publisher's preface also states that LLM/generative-AI ingestion requires OpenStax's permission.",
         "policyUrl": "https://openstax.org/books/psychology/pages/preface"
       },
       "accessibility": {
