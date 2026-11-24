@@ -281,3 +281,8 @@ body[data-theme="tonight"] .support-ribbon small{color:#F1EBDD}
  width:max-content;min-width:32px;max-width:100%;height:auto;min-height:32px;
  padding-inline:4px;box-sizing:border-box;flex:0 0 auto
 }
+
+
+/* Long native-language titles and repository names must wrap at enlarged text sizes. */
+.catalog-card h3,.section-head h2{overflow-wrap:anywhere;word-break:normal}
+.catalog-grid>*{min-width:0;max-width:100%}
