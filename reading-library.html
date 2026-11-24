@@ -163,6 +163,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
       <button type="button" class="kind-chip" data-content-type="blog" aria-pressed="false">Blogs</button>
       <button type="button" class="kind-chip" data-content-type="image" aria-pressed="false">Images</button>
     </div>
+    <p class="format-count-note">Counts show catalogue entries for each format. One source can appear in more than one format. AARAMORA links to the original provider rather than hosting protected books or media.</p>
     <div class="catalogue-toolbar" id="catalogue-toolbar">
       <div class="catalogue-field catalogue-search-field">
         <label for="catalogue-search">Search title, source, language or subject</label>
@@ -490,6 +491,17 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
       if(!data || !Array.isArray(data.records) || !Array.isArray(data.languageGroups)) throw new Error("Catalogue data format is invalid");
       languageAliasesMap = data.languageAliases || {};
       loadedRecords = data.records;
+      kindButtons.forEach(button=>{
+        const type=button.dataset.contentType;
+        const label=button.textContent.trim();
+        const count=type ? data.records.filter(record=>(record.contentTypes||[]).includes(type)).length : data.records.length;
+        const badge=document.createElement("span");
+        badge.className="kind-count";
+        badge.setAttribute("aria-hidden","true");
+        badge.textContent=String(count);
+        button.appendChild(badge);
+        button.setAttribute("aria-label",label+", "+count+" catalogue entries");
+      });
       renderLanguageGroups(data.languageGroups);
       populateLanguageSelect(data.languageGroups);
       [els.search,els.language,els.tradition,els.access,els.rights,els.level,els.format,els.sort].forEach(input=>input.addEventListener("input",()=>filterRecords(data.records)));
