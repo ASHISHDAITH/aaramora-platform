@@ -91,3 +91,93 @@ body[data-theme="tonight"] .discovery-card h3,body[data-theme="tonight"] .discov
 body[data-theme="tonight"] .discovery-card p:not(.eyebrow){color:#D6DCCC}
 body[data-theme="tonight"] .discovery-reading blockquote{background:#354238;color:#F1E8D5}
 @media(max-width:760px){.discovery-links{grid-template-columns:1fr}.discovery-card{padding:19px}}
+
+
+/* Additive quality pass · clearer reading, stronger focus, responsive fallbacks. */
+:root{
+  --measure:72ch;
+  --focus:#0B5C91;
+}
+body{
+  font-family:Arial,"Noto Sans","Noto Sans Devanagari",system-ui,sans-serif;
+  text-rendering:optimizeLegibility;
+}
+.wrap{width:min(1160px,calc(100% - clamp(28px,6vw,72px)))}
+h1,h2,h3,.page-title{ text-wrap:balance }
+p,li{ text-wrap:pretty }
+.hero-copy,.lead,.page-intro>p,.content-panel>p,.content-panel li{max-width:var(--measure)}
+.eyebrow,.kicker{color:#506456}
+.service-meta{color:#526157}
+.verify{color:#53645A}
+.format-count-note{color:#526157}
+.skip-link{
+  position:fixed;left:12px;top:12px;z-index:2000;
+  transform:translateY(-180%);border:2px solid var(--focus);
+  border-radius:10px;box-shadow:0 8px 24px rgba(20,40,30,.18);
+}
+.skip-link:focus{left:12px;top:12px;transform:translateY(0)}
+a,button,input,select,textarea,summary,[role="button"],[tabindex]:not([tabindex="-1"]){-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible,[role="button"]:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{
+  outline:3px solid var(--focus);outline-offset:3px;border-radius:5px
+}
+button,.button,.quiet-button,.menu-toggle,.quick-exit,.footer-more summary{min-height:44px}
+.quick-card,.pathway,.resource-card,.content-panel,.tool-card,.activity-card,.word-card,.discovery-card{
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease
+}
+.quick-card:hover,.pathway:hover,.resource-card:hover,.discovery-card:hover{
+  border-color:#B7C9B7;box-shadow:0 12px 28px rgba(36,61,47,.085)
+}
+.quick-card:focus-visible,.pathway:focus-visible{outline-offset:4px}
+.hero-art img{border:1px solid rgba(37,72,58,.10);box-shadow:0 18px 48px rgba(36,61,47,.10)}
+.discovery-card{min-height:100%}
+.discovery-card>a{padding-block:8px}
+.site-footer a:focus-visible,.footer-more summary:focus-visible{outline-offset:4px}
+body[data-theme="tonight"] .eyebrow,body[data-theme="tonight"] .kicker{color:#D7DCCF}
+body[data-theme="tonight"] .service-meta,body[data-theme="tonight"] .format-count-note{color:#D7DCCF}
+body[data-theme="tonight"] .verify{color:#53645A}
+@media(min-width:1100px){
+  .hero{padding-block:clamp(48px,6vw,78px)}
+  .hero-grid{gap:clamp(34px,5vw,66px)}
+}
+@media(max-width:820px){
+  /* Progressive enhancement: keep navigation visible when JavaScript is unavailable. */
+  html:not(.js-enabled) .menu-toggle{display:none}
+  html:not(.js-enabled) .main-nav{
+    display:flex!important;order:3;width:100%;flex-wrap:wrap;
+    padding:8px 0 12px;gap:8px
+  }
+  html:not(.js-enabled) .main-nav a{min-height:44px}
+}
+@media(max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  .hero-grid{gap:22px}
+  .hero h1,.page-title{font-size:clamp(2.2rem,11vw,3.2rem)}
+  .quick-card{overflow-wrap:anywhere}
+  .pathway{grid-template-columns:108px minmax(0,1fr);gap:9px}
+  .pathway-art img{height:104px}
+  .discovery-card{padding:18px}
+  .content-panel{padding:17px}
+}
+@media(max-width:360px){
+  .wrap{width:calc(100% - 26px)}
+  .header-inner{gap:7px}
+  .brand{font-size:.82rem}
+  .quick-exit{padding:7px 8px}
+  .hero-choices .quick-card{min-height:120px}
+  .pathway{grid-template-columns:1fr}
+  .pathway-art{grid-row:auto}
+  .pathway-art img{height:150px}
+}
+@media(prefers-contrast:more){
+  :root{--line:#AAB9AA;--focus:#004F85}
+  .quick-card,.pathway,.resource-card,.content-panel,.discovery-card,.support-card{border-width:2px}
+  .muted,.service-meta,.verify{color:#3F5146}
+}
+@media(forced-colors:active){
+  .brand-mark,.discovery-icon,.kind-count{border:1px solid ButtonText}
+  .quick-card,.pathway,.resource-card,.content-panel,.discovery-card,.support-card{border:1px solid CanvasText}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid Highlight}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}
+}
