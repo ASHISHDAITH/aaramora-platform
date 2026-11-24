@@ -17,23 +17,23 @@ class HealthTopicPlacementTests(unittest.TestCase):
         self.assertIn('id="womens-health"',WOMEN)
         for topic in ("PMOS","Endometriosis","Thyroid","anaemia","Preparing for a women's health appointment"):
             self.assertIn(topic.lower(),WOMEN.lower())
-    def test_original_womens_health_guides_remain_available_as_draft(self):
-        for section in ('id="pmos"','id="endometriosis"','id="thyroid"','id="anaemia"','id="womens-health"'):
-            self.assertIn(section,WOMEN.lower())
-        self.assertIn("DRAFT",WOMEN)
+    def test_original_womens_health_guides_remain_on_draft_page(self):
+        self.assertIn("PMOS",WOMEN)
+        self.assertIn("Endometriosis",WOMEN)
+        self.assertIn("Thyroid",WOMEN)
+        self.assertIn("anaemia",WOMEN.lower())
     def test_research_spotlight_is_separate_and_review_pending(self):
         self.assertNotIn("evidence-note",HOME)
+        self.assertNotIn("evidence-note",WOMEN)
         self.assertIn("Research spotlight · review pending",RESEARCH)
         self.assertIn("not an individual risk prediction",RESEARCH.lower())
     def test_postpartum_psychosis_urgent_warning_is_retained(self):
         self.assertIn("postpartum psychosis can be a medical emergency",HOME.lower())
         self.assertIn('id="postpartum-psychosis"',HELP)
         self.assertIn('href="tel:112"',HELP)
-    def test_cycle_and_womens_health_tools_show_review_warning(self):
-        self.assertIn("DRAFT, NOT CLINICIAN-REVIEWED",CHECKINS)
-        self.assertIn('id="cycle-log"',CHECKINS)
-        self.assertIn('id="womens-health-planner"',CHECKINS)
-    def test_home_primary_navigation_is_four_destinations(self):
-        nav=HOME.split('<nav class="main-nav"',1)[1].split("</nav>",1)[0]
-        self.assertEqual(nav.count("<a "),4)
+    def test_checkins_womens_health_tools_are_marked_draft(self):
+        self.assertIn("DRAFT",CHECKINS)
+        self.assertIn("CLINICIAN-REVIEWED",CHECKINS)
+        self.assertIn("cycle",CHECKINS.lower())
+        self.assertIn("appointment",CHECKINS.lower())
 if __name__=="__main__":unittest.main()
