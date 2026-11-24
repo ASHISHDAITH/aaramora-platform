@@ -318,69 +318,114 @@ def main():
                 service_workers="allow",
             )
             offline_page = offline_context.new_page()
+            offline_console = []
+            offline_page.on(
+                "console",
+                lambda message: offline_console.append(message.text) if message.type == "error" else None,
+            )
+            offline_page.on("pageerror", lambda error: offline_console.append(str(error)))
             offline_response = offline_page.goto(
                 BASE_URL + "/", wait_until="load", timeout=30000
             )
-            offline_page.evaluate(
+            worker_response = offline_page.request.get(BASE_URL + "/service-worker.js")
+            worker_headers = worker_response.headers
+            registration = offline_page.evaluate(
                 """async () => {
-                  await navigator.serviceWorker.register("/service-worker.js");
-                  await navigator.serviceWorker.ready;
+                  try {
+                    const response = await fetch("/service-worker.js", {cache:"no-store"});
+                    const source = await response.text();
+                    const reg = await navigator.serviceWorker.register("/service-worker.js");
+                    return {
+                      ok: true,
+                      scriptStatus: response.status,
+                      scriptType: response.headers.get("content-type"),
+                      scriptBytes: source.length,
+                      scope: reg.scope,
+                      activeState: reg.active ? reg.active.state : null,
+                      installingState: reg.installing ? reg.installing.state : null
+                    };
+                  } catch (error) {
+                    return {ok:false, name:error.name, message:error.message, stack:error.stack};
+                  }
                 }"""
             )
-            offline_page.wait_for_function(
-                "navigator.serviceWorker.controller !== null", timeout=15000
-            )
-            cached = offline_page.evaluate(
-                """async () => ({
-                  offlinePage: Boolean(await caches.match("/offline.html")),
-                  homepage: Boolean(await caches.match("/index.html")),
-                  stylesheet: Boolean(await caches.match("/site.css"))
-                })"""
-            )
-            offline_cdp = offline_context.new_cdp_session(offline_page)
-            offline_cdp.send("Network.enable")
-            offline_cdp.send(
-                "Network.emulateNetworkConditions",
-                {
-                    "offline": True,
-                    "latency": 0,
-                    "downloadThroughput": 0,
-                    "uploadThroughput": 0,
-                    "connectionType": "none",
-                },
-            )
-            cached_home_response = offline_page.goto(
-                BASE_URL + "/index.html", wait_until="load", timeout=15000
-            )
-            cached_home_ok = (
-                cached_home_response is not None
-                and cached_home_response.ok
-                and offline_page.locator("main h1").is_visible()
-            )
-            fallback_response = offline_page.goto(
-                BASE_URL + "/relationships.html", wait_until="load", timeout=15000
-            )
-            fallback_ok = (
-                fallback_response is not None
-                and fallback_response.ok
-                and "Offline support" in offline_page.title()
-                and offline_page.get_by_text("Support details saved on this device.").is_visible()
-                and offline_page.get_by_role("link", name="14416").is_visible()
-                and offline_page.get_by_role("link", name="112").is_visible()
-            )
+            offline_ready = False
+            ready_error = None
+            if registration.get("ok"):
+                try:
+                    offline_page.wait_for_function(
+                        "navigator.serviceWorker.controller !== null", timeout=15000
+                    )
+                    offline_ready = True
+                except Exception as error:
+                    ready_error = str(error)
             results["offline"] = {
                 "online_install_response_ok": bool(offline_response and offline_response.ok),
-                "cached_assets": cached,
-                "cached_homepage_available": cached_home_ok,
-                "offline_fallback_available": fallback_ok,
+                "worker_script_status": worker_response.status,
+                "worker_script_content_type": worker_headers.get("content-type"),
+                "registration": registration,
+                "controller_ready": offline_ready,
+                "ready_error": ready_error,
+                "console_errors": offline_console[:12],
+                "cached_assets": {},
+                "cached_homepage_available": False,
+                "offline_fallback_available": False,
             }
-            if not all(cached.values()):
-                results["errors"].append("The service worker did not cache every required offline support asset.")
-            if not cached_home_ok:
-                results["errors"].append("The previously cached homepage did not open offline.")
-            if not fallback_ok:
-                results["errors"].append("An uncached page did not fall back to the offline support card with both approved numbers.")
-            offline_context.close()
+            if not registration.get("ok") or not offline_ready:
+                results["errors"].append(
+                    "Service worker registration/controller failed: "
+                    + json.dumps(results["offline"], ensure_ascii=False)[:1800]
+                )
+                offline_context.close()
+            else:
+                cached = offline_page.evaluate(
+                    """async () => ({
+                      offlinePage: Boolean(await caches.match("/offline.html")),
+                      homepage: Boolean(await caches.match("/index.html")),
+                      stylesheet: Boolean(await caches.match("/site.css"))
+                    })"""
+                )
+                offline_cdp = offline_context.new_cdp_session(offline_page)
+                offline_cdp.send("Network.enable")
+                offline_cdp.send(
+                    "Network.emulateNetworkConditions",
+                    {
+                        "offline": True,
+                        "latency": 0,
+                        "downloadThroughput": 0,
+                        "uploadThroughput": 0,
+                        "connectionType": "none",
+                    },
+                )
+                cached_home_response = offline_page.goto(
+                    BASE_URL + "/index.html", wait_until="load", timeout=15000
+                )
+                cached_home_ok = (
+                    cached_home_response is not None
+                    and cached_home_response.ok
+                    and offline_page.locator("main h1").is_visible()
+                )
+                fallback_response = offline_page.goto(
+                    BASE_URL + "/relationships.html", wait_until="load", timeout=15000
+                )
+                fallback_ok = (
+                    fallback_response is not None
+                    and fallback_response.ok
+                    and "Offline support" in offline_page.title()
+                    and offline_page.get_by_text("Support details saved on this device.").is_visible()
+                    and offline_page.get_by_role("link", name="14416").is_visible()
+                    and offline_page.get_by_role("link", name="112").is_visible()
+                )
+                results["offline"]["cached_assets"] = cached
+                results["offline"]["cached_homepage_available"] = cached_home_ok
+                results["offline"]["offline_fallback_available"] = fallback_ok
+                if not all(cached.values()):
+                    results["errors"].append("The service worker did not cache every required offline support asset.")
+                if not cached_home_ok:
+                    results["errors"].append("The previously cached homepage did not open offline.")
+                if not fallback_ok:
+                    results["errors"].append("An uncached page did not fall back to the offline support card with both approved numbers.")
+                offline_context.close()
 
             context.close()
             browser.close()
