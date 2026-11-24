@@ -80,3 +80,8 @@ Evidence: [workflow 45426136282](https://github.com/ASHISHDAITH/aaramora-platfor
 - Browser: 64 responsive checks, 12 keyboard, 16 no-JavaScript, 4 preference-mode, 12 large-text reflow; zero page or visible internal overflow; slow-network and service-worker offline checks passed.
 - Lighthouse: eight mobile/desktop reports, each scoring 100 for Performance, Accessibility, Best Practices and SEO. Artifact: [14940336195](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45433039789/artifacts/14940336195).
 - Production deployment and stable domain unchanged. Real screen-reader, browser-zoom, physical-device, full-site human visual, clinician/safeguarding, native-language and cultural/religious reviews remain open.
+
+
+## Latest support-language selector pass · 24 November 2026
+
+The latest application-code commit is `c09080565d95782b2db31d15832bb52875b465ba`. Get Help now uses concise English / हिन्दी / मराठी selector labels, while retaining the clear unreviewed Hindi/Marathi draft notice. Pull-request content and browser/Lighthouse checks passed: [45435268537](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45435268537) and [45435268522](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45435268522). Eight Lighthouse reports are 100 across all four categories; expanded browser checks had zero page/internal text overflow. Artifact [14940817314](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45435268522/artifacts/14940817314). Latest READY preview: https://aaramora-platform-pvrg7rl5w-httpsgithubcomefigma54-devpp.vercel.app. Production stays unchanged; all real screen-reader/zoom/device and professional review gates remain open.

@@ -346,3 +346,16 @@ Eight reports (homepage, Get Help, Relationship Corner and Reading Library, mobi
 - No WCAG certification, clinical approval or cultural/language sign-off is claimed.
 
 This remains a draft, non-production quality candidate. Do not promote it until the human gates are completed and documented.
+
+
+## Final support-language selector refinement · 24 November 2026
+
+- Latest application-code commit: `c09080565d95782b2db31d15832bb52875b465ba`.
+- Get Help language selector labels are concise English / हिन्दी / मराठी; the notice that Hindi and Marathi are draft wording and not yet reviewed by native speakers remains visible.
+- This fixes truncation observed in the 200% text enlargement screenshot without implying translation approval.
+- The latest pull-request content/safety and browser/Lighthouse runs both passed: [content 45435268537](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45435268537), [browser/Lighthouse 45435268522](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45435268522).
+- Browser suite: 64 responsive checks, 12 keyboard navigation, 16 no-JavaScript, 4 preference mode, 12 large-text checks with zero page/internal visible overflow; offline and slow-network passed.
+- Lighthouse: eight mobile/desktop route reports all 100 for Performance, Accessibility, Best Practices and SEO.
+- Latest report/screenshots artifact: [14940817314](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45435268522/artifacts/14940817314).
+- READY preview deployment `dpl_B578m9zgjfP5X5jrypnvphs88jJt`: https://aaramora-platform-pvrg7rl5w-httpsgithubcomefigma54-devpp.vercel.app.
+- Production remains unchanged. Human NVDA/VoiceOver/TalkBack, real browser zoom, physical-device tests, complete visual review and qualified clinical/safeguarding/language/cultural reviews remain open.
