@@ -1,6 +1,5 @@
 from pathlib import Path
 import json
-import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -10,9 +9,8 @@ class NavigationAndDiscoveryEnhancementTests(unittest.TestCase):
         return (ROOT / name).read_text(encoding="utf-8")
 
     def main_nav(self, page):
-        match = re.search(r'<nav class="main-nav"[^>]*>([\\s\\S]*?)</nav>', page)
-        self.assertIsNotNone(match, "Main navigation must exist")
-        return match.group(0)
+        self.assertIn('<nav class="main-nav"', page, "Main navigation must exist")
+        return page.split('<nav class="main-nav"', 1)[1].split("</nav>", 1)[0]
 
     def test_every_page_with_menu_loads_the_shared_controller(self):
         for path in ROOT.glob("*.html"):
@@ -29,7 +27,7 @@ class NavigationAndDiscoveryEnhancementTests(unittest.TestCase):
             if 'class="menu-toggle"' not in page:
                 continue
             nav = self.main_nav(page)
-            self.assertEqual(6, len(re.findall(r"<a\\b", nav)), path.name)
+            self.assertEqual(6, nav.count("<a "), path.name)
             self.assertIn('href="relationships.html"', nav, path.name)
             self.assertIn('href="reading-library.html"', nav, path.name)
 
@@ -44,7 +42,7 @@ class NavigationAndDiscoveryEnhancementTests(unittest.TestCase):
         }
         for filename, target in targets.items():
             nav = self.main_nav(self.read(filename))
-            self.assertRegex(nav, r'href=["\\']/?' + re.escape(target) + r'["\\'][^>]*aria-current="page"')
+            self.assertIn('href="' + target + '" aria-current="page"', nav)
 
     def test_shared_menu_supports_escape_and_updates_expanded_state(self):
         script = self.read("site.js")
