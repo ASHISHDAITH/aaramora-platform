@@ -302,12 +302,31 @@ def main():
                             element.style.setProperty("font-size", (current * 2) + "px", "important");
                             enlarged += 1;
                           }
+                          const overflowingElements = [...document.body.querySelectorAll("*")]
+                            .map(element => {
+                              const rect = element.getBoundingClientRect();
+                              return {
+                                tag: element.tagName.toLowerCase(),
+                                id: element.id || "",
+                                className: typeof element.className === "string" ? element.className : "",
+                                text: (element.innerText || element.getAttribute("aria-label") || "").trim().slice(0, 90),
+                                left: Math.round(rect.left),
+                                right: Math.round(rect.right),
+                                width: Math.round(rect.width),
+                                clientWidth: element.clientWidth,
+                                scrollWidth: element.scrollWidth,
+                                display: getComputedStyle(element).display
+                              };
+                            })
+                            .filter(element => element.right > window.innerWidth + 1 || element.left < -1)
+                            .slice(0, 16);
                           return {
                             enlargedTextElements: enlarged,
                             documentWidth: document.documentElement.scrollWidth,
                             bodyWidth: document.body.scrollWidth,
                             viewportWidth: window.innerWidth,
-                            headingVisible: Boolean(document.querySelector("main h1")?.getClientRects().length)
+                            headingVisible: Boolean(document.querySelector("main h1")?.getClientRects().length),
+                            overflowingElements
                           };
                         }""",
                         text_selector,
@@ -323,9 +342,9 @@ def main():
                         )
                     if not resize_result["headingVisible"]:
                         results["errors"].append(f"{filename} at {width}px: main heading is not visible after text enlargement")
-                    if filename == "index.html" and width in [390, 320]:
+                    if width in [390, 320]:
                         text_page.screenshot(
-                            path=str(SCREENSHOT_DIR / f"text-200-home-{width}.png"),
+                            path=str(SCREENSHOT_DIR / f"text-200-{filename.replace('.html','')}-{width}.png"),
                             full_page=True,
                         )
                     text_context.close()
