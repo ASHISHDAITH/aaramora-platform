@@ -11,7 +11,8 @@ const routes = [
   { name: "reading-library", path: "/reading-library.html" },
 ];
 const presets = ["mobile", "desktop"];
-const summaries = [];\nconst qualityFindings = [];
+const summaries = [];
+const qualityFindings = [];
 
 await mkdir(outputDir, { recursive: true });
 
