@@ -53,3 +53,20 @@ For each run, record tester's name/permission to name publicly, assistive techno
 - Confirm high-contrast and forced-colours modes retain visible boundaries and focus indicators.
 - Inspect small metadata labels on both Day and Tonight themes. Automated CSS tokens are not a substitute for checking actual rendered text/background combinations.
 - Complete the NVDA, VoiceOver and TalkBack sessions listed above. Record actual browser, OS, assistive-technology and device versions, results, and defects; do not infer human test completion from static tests.
+
+
+
+## Latest automated checks · 24 November 2026
+
+The expanded Chromium run passed on audited commit `817be3de1bc64c2c8686dcf0ad019f54964a61be`:
+- 16 pages at 1440, 768, 390 and 320 CSS px (64 viewport checks).
+- 12 keyboard navigation scenarios, including Escape focus restoration and outside-pointer closing.
+- 16/16 mobile no-JavaScript navigation fallbacks.
+- 4 forced-colours/reduced-motion preference scenarios.
+- 12 automated 200% text-only resize emulations across four core routes at 768, 390 and 320 CSS px; zero horizontal overflow.
+- Slow-network and service-worker offline-after-cache tests passed. Offline fallback rendered the offline support card with both approved support phone links.
+- Lighthouse produced eight reports and scored 100 for Performance, Accessibility, Best Practices and SEO on all four key routes in mobile and desktop profiles.
+
+Evidence: [workflow 45426136282](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282), artifact [14934504814](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282/artifacts/14934504814), and `docs/review/AUTOMATED_EVIDENCE_2026-11-24.md`.
+
+**Human tests are still required:** run every environment in the matrix above; use actual 200% browser text resize and 400% zoom; test keyboard and focus on physical devices; verify airplane-mode use after a successful online visit and slow-network behavior on Android/iOS; inspect light and Tonight modes; and record tester, versions, actions, expected/actual behavior, defects and re-test. The automated 200% CSS emulation and Lighthouse score do not establish screen-reader usability or WCAG conformance.
