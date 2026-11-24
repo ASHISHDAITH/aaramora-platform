@@ -173,3 +173,20 @@ The current production deployment is live at the URL above. A final browser smok
 - The OpenStax Psychology entry records that the publisher requires OpenStax's permission for LLM/generative-AI ingestion, separately from its CC BY 4.0 attribution licence.
 - The catalogue still links to providers and creators; it does not bypass paywalls/DRM or re-host protected books, articles, video or audio.
 - Native-language, religious/cultural-context, rights and manual assistive-technology review remain pending; automated tests do not replace those reviews.
+
+
+### Safety-first homepage and access redesign · 24 November 2026
+
+- Homepage shortened to five main sections, with four primary navigation items: Get help now, Understand, Tools and Trust.
+- Public support contacts are limited to Tele-MANAS **14416** and Emergency **112**, each accompanied by an official-source check date. Alternate numbers and 181 were removed from the public service register pending named human review.
+- A Pune access directory lists 25 service entries across 10 provider/government facilities. Listings link to official pages and map searches. They are source-checked entries, not live confirmation of access, appointments, fees, quality or eligibility.
+- Women's-health information is on its own page marked draft pending qualified clinician review. The research spotlight is separate and marked review pending. The community plan is explicitly a future concept, not an active forum.
+- Tools include Tonight mode, a browser-only safety-plan worksheet, copyable Words Library messages and a print-ready Appointment Bridge. Reset clears generated summaries; no form content is uploaded or persisted by AARAMORA.
+- Crisis/support page is cached by the service worker after the first online visit. A separate offline support fallback is included.
+- Homepage illustrations, styles, film and images are served from the AARAMORA deployment. The film uses fixed versioned `v1` repository paths. No analytics or third-party tracking scripts are installed.
+- Open Graph previews, favicon, manifest, robots.txt and sitemap are included. Hindi and Marathi crisis copy remains labelled draft; no `hreflang` claim is made before translation review.
+- Manual clinician, native-language, cultural and assistive-technology reviews remain open. No fresh screen-reader, 200% zoom, slow-network or Lighthouse audit is claimed in this release record.
+
+**Production URL:** https://aaramora-platform.vercel.app  
+**Current source commit:** `9b4988ee5222b1e07461dc8d3db82487eba8b518`  
+**Vercel latest deployment:** `dpl_3EAf6wm2M2FFW6MhpH2FPW26GqUP` · `READY`
