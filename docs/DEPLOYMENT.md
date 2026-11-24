@@ -14,10 +14,10 @@
 **Content checks:** 68 Python tests passed; catalogue metadata validator passed.  
 **Catalogue:** 49 entries and seven content formats: book, video, audiobook, audio, article, blog and image. The original 46 static cards and the original 26 multilingual records remain.  
 **Hero image:** locally hosted original artwork at `assets/reading-library-book-still-life.webp`; the separately credited Pexels image remains a discovery record.  
-**Source-link audit:** 77 metadata URLs checked, 61 reachable, 0 confirmed dead, 16 inconclusive because of automated-access blocks, timeouts or a provider certificate issue.  
+**Source-link audit:** [run 45297178014](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45297178014) completed successfully: 77 metadata URLs checked, 61 reachable, 0 confirmed dead, 16 inconclusive because of automated-access 403/503 responses, timeouts or a provider certificate issue.  
 **Rights corrections:** OpenStax Psychology's preface says the book must not be used for LLM training or ingested into generative-AI offerings without OpenStax's permission; Project Gutenberg audiobook rights are described as US-specific; audio recitations are not mislabeled as complete audiobooks.
 
-These checks do not replace native-language, religious/cultural, legal or assistive-technology review. Those gates remain open. Vercel confirms the current production deployment above is READY and the stable alias is assigned.
+These checks do not replace native-language, religious/cultural, legal or assistive-technology review. Those gates remain open. The 16 inconclusive links are not classified as dead; the underlying source pages may be available to normal browser visitors. Vercel confirms the current production deployment above is READY and the stable alias is assigned.
 
 ## Current release
 
