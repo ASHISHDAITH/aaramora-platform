@@ -201,6 +201,5 @@ The AARAMORA Guide is a future, disabled feature. There is no chatbot UI, model 
 - `docs/rag/CRISIS_TEMPLATE_REVIEW_DRAFT.md` is for clinician/safeguarding review only.
 - `docs/RAG_INGESTION_POLICY.md` and `data/rag-ingestion-policy.json` implement default-deny source rights.
 - `data/rag-corpus-manifest.json` is empty. Draft health pages are not eligible for retrieval.
-- `scripts/build_reviewed_corpus.py` builds a local retrieval index only from signed, current, rights-verified items. It makes no network or model calls.
-- `tests/fixtures/hinglish-redteam-v2.jsonl` contains 100 synthetic Hinglish starter cases, including prompt injection attempts. These fixtures have structural CI coverage only; they have not been evaluated against a model or clinician-labelled detector.
-- The design report requires 300+ crisis messages across English, Hindi, Marathi and Hinglish and documented clinical sign-off before real users. The 100 starter cases do not satisfy that gate.
+- `scripts/build_reviewed_corpus.py` builds a local retrieval index only from signed, current, rights-verified items. `scripts/search_reviewed_corpus.py` then performs lexical retrieval and returns source-linked passages without a model or network call. The index is currently empty, so it abstains.
+- `tests/fixtures/hinglish-redteam-v2.jsonl` contains 100 synthetic Hinglish starter cases, including prompt injection attempts. `tests/fixtures/crisis-multilingual-301-v1.jsonl` combines those with 67 English, 67 Hindi and 67 Marathi cases. All language/clinical labels remain pending human review; CI validates fixture structure only, not detector or model behaviour.
