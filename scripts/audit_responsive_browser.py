@@ -331,6 +331,17 @@ def main():
                             bodyWidth: document.body.scrollWidth,
                             viewportWidth: window.innerWidth,
                             headingVisible: Boolean(document.querySelector("main h1")?.getClientRects().length),
+                            overflowing: [...document.querySelectorAll("body *")].map(element => {
+                              const rect = element.getBoundingClientRect();
+                              return {
+                                tag: element.tagName.toLowerCase(),
+                                id: element.id || "",
+                                className: typeof element.className === "string" ? element.className : "",
+                                left: Math.round(rect.left),
+                                right: Math.round(rect.right),
+                                text: (element.innerText || "").replace(/\\s+/g, " ").slice(0, 90)
+                              };
+                            }).filter(item => item.right > window.innerWidth + 1 || item.left < -1).slice(0, 16),
                             overflowingElements
                           };
                         }""",
