@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-24",
+  "default": "deny",
+  "runtimeEnabled": false,
+  "modelCallsEnabled": false,
+  "approvedItems": [],
+  "firstPartyRules": {
+    "ownedContentMayBeConsidered": true,
+    "healthAndSafetyRequiresNamedClinicianReview": true,
+    "requireNamedReviewer": true,
+    "requireOwner": true,
+    "requireSources": true,
+    "requireReviewedOn": true,
+    "requireExpiresOn": true,
+    "excludeExpiredDraftUnsignedOrWithdrawn": true
+  },
+  "candidatePendingExactLicenceCheck": [
+    {
+      "name": "BCcampus guide",
+      "claimedLicense": "CC BY 4.0",
+      "status": "pending_exact_item_verification",
+      "allowedForIngestion": false,
+      "requirements": [
+        "exact title and edition",
+        "creator and attribution",
+        "current licence on exact work",
+        "third-party content exclusions",
+        "permission scope"
+      ]
+    }
+  ],
+  "linkOnlyOrNoIngestion": [
+    {
+      "name": "OpenStax Psychology 2e",
+      "default": "link_only",
+      "reason": "Written permission required for AI ingestion per project rights notes"
+    },
+    {
+      "name": "SuttaCentral",
+      "default": "link_only",
+      "reason": "Project records site request against scraping and AI-dataset use"
+    },
+    {
+      "name": "CCI workbooks",
+      "default": "link_only",
+      "reason": "Workbook republication rights restricted"
+    },
+    {
+      "name": "Jain eLibrary",
+      "default": "link_only",
+      "reason": "Personal-use limitation recorded in project rights notes"
+    },
+    {
+      "name": "Sikher translations",
+      "default": "link_only",
+      "reason": "Translation-specific rights and terms"
+    },
+    {
+      "name": "BaniDB translations",
+      "default": "link_only",
+      "reason": "Controlled/item-level terms; separate terms review required"
+    },
+    {
+      "name": "Quran translations",
+      "default": "link_only",
+      "reason": "Translation- and edition-specific rights"
+    },
+    {
+      "name": "Gita Supersite translations",
+      "default": "link_only",
+      "reason": "Translation- and item-specific rights"
+    }
+  ],
+  "acceptedLicenseIds": [
+    "AARAMORA-OWNED",
+    "CC-BY-4.0"
+  ],
+  "requiredMetadata": [
+    "id",
+    "title",
+    "file",
+    "language",
+    "licenseId",
+    "sources",
+    "owner",
+    "reviewer",
+    "reviewedOn",
+    "expiresOn",
+    "approvalStatus",
+    "contentStatus",
+    "audience",
+    "tags"
+  ]
+}
