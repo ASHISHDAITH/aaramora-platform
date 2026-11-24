@@ -62,6 +62,12 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn(".concept-item summary>small{flex:1 1 100%;", relationships)
         self.assertIn(".page-main h1,.page-main h2,.page-main h3", relationships)
 
+    def test_browser_audit_rejects_visible_internal_overflow_at_large_text(self):
+        audit = self.read("scripts/audit_responsive_browser.py")
+        self.assertIn("criticalInternalOverflow", audit)
+        self.assertIn("element.scrollWidth > element.clientWidth + 4", audit)
+        self.assertIn("visible content overflows internally under 200% text enlargement", audit)
+
     def test_reduced_motion_and_mobile_reflow_rules_are_present(self):
         css = self.read("site.css")
         self.assertIn('@media(prefers-reduced-motion:reduce)', css)
