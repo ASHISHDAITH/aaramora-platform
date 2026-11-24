@@ -243,3 +243,10 @@ This section records the move to Kiro as the primary coding IDE. It does not ass
 
 **Non-negotiable instruction:** make AARAMORA more polished, coherent, accessible, fast and trustworthy while preserving everything that already exists. Never trade away safety, content, source rights, privacy or working pathways for visual novelty.
 
+## Additive skip-link correction · 24 November 2026
+
+- Verified `relationships.html` had both a legacy `class="skip"` link and the shared `class="skip-link"` link, both targeting the existing `#main` landmark.
+- Removed only the redundant legacy link; kept the shared skip link and main landmark unchanged.
+- Added a regression assertion in `tests/check_navigation_enhancements.py`.
+- This source correction does not claim a human screen-reader or browser test. CI will provide the automated result for the commit.
+- No page content, relationship concept, quiz, guide, shelf, catalogue record, service entry, support route or media asset was removed.
