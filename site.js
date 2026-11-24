@@ -6,7 +6,7 @@ if(menu&&nav){
  const setMenuState=open=>{
   const expanded=mobileQuery.matches&&Boolean(open);
   nav.classList.toggle("open",expanded);
-  menu.setAttribute("aria-expanded",String(expanded));
+  if(expanded)menu.setAttribute("aria-expanded","true");else menu.setAttribute("aria-expanded","false");
   menu.textContent=expanded?"Close":"Menu";
  };
  const closeMenu=restoreFocus=>{
