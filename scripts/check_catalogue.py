@@ -28,7 +28,7 @@ ACCESS_TYPES = {
     "borrow", "api-read-only",
 }
 READING_LEVELS = {"all-levels", "introductory", "academic", "primary-source"}
-CONTENT_TYPES = {"book", "video", "audiobook", "article", "blog", "image"}
+CONTENT_TYPES = {"book", "video", "audiobook", "audio", "article", "blog", "image"}
 
 
 class CatalogueError(Exception):
