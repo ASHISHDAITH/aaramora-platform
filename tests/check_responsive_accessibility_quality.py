@@ -32,6 +32,7 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn('.service-meta{color:#526157}', css)
         self.assertIn('.verify{color:#53645A}', css)
         self.assertIn('body[data-theme="tonight"] .verify{color:#D7DCCF}', css)
+        self.assertIn('body[data-theme="tonight"] .muted,body[data-theme="tonight"] .service-meta,body[data-theme="tonight"] .verify,body[data-theme="tonight"] .format-count-note{color:#F6F0E1}', css)
         self.assertIn('@media(forced-colors:active)', css)
         self.assertIn('@media(prefers-contrast:more)', css)
 
