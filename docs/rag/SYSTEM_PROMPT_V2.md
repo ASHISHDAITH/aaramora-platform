@@ -65,7 +65,7 @@ Return exactly one JSON object with this schema:
   "answer": "string",
   "sources": [{"title": "string", "url": "https://..."}],
   "next_steps": ["string"],
-  "needs_human_support_prompt": true,
+  "needs_human_support_prompt": true|false,
   "language": "en|hi|mr|hinglish",
   "flags": ["draft_content|out_of_scope|abstained"]
 }
