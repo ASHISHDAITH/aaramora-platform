@@ -124,7 +124,7 @@ The current production deployment is live at the URL above. A final browser smok
 
 ### Final live check · 24 November 2026
 - Latest production deploy: pending final release build.
-- 49 catalogue records, 46 original static cards retained. The category filter supports seven types: books, video, audiobooks, audio, articles, blogs and images.
+- 49 catalogue records, 46 original static cards retained. The category filter supports seven types: books, videos, audiobooks, audio, articles, blogs and images.
 - Metadata-only source-link audit: 77 URLs checked, 61 reachable, 0 confirmed dead and 16 inconclusive because providers blocked or timed out automated requests. Inconclusive does not mean dead.
 - Native-language, religious/cultural-context and manual screen-reader reviews remain pending.
 
@@ -150,7 +150,7 @@ The current production deployment is live at the URL above. A final browser smok
 ### Multi-format Reading Library update · 24 November 2026
 - Original static reading shelves and 46 original resource cards remain present.
 - The source catalogue now has 48 records: 26 original multilingual records and 22 additional discoveries.
-- Format filters classify books, videos, audiobooks, articles, blogs and images. Format can be combined with language, tradition, access, rights, level and file-format filters.
+- Format filters classify books, videos, audiobooks, general audio, articles, blogs and images. Format can be combined with language, tradition, access, rights, level and file-format filters.
 - YouTube and audio-platform content links remain at the creator/provider. The project does not copy protected media or scrape full content.
 - Rights are recorded per source or item. The exact OpenStax Psychology edition is CC BY 4.0; this does not change the separate Psychology 2e restrictions already recorded.
 - All native-language, cultural/religious-context and manual accessibility review fields remain pending.
@@ -169,7 +169,7 @@ The current production deployment is live at the URL above. A final browser smok
 ### Follow-up fixes completed · 24 November 2026
 - "Audio" and "Audiobook" are separate filters. Recitations, podcasts and guided recordings are tagged Audio; full narrated book editions are tagged Audiobook.
 - Project Gutenberg's official Audio Books collection is linked with a United States-only public-domain caveat.
-- The hero uses an original locally hosted WebP at `assets/reading-library-book-still-life.webp`; the Esra Korkmaz Pexels photograph remains separately attributed in image discovery, not used as the hero.
+- The hero uses an original locally hosted WebP at `assets/reading-library-book-still-life.webp`; the Esra Erdem Pexels photograph remains separately attributed in image discovery, not used as the hero.
 - The OpenStax Psychology entry records that the publisher requires OpenStax's permission for LLM/generative-AI ingestion, separately from its CC BY 4.0 attribution licence.
 - The catalogue still links to providers and creators; it does not bypass paywalls/DRM or re-host protected books, articles, video or audio.
 - Native-language, religious/cultural-context, rights and manual assistive-technology review remain pending; automated tests do not replace those reviews.
