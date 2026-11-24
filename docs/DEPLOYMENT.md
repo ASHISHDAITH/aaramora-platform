@@ -204,3 +204,17 @@ A production-like Chromium audit found that the skip link was positioned over th
 - Hero asset: `assets/reading-library-book-still-life.webp`, generated original AARAMORA still life, hosted in the repository.
 - Source-link audit: 77 URLs, 61 reachable, 0 confirmed dead, 16 inconclusive due to provider-side blocks/timeouts or certificate verification. Inconclusive links are not classified as dead.
 - Native-language, religious/cultural-context, legal and manual accessibility review remain pending.
+
+
+## Safety-first homepage and support release · 24 November 2026
+
+- Current source commit: `9b4988ee5222b1e07461dc8d3db82487eba8b518`.
+- Vercel production alias: https://aaramora-platform.vercel.app
+- Vercel latest deployment: `dpl_3EAf6wm2M2FFW6MhpH2FPW26GqUP` · `READY`
+- Homepage is reduced to a short five-section path and four primary destinations. The film is moved to its own page and served from pinned, versioned local MP4 files.
+- Only Tele-MANAS 14416 and Emergency 112 are included in the public support register. Official pages were checked 24 November 2026; a named human reviewer remains pending.
+- Pune directory: 25 official-page-listed services across 10 institutions. This is a source transcription, not a live availability, quality, price or eligibility check.
+- Women's-health content is clearly marked as a draft pending a qualified clinician. The research spotlight is separate and review pending. Community plan is a future concept, not an active forum.
+- The service worker pre-caches the support and offline fallback pages after first online visit. Tools are browser-only and have no AARAMORA server submission or persistence.
+- No third-party imagery, video CDN, analytics or ad-tracking scripts load automatically. Links to providers and map services contact those third parties only after a visitor selects them.
+- Human testing still required: keyboard-only task completion, NVDA/VoiceOver/TalkBack, 200% zoom, slow-network testing and a current Lighthouse audit. No claim of completion is made here.
