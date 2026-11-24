@@ -272,6 +272,116 @@ def main():
                     results["errors"].append(f"{filename}: overflow in forced-colours/reduced-motion mode")
                 preference_context.close()
 
+            # Slow-network smoke test with a throttled 3G-like profile.
+            slow_context = browser.new_context(
+                viewport={"width": 390, "height": 844},
+                service_workers="block",
+            )
+            slow_context.route(
+                "**/*",
+                lambda route: route.continue_()
+                if route.request.url.startswith(BASE_URL)
+                else route.abort(),
+            )
+            slow_page = slow_context.new_page()
+            slow_cdp = slow_context.new_cdp_session(slow_page)
+            slow_cdp.send("Network.enable")
+            slow_cdp.send(
+                "Network.emulateNetworkConditions",
+                {
+                    "offline": False,
+                    "latency": 400,
+                    "downloadThroughput": 128 * 1024,
+                    "uploadThroughput": 64 * 1024,
+                    "connectionType": "cellular3g",
+                },
+            )
+            slow_started = time.monotonic()
+            slow_response = slow_page.goto(
+                BASE_URL + "/", wait_until="domcontentloaded", timeout=60000
+            )
+            slow_page.locator("main h1").wait_for(timeout=20000)
+            slow_elapsed = round(time.monotonic() - slow_started, 2)
+            results["slow_network"] = {
+                "profile": "400ms latency / 128KBps down / 64KBps up",
+                "response_ok": bool(slow_response and slow_response.ok),
+                "main_heading_visible": slow_page.locator("main h1").is_visible(),
+                "elapsed_seconds_to_domcontentloaded_and_heading": slow_elapsed,
+            }
+            if not results["slow_network"]["response_ok"] or not results["slow_network"]["main_heading_visible"]:
+                results["errors"].append("Homepage did not render its main heading under the throttled network profile.")
+            slow_context.close()
+
+            # Install the first-party service worker online, then test its offline cache/fallback.
+            offline_context = browser.new_context(
+                viewport={"width": 390, "height": 844},
+                service_workers="allow",
+            )
+            offline_page = offline_context.new_page()
+            offline_response = offline_page.goto(
+                BASE_URL + "/", wait_until="load", timeout=30000
+            )
+            offline_page.evaluate(
+                """async () => {
+                  await navigator.serviceWorker.register("/service-worker.js");
+                  await navigator.serviceWorker.ready;
+                }"""
+            )
+            offline_page.wait_for_function(
+                "navigator.serviceWorker.controller !== null", timeout=15000
+            )
+            cached = offline_page.evaluate(
+                """async () => ({
+                  offlinePage: Boolean(await caches.match("/offline.html")),
+                  homepage: Boolean(await caches.match("/index.html")),
+                  stylesheet: Boolean(await caches.match("/site.css"))
+                })"""
+            )
+            offline_cdp = offline_context.new_cdp_session(offline_page)
+            offline_cdp.send("Network.enable")
+            offline_cdp.send(
+                "Network.emulateNetworkConditions",
+                {
+                    "offline": True,
+                    "latency": 0,
+                    "downloadThroughput": 0,
+                    "uploadThroughput": 0,
+                    "connectionType": "none",
+                },
+            )
+            cached_home_response = offline_page.goto(
+                BASE_URL + "/index.html", wait_until="load", timeout=15000
+            )
+            cached_home_ok = (
+                cached_home_response is not None
+                and cached_home_response.ok
+                and offline_page.locator("main h1").is_visible()
+            )
+            fallback_response = offline_page.goto(
+                BASE_URL + "/relationships.html", wait_until="load", timeout=15000
+            )
+            fallback_ok = (
+                fallback_response is not None
+                and fallback_response.ok
+                and "Offline support" in offline_page.title()
+                and offline_page.get_by_text("Support details saved on this device.").is_visible()
+                and offline_page.get_by_role("link", name="14416").is_visible()
+                and offline_page.get_by_role("link", name="112").is_visible()
+            )
+            results["offline"] = {
+                "online_install_response_ok": bool(offline_response and offline_response.ok),
+                "cached_assets": cached,
+                "cached_homepage_available": cached_home_ok,
+                "offline_fallback_available": fallback_ok,
+            }
+            if not all(cached.values()):
+                results["errors"].append("The service worker did not cache every required offline support asset.")
+            if not cached_home_ok:
+                results["errors"].append("The previously cached homepage did not open offline.")
+            if not fallback_ok:
+                results["errors"].append("An uncached page did not fall back to the offline support card with both approved numbers.")
+            offline_context.close()
+
             context.close()
             browser.close()
     finally:
@@ -287,6 +397,8 @@ def main():
         f"{len(results['navigation'])} keyboard menu checks; "
         f"{len(results['no_javascript'])} no-JavaScript fallbacks; "
         f"{len(results['preference_checks'])} preference-mode checks; "
+        f"slow-network={'passed' if results.get('slow_network', {}).get('response_ok') else 'failed'}; "
+        f"offline={'passed' if results.get('offline', {}).get('offline_fallback_available') else 'failed'}; "
         f"errors={len(results['errors'])}."
     )
     if results["errors"]:
