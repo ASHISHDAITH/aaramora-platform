@@ -204,3 +204,14 @@ body[data-theme="tonight"] .support-ribbon .helpline-verified{color:#D7DCCF}
  .support-line,.support-links{width:100%;gap:7px 10px}
  .support-ribbon .helpline-verified{max-width:100%}
 }
+
+
+/* Lighthouse follow-up: raise small text above the 4.5:1 contrast threshold. */
+.hero-foot{color:#526157}
+#concept-count,.concept-note,.concept-item summary small{color:#526157}
+.support-ribbon small{color:#4E5F54}
+body[data-theme="tonight"] .hero-foot,
+body[data-theme="tonight"] #concept-count,
+body[data-theme="tonight"] .concept-note,
+body[data-theme="tonight"] .concept-item summary small,
+body[data-theme="tonight"] .support-ribbon small{color:#F1EBDD}

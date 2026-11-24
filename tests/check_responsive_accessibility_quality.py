@@ -46,6 +46,36 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn('max-width:360px', css)
         self.assertIn('.wrap{width:calc(100% - 26px)}', css)
 
+    def test_head_initializes_navigation_before_styles_to_prevent_mobile_shift(self):
+        for page in ROOT.glob("*.html"):
+            html = page.read_text(encoding="utf-8")
+            head = html[:html.lower().find("</head>")]
+            if 'name="viewport"' not in head:
+                continue
+            marker = '<script>document.documentElement.classList.add("js-enabled");</script>'
+            self.assertIn(marker, head, f"{page.name} needs the early JS enhancement marker")
+            self.assertLess(head.index('name="viewport"'), head.index(marker))
+            first_style = min(
+                (pos for pos in (head.find("<style"), head.find('rel="stylesheet"')) if pos >= 0),
+                default=len(head),
+            )
+            self.assertLess(head.index(marker), first_style, f"{page.name} initializes after CSS")
+
+    def test_all_pages_link_the_shared_favicon(self):
+        for page in ROOT.glob("*.html"):
+            html = page.read_text(encoding="utf-8")
+            head = html[:html.lower().find("</head>")]
+            self.assertIn('href="/favicon.svg"', head, f"{page.name} is missing the shared favicon")
+
+    def test_lighthouse_contrast_fixes_are_present(self):
+        css = self.read("site.css")
+        self.assertIn(".hero-foot{color:#526157}", css)
+        self.assertIn("#concept-count,.concept-note,.concept-item summary small{color:#526157}", css)
+        self.assertIn(".support-ribbon small{color:#4E5F54}", css)
+        library = self.read("reading-library.html")
+        self.assertIn('button.setAttribute("aria-label",label+" "+count);', library)
+        self.assertNotIn('label+", "+count+" catalogue entries"', library)
+
     def test_common_controls_retain_practical_touch_targets(self):
         css = self.read("site.css")
         self.assertIn('button,.button,.quiet-button,.menu-toggle,.quick-exit,.footer-more summary{min-height:44px}', css)

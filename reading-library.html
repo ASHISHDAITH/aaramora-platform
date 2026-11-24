@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F6F3EB">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.classList.add("js-enabled");</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#F6F3EB">
 <meta name="description" content="Aaramora reading library: open psychology resources, attachment books, sacred texts, public-domain classics and lawful borrowing links.">
 <title>Reading Library | AARAMORA</title>
 <style>
@@ -500,7 +502,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
         badge.setAttribute("aria-hidden","true");
         badge.textContent=String(count);
         button.appendChild(badge);
-        button.setAttribute("aria-label",label+", "+count+" catalogue entries");
+        button.setAttribute("aria-label",label+" "+count);
       });
       renderLanguageGroups(data.languageGroups);
       populateLanguageSelect(data.languageGroups);

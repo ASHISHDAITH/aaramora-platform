@@ -11,7 +11,7 @@ const routes = [
   { name: "reading-library", path: "/reading-library.html" },
 ];
 const presets = ["mobile", "desktop"];
-const summaries = [];
+const summaries = [];\nconst qualityFindings = [];
 
 await mkdir(outputDir, { recursive: true });
 
@@ -47,6 +47,16 @@ for (const route of routes) {
       ]),
     );
     const metric = id => report.audits?.[id]?.displayValue ?? null;
+    for (const auditId of ["color-contrast", "label-content-name-mismatch", "errors-in-console"]) {
+      const audit = report.audits?.[auditId];
+      if (audit && audit.score !== null && audit.score < 1) {
+        qualityFindings.push(`${route.path} [${preset}] ${auditId}: score ${audit.score}`);
+      }
+    }
+    const cls = report.audits?.["cumulative-layout-shift"]?.numericValue;
+    if (typeof cls === "number" && cls > 0.1) {
+      qualityFindings.push(`${route.path} [${preset}] cumulative-layout-shift: ${cls.toFixed(3)} (> 0.1)`);
+    }
     summaries.push({
       route: route.path,
       preset,
@@ -58,7 +68,7 @@ for (const route of routes) {
         cumulativeLayoutShift: metric("cumulative-layout-shift"),
         speedIndex: metric("speed-index"),
       },
-      finalUrl: report.finalDisplayedUrl ?? report.finalUrl ?? null,
+      finalUrl: report.finalDisplayedUrl ?? report.finalUrl ?? null,\n      qualityChecks: Object.fromEntries(["color-contrast","label-content-name-mismatch","errors-in-console"].map(id=>[id,report.audits?.[id]?.score ?? null])),
     });
   }
 }
@@ -71,7 +81,7 @@ await writeFile(
       baseUrl: base,
       routes,
       reports: summaries,
-      note: "Lighthouse lab scores are diagnostic measurements, not WCAG or clinical certification.",
+      note: "Lighthouse lab scores are diagnostic measurements, not WCAG or clinical certification.",\n      qualityFindings,
     },
     null,
     2,
