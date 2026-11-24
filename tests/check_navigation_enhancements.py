@@ -78,8 +78,8 @@ class NavigationAndDiscoveryEnhancementTests(unittest.TestCase):
         library = self.read("reading-library.html")
         self.assertEqual(40, relationships.count('class="concept-item"'))
         self.assertIn("attachment protest", relationships.lower())
-        for shelf in ("Free downloads", "Relationship learning", "Attachment books", "Sacred texts", "GitHub source", "Reuse rules"):
-            self.assertIn(shelf, library)
+        for shelf_id in ("free-downloads", "scripture-shelf", "workbooks-and-articles", "relationship-open-learning", "attachment-books", "faith-wisdom", "novels-and-classics", "github-shelves", "licensing"):
+            self.assertIn('id="' + shelf_id + '"', library)
         data = json.loads(self.read("data/library.json"))
         self.assertEqual(49, len(data["records"]))
 
