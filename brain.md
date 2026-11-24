@@ -98,6 +98,33 @@ The corpus manifest is empty and runtime is disabled. The default corpus builder
 - This remains a static information/help-navigation prototype. Human clinician, safeguarding, native-language, cultural/religious and independent assistive-technology reviews remain pending. No whole-site WCAG 2.2 AA certification or live AI model evaluation is claimed.
 
 
+## Tonight-mode CSS overrides for inline-style pages · 24 November 2026
+
+### What changed
+- **`site.css`** — 173 lines added after the existing Tonight-mode discovery-card rules. Six new page-specific blocks cover tonight-mode colour overrides for components that live inside inline `<style>` blocks in individual pages:
+  - `wellbeing.html`: condition cards, care note, support section, notice, source list.
+  - `relationships.html`: quizzes, guides, safety panel, scripts, concept library, practice grid, route finder.
+  - `reading-library.html`: catalogue toolbar, filters, record cards, quote card, shelf nav, language coverage, library search, catalogue notice.
+  - `check-ins.html`: panels, choices, results, planner, urgent, mini-cards, tracker table.
+  - `yoga-and-breath.html`: evidence/practice/safety cards, transcript panels, hero art.
+  - `womens-health.html`: womens note, appointment prep, women-cards, claim items, medical boundary, draft status.
+  - Shared across pages: footer, topline, support ribbon, draft banner, status pill.
+- **`womens-health.html`** — 9 lines added inside the existing inline `<style>` block to give the page's own tonight-mode overrides. These are redundant with the new `site.css` rules but were left in place as a defence-in-depth specificity guarantee (the inline `<style>` block loads before `site.css` on this page).
+- **`brain.md`** and **`docs/QA_RESULTS.md`** updated with this release record.
+
+### Validation status
+- Python test suite: **not executable in this environment** (python/python3 binaries resolve to Windows Store stubs; no Python runtime installed). The test suite result from the prior release (109 tests, 6 retrieval tests, catalogue validator) remains the last verified baseline.
+- CSS diff reviewed manually: all 173 added lines use `body[data-theme="tonight"]` selectors; no existing rules were modified or deleted.
+- `womens-health.html` diff reviewed: 9 added lines inside the inline `<style>` block; no existing HTML or CSS rules were removed.
+- `permissions.yaml` inspection: file contains a single valid `rules:` key with one `shell` rule and one `fs_read` rule. **No duplicate key found; no edit was made.**
+
+### Open gates (unchanged)
+- Python test suite execution on a machine with Python installed.
+- Full browser/device visual audit confirming tonight-mode renders correctly on all six pages.
+- Named clinician, safeguarding, native-language and accessibility reviews remain pending.
+
+---
+
 ## Additive discovery and navigation release · 24 November 2026
 
 - **Production source commit:** `7da5fda5c648ac25477684e9996324e472791385`

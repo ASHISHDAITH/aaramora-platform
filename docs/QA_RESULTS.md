@@ -201,6 +201,27 @@
 - Named clinical, safeguarding, native-language, cultural/religious and assistive-technology reviews remain pending.
 
 
+## Tonight-mode CSS overrides for inline-style pages · 24 November 2026
+
+### Files changed
+- `site.css` — 173 lines added. Tonight-mode (`body[data-theme="tonight"]`) overrides for page-unique components in wellbeing, relationships, reading-library, check-ins, yoga-and-breath and womens-health, plus shared footer, topline, support ribbon, draft banner and status pill. No existing rules modified or deleted.
+- `womens-health.html` — 9 lines added inside the existing inline `<style>` block. Same tonight-mode overrides as those now in `site.css`, kept as a specificity safety net.
+- `brain.md`, `docs/QA_RESULTS.md` — updated.
+
+### Validation
+- CSS diff manually reviewed: all additions use the `body[data-theme="tonight"]` selector. No existing selector was changed.
+- HTML diff manually reviewed: change is confined to 9 lines appended inside the existing `<style>` block before the closing `</style>`. No HTML structure altered.
+- Python test suite: **not executable in this environment** — `python` and `python3` resolve to Windows Store stubs with no runtime installed. Last verified result: 109 main-suite tests + 6 retrieval tests + catalogue validator passed (run `45410648378`).
+- `permissions.yaml` inspected before any action: single `rules:` key, two capability entries (`shell` allow, `fs_read` allow). No duplicate key; file left unchanged.
+
+### Remaining open gates
+- Run the Python test suite on a machine with Python installed and confirm it still passes 109+ tests.
+- Browser audit: open `womens-health.html`, toggle Tonight mode, and confirm all component backgrounds, text and border colours render correctly.
+- Same check for wellbeing, relationships, reading-library, check-ins and yoga-and-breath pages.
+- Named clinician, safeguarding, native-language, cultural and assistive-technology reviews remain pending.
+
+---
+
 ## Navigation and discovery quality pass · 24 November 2026
 
 - Preserved all existing pages, sections, relationship concepts, Reading Library catalogue records, book shelves, quizzes, support routes and media assets. No resource data or original shelves were removed.
