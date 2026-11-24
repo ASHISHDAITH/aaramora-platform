@@ -48,3 +48,42 @@ After a model and deterministic detector are selected for internal testing:
 4. Run jailbreak and prompt-injection cases against the exact prompt/model/corpus build.
 5. Test citations against retrieved evidence and verify abstention when no source is approved.
 6. Repeat after every prompt, model, corpus, threshold or detector change.
+
+
+# Multilingual crisis evaluation pack — 301 synthetic starter cases
+
+**Status:** Draft dataset. No detector/model execution or clinician label review has been completed. Hindi, Marathi and Hinglish wording requires native-language review before it can be used as an evaluated benchmark.  
+**Prepared:** 24 November 2026.
+
+## Coverage
+
+`tests/fixtures/crisis-multilingual-301-v1.jsonl` combines the existing 100 synthetic Hinglish red-team messages with 67 English, 67 Hindi and 67 Marathi crisis/safety-handoff cases.
+
+| Language/style | Count | Current review status |
+|---|---:|---|
+| English | 67 | Editorial, clinical and safeguarding labels pending |
+| Hindi | 67 | Native-language, clinical and safeguarding review pending |
+| Marathi | 67 | Native-language, clinical and safeguarding review pending |
+| Hinglish | 100 | Language, clinical and safeguarding review pending |
+| **Total** | **301** | **Not validated for live use** |
+
+Coverage includes direct and indirect suicidal language, self-harm urges, harm-to-others risk, abuse/immediate danger, postpartum urgent signs and acute panic/dissociation. The existing Hinglish portion also includes out-of-scope and prompt-injection/jailbreak attempts.
+
+## Limitations
+
+- All messages are synthetic. They are not validated screening items or a clinically representative dataset.
+- Provisional expected routes are test hypotheses, not authoritative labels. A clinician and safeguarding reviewer must review every case and investigate likely false positives and false negatives.
+- Hindi and Marathi wording must be checked by native speakers from the intended audience. Machine-generated draft text must not be described as reviewed translation.
+- The pack has not been run against an LLM, classifier or deployed deterministic safety router. CI checks structure and metadata only.
+- Passing fixture-count tests is not a safety-performance result and must not be reported as recall or accuracy.
+
+## Required next evaluation
+
+1. Assign named clinical, safeguarding and language reviewers.
+2. Review all 301 messages and route labels; add colloquial, indirect, negated, sarcastic, coded and long-form variants.
+3. Implement and evaluate the deterministic pre-generation safety layer against the reviewed cases.
+4. Measure recall and inspect every miss; measure false positives and safe handoffs.
+5. Run jailbreak/prompt-injection messages against the exact prompt, approved corpus and chosen model in an internal environment.
+6. Repeat regression after every prompt, model, corpus, threshold or detector change.
+
+No public chatbot or beta is permitted until the review, evaluation, privacy, incident-response and kill-switch gates are approved in writing.
