@@ -133,3 +133,7 @@ Each topic follows a consistent pattern: what it is, signs to discuss, what may 
 The design must never imply that clicking a card identifies a diagnosis. No fertility claims, hormone-balancing promises, supplement stacks, medication doses, weight-loss messaging or one-size-fits-all diet advice. Use “what may help” rather than “how to cure / fix / balance hormones”.
 
 Include the PMOS and midlife cognition research spotlight with the observational-evidence caveat. The brain-health study cannot be presented as proof of causation, brain damage or future dementia.
+
+## Shared navigation and discovery refinements · 24 November 2026
+
+The shared six-link navigation keeps Relationship Corner and Reading Library directly accessible while retaining Get help now, Understand, Tools and Trust. Its mobile panel is keyboard-operable, exposes expanded state, closes on Escape and outside click, and marks the current destination. The homepage adds two non-destructive discovery cards for relationship learning and reading. Reading Library format chips display live counts across Book, Video, Audiobook, Audio, Article, Blog and Image; counts overlap because a source may have multiple types. Existing reading shelves and the 49-record catalogue remain intact. Menu behavior is centralized in `site.js`; pages with a menu must load that shared controller.
