@@ -295,11 +295,16 @@ def main():
                     resize_result = text_page.evaluate(
                         """selector => {
                           const elements = [...document.querySelectorAll(selector)];
+                          // Snapshot every original computed size before mutating any parent element.
+                          // This prevents inherited child sizes from being accidentally doubled twice.
+                          const originalSizes = elements.map(element => ({
+                            element,
+                            size: Number.parseFloat(getComputedStyle(element).fontSize)
+                          }));
                           let enlarged = 0;
-                          for (const element of elements) {
-                            const current = Number.parseFloat(getComputedStyle(element).fontSize);
-                            if (!Number.isFinite(current) || current <= 0) continue;
-                            element.style.setProperty("font-size", (current * 2) + "px", "important");
+                          for (const item of originalSizes) {
+                            if (!Number.isFinite(item.size) || item.size <= 0) continue;
+                            item.element.style.setProperty("font-size", (item.size * 2) + "px", "important");
                             enlarged += 1;
                           }
                           const overflowingElements = [...document.body.querySelectorAll("*")]
