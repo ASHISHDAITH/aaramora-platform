@@ -55,9 +55,11 @@ def main():
         "navigation": [],
         "no_javascript": {},
         "preference_checks": [],
+        "text_resize_checks": [],
         "errors": [],
     }
     server = start_server()
+    server_stopped = False
 
     try:
         with sync_playwright() as playwright:
@@ -272,6 +274,62 @@ def main():
                     results["errors"].append(f"{filename}: overflow in forced-colours/reduced-motion mode")
                 preference_context.close()
 
+            # Text-only 200% enlargement emulation on the four key journeys.
+            text_selector = "h1,h2,h3,h4,h5,h6,p,a,button,label,input,select,textarea,li,summary,small,span,strong,em,dt,dd,th,td,figcaption,blockquote"
+            for filename in ["index.html", "get-help.html", "relationships.html", "reading-library.html"]:
+                for width in [768, 390, 320]:
+                    text_context = browser.new_context(
+                        viewport={"width": width, "height": 900},
+                        service_workers="block",
+                    )
+                    text_context.route(
+                        "**/*",
+                        lambda route: route.continue_()
+                        if route.request.url.startswith(BASE_URL)
+                        else route.abort(),
+                    )
+                    text_page = text_context.new_page()
+                    response = text_page.goto(
+                        BASE_URL + page_path(filename), wait_until="load", timeout=30000
+                    )
+                    resize_result = text_page.evaluate(
+                        """selector => {
+                          const elements = [...document.querySelectorAll(selector)];
+                          let enlarged = 0;
+                          for (const element of elements) {
+                            const current = Number.parseFloat(getComputedStyle(element).fontSize);
+                            if (!Number.isFinite(current) || current <= 0) continue;
+                            element.style.setProperty("font-size", (current * 2) + "px", "important");
+                            enlarged += 1;
+                          }
+                          return {
+                            enlargedTextElements: enlarged,
+                            documentWidth: document.documentElement.scrollWidth,
+                            bodyWidth: document.body.scrollWidth,
+                            viewportWidth: window.innerWidth,
+                            headingVisible: Boolean(document.querySelector("main h1")?.getClientRects().length)
+                          };
+                        }""",
+                        text_selector,
+                    )
+                    resize_result.update({"page": filename, "viewport": width, "mode": "text-only 200% emulation"})
+                    results["text_resize_checks"].append(resize_result)
+                    if response is None or not response.ok:
+                        results["errors"].append(f"{filename} at {width}px: 200% text-resize page response was not OK")
+                    if resize_result["documentWidth"] > width + 1 or resize_result["bodyWidth"] > width + 1:
+                        results["errors"].append(
+                            f"{filename} at {width}px: horizontal overflow under 200% text enlargement "
+                            f"({resize_result['documentWidth']}px document)"
+                        )
+                    if not resize_result["headingVisible"]:
+                        results["errors"].append(f"{filename} at {width}px: main heading is not visible after text enlargement")
+                    if filename == "index.html" and width in [390, 320]:
+                        text_page.screenshot(
+                            path=str(SCREENSHOT_DIR / f"text-200-home-{width}.png"),
+                            full_page=True,
+                        )
+                    text_context.close()
+
             # Slow-network smoke test with a throttled 3G-like profile.
             slow_context = browser.new_context(
                 viewport={"width": 390, "height": 844},
@@ -385,6 +443,11 @@ def main():
                       stylesheet: Boolean(await caches.match("/site.css"))
                     })"""
                 )
+                # Stop the local origin as well as toggling browser offline mode.
+                # Chromium can still reach loopback servers during offline emulation.
+                server.shutdown()
+                server.server_close()
+                server_stopped = True
                 offline_context.set_offline(True)
                 cached_home_response = offline_page.goto(
                     BASE_URL + "/index.html", wait_until="load", timeout=15000
@@ -428,8 +491,9 @@ def main():
             context.close()
             browser.close()
     finally:
-        server.shutdown()
-        server.server_close()
+        if not server_stopped:
+            server.shutdown()
+            server.server_close()
 
     (SCREENSHOT_DIR / "results.json").write_text(
         json.dumps(results, indent=2), encoding="utf-8"
