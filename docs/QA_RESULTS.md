@@ -263,3 +263,24 @@ This is still a non-production PR. The exact-commit browser, Lighthouse and huma
 - Screenshot + machine-readable results artifact: [aaramora-responsive-visual-audit](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45416395055/artifacts/14933145020).
 - Support ribbon alignment was refined after visual inspection so the two national contacts do not run together on small screens.
 - This Chromium audit is an automated responsive smoke test, not a human visual or accessibility certification. True 200% text enlargement/400% browser zoom, NVDA/VoiceOver/TalkBack, real mobile devices, offline/slow-network, Lighthouse and qualified clinical/safeguarding/native-language/cultural review remain open.
+
+
+
+## Final automated responsive and Lighthouse pass · 24 November 2026
+
+The complete machine-readable evidence is in `docs/review/AUTOMATED_EVIDENCE_2026-11-24.md`.
+
+- Browser + Lighthouse workflow [45426136282](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282) passed on audited commit `817be3de1bc64c2c8686dcf0ad019f54964a61be).
+- Content/safety workflow [45426136166](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136166) passed.
+- 16 pages × 4 widths (1440, 768, 390, 320 CSS px): 64 responsive checks, zero errors.
+- 12 keyboard navigation checks; 16/16 no-JavaScript mobile fallbacks; four forced-colours/reduced-motion checks.
+- 12 simulated 200% text-only enlargement checks at 768, 390 and 320 CSS px across homepage, Get Help, Relationship Corner and Reading Library: no horizontal overflow.
+- Throttled 3G-like profile passed. Service-worker offline test passed after fixing a syntax error: the cached homepage and offline support card loaded after the local origin stopped; the fallback contained Tele-MANAS 14416 and Emergency 112 links.
+- Eight Lighthouse reports (four key routes × mobile/desktop): all scores 100 in Performance, Accessibility, Best Practices and SEO. Color contrast, accessible-name matching and console-error audits passed; CLS was 0 across all eight profiles.
+- Visual spot-check of homepage, Relationship Corner and Reading Library screenshots at desktop/mobile and the Reading Library at simulated 200% text enlargement found no obvious clipping in the inspected captures.
+
+**Scope note:** The browser text-enlargement check is a DOM/CSS emulation, not a real browser text-size or 400% zoom session. Lighthouse lab scores are not WCAG conformance or clinical certification.
+
+**Still open:** human NVDA/VoiceOver/TalkBack testing, real 200%/400% browser zoom, physical Android/iOS offline/slow-network checks, full human visual review across all pages/themes/devices, clinician and safeguarding review, native Hindi/Marathi review, and cultural/religious review.
+
+The cited run audited commit `817be3de1bc64c2c8686dcf0ad019f54964a61be`. A later Reading Library heading-wrap commit and this evidence note were added afterward. Re-run both CI workflows on the latest branch head before merge/deployment. Production remains unchanged.
