@@ -18,3 +18,7 @@
 - Include responsive, keyboard and reduced-motion checks for UI changes.
 - Update the relevant documentation and QA checklist.
 - Never include real personal mental-health data or credentials in tests, issues, screenshots or fixtures.
+
+## Kiro IDE workflow
+
+The primary development IDE for ongoing work is Kiro. Before editing, follow [the Kiro handoff guide](docs/KIRO_IDE_HANDOFF.md) and read `brain.md`, `SAFETY.md`, and the relevant feature specification. Work in the existing static HTML/CSS/JavaScript project; do not scaffold a replacement or remove existing pages, content, assets, data or tests. Preserve all current support-route and privacy constraints. Use small additive changes, run focused and full tests, validate catalogue records, inspect the complete Git diff, and update project memory and relevant docs. GitHub remains the source of truth. Vercel deployment is a separate, deliberate step and must be verified against the exact deployed commit.
