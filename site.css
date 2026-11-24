@@ -262,3 +262,9 @@ body[data-theme="tonight"] .support-ribbon small{color:#F1EBDD}
 .catalogue-kind-filter>*{min-width:0;max-width:100%;overflow-wrap:anywhere}
 .kind-chip{max-width:100%;white-space:normal;overflow-wrap:anywhere}
 .catalogue-field input,.catalogue-field select{min-width:0;max-width:100%}
+
+
+/* Let editorial hero media shrink with a single-column layout at enlarged text sizes. */
+.hero-grid,.hero-grid>*{min-width:0;max-width:100%}
+.hero-photo{min-width:0;max-width:100%}
+.hero-photo img{display:block;width:100%;max-width:100%;min-width:0}

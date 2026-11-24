@@ -45,6 +45,8 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn(".trust-cta{white-space:normal}", css)
         self.assertIn(".footer-more:not([open]) .footer-more-panel{display:none}", css)
         self.assertIn("max-width:calc(100vw - 32px)", css)
+        self.assertIn(".hero-grid,.hero-grid>*{min-width:0;max-width:100%}", css)
+        self.assertIn(".hero-photo img{display:block;width:100%;max-width:100%;min-width:0}", css)
 
     def test_reduced_motion_and_mobile_reflow_rules_are_present(self):
         css = self.read("site.css")
