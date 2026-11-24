@@ -141,3 +141,17 @@ This is an additive quality release. No original page, relationship concept, rea
 - Automated content/safety suite still verifies 40 relationship concepts, 49 Reading Library catalogue records, nine original shelves, approved support-number policy and catalogue rights/language metadata.
 - Still not complete: real NVDA/VoiceOver/TalkBack testing; true browser text-size/400%-zoom sessions; physical Android/iOS checks; slow/offline network testing; Lighthouse audit; named clinician, safeguarding, Hindi/Marathi, and cultural/religious review. No WCAG or clinical sign-off claim.
 - Production deployment and stable alias remain untouched; this branch is a preview/review candidate only.
+
+
+
+## Latest automated quality evidence · 24 November 2026
+
+- Browser + Lighthouse workflow passed on commit `817be3de1bc64c2c8686dcf0ad019f54964a61be`: [run 45426136282](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282). Content/safety workflow passed: [run 45426136166](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136166).
+- Browser audit: 16 pages × 4 widths (1440, 768, 390, 320 CSS px) = 64 checks; zero baseline overflow; 12 keyboard-menu checks; 16/16 no-JavaScript fallbacks; 4/4 forced-colours/reduced-motion checks; 12/12 simulated 200% text-resize checks; slow-network and service-worker offline fallback passed; zero errors.
+- Lighthouse: eight reports (homepage, Get Help, Relationship Corner and Reading Library, mobile and desktop). Every report scored 100/100 for Performance, Accessibility, Best Practices and SEO. Contrast, label/content-name and console checks clean; CLS 0 in all eight runs.
+- Offline service worker had a real parse error fixed; `node --check service-worker.js` is now a CI gate. Offline test proves cached homepage and offline support card load with local origin stopped.
+- Human visual spot-check reviewed homepage, Relationship Corner and Reading Library screenshots across desktop/mobile, plus Library at simulated 200% text enlargement.
+- Evidence and limits: `docs/review/AUTOMATED_EVIDENCE_2026-11-24.md`. Artifact: [14934504814](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282/artifacts/14934504814).
+- Important: those results belong to the cited audited commit. A follow-up Reading Library heading-wrap commit and the evidence documentation were added after it; new CI must pass on the latest branch head before merge/deploy.
+- Still open: real NVDA/VoiceOver/TalkBack sessions; actual browser 200%/400% zoom and physical-device testing; visual review of every page/device/theme; clinician, safeguarding, native Hindi/Marathi and cultural/religious review. No WCAG, clinical or cultural sign-off is claimed.
+- Production has not been changed. Keep the candidate on preview until the latest commit passes CI and human review gates are recorded.
