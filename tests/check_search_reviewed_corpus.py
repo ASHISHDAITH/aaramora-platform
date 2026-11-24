@@ -1,10 +1,13 @@
-import sys
+import importlib.util
 import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
-from search_reviewed_corpus import search
+spec=importlib.util.spec_from_file_location("aaramora_search_reviewed_corpus",Path(__file__).resolve().parents[1]/"scripts"/"search_reviewed_corpus.py")
+module=importlib.util.module_from_spec(spec)
+assert spec and spec.loader
+spec.loader.exec_module(module)
+search=module.search
 
 class LocalLexicalRetrievalTests(unittest.TestCase):
     def setUp(self):
