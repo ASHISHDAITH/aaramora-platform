@@ -197,12 +197,18 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn("LibriVox", audio["provenance"]["sourceName"])
         self.assertEqual(["audiobook"], records["project-gutenberg-audio-books"]["contentTypes"])
         self.assertIn("public domain in the United States", records["project-gutenberg-audio-books"]["rights"]["licence"])
+        self.assertEqual(["audiobook"], records["project-gutenberg-audio-books"]["contentTypes"])
+        self.assertIn("public domain in the United States", records["project-gutenberg-audio-books"]["rights"]["licence"])
         tanzil = records["tanzil-quran-text"]
         self.assertEqual("open-license", tanzil["rights"]["status"])
         self.assertIn("verbatim", tanzil["rights"]["reuse"])
         gurbani = records["gurbani-prakash-audio"]
         self.assertIn("Sikh", gurbani["traditions"])
         self.assertEqual("pending", gurbani["editorialReview"]["culturalContext"])
+        self.assertEqual(["book", "audio"], gurbani["contentTypes"])
+        self.assertNotIn("audiobook", records["quran-com-recitation-reader"]["contentTypes"])
+        self.assertIn("LLM", records["openstax-psychology-cc-by"]["rights"]["reuse"])
+        self.assertIn("prior written permission", records["openstax-psychology-cc-by"]["rights"]["reuse"])
         self.assertEqual(["book", "audio"], gurbani["contentTypes"])
         self.assertNotIn("audiobook", records["quran-com-recitation-reader"]["contentTypes"])
         self.assertIn("LLM", records["openstax-psychology-cc-by"]["rights"]["reuse"])
@@ -214,6 +220,7 @@ class MultilingualCatalogueTests(unittest.TestCase):
         for marker in ('id="catalogue-kind-filter"', 'data-content-type="book"',
                        'data-content-type="video"', 'data-content-type="audiobook"',
                        'data-content-type="audio"',
+                       'data-content-type="audio"',
                        'data-content-type="article"', 'data-content-type="blog"',
                        'data-content-type="image"', 'selectedContentType'):
             with self.subTest(marker=marker):
@@ -221,6 +228,7 @@ class MultilingualCatalogueTests(unittest.TestCase):
         self.assertIn('record.contentTypes||[]', HTML)
         self.assertIn('data-content-type-link="book"', HTML)
         self.assertIn('data-content-type-link="image"', HTML)
+        self.assertIn('data-content-type-link="audio"', HTML)
         self.assertIn('data-content-type-link="audio"', HTML)
 
     def test_forced_colors_and_minimum_link_targets_are_present(self):
