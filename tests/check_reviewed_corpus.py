@@ -21,7 +21,8 @@ class ReviewedCorpusGateTests(unittest.TestCase):
             "sources":["https://example.org/source"],"owner":"AARAMORA editor",
             "reviewer":"Named qualified reviewer","reviewedOn":"2026-01-01",
             "expiresOn":"2027-01-01","approvalStatus":"approved",
-            "contentStatus":"current","audience":"public","tags":["wellbeing"],\n            "rightsVerified":True,"rightsReviewer":"Named rights reviewer","rightsCheckedOn":"2026-02-01"
+            "contentStatus":"current","audience":"public","tags":["wellbeing"],
+            "rightsVerified":True,"rightsReviewer":"Named rights reviewer","rightsCheckedOn":"2026-02-01"
         }
     def tearDown(self):
         self.temp.cleanup()
@@ -50,7 +51,12 @@ class ReviewedCorpusGateTests(unittest.TestCase):
         ok,reason=eligible(item,self.root,date(2026,11,24))
         self.assertFalse(ok)
         self.assertEqual("rights_not_allowlisted",reason)
-    def test_cc_by_item_without_exact_rights_review_is_excluded(self):\n        item={**self.good,"licenseId":"CC-BY-4.0","rightsVerified":False}\n        ok,reason=eligible(item,self.root,date(2026,11,24))\n        self.assertFalse(ok)\n        self.assertEqual("rights_review_missing",reason)\n    def test_path_traversal_and_outside_paths_are_excluded(self):
+    def test_cc_by_item_without_exact_rights_review_is_excluded(self):
+        item={**self.good,"licenseId":"CC-BY-4.0","rightsVerified":False}
+        ok,reason=eligible(item,self.root,date(2026,11,24))
+        self.assertFalse(ok)
+        self.assertEqual("rights_review_missing",reason)
+    def test_path_traversal_and_outside_paths_are_excluded(self):
         item={**self.good,"file":"../secret.txt"}
         ok,reason=eligible(item,self.root,date(2026,11,24))
         self.assertFalse(ok)
