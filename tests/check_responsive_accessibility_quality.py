@@ -73,8 +73,9 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn("#concept-count,.concept-note,.concept-item summary small{color:#526157}", css)
         self.assertIn(".support-ribbon small{color:#4E5F54}", css)
         library = self.read("reading-library.html")
-        self.assertIn('button.setAttribute("aria-label",label+" "+count);', library)
-        self.assertNotIn('label+", "+count+" catalogue entries"', library)
+        self.assertIn('badge.textContent=String(count);', library)
+        self.assertNotIn('badge.setAttribute("aria-hidden","true")', library)
+        self.assertNotIn('button.setAttribute("aria-label",', library)
 
     def test_common_controls_retain_practical_touch_targets(self):
         css = self.read("site.css")

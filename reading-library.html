@@ -499,10 +499,8 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
         const count=type ? data.records.filter(record=>(record.contentTypes||[]).includes(type)).length : data.records.length;
         const badge=document.createElement("span");
         badge.className="kind-count";
-        badge.setAttribute("aria-hidden","true");
         badge.textContent=String(count);
         button.appendChild(badge);
-        button.setAttribute("aria-label",label+" "+count);
       });
       renderLanguageGroups(data.languageGroups);
       populateLanguageSelect(data.languageGroups);
