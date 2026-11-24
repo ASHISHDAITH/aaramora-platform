@@ -8,9 +8,8 @@
 
 | Role | Required responsibility | Current status |
 |---|---|---|
-| Product/content owner | Page owner, version, sources and expiry tracking | Project owner not named in public site |
-| Clinical lead | Approve mental-health claims, exercises, crisis wording and referral logic; may pause any page | **Unassigned** |
-| Yoga professional | Approve yoga movement, breath, guided-rest scripts and audio | **Unassigned** |
+| Product/content owner | Page owner, version, sources and expiry tracking | Not named in public site |
+| Clinical lead | Approve mental-health claims, exercises, crisis wording and referral logic; may pause any feature | **Unassigned** |
 | Safeguarding reviewer | Review self-harm, violence, coercion, privacy and escalation wording | **Unassigned** |
 | Hindi reviewer | Natural Hindi, dialect, accessibility and pronunciation review | **Unassigned** |
 | Marathi reviewer | Natural Marathi, regional fit, accessibility and pronunciation review | **Unassigned** |
@@ -33,16 +32,11 @@ A source check is not clinical approval. A static website build succeeding is no
 
 The public correction log is maintained in [CORRECTIONS_LOG.md](CORRECTIONS_LOG.md). Do not include visitor names, health details, crisis narratives or other personal data in public issue threads or public logs. The repository currently has no private clinical escalation/contact channel; establish one before inviting users to submit sensitive reports.
 
-## Link freshness
+## Public support source register
 
-Critical service links are registered in `data/service-links.json` with:
-- source organisation and official source URL;
-- visible service number;
-- last verification date and next review date;
-- named editorial owner (to be assigned);
-- a non-invasive HTTP link check that does not retrieve content bodies.
+The only national contacts currently displayed by AARAMORA are Tele-MANAS 14416 and ERSS 112. Their source URLs, owners, source-check dates, next review dates and human-review status are held in `data/service-links.json`. Any extra or alternate number remains off the public site until a named human reviewer checks its official source, coverage and current access and records written sign-off.
 
-The weekly GitHub Actions workflow `.github/workflows/service-links.yml` checks the official-source URLs for Tele-MANAS, ERSS 112 and Women Helpline 181. It treats 404/410 as confirmed dead links; 403, 405, 429, timeouts and other restrictions are inconclusive and require human review, not automatic deletion. The separate `reading-library-link-check.yml` workflow checks reading-catalogue metadata links only. Neither workflow downloads books or changes displayed numbers automatically.
+The weekly `.github/workflows/service-links.yml` workflow checks only the official sources for those two entries. A 403, 405, 429, timeout, TLS error or other access restriction is inconclusive and must not be treated as proof that a service is unavailable. The checker never downloads a source-page body or changes public numbers automatically.
 
 ## Crisis and suicide-related communication
 
@@ -52,6 +46,7 @@ The weekly GitHub Actions workflow `.github/workflows/service-links.yml` checks 
 - Avoid presenting suicide as inevitable, romantic, a solution, or the result of one event.
 - Use non-judgemental language, emphasise survival, recovery and routes to human help, and place relevant help details near the content.
 - Any copy describing self-harm or suicide requires clinical and safeguarding review before publication.
+- The fixed chatbot crisis message is a draft until a named clinician and safeguarding reviewer approve the exact version in writing.
 
 ## Motivation and user agency
 
@@ -71,10 +66,21 @@ For Indian traditions and local languages, commission native-language and cultur
 ## Performance and privacy gates
 
 Before public pilot:
-- Run Lighthouse on mobile and desktop; target 95+ where feasible, record actual scores rather than promises.
+- Run Lighthouse on mobile and desktop; record actual scores rather than promises.
 - Keep first-party HTML and assets lean; measure each page and first-load transfer.
-- Verify the site works offline only if an offline mode is explicitly implemented and tested; do not claim offline support before then.
+- Test offline support only after a service worker is implemented; a first online visit is required to seed the cache.
 - No third-party trackers, advertising pixels or analytics on sensitive pages.
-- Inspect network requests and verify all media are either self-hosted or explicitly disclosed.
+- Inspect network requests and verify all automatically loaded media are first-party or explicitly disclosed.
 - Review CSP, security headers, referrer behaviour and external link policies.
 - Run keyboard, screen-reader, reduced-motion, zoom and low-bandwidth testing.
+
+## Chatbot governance
+
+The chatbot is not enabled. It cannot be launched until all of the following exist:
+- Named clinical lead and named engineering owner.
+- Clinician-approved crisis response templates and language-localised versions.
+- Written escalation, incident and kill-switch procedures.
+- An empty-by-default corpus populated only with signed, current, rights-eligible items.
+- A multilingual evaluation suite (at least 300 crisis cases across English, Hindi, Marathi and Hinglish, plus groundedness, abstention, adversarial, privacy and tone cases).
+- Documented privacy/provider review and no-live-monitoring disclosure.
+- Independent review of the system prompt and final release candidate.
