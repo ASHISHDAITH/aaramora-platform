@@ -1,12 +1,31 @@
 (()=>{"use strict";
+document.documentElement.classList.add("js-enabled");
 const menu=document.querySelector(".menu-toggle"),nav=document.querySelector(".main-nav");
 if(menu&&nav){
- const closeMenu=()=>{nav.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.textContent="Menu";};
- const openMenu=()=>{nav.classList.add("open");menu.setAttribute("aria-expanded","true");menu.textContent="Close";};
- menu.addEventListener("click",()=>nav.classList.contains("open")?closeMenu():openMenu());
- nav.addEventListener("click",event=>{if(event.target.closest("a"))closeMenu();});
- document.addEventListener("keydown",event=>{if(event.key==="Escape"&&nav.classList.contains("open")){closeMenu();menu.focus();}});
- document.addEventListener("click",event=>{if(nav.classList.contains("open")&&!event.target.closest(".header-inner"))closeMenu();});
+ const mobileQuery=window.matchMedia("(max-width: 820px)");
+ const setMenuState=open=>{
+  const expanded=mobileQuery.matches&&Boolean(open);
+  nav.classList.toggle("open",expanded);
+  menu.setAttribute("aria-expanded",String(expanded));
+  menu.textContent=expanded?"Close":"Menu";
+ };
+ const closeMenu=restoreFocus=>{
+  setMenuState(false);
+  if(restoreFocus)menu.focus();
+ };
+ menu.addEventListener("click",()=>setMenuState(!nav.classList.contains("open")));
+ nav.addEventListener("click",event=>{
+  if(event.target.closest("a"))closeMenu(false);
+ });
+ document.addEventListener("keydown",event=>{
+  if(event.key==="Escape"&&nav.classList.contains("open"))closeMenu(true);
+ });
+ document.addEventListener("pointerdown",event=>{
+  if(nav.classList.contains("open")&&!event.target.closest(".header-inner"))closeMenu(false);
+ });
+ mobileQuery.addEventListener("change",event=>{
+  if(!event.matches)closeMenu(false);
+ });
 }
 const night=document.getElementById("tonight-toggle");
 if(night)night.addEventListener("click",()=>{const on=document.body.dataset.theme!=="tonight";document.body.dataset.theme=on?"tonight":"day";night.setAttribute("aria-pressed",String(on));night.textContent=on?"☀ Day mode":"☾ Tonight mode";});
