@@ -59,3 +59,20 @@ The initial candidate commit `8df9bc415554669c80245521206cc4417f8d64e8` passed:
 - Default-deny RAG output remains empty; no model calls are made.
 
 Later documentation-only commits will trigger the same CI workflow again. Human and production gates above remain open.
+
+
+## Browser verification · 24 November 2026
+
+The final browser test run on candidate commit `747c37c6498260ef5b73deb9a643ab30dfab3103` passed:
+- Content/safety [run 45416395059](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45416395059).
+- Chromium responsive [run 45416395055](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45416395055).
+- 16 menu-bearing pages at 1440, 768, 390 and 320 CSS px: 64 page/viewport checks and zero horizontal overflow.
+- 12 navigation checks: keyboard activation, Escape close with focus restoration, outside-pointer close.
+- No-JavaScript mobile navigation fallback.
+- The browser workflow uploads homepage, Relationship Corner and Reading Library screenshots, plus machine-readable results: [artifact 14933145020](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45416395055/artifacts/14933145020).
+
+A fresh screenshot review caught and corrected a support-ribbon spacing inconsistency on the Relationship Corner. The two emergency/contact links are now separated and share consistent touch-friendly styling.
+
+**Still open:** true browser zoom and text enlargement sessions; real NVDA/VoiceOver/TalkBack sessions; real devices; slow/offline checks; Lighthouse; clinician/safeguarding and native Hindi/Marathi plus cultural/religious reviews. The Playwright audit does not represent any of these human sign-offs and is not WCAG certification.
+
+Production remains on the last verified production deployment. The candidate branch must be reviewed as a preview; do not promote it until the open manual and human review gates are completed.
