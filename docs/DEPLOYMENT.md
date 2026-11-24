@@ -3,7 +3,8 @@
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
 **Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_CYKUri19P8g1uM4hu5tKHbiiZgjG`  
+**Latest deployment:** `dpl_5oYGpf4g1ZSVbeef2b7vJECrPe6E`  
+**Deployment source:** `main` commit `2d42e47782a9d5ca8e3efde5419ac66f1f408c01`  
 **Status:** READY · production · stable alias assigned
 
 
@@ -22,7 +23,7 @@ These checks do not replace native-language, religious/cultural, legal or assist
 
 A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
 
-The latest deployment is a static snapshot of commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde` on `main`. It contains:
+The previously documented deployment was a static snapshot of commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde` on `main`; the latest production snapshot is listed above. It contains:
 - `index.html` — simplified navigation, shorter hero copy and the 16:9 brand film in the hero
 - `wellbeing.html`
 - `relationships.html`
@@ -35,7 +36,7 @@ The latest deployment is a static snapshot of commit `a4c2a6a16632914e7fd4f2f20d
 
 The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The homepage now shows five common navigation destinations and groups the remaining destinations under “More”; all original links, sections and tools are retained. It uses shorter hero copy and places the 16:9 master in the hero, with the 9:16 version as a separate link. Video playback is user-initiated; it does not autoplay.
 
-The Reading Library now contains nine subject shelves and 23 linked catalogue cards spanning open mental-health workbooks, academic books, relationship learning, Hindu/Sikh/Islamic/Christian/Buddhist/Jain texts, regional-language literature, public-domain classics and GitHub discovery indexes. Its search filters rendered cards in the browser only; it sends no search query to a server and stores no search history. The hero uses a credited Pexels still-life image with an original AARAMORA reading note. It links to source institutions rather than copying third-party books or restricted texts.
+The Reading Library retains its original static subject shelves and 46 resource cards, alongside a searchable 49-record catalogue. Seven format filters cover books, videos, audiobooks, general audio, articles, blogs and images; they combine with the language, tradition, rights, access and reading-level filters. Catalogue searches run in the browser and are not sent to a server. The hero uses original AARAMORA artwork stored locally at `assets/reading-library-book-still-life.webp`; the credited Pexels photograph remains a separate image-discovery record. The catalogue links to source institutions rather than copying third-party books or restricted media.
 
 The Yoga & Breath page is an evidence-honest guide with summaries of four systematic reviews (2013, 2021, 2023 and 2024), optional low-intensity practices, safety boundaries and expandable Hindi/Marathi draft transcripts. Study populations, outcomes, comparators and certainty are distinguished. The page does not claim yoga cures depression or replaces care, and it does not use invented A/B/C/D evidence grades. Four original Hindi/Marathi scripts (guided rest and comfortable breathing) are now displayed on the page and stored in `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md`; they target 5–7 minutes and remain draft text. No audio recordings have been submitted or published because a voice selection and the required native-speaker, clinician and qualified yoga-professional reviews remain outstanding.
 
@@ -191,3 +192,15 @@ The Tele-MANAS and Emergency 112 support links now have a 44px minimum height an
 
 ### Focused keyboard state verified · final candidate
 A production-like Chromium audit found that the skip link was positioned over the Tele-MANAS target at narrow widths while focused. The focused skip link now occupies its own top-bar row. The target links are 44px high with 24px spacing. Axe-core 4.10.3 returned zero violations/incomplete findings at 1440px, 390px and 320px both with and without the skip link focused. All 63 tests pass.
+
+
+## Final Reading Library verification · 24 November 2026
+
+- Production deployment: `dpl_5oYGpf4g1ZSVbeef2b7vJECrPe6E`, READY, with the stable alias `aaramora-platform.vercel.app`.
+- Source commit: `2d42e47782a9d5ca8e3efde5419ac66f1f408c01`.
+- Content/safety workflow: 68 tests passed; `scripts/check_catalogue.py` passed.
+- Catalogue: 49 records (26 original multilingual records plus 23 additions); seven browse formats; all 46 original static cards retained.
+- Media taxonomy: Audio is separate from Audiobook. The Project Gutenberg Audio Books collection is linked with a US public-domain caveat. OpenStax Psychology's separate no-LLM/no-generative-AI-ingestion restriction is recorded.
+- Hero asset: `assets/reading-library-book-still-life.webp`, generated original AARAMORA still life, hosted in the repository.
+- Source-link audit: 77 URLs, 61 reachable, 0 confirmed dead, 16 inconclusive due to provider-side blocks/timeouts or certificate verification. Inconclusive links are not classified as dead.
+- Native-language, religious/cultural-context, legal and manual accessibility review remain pending.
