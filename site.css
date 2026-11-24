@@ -298,3 +298,13 @@ body[data-theme="tonight"] .support-ribbon small{color:#F1EBDD}
  min-width:0;max-width:100%;box-sizing:border-box;
  overflow-wrap:anywhere;word-break:normal
 }
+
+
+/* Large-text reflow for support copy and controls. */
+.page-intro,.language-picker,.language-picker select,.support-grid,.support-card,.support-card>*{
+ min-width:0;max-width:100%;box-sizing:border-box
+}
+.page-intro h1,.page-intro p,.language-picker,.language-picker select,
+.support-card h2,.support-card p,.support-card .verify,.support-card .official-source,.support-card a{
+ overflow-wrap:anywhere;word-break:normal
+}
