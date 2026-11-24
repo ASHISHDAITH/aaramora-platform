@@ -1,229 +1,61 @@
-# Deployment Status and Release Path
+# AARAMORA Deployment and Release Status
 
 **Repository:** [ASHISHDAITH/aaramora-platform](https://github.com/ASHISHDAITH/aaramora-platform)  
 **Production URL:** https://aaramora-platform.vercel.app  
-**Vercel project:** `aaramora-platform` (`prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`)  
-**Latest deployment:** `dpl_8QYy1Fe94fctdBhqX3pT1mTRhiVw`  
-**Deployment source:** `main` commit `67d7b29ed08923a7c5e180d6b2d316802ec9f15a`  
-**Status:** READY · production · stable alias assigned
+**Vercel project:** `aaramora-platform` · `prj_VzSl28VokjdmWzbCHjKvu7ZGgyGA`  
+**Last updated:** 24 November 2026
 
+## Current production deployment
 
-## Latest release correction · 24 November 2026
+- **Deployment:** `dpl_8oRcw6Cjs5pRCFr9KHKVbErnouEo`
+- **Source commit:** `c1fd0b89cf28881bdef6755ba5e0e962f4a9c89c` on `main`
+- **State:** READY · target production
+- **Stable alias:** `aaramora-platform.vercel.app`
+- **Alias error:** none reported by Vercel.
 
-**Source commit:** `67d7b29ed08923a7c5e180d6b2d316802ec9f15a`  
-**Content checks:** 68 Python tests passed; catalogue metadata validator passed.  
-**Catalogue:** 49 entries and seven content formats: book, video, audiobook, audio, article, blog and image. The original 46 static cards and the original 26 multilingual records remain.  
-**Hero image:** locally hosted original artwork at `assets/reading-library-book-still-life.webp`; the separately credited Pexels image remains a discovery record.  
-**Source-link audit:** [run 45297178014](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45297178014) completed successfully: 77 metadata URLs checked, 61 reachable, 0 confirmed dead, 16 inconclusive because of automated-access 403/503 responses, timeouts or a provider certificate issue.  
-**Rights corrections:** OpenStax Psychology's preface says the book must not be used for LLM training or ingested into generative-AI offerings without OpenStax's permission; Project Gutenberg audiobook rights are described as US-specific; audio recitations are not mislabeled as complete audiobooks.
+The Vercel deployment record confirms build readiness and alias assignment. It is not a substitute for manual browser, screen-reader, device, low-bandwidth or clinician review. The web preview fetch in this run could not retrieve page HTML, so no fresh manual live-browser audit is claimed here.
 
-These checks do not replace native-language, religious/cultural, legal or assistive-technology review. Those gates remain open. The 16 inconclusive links are not classified as dead; the underlying source pages may be available to normal browser visitors. Vercel confirms the current production deployment above is READY and the stable alias is assigned.
+## Current site release
 
-## Current release
+The homepage has five sections and four primary navigation destinations: Get help now, Understand, Tools and Trust. The Sandhya palette uses an opaque paper header and turmeric Kiran light. Original first-party SVG illustrations replace the homepage stock-image requests; versioned brand-film files are served from the repository.
 
-A public static deployment has been created in the Vercel Hobby workspace. Vercel reports the deployment as READY and assigned the stable `aaramora-platform.vercel.app` alias.
+The site includes:
+- Get Help page with only Tele-MANAS 14416 and Emergency 112; both show source-check dates.
+- Persistent postpartum psychosis emergency warning.
+- Pune Access Map with 25 official-page-listed service entries across 10 facilities. It is a directory, not an endorsement or live capacity/quality check.
+- Tonight mode, browser-only Safety Plan worksheet, Words Library and printable Appointment Bridge.
+- Separate draft Women's Health and Research pages; neither is clinician-approved.
+- First-party offline cache for the support page after a first online visit.
+- Sitemap, robots.txt, favicon, manifest, Open Graph/Twitter metadata and noindex on draft/utility routes.
 
-The previously documented deployment was a static snapshot of commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde` on `main`; the latest production snapshot is listed above. It contains:
-- `index.html` — simplified navigation, shorter hero copy and the 16:9 brand film in the hero
-- `wellbeing.html`
-- `relationships.html`
-- `check-ins.html`
-- `reading-library.html`
-- `yoga-and-breath.html` — four evidence summaries, optional low-intensity practices, safety notes, and expandable Hindi/Marathi guided-rest and breathing draft transcripts (no audio has been recorded or published)
-- `assets/healing-garden.svg`
-- `assets/safe-corner.svg`
-- `assets/thought-river.svg`
+No analytics, advertising trackers, server-side health forms, public community, model endpoint or chatbot UI is enabled.
 
-The brand-film MP4s are committed in GitHub under `assets/brand-film/`. The homepage now shows five common navigation destinations and groups the remaining destinations under “More”; all original links, sections and tools are retained. It uses shorter hero copy and places the 16:9 master in the hero, with the 9:16 version as a separate link. Video playback is user-initiated; it does not autoplay.
+## Latest automated checks
 
-The Reading Library retains its original static subject shelves and 46 resource cards, alongside a searchable 49-record catalogue. Seven format filters cover books, videos, audiobooks, general audio, articles, blogs and images; they combine with the language, tradition, rights, access and reading-level filters. Catalogue searches run in the browser and are not sent to a server. The hero uses original AARAMORA artwork stored locally at `assets/reading-library-book-still-life.webp`; the credited Pexels photograph remains a separate image-discovery record. The catalogue links to source institutions rather than copying third-party books or restricted media.
+- GitHub content checks: [run 45388240891](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45388240891) — **success**.
+- Python test suite: **85 tests passed**.
+- Default-deny corpus build: **0 approved RAG entries**, 0 exclusions, LLM disabled.
+- Reading Library catalogue validator: completed successfully in the same workflow.
+- Official support-source workflow: [run 45387267894](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45387267894) — **success**. It checked three official source URLs: 2 reachable, 0 confirmed dead, 1 inconclusive. The inconclusive result is not treated as evidence that the service is unavailable.
+- Support-register tests enforce exactly two public national contacts: 14416 and 112.
 
-The Yoga & Breath page is an evidence-honest guide with summaries of four systematic reviews (2013, 2021, 2023 and 2024), optional low-intensity practices, safety boundaries and expandable Hindi/Marathi draft transcripts. Study populations, outcomes, comparators and certainty are distinguished. The page does not claim yoga cures depression or replaces care, and it does not use invented A/B/C/D evidence grades. Four original Hindi/Marathi scripts (guided rest and comfortable breathing) are now displayed on the page and stored in `docs/YOGA_AND_BREATH_AUDIO_SCRIPTS.md`; they target 5–7 minutes and remain draft text. No audio recordings have been submitted or published because a voice selection and the required native-speaker, clinician and qualified yoga-professional reviews remain outstanding.
+## Chatbot / RAG release hold
 
-The Check-ins page now includes the Problem Bench worksheet at `check-ins.html#problem-bench`. It is a local-only, optional, non-scored reflection worksheet, not a clinical service, not problem-solving therapy and not the Friendship Bench programme. The Friendship Bench and Goa HAP evidence is explicitly attributed to trained, supervised human-delivered programmes; their trial outcomes are not applied to AARAMORA's website feature. The existing guide finder, women's-health appointment planner and two-cycle log remain in place.
+The AARAMORA Guide is a future feature and remains **disabled**. No model API, inference endpoint, persistent chat log, transcript store or public chat widget is configured.
 
-The WHO stress-guide companion is an original AARAMORA draft, not a translation or copy of the WHO guide and not endorsed by WHO. See `docs/WHO_STRESS_GUIDE_ADAPTATION.md` and the unsent enquiry draft `docs/WHO_OUTREACH_DRAFT.md`. Any true adaptation must follow the WHO licence, attribution, disclaimer, no-logo and third-party-rights requirements.
+The prompt v2 and English crisis-response template are review drafts only. The corpus manifest and approved index are empty. The corpus builder is local/offline and only indexes content with named reviewers, current approval, dates, sources and explicit exact-item rights verification. Link-only sources are not ingested.
 
-The official India support-source register is in `data/service-links.json`. Weekly metadata-only URL checks are implemented for Tele-MANAS, ERSS 112 and Women Helpline 181. The WCD source currently notes that 181 coverage excludes West Bengal; the page shows this caveat. Link checks cannot verify staffing, network access or service quality.
+The current 100-case Hinglish starter set is synthetic and structurally tested in CI. It has **not** been run against an LLM, classifier or deployed safety router. The original RAG design report requires a 300+ multilingual crisis benchmark across English, Hindi, Marathi and Hinglish, plus clinician/safeguarding sign-off before real-user access.
 
-Content checks passed on commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde` ([run 45285497757](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285497757)). The reading-library metadata source-link check passed on the preceding code-compatible commit `081ca9a4177fec08bbee9cd420d70cc3381975c8` ([run 45285225515](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45285225515)).
+### Remaining launch gates
 
-The Vercel deployment was created directly from the listed source files because Git repository integration was blocked. The project has Vercel SSO/password deployment protection disabled so the public static site can be visited without membership in the Vercel workspace.
+- Named clinical lead, safeguarding reviewer and engineering owner.
+- Written, version-specific clinician and safeguarding approval of the prompt and fixed crisis response.
+- Native-language review and clinician approval for Hindi/Marathi crisis text.
+- 300+ multilingual crisis benchmark and actual detector evaluation, including review of false negatives.
+- Groundedness, abstention, prompt-injection, privacy, PII redaction and JSON validation tests against the exact selected implementation.
+- Provider retention/training/region review before any future model call.
+- Rate limits, kill switch, incident handling and clear no-live-monitoring disclosure.
+- Manual keyboard, screen-reader, zoom, slow-network and human accessibility checks for the current site.
 
-## Remaining Git integration step
-
-The connected Vercel GitHub identity returned `repo_no_access` when linking `ASHISHDAITH/aaramora-platform`, saying it needs admin or write access. GitHub confirms the repository is public and the signed-in GitHub connector can push, but Vercel's connected GitHub App/identity does not currently have the needed access.
-
-Until that is fixed, **new pushes to `main` will not automatically update the live site**. To enable automatic deployments:
-
-1. Open [Vercel project settings](https://vercel.com/httpsgithubcomefigma54-devpp/aaramora-platform/settings/git).
-2. In GitHub, install or update the Vercel GitHub App for the account that owns `ASHISHDAITH/aaramora-platform`, and grant it access to this repository.
-3. In Vercel, connect the repository to this existing project. Keep the root directory at `./`; this is a static HTML project with no package install or build command.
-4. Push a small reviewed commit and confirm Vercel creates a new production deployment automatically.
-
-Do not create another Vercel project just to retry the connection; the current project already owns the production alias.
-
-## Verification notes
-
-- Vercel's deployment API reports `READY`, `target=production`, the stable `aaramora-platform.vercel.app` alias, and `aliasError=null` for deployment `dpl_E45batFEw39PSg1GKyBkN5gQZRb3`.
-- Vercel's source-file listing confirms all nine expected HTML/SVG files are present, including `check-ins.html`, `reading-library.html` and `yoga-and-breath.html`.
-- The earlier web-fetch environment could not retrieve the Vercel page. A later headless Chromium visitor-side smoke test and axe-core 4.10.3 scan did run against production; see the latest release section below. Manual NVDA/VoiceOver/TalkBack review, native-language review and clinician/safeguarding review remain outstanding.
-- Confirm the video CDN returns the complete MP4s in a regular browser and check browser developer tools for failed requests before announcing the site publicly.
-
-## No backend or health-data collection
-
-The current website is a static information/help-navigation prototype. No API keys, database, accounts, server-side journal storage, analytics or AI service are required for this deployment. Do not add forms that collect private health details without a separate privacy/security review.
-
-## Production release gates
-
-A successful static deployment does not mean the platform is clinically approved. Before promoting the site as a health service:
-- clinician review of all mental-health and women's-health copy;
-- safeguarding review of relationship content and the safety flow;
-- native-language review of Hindi and Marathi content;
-- keyboard, screen-reader, mobile, low-bandwidth and WCAG 2.2 AA checks;
-- privacy/security review and deployed network-traffic inspection;
-- current verification of Tele-MANAS, emergency and women's helpline details;
-- explicit ownership and review dates for every public resource.
-
-Keep the public description clear: AARAMORA is an information and help-navigation prototype, not therapy, diagnosis, prescribing or an emergency response service.
-
-
-## Check-ins page
-
-The `check-ins.html` page is included in the current production deployment. It contains the non-diagnostic guide finder, women's-health appointment/print planner and original blank two-cycle symptom log. The latest deployment's Vercel source file listing confirms the page is present. The route should still be checked in a regular browser as part of the visitor-side smoke test.
-
-
-
-## Latest verified production release · 24 November 2026
-
-**Previous production deployment:** `dpl_2Q3n6GmFCn13Lpizgx93LZJGQ6Wy`  
-**State:** READY · `target=production` · stable alias assigned  
-**Source:** `main` at `ba193318500e06e04c6a506ea3363b3aab552ea7`  
-**Production alias:** https://aaramora-platform.vercel.app
-
-This release enhances the Reading Library without removing its existing shelves or cards:
-
-- All nine pre-existing Reading Library sections remain present.
-- All 46 original static resource cards remain present and each shows a listing-metadata review date. This date is not a legal clearance of every edition; the source terms must still be checked.
-- A new multilingual catalogue renders from `data/library.json` using the fields in `data/library.schema.json`.
-- Search and filters cover language, tradition, access type, rights status, reading level and format.
-- Language groups include 22 Eighth Schedule languages, 17 additional Indian-language discovery terms, 51 initial world-language filters and 4 classical/scholarly language tags. These are discovery aids, not a complete census and not a guarantee that every linked source has a book in every language.
-- Eleven institutional/source records include access notes, rights restrictions, provenance, accessibility notes, checked dates and next-review dates.
-- BaniDB is linked only; Gurbani data is not copied or integrated. NDLI remains a discovery layer; download permission is determined by each provider. Heritage Scripture Server scripts are distinguished from translation languages, and GRETIL is labelled for scholarly reference only.
-- `scripts/check_catalogue.py` validates required record fields. `scripts/check_library_links.py` checks metadata URLs using HEAD/range requests only; it does not download book content. A weekly workflow is configured.
-
-**Automated checks:** GitHub Actions run [45282847618](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45282847618) passed the existing content/safety suite, Reading Library checks, multilingual catalogue tests and catalogue validator. The initial weekly link-check workflow run [45282656364](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45282656364) also passed.
-
-The Vercel API reports the deployment as READY and assigns the stable production alias. This tool could not load the live Vercel HTML/JSON in a normal browser session, so a human visitor-side smoke test of the live filters, source links and small-screen layout remains outstanding. Automated tests are not a substitute for keyboard, screen-reader, clinical, religious/cultural or legal review.
-
-
-## Edition-level multilingual update · 24 November 2026
-
-The Reading Library catalogue has grown to 26 entries. It now includes exact source pages for the Hindi Ramcharitmanas, Marathi Jnaneshwari, Bengali Gitanjali 1913, one Punjabi Guru Granth Sahib folio, Urdu Diwan-e-Ghalib, the first Skandha of the Odia Bhagabata, Tamil Tirukkural, Gujarati/Kannada/Malayalam book catalogues, the Arabic Safahat platform and four Project Gutenberg editions in French, German, Spanish and Portuguese.
-
-Each card now shows its known writing system separately from language and an explicit editorial-review note. Native-language, cultural-context and source-text accessibility review remain pending. The source pages have not been converted into AARAMORA-hosted book files.
-
-## Edition-level multilingual update · 24 November 2026
-
-The Reading Library catalogue has grown to 26 entries. It now includes exact source pages for the Hindi Ramcharitmanas, Marathi Jnaneshwari, Bengali Gitanjali 1913, one Punjabi Guru Granth Sahib folio, Urdu Diwan-e-Ghalib, the first Skandha of the Odia Bhagabata, Tamil Tirukkural, Gujarati/Kannada/Malayalam book catalogues, the Arabic Safahat platform and four Project Gutenberg editions in French, German, Spanish and Portuguese.
-
-Each card now shows its known writing system separately from language and an explicit editorial-review note. Native-language, cultural-context and source-text accessibility review remain pending. The source pages have not been converted into AARAMORA-hosted book files.
-
-
-## Historical live-browser audit · 26-entry snapshot · 24 November 2026
-
-For that historical 26-entry release, the live Reading Library page, JSON catalogue and JSON schema returned HTTP 200. The browser rendered all 46 original static cards, all 26 catalogue entries and 10 page sections. This is not a fresh browser audit of the current 49-entry release. Independent filters were exercised for Marathi, Sikh, audio access, permission-required rights, academic level, EPUB format and the GRETIL search. At 390px width the page had no horizontal overflow. The first keyboard Tab focused the visible skip link, and Enter moved to main content. Axe-core 4.10.3 reported zero WCAG 2.2 AA/best-practice violations on the audited page (46 passes, no incomplete findings). This was an automated browser/axe scan, not a human NVDA/VoiceOver/TalkBack or native-reader review.
-
-
-The metadata-only link checker percent-encodes non-ASCII URL paths before making HEAD/range requests. The checker does not parse or download source page bodies or book files.
-
-
-## Historical production browser verification · 26-entry snapshot · 24 November 2026
-
-**Vercel deployment:** `dpl_Eeu3YsRJwmC86Zg652mQYriEcvbM`  
-**Deployment source:** `main` commit `a4c2a6a16632914e7fd4f2f20daae3e9a9578cde`  
-**State:** READY · production target · stable `aaramora-platform.vercel.app` alias assigned.
-
-### Visitor-side verification
-
-A headless Chromium check against the stable production domain confirmed:
-
-- `/reading-library.html`, `/data/library.json`, `/data/library.schema.json`, and `/yoga-and-breath.html` all return HTTP 200.
-- The source catalogue contains and renders 26 entries.
-- The original 46 static book/resource cards and all original reading shelves remain present.
-- The language, tradition, rights, format, access and search filters return expected records in independent cases.
-- At 390 CSS-pixel viewport width, there is no horizontal page overflow.
-- The keyboard's first Tab reaches the skip link; activating it moves to main content.
-- axe-core 4.10.3 reports zero automated WCAG 2.2 AA/best-practice violations on the audited Reading Library page (46 passes, zero incomplete findings).
-- All four Hindi/Marathi draft transcript panels are present on the Yoga & Breath page. They remain drafts and are not recordings.
-
-This is an automated browser and axe scan, not a human NVDA, VoiceOver or TalkBack review, and not a formal WCAG conformance statement.
-
-### Source-link audit
-
-The local metadata-only source-link check examined 40 unique source/policy URLs: 32 returned success, 0 were confirmed dead (404/410), and 8 were inconclusive because of provider-side 503 responses, a timeout or a certificate issue. Those 8 are not labelled dead and should be rechecked. The checker percent-encodes Unicode/Indic/Arabic URL paths, uses HEAD first and only a one-byte range retry for selected blocked HEAD requests. It does not retrieve or parse book bodies.
-
-### Human review still required
-
-All catalogue records still show native-language, cultural-context and underlying-source accessibility review as pending. These statuses should remain pending until a named qualified reviewer checks the exact text and edition. Automated accessibility scanning does not review translation fidelity, theological interpretation, cultural phrasing, OCR accuracy or source-edition completeness.
-
-
-
-## Candidate release — multilingual filter and reviewer-pack hardening · 24 November 2026
-
-Candidate source commit: `f5a186d19274883e29b832ecd7e24671603b88f0` before this release-note update. The latest local checkout has passed `python scripts/check_catalogue.py` and all 60 Python tests.
-
-Additional candidate browser checks:
-- Manipuri and Meitei (Manipuri) aliases each return only the NDLI entry.
-- French returns only the French Monte-Cristo edition; Marathi returns three expected records.
-- Urdu native title carries `lang="ur"` and `dir="rtl"`; English descriptor remains LTR.
-- 1280, 768, 390, 360 and 320 CSS-pixel viewports show no horizontal overflow.
-- Forced-colors mode and reduced-motion CSS are enabled; 32px header/navigation targets were measured.
-- axe-core 4.10.3 reports zero violations and 47 passes on the local candidate; browser console/page-error list is empty.
-
-Four independent-review files now exist under `docs/review/`. They are reviewer requests and test instructions, not completed reviews. Qualified native-language, cultural/religious, rights and assistive-technology reviewers have not been contacted or signed off. Do not mark those fields reviewed without evidence.
-
-
-
-### Support-contact touch target correction · 24 November 2026
-The Tele-MANAS and Emergency 112 support links now have a 44px minimum height and 24px gap. This avoids tightly clustered phone links on narrow screens. The latest candidate passes the 62-test Python suite and local axe/viewport checks. Human assistive-technology testing remains pending.
-
-
-
-### Focused keyboard state verified · final candidate
-A production-like Chromium audit found that the skip link was positioned over the Tele-MANAS target at narrow widths while focused. The focused skip link now occupies its own top-bar row. The target links are 44px high with 24px spacing. Axe-core 4.10.3 returned zero violations/incomplete findings at 1440px, 390px and 320px both with and without the skip link focused. All 63 tests pass.
-
-
-## Final Reading Library verification · 24 November 2026
-
-- Production deployment: `dpl_8QYy1Fe94fctdBhqX3pT1mTRhiVw`, READY, with the stable alias `aaramora-platform.vercel.app`.
-- Source commit: `67d7b29ed08923a7c5e180d6b2d316802ec9f15a`.
-- Content/safety workflow: 68 tests passed; `scripts/check_catalogue.py` passed.
-- Catalogue: 49 records (26 original multilingual records plus 23 additions); seven browse formats; all 46 original static cards retained.
-- Media taxonomy: Audio is separate from Audiobook. The Project Gutenberg Audio Books collection is linked with a US public-domain caveat. OpenStax Psychology's separate no-LLM/no-generative-AI-ingestion restriction is recorded.
-- Hero asset: `assets/reading-library-book-still-life.webp`, generated original AARAMORA still life, hosted in the repository.
-- Source-link audit: 77 URLs, 61 reachable, 0 confirmed dead, 16 inconclusive due to provider-side blocks/timeouts or certificate verification. Inconclusive links are not classified as dead.
-- Native-language, religious/cultural-context, legal and manual accessibility review remain pending.
-
-
-## Safety-first homepage and support release · 24 November 2026
-
-- Current source commit: `9b4988ee5222b1e07461dc8d3db82487eba8b518`.
-- Vercel production alias: https://aaramora-platform.vercel.app
-- Vercel latest deployment: `dpl_3EAf6wm2M2FFW6MhpH2FPW26GqUP` · `READY`
-- Homepage is reduced to a short five-section path and four primary destinations. The film is moved to its own page and served from pinned, versioned local MP4 files.
-- Only Tele-MANAS 14416 and Emergency 112 are included in the public support register. Official pages were checked 24 November 2026; a named human reviewer remains pending.
-- Pune directory: 25 official-page-listed services across 10 institutions. This is a source transcription, not a live availability, quality, price or eligibility check.
-- Women's-health content is clearly marked as a draft pending a qualified clinician. The research spotlight is separate and review pending. Community plan is a future concept, not an active forum.
-- The service worker pre-caches the support and offline fallback pages after first online visit. Tools are browser-only and have no AARAMORA server submission or persistence.
-- No third-party imagery, video CDN, analytics or ad-tracking scripts load automatically. Links to providers and map services contact those third parties only after a visitor selects them.
-- Human testing still required: keyboard-only task completion, NVDA/VoiceOver/TalkBack, 200% zoom, slow-network testing and a current Lighthouse audit. No claim of completion is made here.
-
-
-## RAG assistant release hold · 24 November 2026
-
-The chatbot is disabled and is not part of the public website. The prompt v2 and English crisis response are review drafts only. The approved corpus manifest is empty by design; no unreviewed health pages are indexed. The source-linked reading library is not a chatbot ingestion permission.
-
-The repository now contains a default-deny corpus manifest and a standard-library Python builder for local retrieval evaluation. The builder requires named clinical/content review, expiry, source URLs, owner and exact rights-review metadata. It does not call a model, scrape websites or send data externally. The 100 synthetic Hinglish starter cases are for future detector/prompt testing and have not been run against an LLM. The source design plan still requires a 300+ multilingual crisis benchmark, clinician approval, output-safety evaluation, rate limits, privacy review and a kill switch before any real-user access.
-
-The public support policy is limited to Tele-MANAS 14416 and Emergency 112. The service-link checker now validates the two-record public register and checks only those official source URLs. It does not automatically change displayed contact details.
+No chatbot beta or public deployment should be enabled until these gates are completed and recorded.
