@@ -21,5 +21,7 @@ jobs:
           python-version: "3.x"
       - name: Run website content checks
         run: python -m unittest discover -s tests -p 'check_*.py' -v
+      - name: Build the empty approved-only retrieval index (no model calls)
+        run: python scripts/build_reviewed_corpus.py --output /tmp/aaramora-rag-approved-index.json
       - name: Validate reading library catalogue metadata
         run: python scripts/check_catalogue.py
