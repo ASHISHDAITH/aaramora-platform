@@ -55,6 +55,13 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn("#language-catalogue .language-source-links a", css)
         self.assertIn("overflow-wrap:anywhere;word-break:normal", css)
 
+    def test_support_language_selector_uses_short_clear_option_labels(self):
+        help_page = self.read("get-help.html")
+        self.assertIn('<option value="en">English</option>', help_page)
+        self.assertIn('<option value="hi">हिन्दी</option>', help_page)
+        self.assertIn('<option value="mr">मराठी</option>', help_page)
+        self.assertIn("has not yet been reviewed by native speakers", help_page)
+
     def test_support_and_relationship_content_reflows_at_large_text_sizes(self):
         css = self.read("site.css")
         self.assertIn(".support-card p,.support-card .verify,.support-card .official-source", css)
