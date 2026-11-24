@@ -188,8 +188,8 @@ The current production deployment is live at the URL above. A final browser smok
 - Manual clinician, native-language, cultural and assistive-technology reviews remain open. No fresh screen-reader, 200% zoom, slow-network or Lighthouse audit is claimed in this release record.
 
 **Production URL:** https://aaramora-platform.vercel.app  
-**Current source commit:** `9b4988ee5222b1e07461dc8d3db82487eba8b518`  
-**Vercel latest deployment:** `dpl_3EAf6wm2M2FFW6MhpH2FPW26GqUP` · `READY`
+**Current source commit:** `73c49f4182ef6befc37a8b760090acbccec1ebea`  
+**Vercel latest deployment:** `dpl_3joScLaijXWdRndiNcBw48itcvJc` · `READY`
 
 
 ## RAG assistant status · 24 November 2026
@@ -203,3 +203,14 @@ The AARAMORA Guide is a future, disabled feature. There is no chatbot UI, model 
 - `data/rag-corpus-manifest.json` is empty. Draft health pages are not eligible for retrieval.
 - `scripts/build_reviewed_corpus.py` builds a local retrieval index only from signed, current, rights-verified items. `scripts/search_reviewed_corpus.py` then performs lexical retrieval and returns source-linked passages without a model or network call. The index is currently empty, so it abstains.
 - `tests/fixtures/hinglish-redteam-v2.jsonl` contains 100 synthetic Hinglish starter cases, including prompt injection attempts. `tests/fixtures/crisis-multilingual-301-v1.jsonl` combines those with 67 English, 67 Hindi and 67 Marathi cases. All language/clinical labels remain pending human review; CI validates fixture structure only, not detector or model behaviour.
+
+
+### Final deployment and CI check · 24 November 2026
+
+- Current main commit: `73c49f4182ef6befc37a8b760090acbccec1ebea`.
+- Production deployment: `dpl_3joScLaijXWdRndiNcBw48itcvJc` · READY, with the stable `aaramora-platform.vercel.app` alias assigned.
+- Latest GitHub content-check run [45391042468](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45391042468): success; 97 website/content tests and 6 retrieval-only tests passed; catalogue validation passed for 49 records.
+- The 301-case crisis fixture pack is synthetic and structurally checked only. It has not been run against a model or safety classifier.
+- The public support register contains only 14416 and 112. Named human review remains pending.
+- The Pune Access Map contains 25 official-page-listed service entries across 10 facilities. It is not a confirmation of live availability or quality.
+- A fresh whole-site browser, screen-reader, 200% zoom, slow-network and Lighthouse audit is still required for this exact production deployment. Automated CI and Vercel READY status do not complete those human checks.

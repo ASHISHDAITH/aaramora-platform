@@ -182,3 +182,20 @@
 - No LLM endpoint, classifier endpoint, chatbot UI, runtime corpus or visitor transcript store is configured. The 100 Hinglish and 301 multilingual fixtures have not been executed against a model or safety router.
 - Public support register remains limited to 14416 and 112. No other national contact is displayed.
 - The latest source branch is ready for a fresh production deployment; the prior Vercel deployment ID recorded above predates the latest homepage/retrieval changes.
+
+
+## Final production verification · 24 November 2026
+
+- GitHub main commit: `73c49f4182ef6befc37a8b760090acbccec1ebea`.
+- Vercel production deployment: `dpl_3joScLaijXWdRndiNcBw48itcvJc`, source SHA matches the main commit, state READY.
+- Stable alias confirmed by Vercel: `aaramora-platform.vercel.app`.
+- GitHub Content checks [run 45391042468](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45391042468): success.
+- Website/content/safety test suite: **97 passed**.
+- Local lexical retrieval test suite: **6 passed**.
+- Reading Library metadata validator: **49 records valid**, four language groups, 22 scheduled Indian languages and seven content formats.
+- Multilingual fixture gate: **301 synthetic cases** (67 English, 67 Hindi, 67 Marathi, 100 Hinglish); structural/count checks only. No live model or classifier execution.
+- Public crisis register: two entries only, Tele-MANAS 14416 and Emergency 112. Named human reviewer sign-off remains pending.
+- Pune Access Map: 25 provider/government service entries across 10 facilities. Provider availability, fees, waiting times, eligibility, capacity and service quality have not been independently confirmed.
+- The wellbeing skip link was corrected to target the page's actual main landmark. The homepage's “Find a person” card now opens the Pune Access Map. The offline support card now includes Quick Exit.
+- No fresh whole-site live browser, screen-reader, 200% zoom, slow-network or Lighthouse audit is recorded for this exact production deployment. Earlier local Chromium/axe results in this file apply to the tested candidate pages and should not be interpreted as full-site certification.
+- Named clinical, safeguarding, native-language, cultural/religious and assistive-technology reviews remain pending.

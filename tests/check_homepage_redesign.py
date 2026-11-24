@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,6 +77,24 @@ class HomepageReleaseTests(unittest.TestCase):
             self.assertIn("mailto:?subject=AARAMORA%20problem%20report",page,filename)
         trust=(ROOT/"trust.html").read_text(encoding="utf-8")
         self.assertIn("public recipient address is not configured",trust.lower())
+
+    def test_skip_links_target_a_real_main_landmark_on_every_page(self):
+        for path in ROOT.glob("*.html"):
+            page=path.read_text(encoding="utf-8")
+            match=re.search(r'<a\\b[^>]*class="skip-link"[^>]*href="#([^"]+)"',page)
+            if match:
+                self.assertRegex(page,rf'id=["\\']{re.escape(match.group(1))}["\\']',path.name)
+
+    def test_find_a_person_pathway_opens_the_pune_access_map(self):
+        home=(ROOT/"index.html").read_text(encoding="utf-8")
+        before=home.split("<h3>Find a person</h3>",1)[0][-350:]
+        self.assertIn('href="access-map.html"',before)
+        self.assertIn("25 Pune service listings",home)
+
+    def test_offline_support_card_has_a_quick_exit(self):
+        page=(ROOT/"offline.html").read_text(encoding="utf-8")
+        self.assertIn('href="about:blank"',page)
+        self.assertIn("Quick Exit",page)
 
 if __name__ == "__main__":
     unittest.main()

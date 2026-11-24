@@ -7,8 +7,8 @@
 
 ## Current production deployment
 
-- **Deployment:** `dpl_6q1FeVVVNZjicfRNmH23pnxcrwbm`
-- **Source commit:** `b7a830a571ef0809048753431f42aa2c61debef1` on `main`
+- **Deployment:** `dpl_3joScLaijXWdRndiNcBw48itcvJc`
+- **Source commit:** `73c49f4182ef6befc37a8b760090acbccec1ebea` on `main`
 - **State:** READY · target production
 - **Stable alias:** `aaramora-platform.vercel.app`
 - **Alias error:** none reported by Vercel.
@@ -32,8 +32,8 @@ No analytics, advertising trackers, server-side health forms, public community, 
 
 ## Latest automated checks
 
-- GitHub content checks: [run 45388240891](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45388240891) — **success**.
-- Python test suite: **85 tests passed**.
+- GitHub content checks: [run 45391042468](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45388240891) — **success**.
+- Python test suite: **97 website/content tests and 6 retrieval-only tests passed**.
 - Default-deny corpus build: **0 approved RAG entries**, 0 exclusions, LLM disabled.
 - Reading Library catalogue validator: completed successfully in the same workflow.
 - Official support-source workflow: [run 45387267894](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45387267894) — **success**. It checked three official source URLs: 2 reachable, 0 confirmed dead, 1 inconclusive. The inconclusive result is not treated as evidence that the service is unavailable.
@@ -69,4 +69,21 @@ The repository now includes:
 - Local lexical retrieval-only Phase 2: `scripts/search_reviewed_corpus.py`, with source links and safe abstention. Current approved index remains empty.
 - A 301-case synthetic crisis fixture pack across English, Hindi, Marathi and Hinglish. All language/clinical labels are pending human review; it has not been run against a model or detector.
 
-These current branch changes must pass CI and then receive a fresh production deployment. The earlier deployment ID below identifies the preceding site build, not these newer changes.
+The changes described in this release record are present in `main` at `73c49f4182ef6befc37a8b760090acbccec1ebea` and are included in the READY production deployment above.
+
+
+## Final release record · 24 November 2026
+
+- **Source commit on main:** `73c49f4182ef6befc37a8b760090acbccec1ebea`.
+- **Vercel production deployment:** `dpl_3joScLaijXWdRndiNcBw48itcvJc` · READY.
+- **Stable alias:** [https://aaramora-platform.vercel.app](https://aaramora-platform.vercel.app). Vercel lists this alias on the deployment and reports no alias error.
+- **GitHub content-check workflow:** [run 45391042468](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45391042468) · success.
+- **Automated validation:** 97 website/content/safety tests, 6 local lexical retrieval tests and the 49-entry Reading Library catalogue validator passed.
+- **Multilingual crisis fixtures:** 301 synthetic records (67 English, 67 Hindi, 67 Marathi and 100 Hinglish). The tests check fixture structure/counts only; no live detector, classifier or model was evaluated.
+- **Pune Access Map:** 25 source-listed service entries across 10 facilities. The directory does not establish live availability, eligibility, fees, service quality or appointment capacity.
+- **Support policy:** the public register and pages show only Tele-MANAS 14416 and Emergency 112, each with an official-source check date. Named human sign-off remains pending.
+- **RAG:** runtime and model calls remain disabled; the approved corpus is empty and retrieval abstains when no approved passages exist.
+- **Manual release gates still open:** fresh live browser inspection of every route, screen-reader/manual keyboard testing, 200% text and 400% zoom/reflow, slow-network/offline device testing and Lighthouse recording for this exact deployment. Prior local Chromium/axe checks are recorded above but do not replace a new full-site review.
+- **Human sign-off still open:** clinician, safeguarding, Hindi/Marathi native-language, cultural/religious and independent accessibility review. No automated test or source check is treated as such sign-off.
+
+Vercel's READY state and the matching commit prove deployment/build status, not clinical or WCAG conformance.

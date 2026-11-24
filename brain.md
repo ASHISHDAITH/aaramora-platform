@@ -71,3 +71,14 @@ The corpus manifest is empty and runtime is disabled. The default corpus builder
 - Do not send real user mental-health data to external models.
 - Update documentation and tests with each product/safety change.
 - Deploy only after CI passes and inspect the deployed commit; a newer GitHub main branch does not mean Vercel production is updated.
+
+
+## 9. Latest verified website release · 24 November 2026
+
+- Main commit `73c49f4182ef6befc37a8b760090acbccec1ebea` is deployed to Vercel production as `dpl_3joScLaijXWdRndiNcBw48itcvJc` (READY); stable alias `aaramora-platform.vercel.app`.
+- GitHub content-check run `45391042468` passed: 97 website/content tests, 6 retrieval-only tests and the 49-record catalogue validator.
+- Multilingual crisis pack: 301 synthetic structural fixtures (67 English, 67 Hindi, 67 Marathi, 100 Hinglish). No live classifier or LLM execution; all native-language, clinical and safeguarding labels remain pending.
+- Pune Access Map: 25 official-page-listed service entries across 10 facilities, not an availability or quality ranking.
+- Public crisis routes remain exactly 14416 and 112. Named human sign-off is still pending.
+- Last small fixes: wellbeing skip link now targets `#main-content`; homepage Find a person card opens the Pune Access Map; offline support fallback includes Quick Exit.
+- Do not claim whole-site screen-reader, 200% zoom, slow-network or Lighthouse sign-off from automated CI. Those checks remain open for the exact production version.
