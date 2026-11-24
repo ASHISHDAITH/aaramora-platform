@@ -42,3 +42,14 @@ Last prepared: 24 November 2026. This is a test plan, not a conformance statemen
 ## Record results
 
 For each run, record tester's name/permission to name publicly, assistive technology and version, OS/browser version, device, viewport/zoom, exact actions, expected/actual, severity, evidence, remediation owner, and re-test date. Do not record personal health information or infer a tester's disability. Use a compensated tester where possible.
+
+
+## Additional release checks for the 24 November 2026 candidate
+
+- Verify the menu without JavaScript: at 820 CSS px and below, all six navigation destinations must remain visible and the non-functional Menu button must not be presented.
+- Verify with JavaScript: toggle with Enter and Space, then use Tab/Shift+Tab through all six destinations; Escape closes and returns focus to Menu; clicking outside closes without stealing focus.
+- Resize while the menu is open from mobile to desktop; the nav must return to its desktop layout and the button must report collapsed.
+- Repeat at 820, 768, 600, 420, 390, 360 and 320 CSS px. Include landscape and text enlargement, not just viewport resizing.
+- Confirm high-contrast and forced-colours modes retain visible boundaries and focus indicators.
+- Inspect small metadata labels on both Day and Tonight themes. Automated CSS tokens are not a substitute for checking actual rendered text/background combinations.
+- Complete the NVDA, VoiceOver and TalkBack sessions listed above. Record actual browser, OS, assistive-technology and device versions, results, and defects; do not infer human test completion from static tests.
