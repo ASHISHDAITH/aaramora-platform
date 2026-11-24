@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "scripts/build_reviewed_corpus.py",
+  "runtimeEnabled": false,
+  "llmEnabled": false,
+  "builtOn": "2026-11-24",
+  "approvedEntryCount": 0,
+  "entries": [],
+  "excluded": [],
+  "releaseNote": "Empty by design: no clinician-approved and rights-verified corpus is currently registered."
+}
