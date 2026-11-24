@@ -7,13 +7,13 @@
 
 ## Current production deployment
 
-- **Deployment:** `dpl_8oRcw6Cjs5pRCFr9KHKVbErnouEo`
-- **Source commit:** `c1fd0b89cf28881bdef6755ba5e0e962f4a9c89c` on `main`
+- **Deployment:** `dpl_6q1FeVVVNZjicfRNmH23pnxcrwbm`
+- **Source commit:** `b7a830a571ef0809048753431f42aa2c61debef1` on `main`
 - **State:** READY · target production
 - **Stable alias:** `aaramora-platform.vercel.app`
 - **Alias error:** none reported by Vercel.
 
-The Vercel deployment record confirms build readiness and alias assignment. It is not a substitute for manual browser, screen-reader, device, low-bandwidth or clinician review. The web preview fetch in this run could not retrieve page HTML, so no fresh manual live-browser audit is claimed here.
+The Vercel deployment record confirms build readiness and the stable `aaramora-platform.vercel.app` alias is assigned to this deployment. It is not a substitute for manual browser, screen-reader, device, low-bandwidth or clinician review. The web preview fetch in this run could not retrieve page HTML, so no fresh manual live-browser audit is claimed here.
 
 ## Current site release
 
