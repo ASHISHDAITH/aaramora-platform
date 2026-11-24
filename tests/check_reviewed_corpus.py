@@ -3,11 +3,15 @@ import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
-import sys
+import importlib.util
 
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/"scripts"))
-from build_reviewed_corpus import build, eligible
+spec=importlib.util.spec_from_file_location("aaramora_build_reviewed_corpus",ROOT/"scripts"/"build_reviewed_corpus.py")
+module=importlib.util.module_from_spec(spec)
+assert spec and spec.loader
+spec.loader.exec_module(module)
+build=module.build
+eligible=module.eligible
 
 class ReviewedCorpusGateTests(unittest.TestCase):
     def setUp(self):
