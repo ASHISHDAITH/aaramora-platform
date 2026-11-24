@@ -81,9 +81,10 @@ class HomepageReleaseTests(unittest.TestCase):
     def test_skip_links_target_a_real_main_landmark_on_every_page(self):
         for path in ROOT.glob("*.html"):
             page=path.read_text(encoding="utf-8")
-            match=re.search(r'<a\\b[^>]*class="skip-link"[^>]*href="#([^"]+)"',page)
+            match=re.search(r'<a[^>]*class="skip-link"[^>]*href="#([^"]+)"',page)
             if match:
-                self.assertRegex(page,rf'id=["\\']{re.escape(match.group(1))}["\\']',path.name)
+                target=match.group(1)
+                self.assertTrue(('id="'+target+'"' in page) or ("id='"+target+"'" in page), path.name)
 
     def test_find_a_person_pathway_opens_the_pune_access_map(self):
         home=(ROOT/"index.html").read_text(encoding="utf-8")
