@@ -240,4 +240,12 @@ This is an additive quality release. No original page, relationship concept, rea
 
 A separate additive candidate branch adds responsive navigation fallback, breakpoint-aware menu handling, focus and contrast improvements, forced-colours / higher-contrast rules, and small-screen refinements. Regression assertions are in `tests/check_responsive_accessibility_quality.py`.
 
-**Status:** waiting for the candidate branch's GitHub Actions run. This is not a production release. The exact-commit browser and assistive-technology matrix remains open; see `docs/RELEASE_QUALITY_PASS_2026-11-24.md`.
+**Automated status:** passed on candidate commit `8df9bc415554669c80245521206cc4417f8d64e8`.
+- GitHub Actions push run [45414344425](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45414344425) · success.
+- GitHub Actions pull-request run [45414328733](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45414328733) · success.
+- 115 website/content/safety tests passed.
+- 6 local lexical-retrieval tests passed.
+- Catalogue validator passed: 49 entries, 4 language groups, 22 scheduled Indian languages; the seven format totals remain intact.
+- Approved RAG entries remain 0 and LLM calls remain disabled.
+
+This is still a non-production PR. The exact-commit browser, Lighthouse and human assistive-technology matrix remains open; see `docs/RELEASE_QUALITY_PASS_2026-11-24.md`.
