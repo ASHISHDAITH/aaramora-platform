@@ -29,6 +29,7 @@ A format tag identifies a type of source. It does not imply that AARAMORA hosts,
 | The Gottman Institute | Article, blog, video | Relationship and communication learning | Link to original posts and official media; not diagnosis or assessment of an individual relationship. |
 | The School of Life · YouTube | Video | Two creator-published attachment-style explainers | Credit the creator and link/embed the YouTube source. Do not download or rehost video files. |
 | LibriVox | Audiobook | Multilingual volunteer-read public-domain audiobook catalogue | LibriVox says its recordings are public domain; check the underlying text's copyright by territory. |
+| Project Gutenberg · Audio Books | Audiobook | Human-read titles and the Open Audiobook Collection | The publisher states its digitizations are free and public domain in the United States; check each title and territory. |
 | eBible.org | Audiobook | World English Bible audio discovery | Check the exact recording and narrator's notice. Text, translation and sound recording are separate rights objects. |
 | Gurbani Prakash | Book, audiobook | Gurbani and Nitnem browser reader with recitations | Link to the original reader. Its project describes devotional/non-commercial use of recitations; no general mirroring permission. |
 | Quran.com | Book, audiobook | Qur'an reading and recitation player | Platform terms and individual reciter/translation rights apply. Do not extract or rehost audio or translations. |
