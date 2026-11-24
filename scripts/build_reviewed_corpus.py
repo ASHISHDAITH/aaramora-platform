@@ -18,7 +18,7 @@ ACCEPTED_LICENSES = {"AARAMORA-OWNED", "CC-BY-4.0"}
 REQUIRED = {
     "id", "title", "file", "language", "licenseId", "sources", "owner",
     "reviewer", "reviewedOn", "expiresOn", "approvalStatus",
-    "contentStatus", "audience", "tags"
+    "contentStatus", "audience", "tags", "rightsVerified", "rightsReviewer", "rightsCheckedOn"
 }
 
 def eligible(entry: dict[str, Any], root: Path, today: date) -> tuple[bool, str]:
@@ -31,6 +31,14 @@ def eligible(entry: dict[str, Any], root: Path, today: date) -> tuple[bool, str]
         return False, "not_current"
     if entry.get("licenseId") not in ACCEPTED_LICENSES:
         return False, "rights_not_allowlisted"
+    if entry.get("rightsVerified") is not True or not str(entry.get("rightsReviewer", "")).strip():
+        return False, "rights_review_missing"
+    try:
+        rights_checked = date.fromisoformat(entry["rightsCheckedOn"])
+    except (TypeError, ValueError):
+        return False, "rights_review_date_invalid"
+    if rights_checked > today:
+        return False, "rights_review_date_in_future"
     if not str(entry.get("owner", "")).strip() or not str(entry.get("reviewer", "")).strip():
         return False, "owner_or_reviewer_missing"
     if not isinstance(entry.get("sources"), list) or not entry["sources"]:
