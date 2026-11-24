@@ -199,3 +199,15 @@
 - [ ] Every entry shows native-language, cultural-context and accessibility review status; do not mark pending reviews complete without named human reviewers.
 - [ ] Native-language reviewers check script rendering, diacritics, OCR/transcription quality, edition fidelity and search aliases.
 - [ ] Religious/tradition reviewers approve descriptions and sacred-use wording before editorial promotion.
+
+
+## Future chatbot / RAG release gate (not a public feature)
+- [ ] Named clinical lead, safeguarding reviewer and engineering owner assigned.
+- [ ] Clinician and safeguarding sign-off recorded for the exact system prompt and fixed crisis response.
+- [ ] Hindi and Marathi crisis text reviewed by native speakers and clinician.
+- [ ] Approved corpus manifest contains only current, signed and rights-verified items; no drafts or link-only sources.
+- [ ] 100 synthetic Hinglish starter cases reviewed; add the full 300+ multilingual crisis test set required by the design plan.
+- [ ] Run detector recall, negation/indirect-risk, prompt injection, groundedness, abstention, PII redaction and output-format tests against the actual selected model/detector.
+- [ ] Privacy/provider retention terms reviewed before any model call.
+- [ ] Kill switch, rate limits, incident response and non-live-monitoring disclosure tested.
+- [ ] No public chatbot until every gate is signed.
