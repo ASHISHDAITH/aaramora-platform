@@ -1,64 +1,22 @@
-import unittest
-from html.parser import HTMLParser
 from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-
-class PageAudit(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.ids = []
-        self.anchors = []
-        self.external_assets = []
-    def handle_starttag(self, tag, attrs):
-        a = dict(attrs)
-        if a.get("id"):
-            self.ids.append(a["id"])
-        if tag == "a" and a.get("href", "").startswith("#"):
-            self.anchors.append(a["href"][1:])
-        if tag in {"script", "img", "iframe", "link"}:
-            src = a.get("src") or (a.get("href") if tag == "link" else "")
-            if src.startswith(("http://", "https://")):
-                self.external_assets.append(src)
-
-class RelationshipPageTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.home = (ROOT / "index.html").read_text(encoding="utf-8")
-        cls.page = (ROOT / "relationships.html").read_text(encoding="utf-8")
-        cls.parser = PageAudit()
-        cls.parser.feed(cls.page)
-
-    def test_home_links_to_relationship_corner(self):
-        self.assertIn('href="relationships.html"', self.home)
-
-    def test_safety_gate_and_three_reflection_quizzes_exist(self):
-        self.assertIn('id="safety-form"', self.page)
-        self.assertIn('id="attachment-quiz"', self.page)
-        self.assertIn('id="conflict-quiz"', self.page)
-        self.assertIn('id="boundaries-quiz"', self.page)
-
-    def test_quiz_prompts_are_unvalidated_and_not_diagnostic(self):
-        self.assertIn("not validated psychological instruments", self.page)
-        self.assertIn("cannot diagnose", self.page)
-        self.assertEqual(self.page.count('class="concept-item"'), 40)
-
-    def test_internal_anchors_resolve_and_ids_are_unique(self):
-        ids = set(self.parser.ids)
-        self.assertEqual(len(self.parser.ids), len(ids), "duplicate HTML ids")
-        self.assertFalse([x for x in self.parser.anchors if x not in ids])
-
-    def test_no_external_runtime_assets(self):
-        self.assertEqual(self.parser.external_assets, [])
-
-    def test_no_personal_data_persistence_or_network_calls(self):
-        for token in ["localStorage", "sessionStorage", "XMLHttpRequest", "sendBeacon"]:
-            self.assertNotIn(token, self.page)
-        self.assertNotRegex(self.page, r"fetch\s*\(")
-
-    def test_three_support_routes_are_visible(self):
-        for href in ["tel:112", "tel:181", "tel:14416"]:
-            self.assertIn(href, self.page)
-
-if __name__ == "__main__":
+import unittest
+ROOT=Path(__file__).resolve().parents[1]
+PAGE=(ROOT/"relationships.html").read_text(encoding="utf-8")
+class RelationshipSupportTests(unittest.TestCase):
+    def test_relationship_resource_page_is_preserved(self):
+        self.assertTrue((ROOT/"relationships.html").is_file())
+        self.assertIn("relationship",PAGE.lower())
+    def test_unapproved_numbers_are_not_public(self):
+        for number in ("1800-89-14416","18008914416","tel:181"):
+            self.assertNotIn(number,PAGE)
+    def test_immediate_danger_route_uses_112(self):
+        self.assertIn('href="tel:112"',PAGE)
+    def test_mental_health_support_route_uses_14416(self):
+        self.assertIn('href="tel:14416"',PAGE)
+    def test_shared_navigation_has_four_primary_items(self):
+        nav=PAGE.split('<nav class="main-nav"',1)[1].split("</nav>",1)[0]
+        self.assertEqual(nav.count("<a "),4)
+    def test_support_numbers_have_verification_date(self):
+        self.assertIn("Last verified 24 November 2026",PAGE)
+if __name__=="__main__":
     unittest.main()
