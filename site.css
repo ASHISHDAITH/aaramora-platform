@@ -19,3 +19,12 @@ body[data-theme="tonight"]{--paper:#1B2923;--surface:#27372F;--ink:#F6F0E1;--mut
 @media(max-width:540px){.support-ribbon-inner{justify-content:flex-start;gap:7px 14px}.support-ribbon small{flex-basis:100%;padding-left:3px}.quick-grid{grid-template-columns:1fr 1fr}.quick-card{min-height:130px;padding:13px}.hero{padding-top:31px}.hero-art img{aspect-ratio:1/1}.page-main{padding-top:28px}.footer-top{display:block}.footer-links{margin-top:14px}.form-grid{grid-template-columns:1fr}.filter-row input,.filter-row select{min-width:0;width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 body.printing-summary>*{visibility:hidden!important}body.printing-summary .print-output.active-print,body.printing-summary .print-output.active-print *{visibility:visible!important}body.printing-summary .print-output.active-print{position:absolute;inset:0 auto auto 0;width:100%;min-height:0;background:#fff;color:#111;z-index:9999;border:0;box-shadow:none}body.printing-summary .print-output.active-print .no-print{display:none!important}@media print{.site-header,.support-ribbon,.site-footer,.no-print,button{display:none!important}body{background:#fff;color:#111}.page-main{padding:0}.print-output{border:0}.content-panel,.tool-card{break-inside:avoid}}
+
+/* Homepage quick choices sit inside the hero, before the film link. */
+.hero-choices{margin:23px 0 16px;max-width:680px}
+.hero-choices .section-title{font-size:clamp(1.3rem,2vw,1.58rem);margin:0 0 11px}
+.hero-choices .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.hero-choices .quick-card{min-height:98px;padding:12px;border-radius:15px;gap:5px}
+.hero-choices .quick-card strong{font-size:.85rem}
+.hero-choices .quick-card span:last-child{font-size:.75rem}
+@media(max-width:540px){.hero-choices .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-choices .quick-card{min-height:112px;padding:10px}}
