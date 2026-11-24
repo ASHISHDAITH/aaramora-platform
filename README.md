@@ -164,3 +164,12 @@ The current production deployment is live at the URL above. A final browser smok
 - The OpenStax Psychology item records that the publisher's preface separately requires prior written permission before LLM/generative-AI ingestion, despite CC BY 4.0 attribution terms.
 - The source audit on the 49-entry catalogue checked 77 URLs: 61 reachable, 0 confirmed dead, 16 inconclusive. Automated provider blocks and timeouts are not described as broken links.
 - Native-language, religious/cultural-context, legal and manual assistive-technology reviews remain pending; no independent sign-off is claimed.
+
+
+### Follow-up fixes completed · 24 November 2026
+- "Audio" and "Audiobook" are separate filters. Recitations, podcasts and guided recordings are tagged Audio; full narrated book editions are tagged Audiobook.
+- Project Gutenberg's official Audio Books collection is linked with a United States-only public-domain caveat.
+- The hero uses an original locally hosted WebP at `assets/reading-library-book-still-life.webp`; the Esra Korkmaz Pexels photograph remains separately attributed in image discovery, not used as the hero.
+- The OpenStax Psychology entry records that the publisher requires prior written permission for LLM/generative-AI ingestion, separately from its CC BY 4.0 attribution licence.
+- The catalogue still links to providers and creators; it does not bypass paywalls/DRM or re-host protected books, articles, video or audio.
+- Native-language, religious/cultural-context, rights and manual assistive-technology review remain pending; automated tests do not replace those reviews.
