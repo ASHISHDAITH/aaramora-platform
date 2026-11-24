@@ -68,3 +68,9 @@ body.printing-summary>*{visibility:hidden!important}body.printing-summary .print
 @media(prefers-reduced-motion:reduce){
  .main-nav a{transition:none}
 }
+
+.format-count-note{margin:0 2px 14px;color:#5A6C61;font-size:.78rem;line-height:1.5}
+.kind-chip{white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.kind-count{display:inline-flex;align-items:center;justify-content:center;min-width:1.55em;height:1.55em;padding:0 .32em;border-radius:999px;background:#E4EAE2;color:#385646;font-size:.72rem;font-weight:850;font-variant-numeric:tabular-nums}
+.kind-chip.is-active .kind-count{background:rgba(255,255,255,.18);color:#fff}
+@media(max-width:600px){.catalogue-kind-filter{gap:7px}.kind-chip{min-height:42px;padding:8px 11px}}
