@@ -394,8 +394,9 @@ def main():
                     and cached_home_response.ok
                     and offline_page.locator("main h1").is_visible()
                 )
+                fallback_path = "/__offline-audit-never-cached-2026.html"
                 fallback_response = offline_page.goto(
-                    BASE_URL + "/relationships.html", wait_until="load", timeout=15000
+                    BASE_URL + fallback_path, wait_until="load", timeout=15000
                 )
                 fallback_body = offline_page.locator("body").inner_text()
                 helpline_14416_links = offline_page.locator('a[href="tel:14416"]').count()
