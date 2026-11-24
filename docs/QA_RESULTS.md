@@ -152,7 +152,7 @@
 
 ## Final site and RAG candidate · 24 November 2026
 
-- Production deployment `dpl_8oRcw6Cjs5pRCFr9KHKVbErnouEo` is READY on the stable `aaramora-platform.vercel.app` alias, source commit `c1fd0b89cf28881bdef6755ba5e0e962f4a9c89c`.
+- Production deployment `dpl_6q1FeVVVNZjicfRNmH23pnxcrwbm` is READY; the stable `aaramora-platform.vercel.app` alias was explicitly assigned and read back from Vercel, source commit `b7a830a571ef0809048753431f42aa2c61debef1`.
 - Latest GitHub content-check workflow `45388240891`: success; 85 Python tests passed, catalogue validation passed, empty approved-only corpus build passed.
 - Official support-source workflow `45387267894`: success; two source URLs reachable, zero confirmed dead, one inconclusive access response. No number was changed automatically.
 - RAG runtime remains disabled, model calls disabled and approved index empty.
