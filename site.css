@@ -182,3 +182,25 @@ body[data-theme="tonight"] .verify{color:#D7DCCF}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}
 }
+
+
+/* Shared support ribbon: keep national contacts distinct and easy to tap on every route. */
+.support-line,.support-links{
+  display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap
+}
+.support-line{justify-content:flex-start}
+.support-links{justify-content:flex-start}
+.support-ribbon .support-line a,.support-ribbon .support-links a,.support-ribbon .support-link{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  min-height:44px;padding:6px 12px;border:1px solid #D2DED1;border-radius:999px;
+  background:#F6F8F2;color:#29483A;text-decoration:none;font-weight:850
+}
+.support-ribbon .helpline-verified{
+  display:inline-block;font-size:.72rem;line-height:1.35;color:#53645A
+}
+body[data-theme="tonight"] .support-ribbon .helpline-verified{color:#D7DCCF}
+@media(max-width:600px){
+ .support-ribbon-inner{justify-content:flex-start;align-items:flex-start}
+ .support-line,.support-links{width:100%;gap:7px 10px}
+ .support-ribbon .helpline-verified{max-width:100%}
+}
