@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "status": "blocked_empty_corpus",
+  "runtimeEnabled": false,
+  "lastBuiltAt": null,
+  "entries": [],
+  "note": "No current AARAMORA content has a named clinical reviewer and signed approval record in this manifest. Draft health pages must not be indexed."
+}
