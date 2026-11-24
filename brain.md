@@ -45,6 +45,8 @@ The AARAMORA Guide is a future feature, **not implemented and not enabled**. Sou
 - `docs/rag/SYSTEM_PROMPT_V2.md`
 - `docs/rag/CRISIS_TEMPLATE_REVIEW_DRAFT.md`
 - `docs/rag/PROMPT_REVIEW_CHECKLIST.md`
+- `scripts/search_reviewed_corpus.py` provides a local lexical retrieval-only Phase 2 path with citations and abstention; no model calls or network requests.
+- `tests/fixtures/crisis-multilingual-301-v1.jsonl` contains 301 synthetic cases across English, Hindi, Marathi and Hinglish; all language/clinical labels remain pending human review.
 - `docs/RAG_INGESTION_POLICY.md`
 - `data/rag-ingestion-policy.json`
 - `data/rag-corpus-manifest.json`
@@ -57,7 +59,7 @@ Non-negotiables:
 5. Default-deny ingestion. Do not scrape, mass-download or bypass DRM/paywalls/borrowing; keep restricted sources link-only.
 6. No accounts, transcript storage, long-term memory, model calls or analytics by default.
 7. A public chatbot requires named clinical/safeguarding/engineering owners, an approved crisis script, privacy/provider review, 300+ multilingual crisis tests, jailbreak/groundedness/abstention tests, a kill switch and incident procedures.
-8. The 100 Hinglish cases in `tests/fixtures/hinglish-redteam-v2.jsonl` are synthetic starter fixtures only. They have structural CI checks but have not been run against a model or clinician-labelled detector.
+8. The 100 Hinglish cases and 301-case multilingual pack are synthetic fixtures only. CI checks structure, not live model/detector behaviour; clinician, safeguarding and language review remain pending.
 
 The corpus manifest is empty and runtime is disabled. The default corpus builder makes no network or model calls and rejects draft, expired, unsigned or rights-unverified sources.
 
