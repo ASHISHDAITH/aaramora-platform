@@ -35,9 +35,9 @@ class HomepageReleaseTests(unittest.TestCase):
             self.assertTrue((ROOT / file).is_file())
 
     def test_active_pages_share_six_primary_navigation_destinations_and_mobile_toggle(self):
-        pages = ("get-help.html", "access-map.html", "tools.html", "trust.html", "about.html",
+        pages = ("get-help.html", "access-map.html", "tools.html", "trust.html", "privacy.html", "about.html",
                  "gentle-activities.html", "wellbeing.html", "relationships.html", "check-ins.html",
-                 "yoga-and-breath.html", "reading-library.html")
+                 "yoga-and-breath.html", "reading-library.html", "womens-health.html", "research.html", "community.html")
         for filename in pages:
             page = (ROOT / filename).read_text(encoding="utf-8")
             nav = page.split('<nav class="main-nav"', 1)[1].split("</nav>", 1)[0]
