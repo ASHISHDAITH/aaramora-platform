@@ -213,3 +213,12 @@ All 26 records currently have editorialReview.nativeLanguage=pending, editorialR
 
 ### Metadata link-check implementation update
 The metadata-only link checker now percent-encodes non-ASCII URL paths before HTTP requests. This supports pages whose URL paths contain Devanagari, Bengali, Gurmukhi, Arabic-derived, Odia and other Unicode scripts. It still uses HEAD first and a one-byte range request only for selected HEAD blocks; no source page body or book file is downloaded or parsed.
+
+
+## Format taxonomy correction and locally hosted hero · 24 November 2026
+
+The current source catalogue contains 49 records, including 23 additions to the original 26 multilingual records. The seven browse formats are books, videos, audiobooks, audio, articles, blogs and images. The separate Audio category covers recitations, podcasts and guided resources; Audiobook is reserved for actual narrated books.
+
+The page hero now uses the original AARAMORA still-life artwork stored at `assets/reading-library-book-still-life.webp`. The Pexels image by Esra Korkmaz remains in the image-discovery catalogue with its separate licence and attribution record, not as the page hero.
+
+The new Project Gutenberg Audio Books record links to the official provider catalogue. Its public-domain claim is US-specific and must be checked per title, narrator and territory. The OpenStax Psychology record now explicitly records the publisher's separate no-LLM/no-generative-AI-ingestion restriction without written permission, alongside CC BY 4.0 attribution conditions.
