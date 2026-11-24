@@ -130,3 +130,14 @@ This is an additive quality release. No original page, relationship concept, rea
 - GitHub Actions push run `45414344425` and pull-request run `45414328733` passed on candidate commit `8df9bc415554669c80245521206cc4417f8d64e8`: 115 website/content/safety tests, 6 retrieval-only tests and the 49-entry catalogue validator passed; the RAG index remains empty and LLM calls disabled.
 - Human NVDA, VoiceOver, TalkBack, 200%/400% zoom, physical-device offline/slow-network, visual review, Lighthouse and qualified clinical/language/cultural review are still outstanding. No WCAG conformance or clinical sign-off is claimed.
 - Do not merge or deploy until CI passes; after merge, deploy the exact commit and repeat live smoke tests. Production remains on the previously verified release until then.
+
+
+## Responsive browser audit and final ribbon pass · 24 November 2026
+
+- Added shared support-ribbon styling to keep the Tele-MANAS and Emergency contacts visibly separated, consistently styled and easy to tap on the Relationship Corner and other pages.
+- Added `.github/workflows/browser-quality.yml` and `scripts/audit_responsive_browser.py`. The browser audit uses Playwright Chromium against all root HTML pages that expose the shared six-link menu.
+- Latest candidate commit `747c37c6498260ef5b73deb9a643ab30dfab3103` passed both GitHub workflows: content/safety checks `45416395059` and Chromium browser audit `45416395055`.
+- Browser evidence: 16 pages × 4 widths (1440, 768, 390, 320 CSS px) = 64 page/viewport checks; zero horizontal overflow; 12 keyboard navigation checks; Escape closes and restores focus; outside pointer closes; mobile navigation remains visible with JavaScript disabled. Visual screenshots and `results.json` are stored in artifact `14933145020`.
+- Automated content/safety suite still verifies 40 relationship concepts, 49 Reading Library catalogue records, nine original shelves, approved support-number policy and catalogue rights/language metadata.
+- Still not complete: real NVDA/VoiceOver/TalkBack testing; true browser text-size/400%-zoom sessions; physical Android/iOS checks; slow/offline network testing; Lighthouse audit; named clinician, safeguarding, Hindi/Marathi, and cultural/religious review. No WCAG or clinical sign-off claim.
+- Production deployment and stable alias remain untouched; this branch is a preview/review candidate only.
