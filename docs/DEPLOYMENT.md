@@ -218,3 +218,12 @@ A production-like Chromium audit found that the skip link was positioned over th
 - The service worker pre-caches the support and offline fallback pages after first online visit. Tools are browser-only and have no AARAMORA server submission or persistence.
 - No third-party imagery, video CDN, analytics or ad-tracking scripts load automatically. Links to providers and map services contact those third parties only after a visitor selects them.
 - Human testing still required: keyboard-only task completion, NVDA/VoiceOver/TalkBack, 200% zoom, slow-network testing and a current Lighthouse audit. No claim of completion is made here.
+
+
+## RAG assistant release hold · 24 November 2026
+
+The chatbot is disabled and is not part of the public website. The prompt v2 and English crisis response are review drafts only. The approved corpus manifest is empty by design; no unreviewed health pages are indexed. The source-linked reading library is not a chatbot ingestion permission.
+
+The repository now contains a default-deny corpus manifest and a standard-library Python builder for local retrieval evaluation. The builder requires named clinical/content review, expiry, source URLs, owner and exact rights-review metadata. It does not call a model, scrape websites or send data externally. The 100 synthetic Hinglish starter cases are for future detector/prompt testing and have not been run against an LLM. The source design plan still requires a 300+ multilingual crisis benchmark, clinician approval, output-safety evaluation, rate limits, privacy review and a kill switch before any real-user access.
+
+The public support policy is limited to Tele-MANAS 14416 and Emergency 112. The service-link checker now validates the two-record public register and checks only those official source URLs. It does not automatically change displayed contact details.
