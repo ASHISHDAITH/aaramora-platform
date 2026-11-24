@@ -6,15 +6,15 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 
 class HomepageReleaseTests(unittest.TestCase):
-    def test_homepage_has_four_sections_and_four_primary_destinations(self):
+    def test_homepage_has_four_sections_and_six_primary_destinations(self):
         home = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertEqual(4, home.count("<section"))
         self.assertIn('id="hero-choices"', home)
         hero = home.split('<section class="hero"', 1)[1].split("</section>", 1)[0]
         self.assertLess(hero.index('id="hero-choices"'), hero.index('href="about.html"'))
         nav = home.split('<nav class="main-nav"', 1)[1].split("</nav>", 1)[0]
-        self.assertEqual(4, nav.count("<a "))
-        for target in ("get-help.html", "wellbeing.html", "tools.html", "trust.html"):
+        self.assertEqual(6, nav.count("<a "))
+        for target in ("get-help.html", "wellbeing.html", "tools.html", "relationships.html", "reading-library.html", "trust.html"):
             self.assertIn(target, nav)
 
     def test_homepage_assets_are_first_party_and_original(self):
@@ -34,14 +34,24 @@ class HomepageReleaseTests(unittest.TestCase):
         for file in ("favicon.svg", "manifest.webmanifest", "sitemap.xml", "robots.txt", "service-worker.js"):
             self.assertTrue((ROOT / file).is_file())
 
-    def test_active_pages_share_four_primary_navigation_destinations(self):
+    def test_active_pages_share_six_primary_navigation_destinations_and_mobile_toggle(self):
         pages = ("get-help.html", "access-map.html", "tools.html", "trust.html", "about.html",
                  "gentle-activities.html", "wellbeing.html", "relationships.html", "check-ins.html",
                  "yoga-and-breath.html", "reading-library.html")
         for filename in pages:
             page = (ROOT / filename).read_text(encoding="utf-8")
             nav = page.split('<nav class="main-nav"', 1)[1].split("</nav>", 1)[0]
-            self.assertEqual(4, nav.count("<a "), filename)
+            self.assertEqual(6, nav.count("<a "), filename)
+            self.assertIn('class="menu-toggle"', page, filename)
+            self.assertIn('aria-controls="site-nav"', page, filename)
+            self.assertIn('href="relationships.html"', nav, filename)
+            self.assertIn('href="reading-library.html"', nav, filename)
+
+    def test_relationship_corner_and_reading_library_are_top_level_routes(self):
+        home = (ROOT / "index.html").read_text(encoding="utf-8")
+        for target in ("relationships.html", "reading-library.html"):
+            self.assertIn('href="' + target + '"', home)
+            self.assertTrue((ROOT / target).is_file())
 
     def test_no_unapproved_public_crisis_number_or_blank_alternative(self):
         for path in ROOT.glob("*.html"):
