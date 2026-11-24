@@ -25,11 +25,30 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Audit responsive pages and navigation
         run: python scripts/audit_responsive_browser.py
+      - name: Set up Node.js for Lighthouse
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Lighthouse CLI
+        run: npm install --global lighthouse@13.6.0
+      - name: Generate Lighthouse mobile and desktop reports
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 --directory . >/tmp/aaramora-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 1
+          done
+          export CHROME_PATH="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
+          node scripts/run_lighthouse_audit.mjs
       - name: Save visual review screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: aaramora-responsive-visual-audit
-          path: artifacts/visual-audit/
+          path: |
+            artifacts/visual-audit/
+            artifacts/lighthouse/
           if-no-files-found: warn
           retention-days: 7
