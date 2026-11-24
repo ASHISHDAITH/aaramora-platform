@@ -88,8 +88,8 @@ class NavigationAndDiscoveryEnhancementTests(unittest.TestCase):
         page = self.read("relationships.html")
         self.assertEqual(1, page.count('class="skip-link"'))
         self.assertNotIn('class="skip"', page)
-        self.assertIn('href="#main"', page)
-        self.assertIn('<main id="main">', page)
+        self.assertIn('href="#main-content"', page)
+        self.assertIn('<main id="main-content">', page)
 
     def test_legacy_page_specific_menu_handlers_are_removed(self):
         for filename in ("relationships.html", "check-ins.html"):

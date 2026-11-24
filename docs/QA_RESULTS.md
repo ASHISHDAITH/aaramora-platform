@@ -201,6 +201,17 @@
 - Named clinical, safeguarding, native-language, cultural/religious and assistive-technology reviews remain pending.
 
 
+## CI regression fix: test_relationship_page_has_one_shared_skip_link · 25 November 2026
+
+- **File:** `tests/check_navigation_enhancements.py`
+- **Problem:** `test_relationship_page_has_one_shared_skip_link` asserted `href="#main"` and `<main id="main">` — the values present before commit `3c54906` corrected the skip-link target. The website code was correct; the test was stale.
+- **Fix:** Updated both assertions to `href="#main-content"` and `<main id="main-content">`. The duplicate-link guard (`assertNotIn('class="skip"')`) and count check (`assertEqual(1, ...)`) are unchanged.
+- **GitHub Actions run that showed the failure:** `45471180576` (110 tests, 1 failure).
+- **Expected outcome after this fix:** all tests pass on next CI run.
+- **Local test execution:** Python runtime not available in this environment (Windows Store stub); CI on GitHub will be the verification.
+
+---
+
 ## Tonight-mode CSS overrides for inline-style pages · 24 November 2026
 
 ### Files changed

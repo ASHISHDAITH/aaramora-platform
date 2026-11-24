@@ -98,6 +98,15 @@ The corpus manifest is empty and runtime is disabled. The default corpus builder
 - This remains a static information/help-navigation prototype. Human clinician, safeguarding, native-language, cultural/religious and independent assistive-technology reviews remain pending. No whole-site WCAG 2.2 AA certification or live AI model evaluation is claimed.
 
 
+## CI regression fix · 25 November 2026
+
+- Corrected stale test assertion in `tests/check_navigation_enhancements.py`: `test_relationship_page_has_one_shared_skip_link` previously expected `href="#main"` / `<main id="main">` (the pre-correction values). Updated to `href="#main-content"` / `<main id="main-content">` to match the website code committed in `3c54906`.
+- Identified by GitHub Actions run `45471180576`: 110 tests, 1 failure.
+- Local Python runtime unavailable; CI will confirm.
+- `docs/QA_RESULTS.md` updated.
+
+---
+
 ## Tonight-mode CSS overrides for inline-style pages · 24 November 2026
 
 ### What changed
