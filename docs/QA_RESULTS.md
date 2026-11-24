@@ -148,3 +148,14 @@
 - Live-style Chromium + axe-core 4.10.3 with the skip link focused at 1440px, 390px and 320px: zero violations.
 - Support links: 44px height, 24px gap; no horizontal overflow at 1440px, 390px or 320px.
 - Latest local validation: 26 records, 4 language groups, 22 scheduled Indian languages; 63 Python tests passed.
+
+
+## Final site and RAG candidate · 24 November 2026
+
+- Production deployment `dpl_8oRcw6Cjs5pRCFr9KHKVbErnouEo` is READY on the stable `aaramora-platform.vercel.app` alias, source commit `c1fd0b89cf28881bdef6755ba5e0e962f4a9c89c`.
+- Latest GitHub content-check workflow `45388240891`: success; 85 Python tests passed, catalogue validation passed, empty approved-only corpus build passed.
+- Official support-source workflow `45387267894`: success; two source URLs reachable, zero confirmed dead, one inconclusive access response. No number was changed automatically.
+- RAG runtime remains disabled, model calls disabled and approved index empty.
+- 100 synthetic Hinglish starter messages with jailbreak cases are checked structurally only; they have not been run against a model or classifier.
+- Native-language, clinician, safeguarding and independent accessibility approvals remain pending.
+- A separate manual live-site browser audit was not completed in this release step; Vercel readiness and CI do not establish that audit.
