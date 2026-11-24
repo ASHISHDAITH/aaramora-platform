@@ -385,18 +385,7 @@ def main():
                       stylesheet: Boolean(await caches.match("/site.css"))
                     })"""
                 )
-                offline_cdp = offline_context.new_cdp_session(offline_page)
-                offline_cdp.send("Network.enable")
-                offline_cdp.send(
-                    "Network.emulateNetworkConditions",
-                    {
-                        "offline": True,
-                        "latency": 0,
-                        "downloadThroughput": 0,
-                        "uploadThroughput": 0,
-                        "connectionType": "none",
-                    },
-                )
+                offline_context.set_offline(True)
                 cached_home_response = offline_page.goto(
                     BASE_URL + "/index.html", wait_until="load", timeout=15000
                 )
@@ -408,16 +397,24 @@ def main():
                 fallback_response = offline_page.goto(
                     BASE_URL + "/relationships.html", wait_until="load", timeout=15000
                 )
+                fallback_body = offline_page.locator("body").inner_text()
+                helpline_14416_links = offline_page.locator('a[href="tel:14416"]').count()
+                emergency_112_links = offline_page.locator('a[href="tel:112"]').count()
                 fallback_ok = (
                     fallback_response is not None
                     and fallback_response.ok
                     and "Offline support" in offline_page.title()
-                    and offline_page.get_by_text("Support details saved on this device.").is_visible()
-                    and offline_page.get_by_role("link", name="14416").is_visible()
-                    and offline_page.get_by_role("link", name="112").is_visible()
+                    and "Support details saved on this device." in fallback_body
+                    and helpline_14416_links > 0
+                    and emergency_112_links > 0
                 )
                 results["offline"]["cached_assets"] = cached
                 results["offline"]["cached_homepage_available"] = cached_home_ok
+                results["offline"]["fallback_response_status"] = fallback_response.status if fallback_response else None
+                results["offline"]["fallback_page_title"] = offline_page.title()
+                results["offline"]["fallback_has_support_copy"] = "Support details saved on this device." in fallback_body
+                results["offline"]["fallback_helpline_14416_link_count"] = helpline_14416_links
+                results["offline"]["fallback_emergency_112_link_count"] = emergency_112_links
                 results["offline"]["offline_fallback_available"] = fallback_ok
                 if not all(cached.values()):
                     results["errors"].append("The service worker did not cache every required offline support asset.")
