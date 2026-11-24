@@ -55,6 +55,13 @@ class ResponsiveAccessibilityQualityTests(unittest.TestCase):
         self.assertIn("#language-catalogue .language-source-links a", css)
         self.assertIn("overflow-wrap:anywhere;word-break:normal", css)
 
+    def test_support_and_relationship_content_reflows_at_large_text_sizes(self):
+        css = self.read("site.css")
+        self.assertIn(".support-card p,.support-card .verify,.support-card .official-source", css)
+        relationships = self.read("relationships.html")
+        self.assertIn(".concept-item summary>small{flex:1 1 100%;", relationships)
+        self.assertIn(".page-main h1,.page-main h2,.page-main h3", relationships)
+
     def test_reduced_motion_and_mobile_reflow_rules_are_present(self):
         css = self.read("site.css")
         self.assertIn('@media(prefers-reduced-motion:reduce)', css)
