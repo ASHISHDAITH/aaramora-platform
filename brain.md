@@ -117,3 +117,15 @@ The corpus manifest is empty and runtime is disabled. The default corpus builder
 - **Open manual gates:** no fresh whole-site visual browser audit, screen-reader run by a human, 200%/400% zoom session, slow-network/offline device test or Lighthouse report is claimed for this release. Clinician, safeguarding, Hindi/Marathi native-language, cultural/religious and independent assistive-technology reviews remain pending.
 
 This is an additive quality release. No original page, relationship concept, reading-library shelf, catalogue record, support route or media file was intentionally deleted.
+
+
+## Additive responsive and accessibility quality pass · 24 November 2026
+
+- Candidate branch: `quality-pass-2026-11-24`, based on the current `main` head `d1a59577896feb4598ce8fe72b44c4cc78cebb91`.
+- This is a non-destructive candidate only. It does not deploy to production and does not replace the current Vercel alias.
+- Updated `site.css` with refined mobile spacing down to 320 CSS px, stronger small-label contrast, visible focus, larger common targets, forced-colour/high-contrast support, and reduced-motion safeguards.
+- Updated `site.js` so mobile navigation has explicit breakpoint-aware state, closes on Escape and outside pointer input, and resets on desktop resize. The page exposes a no-JavaScript mobile-navigation fallback.
+- Added `tests/check_responsive_accessibility_quality.py` to check these safeguards and verify the 40 relationship concepts, 49 library records and nine original shelves remain present.
+- Added `docs/RELEASE_QUALITY_PASS_2026-11-24.md` with scope, gates and deployment sequence.
+- Human NVDA, VoiceOver, TalkBack, 200%/400% zoom, physical-device offline/slow-network, visual review, Lighthouse and qualified clinical/language/cultural review are still outstanding. No WCAG conformance or clinical sign-off is claimed.
+- Do not merge or deploy until CI passes; after merge, deploy the exact commit and repeat live smoke tests. Production remains on the previously verified release until then.
