@@ -23,5 +23,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'check_*.py' -v
       - name: Build the empty approved-only retrieval index (no model calls)
         run: python scripts/build_reviewed_corpus.py --output /tmp/aaramora-rag-approved-index.json
-      - name: Validate reading library catalogue metadata
+      - name: Check local lexical retrieval (no model/network calls)\n        run: python -m unittest tests/check_search_reviewed_corpus.py -v\n      - name: Validate reading library catalogue metadata
         run: python scripts/check_catalogue.py
