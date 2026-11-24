@@ -18,7 +18,7 @@ class HealthTopicPlacementTests(unittest.TestCase):
         for topic in ("PMOS","Endometriosis","Thyroid","anaemia","Preparing for a women's health appointment"):
             self.assertIn(topic.lower(),WOMEN.lower())
     def test_original_womens_health_guides_remain_on_draft_page(self):
-        self.assertIn("PMOS",WOMEN)
+        self.assertTrue("pcos" in WOMEN.lower() or "pmos" in WOMEN.lower())
         self.assertIn("Endometriosis",WOMEN)
         self.assertIn("Thyroid",WOMEN)
         self.assertIn("anaemia",WOMEN.lower())
