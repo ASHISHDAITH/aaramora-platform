@@ -59,3 +59,14 @@ The current 100-case Hinglish starter set is synthetic and structurally tested i
 - Manual keyboard, screen-reader, zoom, slow-network and human accessibility checks for the current site.
 
 No chatbot beta or public deployment should be enabled until these gates are completed and recorded.
+
+
+## Latest source updates after the previous production build
+
+The repository now includes:
+- Hero-contained quick choices before the film link (four top-level homepage sections).
+- Consistent “Was this helpful? Report a problem” email-draft links. The links have no tracking, but no public recipient address is configured.
+- Local lexical retrieval-only Phase 2: `scripts/search_reviewed_corpus.py`, with source links and safe abstention. Current approved index remains empty.
+- A 301-case synthetic crisis fixture pack across English, Hindi, Marathi and Hinglish. All language/clinical labels are pending human review; it has not been run against a model or detector.
+
+These current branch changes must pass CI and then receive a fresh production deployment. The earlier deployment ID below identifies the preceding site build, not these newer changes.
