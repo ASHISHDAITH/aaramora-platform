@@ -83,6 +83,14 @@ class NavigationAndDiscoveryEnhancementTests(unittest.TestCase):
         data = json.loads(self.read("data/library.json"))
         self.assertEqual(49, len(data["records"]))
 
+
+    def test_relationship_page_has_one_shared_skip_link(self):
+        page = self.read("relationships.html")
+        self.assertEqual(1, page.count('class="skip-link"'))
+        self.assertNotIn('class="skip"', page)
+        self.assertIn('href="#main"', page)
+        self.assertIn('<main id="main">', page)
+
     def test_legacy_page_specific_menu_handlers_are_removed(self):
         for filename in ("relationships.html", "check-ins.html"):
             page = self.read(filename)
