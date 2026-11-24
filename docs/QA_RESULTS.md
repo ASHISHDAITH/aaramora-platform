@@ -249,3 +249,17 @@ A separate additive candidate branch adds responsive navigation fallback, breakp
 - Approved RAG entries remain 0 and LLM calls remain disabled.
 
 This is still a non-production PR. The exact-commit browser, Lighthouse and human assistive-technology matrix remains open; see `docs/RELEASE_QUALITY_PASS_2026-11-24.md`.
+
+
+## Final browser quality pass · 24 November 2026
+
+- Latest candidate commit: `747c37c6498260ef5b73deb9a643ab30dfab3103`.
+- Content/safety workflow: [run 45416395059](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45416395059) · passed.
+- Chromium responsive workflow: [run 45416395055](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45416395055) · passed.
+- 115 website/content/safety tests passed; 6 local retrieval tests passed; catalogue validator passed with 49 entries.
+- Playwright Chromium evaluated all 16 HTML pages carrying the shared menu at 1440, 768, 390 and 320 CSS px: 64 checks, zero horizontal overflow.
+- 12 keyboard-navigation checks passed across the homepage, Relationship Corner, Reading Library and Get Help at mobile widths. The checks exercise keyboard open, Escape close/focus restoration and outside-pointer close.
+- No-JavaScript mobile navigation fallback passed.
+- Screenshot + machine-readable results artifact: [aaramora-responsive-visual-audit](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45416395055/artifacts/14933145020).
+- Support ribbon alignment was refined after visual inspection so the two national contacts do not run together on small screens.
+- This Chromium audit is an automated responsive smoke test, not a human visual or accessibility certification. True 200% text enlargement/400% browser zoom, NVDA/VoiceOver/TalkBack, real mobile devices, offline/slow-network, Lighthouse and qualified clinical/safeguarding/native-language/cultural review remain open.
