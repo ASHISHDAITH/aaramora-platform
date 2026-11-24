@@ -118,9 +118,9 @@ These statuses must not be changed to reviewed until a named qualified reviewer 
 
 
 
-## Six-format discovery catalogue · 24 November 2026
+## Seven-format discovery catalogue · 24 November 2026
 
-The original 26 multilingual records remain. The catalogue now contains 48 entries after adding 22 source records. Each entry has required `contentTypes` tags, using one or more of `book`, `video`, `audiobook`, `article`, `blog` and `image`. Format tags describe source links, not AARAMORA-hosted content. They can be combined with the existing language, tradition, access, rights, reading-level and file-format filters.
+The original 26 multilingual records remain. The catalogue now contains 49 entries after adding 23 source records. Each entry has required `contentTypes` tags, using one or more of `book`, `video`, `audiobook`, `audio`, `article`, `blog` and `image`. Format tags describe source links, not AARAMORA-hosted content. They can be combined with the existing language, tradition, access, rights, reading-level and file-format filters.
 
 The media shelf includes:
 - OpenStax Psychology (the specific edition whose preface names CC BY 4.0), Standard Ebooks, and Centre for Clinical Interventions workbooks.
@@ -132,3 +132,6 @@ The media shelf includes:
 - Openverse, Wikimedia Commons and the individually credited Pexels book photograph.
 
 See [READING_MEDIA_EXPANSION.md](READING_MEDIA_EXPANSION.md) for source-by-source links, exact contributor attributions and item-level restrictions. No source content is bulk copied into this repository. Native-language, religious/cultural-context and manual accessibility reviews remain pending.
+
+
+The Audio filter is separate from Audiobooks. Gurbani Prakash, Quran.com, CCI guided-audio resources and podcasts are classified as Audio; LibriVox, eBible.org and Project Gutenberg's audio-book collection are catalogued as Audiobooks where the source provides narrated books. These classifications identify the media form and do not imply permission to copy the recordings.
