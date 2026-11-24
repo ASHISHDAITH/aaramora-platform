@@ -1,9 +1,10 @@
 "use strict";
-const CACHE_NAME="aaramora-support-v1";
+const CACHE_NAME="aaramora-support-v2";
 const CORE=[
 "/","/index.html","/get-help.html","/offline.html","/site.css","/site.js","/favicon.svg","/manifest.webmanifest",
 "/assets/reading-library-book-still-life.webp",
 "/assets/illustrations/journal.svg","/assets/illustrations/garden.svg","/assets/illustrations/appointment.svg",
+"/access-map.html","/access-map.js","/data/pune-services.json",
 "/assets/healing-garden.svg","/assets/safe-corner.svg","/assets/thought-river.svg"
 ];
 self.addEventListener("install",event=>{
