@@ -221,4 +221,4 @@ The current source catalogue contains 49 records, including 23 additions to the 
 
 The page hero now uses the original AARAMORA still-life artwork stored at `assets/reading-library-book-still-life.webp`. The Pexels image by Esra Erdem remains in the image-discovery catalogue with its separate licence and attribution record, not as the page hero.
 
-The new Project Gutenberg Audio Books record links to the official provider catalogue. Its public-domain claim is US-specific and must be checked per title, narrator and territory. The OpenStax Psychology record now explicitly records the publisher's separate no-LLM/no-generative-AI-ingestion restriction without written permission, alongside CC BY 4.0 attribution conditions.
+The new Project Gutenberg Audio Books record links to the official provider catalogue. Its public-domain claim is US-specific and must be checked per title, narrator and territory. The OpenStax Psychology record now explicitly records the publisher's separate no-LLM/no-generative-AI-ingestion restriction without OpenStax's permission, alongside CC BY 4.0 attribution conditions.
