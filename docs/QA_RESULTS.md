@@ -234,3 +234,10 @@
 - **Open manual gates:** no fresh whole-site visual browser audit, screen-reader run by a human, 200%/400% zoom session, slow-network/offline device test or Lighthouse report is claimed for this release. Clinician, safeguarding, Hindi/Marathi native-language, cultural/religious and independent assistive-technology reviews remain pending.
 
 This is an additive quality release. No original page, relationship concept, reading-library shelf, catalogue record, support route or media file was intentionally deleted.
+
+
+## Candidate release quality pass · 24 November 2026
+
+A separate additive candidate branch adds responsive navigation fallback, breakpoint-aware menu handling, focus and contrast improvements, forced-colours / higher-contrast rules, and small-screen refinements. Regression assertions are in `tests/check_responsive_accessibility_quality.py`.
+
+**Status:** waiting for the candidate branch's GitHub Actions run. This is not a production release. The exact-commit browser and assistive-technology matrix remains open; see `docs/RELEASE_QUALITY_PASS_2026-11-24.md`.
