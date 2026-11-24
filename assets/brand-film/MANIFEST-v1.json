@@ -1,0 +1,18 @@
+{
+  "version": "v1",
+  "files": [
+    {
+      "path": "assets/brand-film/aaramora-master-v1.mp4",
+      "sourcePath": "assets/brand-film/aaramora-master-16x9.mp4",
+      "sourceGitBlob": "4ea8f7222bf6d0cbaace895619080124c3a5ee8c",
+      "sourceSize": 12114271
+    },
+    {
+      "path": "assets/brand-film/aaramora-instagram-v1.mp4",
+      "sourcePath": "assets/brand-film/aaramora-instagram-9x16.mp4",
+      "sourceGitBlob": "337d3aa6965fd996c591d7f2a2603ccc4754da7c",
+      "sourceSize": 10346721
+    }
+  ],
+  "note": "The v1 paths are pinned copies of the exact source Git blobs reviewed on 24 November 2026. Do not replace a v1 file without a new versioned review."
+}
