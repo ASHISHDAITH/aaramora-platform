@@ -76,3 +76,20 @@ A fresh screenshot review caught and corrected a support-ribbon spacing inconsis
 **Still open:** true browser zoom and text enlargement sessions; real NVDA/VoiceOver/TalkBack sessions; real devices; slow/offline checks; Lighthouse; clinician/safeguarding and native Hindi/Marathi plus cultural/religious reviews. The Playwright audit does not represent any of these human sign-offs and is not WCAG certification.
 
 Production remains on the last verified production deployment. The candidate branch must be reviewed as a preview; do not promote it until the open manual and human review gates are completed.
+
+
+
+## Latest automated release evidence · 24 November 2026
+
+The candidate's browser and Lighthouse automation now passes on audited commit `817be3de1bc64c2c8686dcf0ad019f54964a61be`:
+
+- [Browser + Lighthouse run 45426136282](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282) · success.
+- [Content/safety run 45426136166](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136166) · success.
+- 64 responsive checks across 16 menu-bearing pages and 4 widths; 12 keyboard menu checks; 16 no-JavaScript fallback checks; four forced-colours/reduced-motion checks; 12 simulated 200% text-resize checks; all zero errors.
+- Throttled-network and offline-after-cache tests passed. The offline worker's parse error was corrected and a Node syntax gate was added.
+- Eight Lighthouse reports: 100 in all four categories for each of the four audited routes in both mobile and desktop profiles.
+- Evidence: `docs/review/AUTOMATED_EVIDENCE_2026-11-24.md`; workflow artifact [14934504814](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45426136282/artifacts/14934504814).
+
+The reported 200% text enlargement is automated CSS emulation, not a human browser zoom test. Real 400% zoom, physical-device offline/slow network, screen-reader testing, complete human visual review, clinician/safeguarding review, native Hindi/Marathi review and cultural/religious review remain release gates.
+
+The successful run was on `817be3de1bc64c2c8686dcf0ad019f54964a61be`; the branch then received a Reading Library heading-wrap adjustment and an evidence-doc commit. Both CI workflows must be green on the latest head before merge or deployment. Keep production untouched until the remaining human gates are closed.
