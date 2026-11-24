@@ -168,3 +168,17 @@
 - Multilingual starter pack: 301 synthetic fixtures (67 English, 67 Hindi, 67 Marathi, 100 Hinglish). CI structural checks only; native-language, clinical and safeguarding reviews remain pending.
 - Latest CI on the pre-pack commit included 92 main-suite tests and 6 retrieval tests; the new 301-pack gate is being added and must pass before release.
 - No LLM/classifier execution or clinician sign-off is claimed.
+
+
+## Final release candidate verification · 24 November 2026
+
+- GitHub content-check workflow [45390918990](https://github.com/ASHISHDAITH/aaramora-platform/actions/runs/45390918990): **success**.
+- Main content/safety suite: **97 tests passed**.
+- Separate local lexical retrieval suite: **6 tests passed**.
+- Approved-only corpus builder: **0 approved entries**, **0 excluded**, model disabled.
+- Reading Library catalogue validator: completed successfully.
+- Multilingual crisis fixture package: **301 synthetic records** — 67 English, 67 Hindi, 67 Marathi and 100 Hinglish. All clinical/safeguarding labels remain pending; Hindi/Marathi translations remain pending native-language review. CI validates counts and metadata only.
+- Local retrieval CLI: lexical ranking only, citations preserved, no model or network calls. With the current empty approved index, expected status is `no_approved_passages`.
+- No LLM endpoint, classifier endpoint, chatbot UI, runtime corpus or visitor transcript store is configured. The 100 Hinglish and 301 multilingual fixtures have not been executed against a model or safety router.
+- Public support register remains limited to 14416 and 112. No other national contact is displayed.
+- The latest source branch is ready for a fresh production deployment; the prior Vercel deployment ID recorded above predates the latest homepage/retrieval changes.
